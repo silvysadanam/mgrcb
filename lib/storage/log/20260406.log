@@ -1,0 +1,147 @@
+[11:46:03 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[11:46:03 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[11:51:27 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[11:51:27 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[11:52:15 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[11:52:15 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[11:52:29 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[11:52:29 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[11:54:20 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 407 : Trying to access array offset on value of type null
+[11:54:20 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 407 : Trying to access array offset on value of type null
+[11:55:18 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[11:55:18 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:01:48 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 407 : Trying to access array offset on value of type null
+[12:01:48 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 407 : Trying to access array offset on value of type null
+[12:05:05 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:05:05 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:05:47 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:05:47 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:10:28 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:10:28 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:11:35 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 407 : Trying to access array offset on value of type null
+[12:11:35 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 407 : Trying to access array offset on value of type null
+[12:12:20 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 407 : Trying to access array offset on value of type null
+[12:12:20 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 407 : Trying to access array offset on value of type null
+[12:13:04 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:13:04 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:15:19 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:15:19 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:22:19 IST] EXCEPTION: \lib\module\Branch\src\Utility\DeductionReport.php on line 382 : date_format(): Argument #1 ($object) must be of type DateTimeInterface, bool given
+[12:23:10 IST] EXCEPTION: \lib\module\Branch\src\Utility\DeductionReport.php on line 381 : Class "Branch\Utility\DateTime" not found
+[12:23:43 IST] EXCEPTION: \lib\module\Branch\src\Utility\DeductionReport.php on line 381 : Failed to parse time string (31/03/2026) at position 0 (3): Unexpected character
+[12:25:22 IST] EXCEPTION: \lib\module\Branch\src\Utility\DeductionReport.php on line 382 : Failed to parse time string (31/03/2026) at position 0 (3): Unexpected character
+[12:27:01 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:27:01 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:27:43 IST] ERROR [2]: \lib\module\Branch\src\Utility\DeductionReport.php line 264 : Undefined variable $fydata
+[12:27:43 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:27:43 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:28:14 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[12:28:14 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 406 : Trying to access array offset on value of type null
+[15:11:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:10:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[18:13:14 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:14:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:17:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:17:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:17:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:17:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:18:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:22:13 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:24:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:24:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 44 : Undefined variable $heads
+[18:24:44 IST] EXCEPTION: \lib\module\Backend\view\scripts\accounts\bsreset.phtml on line 44 : in_array(): Argument #2 ($haystack) must be of type array, null given
+[18:25:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:25:37 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:26:14 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:26:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 37 : Array to string conversion
+[18:26:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 37 : Array to string conversion
+[18:26:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 37 : Array to string conversion
+[18:26:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 37 : Array to string conversion
+[18:26:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 37 : Array to string conversion
+[18:26:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 37 : Array to string conversion
+[18:26:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 37 : Array to string conversion
+[18:26:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 37 : Array to string conversion
+[18:26:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:26:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 37 : Undefined array key 8
+[18:27:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:27:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Undefined array key 8
+[18:27:58 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:27:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 39 : Undefined array key 8
+[18:28:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:52:56 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 96 : Undefined variable $headsQuery
+[18:52:56 IST] ERROR [8192]: \lib\web\Web\src\Database\Model.php line 96 : PDO::query(): Passing null to parameter #1 ($query) of type string is deprecated
+[18:52:56 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : PDO::query(): Argument #1 ($query) cannot be empty
+[18:53:39 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 96 : Undefined variable $headsQuery
+[18:53:39 IST] ERROR [8192]: \lib\web\Web\src\Database\Model.php line 96 : PDO::query(): Passing null to parameter #1 ($query) of type string is deprecated
+[18:53:39 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : PDO::query(): Argument #1 ($query) cannot be empty
+[18:53:54 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`rp_balance_sheet` GROUP BY fmc_id' at line 1
+[18:54:31 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] ERROR [8]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 38 : Object of class stdClass could not be converted to int
+[18:54:32 IST] EXCEPTION: \lib\module\Backend\view\scripts\accounts\bsreset.phtml on line 39 : Object of class stdClass could not be converted to string
+[18:59:27 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:59:51 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:59:51 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 4 : Undefined variable $fyMap
+[18:59:51 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 6 : Undefined variable $fy
+[19:00:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:00:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 4 : Undefined variable $fyMap
+[19:00:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:01:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:01:43 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:41:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:41:38 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:44:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:44:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[19:44:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:44:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[19:44:14 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:45:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:45:57 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:47:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans

@@ -1,0 +1,130 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">New Withdrawal</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-withdrawal" id="form-withdrawal" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="alert alert-danger" id="validation-message" style="display:none;"></div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="withdrawal_date">Date <span class="red">*</span></label>
+                                                            <input type="text" name="withdrawal_date" id="withdrawal_date" class="form-control single-date-max-today" data-min-date="01/04/2022" value="<?php 
+                                                            echo $form->getEscapedValue('withdrawal_date'); ?>" placeholder="Date" maxlength="10" readonly="readonly">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="member_id">Member <span class="red">*</span></label>
+                                                            <select name="member_id" id="member_id" class="form-control" title="Member">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('member'), $form->getValue('member_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="deduction_type_id">Deduction Type <span class="red">*</span></label>
+                                                            <select name="deduction_type_id" id="deduction_type_id" class="form-control" title="Deduction Type">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('selectGroup', $this->view->getVariable('deductionSelector'), $form->getValue('deduction_type_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="withdrawal_amount">Amount <span class="red">*</span></label>
+                                                            <input type="text" name="withdrawal_amount" id="withdrawal_amount" class="form-control number-integer" value="<?php 
+                                                            echo $form->getEscapedValue('withdrawal_amount'); ?>" placeholder="Amount" maxlength="6" required="required">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="description">Description <span class="red">*</span></label>
+                                                            <input type="text" name="description" id="description" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('description'); ?>" placeholder="Description" required="required">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="note">Notes</label>
+                                                            <textarea name="note" id="note" class="form-control" placeholder="Notes"><?php 
+                                                            echo $form->getEscapedValue('note'); ?></textarea>
+                                                        </div>
+                                                        <hr>
+                                                        <p class="help-block"><span class="red">*</span> denotes required field</p>
+                                                        <p class="help-block">Withdrawal will be adjusted on closing balance for last deduction bill on or before the selected Withdrawal Date</p>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <a href="javascript:;" class="btn btn-outline-primary" id="check-balance" title="Check Deduction Balance"><i class="ft-refresh-cw"></i> CHECK CLOSING BALANCE</a>
+                                                                <input type="hidden" id="check-balance-url" value="<?php
+                                                                echo $this->view->actionUrl('withdrawal/check-balance'); ?>">
+                                                            </div>
+                                                            <hr>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <table class="table table-bordered border-info table-striped">
+                                                                    <thead class="bg-info white">
+                                                                        <tr>
+                                                                            <th colspan="2">Member Deduction Balance</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td width="50%">Withdrawal Date</td>
+                                                                            <td id="check-advance-date"><?php echo $form->getEscapedValue('withdrawal_date'); ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Member</td>
+                                                                            <td id="check-member"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Deduction Type</td>
+                                                                            <td id="check-deduction-type"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Deduction Bill Date</td>
+                                                                            <td id="check-deduction-date"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Closing Balance</td>
+                                                                            <td id="check-closing-balance"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Withdrawal Amount</td>
+                                                                            <td id="check-withdrawal-amount"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Modified Closing Balance</td>
+                                                                            <td id="check-modified-closing"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Last Withdrawal</td>
+                                                                            <td id="check-last"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

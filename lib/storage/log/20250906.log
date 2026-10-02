@@ -1,0 +1,241 @@
+[09:01:45 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:01:45 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:01:45 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:02:05 IST] EXCEPTION: \lib\module\Branch\src\Controller\CloseoutController.php on line 136 : Call to undefined method Branch\Controller\CloseoutController::_getId()
+[09:05:50 IST] EXCEPTION: \lib\module\Branch\src\Controller\CloseoutController.php on line 136 : Call to undefined method Branch\Controller\CloseoutController::_getId()
+[09:07:19 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\view.phtml on line 4 : Call to a member function advance() on null
+[09:24:34 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:24:34 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:24:34 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:27:38 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:27:38 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:27:38 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:27:39 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 6 : Undefined variable $store
+[09:27:39 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\view.phtml on line 6 : Call to a member function repayments() on null
+[09:28:50 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:28:50 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:28:50 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:31:12 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:31:12 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:31:12 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:31:14 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 6 : Undefined variable $store
+[09:31:14 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\view.phtml on line 6 : Call to a member function repayments() on null
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 28 : Attempt to read property "type" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 32 : Attempt to read property "counted_till" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 36 : Attempt to read property "expected_till" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 40 : Attempt to read property "till_difference" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 44 : Attempt to read property "notes" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 48 : Attempt to read property "timestamp" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 61 : Attempt to read property "counted_till" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 65 : Attempt to read property "expected_till" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 69 : Attempt to read property "till_difference" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 73 : Attempt to read property "notes" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 77 : Attempt to read property "timestamp" on array
+[09:31:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 90 : Undefined variable $store
+[09:31:27 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\view.phtml on line 90 : Call to a member function withdrawal() on null
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 61 : Undefined array key 0
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 61 : Attempt to read property "counted_till" on null
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 65 : Undefined array key 0
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 65 : Attempt to read property "expected_till" on null
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 69 : Undefined array key 0
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 69 : Attempt to read property "till_difference" on null
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 73 : Undefined array key 0
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 73 : Attempt to read property "notes" on null
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 77 : Undefined array key 0
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 77 : Attempt to read property "timestamp" on null
+[09:32:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 90 : Undefined variable $store
+[09:32:21 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\view.phtml on line 90 : Call to a member function withdrawal() on null
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 61 : Undefined array key 0
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 61 : Attempt to read property "counted_till" on null
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 65 : Undefined array key 0
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 65 : Attempt to read property "expected_till" on null
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 69 : Undefined array key 0
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 69 : Attempt to read property "till_difference" on null
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 73 : Undefined array key 0
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 73 : Attempt to read property "notes" on null
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 77 : Undefined array key 0
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 77 : Attempt to read property "timestamp" on null
+[09:33:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 90 : Undefined variable $store
+[09:33:41 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\view.phtml on line 90 : Call to a member function withdrawal() on null
+[09:34:30 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 90 : Undefined variable $store
+[09:34:30 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\view.phtml on line 90 : Call to a member function withdrawal() on null
+[09:38:40 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:38:40 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:38:40 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:40:03 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:40:03 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:40:03 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:43:27 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:43:27 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:43:27 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:43:39 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `l`.fmc_id =  4' at line 1
+[09:44:02 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `l`.fmc_id =  4' at line 1
+[09:46:57 IST] ERROR [2]: \lib\module\Branch\src\Controller\CloseoutController.php line 131 : Undefined array key "t0_date"
+[09:46:57 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'l.transType' in 'where clause'
+[09:47:09 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:47:09 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:47:09 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:50:38 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'l.transType' in 'where clause'
+[09:51:48 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:51:48 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:51:48 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:52:01 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:52:01 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:52:01 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:52:24 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[09:52:24 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[09:52:24 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:04:06 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[12:07:18 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[12:07:18 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:07:18 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:09:31 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[12:09:31 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:09:31 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:09:31 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 77 : Undefined variable $row
+[12:09:31 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 77 : Attempt to read property "expected_till" on null
+[12:09:31 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 77 : Undefined variable $row
+[12:09:31 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 77 : Attempt to read property "counted_till" on null
+[12:10:54 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[12:10:54 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:10:54 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:11:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[12:11:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:11:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:11:56 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[12:11:56 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:11:56 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:12:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[12:12:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:12:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:12:35 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[12:12:35 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:12:35 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:12:56 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[12:12:56 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:12:56 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:14:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 5 : Attempt to read property "counted_till" on array
+[12:14:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\view.phtml line 5 : Attempt to read property "expected_till" on array
+[12:20:37 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 215 : Undefined property: stdClass::$notes
+[12:24:33 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 215 : Undefined property: stdClass::$notes
+[12:25:04 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 216 : Undefined property: stdClass::$notes
+[12:27:19 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 216 : Undefined property: stdClass::$notes
+[12:28:44 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[12:28:44 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[12:28:44 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:23:09 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php on line 181 : syntax error, unexpected token "use"
+[18:24:35 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:24:35 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:24:35 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:28:05 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:28:05 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:28:05 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:30:07 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:30:07 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:30:07 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:59:07 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php on line 182 : Too few arguments to function Branch\Form\Opening\CreateCloseoutForm::sendMail(), 0 passed in C:\laragon\www\fws_main\lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php on line 148 and exactly 1 expected
+[18:59:56 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php on line 183 : Too few arguments to function Branch\Form\Opening\CreateCloseoutForm::sendMail(), 0 passed in C:\laragon\www\fws_main\lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php on line 149 and exactly 1 expected
+[19:00:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 186 : require(phpmailer/src/Exception.php): Failed to open stream: No such file or directory
+[19:00:09 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php on line 186 : Failed opening required 'phpmailer/src/Exception.php' (include_path='.;C:/laragon/etc/php/pear')
+[19:06:55 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[19:06:55 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[19:06:55 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[19:15:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 191 : Undefined variable $today
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 208 : Undefined variable $closeOutData
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 208 : Trying to access array offset on value of type null
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 212 : Undefined variable $closeOutData
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 212 : Trying to access array offset on value of type null
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 216 : Undefined variable $closeOutData
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 216 : Trying to access array offset on value of type null
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 220 : Undefined variable $closeOutData
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 220 : Trying to access array offset on value of type null
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 224 : Undefined variable $closeOutData
+[19:16:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 224 : Trying to access array offset on value of type null
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 209 : Undefined variable $closeOutData
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 209 : Trying to access array offset on value of type null
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 213 : Undefined variable $closeOutData
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 213 : Trying to access array offset on value of type null
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 217 : Undefined variable $closeOutData
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 217 : Trying to access array offset on value of type null
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 221 : Undefined variable $closeOutData
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 221 : Trying to access array offset on value of type null
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 225 : Undefined variable $closeOutData
+[19:17:02 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 225 : Trying to access array offset on value of type null
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 205 : Undefined variable $closeOutData
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 205 : Trying to access array offset on value of type null
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 213 : Undefined variable $closeOutData
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 213 : Trying to access array offset on value of type null
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 217 : Undefined variable $closeOutData
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 217 : Trying to access array offset on value of type null
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 221 : Undefined variable $closeOutData
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 221 : Trying to access array offset on value of type null
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 225 : Undefined variable $closeOutData
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 225 : Trying to access array offset on value of type null
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 229 : Undefined variable $closeOutData
+[19:17:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 229 : Trying to access array offset on value of type null
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 190 : Undefined variable $closeOutData
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 190 : Trying to access array offset on value of type null
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 205 : Undefined variable $closeOutData
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 205 : Trying to access array offset on value of type null
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 213 : Undefined variable $closeOutData
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 213 : Trying to access array offset on value of type null
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 217 : Undefined variable $closeOutData
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 217 : Trying to access array offset on value of type null
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 221 : Undefined variable $closeOutData
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 221 : Trying to access array offset on value of type null
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 225 : Undefined variable $closeOutData
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 225 : Trying to access array offset on value of type null
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 229 : Undefined variable $closeOutData
+[19:18:51 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 229 : Trying to access array offset on value of type null
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 206 : Undefined variable $closeOutData
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 206 : Trying to access array offset on value of type null
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 214 : Undefined variable $closeOutData
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 214 : Trying to access array offset on value of type null
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 218 : Undefined variable $closeOutData
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 218 : Trying to access array offset on value of type null
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 222 : Undefined variable $closeOutData
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 222 : Trying to access array offset on value of type null
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 226 : Undefined variable $closeOutData
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 226 : Trying to access array offset on value of type null
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 230 : Undefined variable $closeOutData
+[19:19:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 230 : Trying to access array offset on value of type null
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 206 : Undefined variable $closeOutData
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 206 : Trying to access array offset on value of type null
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 214 : Undefined variable $closeOutData
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 214 : Trying to access array offset on value of type null
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 218 : Undefined variable $closeOutData
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 218 : Trying to access array offset on value of type null
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 222 : Undefined variable $closeOutData
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 222 : Trying to access array offset on value of type null
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 226 : Undefined variable $closeOutData
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 226 : Trying to access array offset on value of type null
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 230 : Undefined variable $closeOutData
+[19:19:56 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 230 : Trying to access array offset on value of type null
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 206 : Undefined variable $closeOutData
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 206 : Trying to access array offset on value of type null
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 214 : Undefined variable $closeOutData
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 214 : Trying to access array offset on value of type null
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 218 : Undefined variable $closeOutData
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 218 : Trying to access array offset on value of type null
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 222 : Undefined variable $closeOutData
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 222 : Trying to access array offset on value of type null
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 226 : Undefined variable $closeOutData
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 226 : Trying to access array offset on value of type null
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 230 : Undefined variable $closeOutData
+[19:20:18 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 230 : Trying to access array offset on value of type null
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 214 : Undefined variable $closeOutData
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 214 : Trying to access array offset on value of type null
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 218 : Undefined variable $closeOutData
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 218 : Trying to access array offset on value of type null
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 222 : Undefined variable $closeOutData
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 222 : Trying to access array offset on value of type null
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 226 : Undefined variable $closeOutData
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 226 : Trying to access array offset on value of type null
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 230 : Undefined variable $closeOutData
+[19:20:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 230 : Trying to access array offset on value of type null
+[19:21:37 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 230 : Undefined array key "timestamp"
+[19:27:15 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[19:27:15 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[19:27:15 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[19:27:18 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 215 : Undefined array key 0
+[19:27:18 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 215 : Attempt to read property "notes" on null

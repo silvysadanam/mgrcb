@@ -1,0 +1,60 @@
+[18:33:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:33:53 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:34:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:13:13 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:13:16 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:26:11 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:26:13 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:26:13 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:26:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:26:18 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:26:34 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:26:34 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:28:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:33:54 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:34:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:34:54 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:34:56 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:34:56 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:35:05 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:35:05 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:35:09 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:35:12 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:35:12 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:35:26 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:35:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:35:59 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:52:31 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:52:34 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'deduction_date' in 'field list'
+[21:54:29 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'deduction_date' in 'field list'
+[21:54:30 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'deduction_date' in 'field list'
+[21:54:30 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'deduction_date' in 'field list'
+[21:54:31 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'deduction_date' in 'field list'
+[21:54:31 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'deduction_date' in 'field list'
+[21:54:31 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'deduction_date' in 'field list'
+[21:55:11 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:55:13 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 169 : Class "Branch\Utility\IEReport" not found
+[21:56:42 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 169 : Class "Application\Utility\IEReport" not found
+[21:58:13 IST] EXCEPTION: \lib\module\Application\src\Utility\IEReport.php on line 625 : Call to a member function deductionTypes() on null
+[22:01:07 IST] EXCEPTION: \lib\module\Application\src\Utility\IEReport.php on line 125 : Call to a member function id() on null
+[22:01:37 IST] ERROR [2]: \lib\module\Application\src\Utility\IEReport.php line 125 : Undefined property: Application\Utility\IEReport::$_fmc_id
+[22:01:37 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by head_name' at line 1
+[22:02:09 IST] ERROR [2]: \lib\module\Application\src\Utility\IEReport.php line 71 : Undefined variable $fmc_id
+[22:02:09 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by head_name' at line 1
+[22:02:40 IST] ERROR [2]: \lib\module\Application\src\Utility\IEReport.php line 65 : Undefined variable $branch
+[22:02:40 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by head_name' at line 1
+[22:03:23 IST] ERROR [2]: \lib\module\Application\src\Utility\IEReport.php line 65 : Undefined variable $branch
+[22:03:23 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 173 : Call to a member function name() on null
+[22:03:48 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 173 : Call to a member function name() on null
+[22:04:26 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:04:26 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\income.phtml on line 85 : Call to a member function name() on null
+[22:05:48 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:06:19 IST] EXCEPTION: \lib\module\Application\src\Utility\IEReport.php on line 514 : Call to a member function id() on null
+[22:07:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:07:42 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:07:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:07:54 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:08:12 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:08:13 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:09:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:09:12 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans

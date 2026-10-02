@@ -1,0 +1,8 @@
+[18:28:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:28:28 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:28:28 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 176 : Undefined variable $headId
+[18:45:34 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:45:44 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[18:45:47 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[18:45:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[18:45:55 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans

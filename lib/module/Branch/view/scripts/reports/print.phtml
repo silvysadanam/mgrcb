@@ -1,0 +1,153 @@
+<?php
+
+$generator = $this->view->getVariable('generator');
+$groups = $this->view->getVariable('groups');
+$branch = $this->view->getVariable('branch');
+$fmc = $branch->name();
+$report = $generator->report();
+$filters = $report['filters'];
+$members = $this->view->lookupStore('member_code');
+$list = $report['report'];
+$fields = array_keys($report['titles']);
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>
+            FMC <?php echo $this->view->escapeHtml($fmc); ?>
+            Sanghom Statement <?php echo $this->view->formatDateTime('d-m-Y', $filters['start']); ?> to <?php
+            echo $this->view->formatDateTime('d-m-Y', $filters['end']); ?>
+            
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style media="all">
+            html {
+                overflow: auto;
+            }
+            body {
+                font-family: "Calibri", sans-serif;
+                font-size: 11pt;
+                text-align: left;
+                color: black;
+            }
+            thead th {
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            thead th.center, tbody td.center, tfoot th.center {
+                text-align: center;
+            }
+            thead th.right, tbody td.right {
+                text-align: right;
+            }
+            tfoot th {
+                font-weight: bold;
+            }
+            tbody tr td {
+                white-space: nowrap;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            p#print-button {
+                margin: 10px 0px 10px 5px;
+            }
+            p#print-button button {
+                cursor: pointer;
+                padding: 5px 15px 5px 15px;
+            }
+            
+            @media print {
+                @page {
+                  size: A4 landscape;
+                  margin: auto;
+                }
+                p#print-button {
+                    display: none;
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="0" border="0" style="margin:10px 10px 5px 0;" width="700">
+            <thead>
+                <tr>
+                    <th class="main-heading center">
+                        FMC <?php echo $this->view->escapeHtml($fmc); ?> - Sanghom Statement for the period of <?php
+                        echo $filters['period'][0]; ?> to <?php echo $filters['period'][1]; ?>
+                        
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="center">Sl</th>
+                                    <th class="center">Code</th>
+                                    <th class="center">Name</th>
+                                    <?php foreach ($report['deductions'] as $deductionId): ?>
+
+                                    <th colspan="4" class="center"><?php echo $this->view->lookup('deductionType', $deductionId); ?></th>
+                                    <?php endforeach; ?>
+
+                                </tr>
+                                <tr>
+                                    <th class="center">No</th><th>&nbsp;</th><th>&nbsp;</th>
+                                    <?php $deductionCount = count($report['deductions']); ?>
+                                    <?php for ($count = 0; $count < $deductionCount; $count++): ?>
+
+                                    <th class="center"><?php echo $report['titles']['opening']; ?></th>
+                                    <th class="center"><?php echo $report['titles']['collection']; ?></th>
+                                    <th class="center"><?php echo $report['titles']['withdrawal']; ?></th>
+                                    <th class="center"><?php echo $report['titles']['closing']; ?></th>
+                                    <?php endfor; ?>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($members as $memberId => $code): ?>
+                                <?php if (isset($list[$memberId])): ?>
+
+                                <tr>
+                                    <td class="center"><?php echo $this->view->counter(); ?></td>
+                                    <td class="center"><?php echo $this->view->escapeHtml($code); ?></td>
+                                    <td style="white-space: nowrap;"><?php echo $this->view->lookup('member_name', $memberId); ?></td>
+
+                                    <?php foreach ($report['deductions'] as $deductionId): ?>
+                                    <?php foreach ($fields as $field): ?>
+                                    <td class="right"><?php echo $list[$memberId][$deductionId][$field]; ?></td>
+
+                                    <?php endforeach; ?>
+                                    <?php endforeach; ?>
+
+                                </tr>
+                                <?php endif; ?>
+                                <?php endforeach; ?>
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3" class="text-center">Total</th>
+                                    <?php foreach ($report['deductions'] as $deductionId): ?>
+                                    <?php foreach ($fields as $field): ?>
+                                    <th class="right"><?php echo $report['report_total'][$deductionId][$field]; ?></th>
+
+                                    <?php endforeach; ?>
+                                    <?php endforeach; ?>
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>

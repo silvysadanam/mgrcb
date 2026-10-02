@@ -1,0 +1,216 @@
+<?php
+
+$form = $this->getForm();
+$generator = $this->view->getVariable('generator');
+$headId = $this->view->getVariable('headID');
+$branch = $this->view->getVariable('branch');
+$groups = $this->view->getVariable('groups');
+?>
+
+                <section class="do-not-print">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Ledger Account</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-summary" id="form-summary" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="start_date" class="label-control col-md-4 text-left">From date</label>
+                                                            <input type="text" name="start_date" id="start_date" class="form-control col-md-8 single-date-max-today" value="<?php
+                                                            echo $form->getEscapedValue('start_date'); ?>" readonly="readonly" data-min-date="<?php
+                                                            echo $this->view->getVariable('min_date'); ?>">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="end_date" class="label-control col-md-4 text-left">To date</label>
+                                                            <input type="text" name="end_date" id="end_date" class="form-control col-md-8 single-date-max-today" value="<?php
+                                                            echo $form->getEscapedValue('end_date'); ?>" readonly="readonly" data-min-date="<?php
+                                                            echo $this->view->getVariable('min_date'); ?>">
+                                                        </div>
+                                                         <div class="form-group row">
+                                                            <label for="head" class="label-control col-md-4 text-left">Head <span class="red">*</span></label>
+                                                            <select name="head" id="head" required="required" class="form-control col-md-8" title="SOURCE">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('heads'), $headId) ?>
+
+                                                            </select>
+                                                        </div>
+                                                        </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="help-block text-italic">Instructions</p>
+                                                                <p class="help-block">Select dates for specific report period </p>
+                                                                <p class="help-block">Report period is inclusive of selected dates</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                
+                                                <button type="submit" class="btn btn-primary" title="SUBMIT">SUBMIT</button>
+                                                <input type="hidden" id="min-date" value="<?php echo $this->view->getVariable('min_date'); ?>">
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php if (! empty($generator)): ?>
+                <?php $report = $generator->report(); ?>
+                <?php $filters = $report['filters']; ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                       
+                                    </h4>
+                                     <h4 class="card-title">
+                                       
+                                    </h4>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12 overflow-x">
+                                                <table border =2 class="table table-bordered table-condensed table-responsive">
+                                                    <thead class="bg-info white">
+                                                        <tr> <th class="text-center" colspan="8"> <h4> FMC <?php echo $this->view->escapeHtml($branch->name()); ?> - Sanghom</h4> </th></tr>
+                                                        <tr> <th class="text-center" colspan="8"> <h5>Ledger & Account of <?php echo $report['Month'] ;?> <?php echo $report['Month'] ;?> - <?php echo $report['Year'];?> </h5></th></tr>
+                                                        <tr> <th class="text-center" colspan="8"> <h5>Ledger & Account of <?php echo $report['ledgerName'] ;?> </h5></th></tr>
+                                                        <tr>
+                                                            <th class="text-center">No</th>
+                                                            <th class="text-center">Date </th>
+                                                            <th class="text-center">Member/Auctioneer</th>
+                                                            <th class="text-center">Particulars</th>
+                                                            <th class="text-center">To Cash</th>
+                                                            <th class="text-center">To Bank</th>
+                                                            <th class="text-center">By Cash</th>
+                                                            <th class="text-center">By Bank</th>
+                                                            
+                                                        </tr>                                                      
+                                                    </thead>
+                                                    <tbody>
+                                                     <?php if(isset($report['opb'])):?>          
+                                                        <tr>
+                                                            <th class="text-center"></th>
+                                                            <th class="text-center"> </th>
+                                                            <th class="text-center"></th>
+                                                            <th class="text-center"><b>Opening Balance</b></th>
+                                                            <th class="text-center"><?php echo $this->view->escapeHtml($report['opb']); ?></th>
+                                                            <th class="text-center"></th>
+                                                        </tr>      
+                                                    <?php endif;?>    
+                                                       <?php if(isset($report['report'])):?>                                                      
+                                                        <?php $transactions = $report['report'];?>
+                                                         <?php $cashTotal = $report['cashTotal'];?>
+                                                        <?php $auctioneerCashTotal =  $report['auctioneerCashTotal'];?>
+                                                        <?php foreach ($transactions as $item): ?>
+                                                        <?php if(isset($item['tobank'])) { $item['bank'] = $item['tobank']; } ?>
+                                                        <tr>
+                                                            <td class="text-center"><?php echo $this->view->escapeHtml($item['transNo']); ?></td>
+                                                            <td class="text-center"><?php echo $this->view->escapeHtml($item['transDate']); ?></td>
+                                                            <td class="text-center"><?php echo $this->view->escapeHtml($item['name']); ?></td>
+                                                            <td class="text-center"><?php echo $this->view->escapeHtml($item['particulars']); ?></td>
+                                                            <td class="text-center"><?php if(isset($item['cash'])) { echo $this->view->escapeHtml($item['cash']); } else { echo "0"; }; ?></td>
+                                                            <td class="text-center"><?php if(isset($item['bank'])) { echo $this->view->escapeHtml($item['bank']); } else { echo "0"; } ?></td>   
+                                                            <td class="text-center"><?php if(isset($item['bycash'])) { echo $this->view->escapeHtml($item['bycash']); } else { echo "0"; } ?></td>  
+                                                            <td class="text-center"><?php if(isset($item['bybank'])) { echo $this->view->escapeHtml($item['bybank']); } else { echo "0"; } ?></td>  
+                                                        </tr>
+                                                        <?php endforeach; ?>  
+                                                        <tr>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"><b>Total</b></td>
+                                                            <td class="text-center"><b><?php if($cashTotal> 0) { echo $this->view->escapeHtml($cashTotal); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['bankTotal']> 0) { echo $this->view->escapeHtml($report['bankTotal']); }  ?></b></td> 
+                                                            <td class="text-center"><b><?php if($report['bycashTotal']> 0) { echo $this->view->escapeHtml($report['bycashTotal']); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['byBankTotal']> 0) { echo $this->view->escapeHtml($report['byBankTotal']); }  ?></b></td>
+                                                        </tr>
+                                                        <?php if($report['catchTotal']>0):?>
+                                                        <tr>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"><b>Catch Total</b></td>
+                                                            <td class="text-center"><b><?php if($report['catchTotal']> 0) { echo $this->view->escapeHtml($report['catchTotal']); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['bankTotal']> 0) { echo $this->view->escapeHtml($report['bankTotal']); }  ?></b></td> 
+                                                            <td class="text-center"><b><?php if($report['bycashTotal']> 0) { echo $this->view->escapeHtml($report['bycashTotal']); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['byBankTotal']> 0) { echo $this->view->escapeHtml($report['byBankTotal']); }  ?></b></td>
+                                                        </tr>
+                                                         <?php endif; ?>
+                                                         <?php if($report['memberAdvancePaid']>0):?>
+                                                        <tr>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"><b>Member Advance Total</b></td>
+                                                            <td class="text-center"><b><?php if($report['memberAdvancePaid']> 0) { echo $this->view->escapeHtml($report['memberAdvancePaid']); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['bankTotal']> 0) { echo $this->view->escapeHtml($report['bankTotal']); }  ?></b></td> 
+                                                            <td class="text-center"><b><?php if($report['bycashTotal']> 0) { echo $this->view->escapeHtml($report['bycashTotal']); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['byBankTotal']> 0) { echo $this->view->escapeHtml($report['byBankTotal']); }  ?></b></td>
+                                                        </tr>
+                                                         <?php endif; ?>
+                                                        <?php if($report['auctioneerCashTotal']>0):?>
+                                                        <tr>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"><b>Auctioneer Payment Total</b></td>
+                                                            <td class="text-center"><b><?php if($auctioneerCashTotal> 0) { echo $this->view->escapeHtml($auctioneerCashTotal); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['bankTotal']> 0) { echo $this->view->escapeHtml($report['bankTotal']); }  ?></b></td> 
+                                                            <td class="text-center"><b><?php if($report['bycashTotal']> 0) { echo $this->view->escapeHtml($report['bycashTotal']); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['byBankTotal']> 0) { echo $this->view->escapeHtml($report['byBankTotal']); }  ?></b></td>
+                                                        </tr>
+                                                         <?php endif; ?>
+                                                        <?php if($report['cashClosing']):?> 
+                                                        <tr>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"><b>Closing Balance</b></td>
+                                                            <td class="text-center"><b><?php echo $this->view->escapeHtml($report['cashClosing']); ?></b></td>
+                                                            <td class="text-center"></td> 
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                        </tr>
+                                                         <?php endif; ?>
+                                                         <?php if($report['bankClosing'] > 0):?> 
+                                                        <tr>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"><b>Closing Balance - Bank</b></td>
+                                                            <td class="text-center"><b><?php echo $this->view->escapeHtml($report['bankClosing']); ?></b></td>
+                                                            <td class="text-center"></td> 
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                        </tr>
+                                                         <?php endif; ?>
+                                                        <?php endif; ?>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif;
+                

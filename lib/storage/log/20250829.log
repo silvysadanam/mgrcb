@@ -1,0 +1,22 @@
+[10:45:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:46:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:46:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:46:29 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:46:29 IST] ERROR [2]: \lib\module\Backend\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[10:46:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[11:56:54 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 380 : syntax error, unexpected identifier "select", expecting "]"
+[20:54:55 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[21:37:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[21:46:41 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 59 : Class "Branch\Controller\CreateForm" not found
+[22:03:32 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 59 : Class "Branch\Controller\CreateForm" not found
+[22:03:35 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 59 : Class "Branch\Controller\CreateForm" not found
+[22:04:14 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 59 : Class "Branch\Controller\CreateForm" not found
+[22:06:51 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 56 : Class "Branch\Form\Opening\CreateForm" not found
+[22:07:27 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 56 : Undefined property: Branch\Controller\OpeningController::$_fmc_id
+[22:07:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 83 : Undefined variable $headId
+[22:10:01 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 83 : Undefined variable $headId
+[22:19:12 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 83 : Undefined variable $headId
+[22:20:09 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 83 : Undefined variable $headId
+[22:21:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 83 : Undefined variable $headId
+[22:21:43 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 83 : Undefined variable $headId
+[22:22:07 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 83 : Undefined variable $headId

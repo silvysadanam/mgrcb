@@ -1,0 +1,32 @@
+[19:33:31 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\print.phtml on line 5 : Call to a member function fmc() on null
+[19:33:43 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\print.phtml on line 6 : Call to a member function member() on null
+[19:33:45 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\print.phtml on line 6 : Call to a member function member() on null
+[19:47:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:47:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:47:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:47:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:47:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:49:44 IST] EXCEPTION: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php on line 221 : Class "Shared\Utility\HouseType" not found
+[19:59:11 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 229 : Class "Backend\Controller\Membership" not found
+[20:59:03 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 229 : Class "Backend\Controller\Membership" not found
+[20:59:20 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 229 : Class "Backend\Controller\Membership" not found
+[20:59:51 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 40 : Undefined variable $membership
+[20:59:51 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 40 : Call to a member function memberType() on null
+[21:10:02 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 4 : Call to a member function getValues() on null
+[21:10:20 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 3 : syntax error, unexpected token "="
+[21:10:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 4 : Undefined variable $beneficiary
+[21:10:30 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 4 : Call to a member function member() on null
+[21:11:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 4 : Undefined variable $beneficiary
+[21:11:00 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 4 : Call to a member function member() on null
+[21:11:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 19 : Undefined variable $member
+[21:11:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 19 : Attempt to read property "id" on null
+[21:11:30 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 51 : Call to undefined method stdClass::getEscapedValue()
+[21:12:01 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 5 : Undefined variable $beneficiary
+[21:12:01 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 5 : Call to a member function member() on null
+[21:12:18 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 52 : Call to undefined method Shared\Utility\BeneficiaryAccount::getEscapedValue()
+[21:12:49 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 52 : Call to undefined method Shared\Utility\BeneficiaryAccount::getEscapedValue()
+[21:13:20 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 61 : Call to undefined method Shared\Utility\BeneficiaryAccount::getEscapedValue()
+[21:15:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 20 : Undefined variable $member
+[21:15:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 20 : Attempt to read property "id" on null
+[21:15:23 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 52 : Call to undefined method stdClass::getEscapedValue()
+[21:15:46 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 52 : Call to undefined method stdClass::getEscapedValue()

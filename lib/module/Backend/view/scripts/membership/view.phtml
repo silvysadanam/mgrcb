@@ -1,0 +1,142 @@
+<?php
+
+$membership = $this->view->getVariable('membership');
+$fmc = $membership->fmc();
+$member = $membership->member();
+$yesOrNo = ['No', 'Yes'];
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Member &nbsp;
+                                        <a class="btn btn-sm btn-outline-primary" title="Edit" href="<?php
+                                        echo $this->view->actionUrl('membership/change/id/' . $member->id); ?>">Edit</a></h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>                                                     
+                                                       
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mobile</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->mobile); ?></td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>Address</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->address); ?>, <?php echo $this->view->escapeHtml($member->location); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Name of the Orthodox Parish of which you are a member</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->parish); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Aadhar Number</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->aadhar_number); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date of Birth</td>
+                                                            <td><?php echo $membership->dateOfBirth(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Age</td>
+                                                            <td><?php echo $membership->age(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Status</td>
+                                                            <td><?php if ($membership->active()) { ?>Active<?php } else { ?>Inactive<?php } ?></td>
+                                                        </tr>
+                                                        <?php if (! $membership->active()): ?>
+                                                        
+                                                        <tr>
+                                                            <td>Inactive from</td>
+                                                            <td>
+                                                                <?php echo $this->view->datepicker($member->inactive_date); ?><br>
+                                                                [<?php echo $this->view->escapeHtml($member->inactive_note); ?>]
+                                                            </td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Member Type</td>
+                                                            <td><?php echo $this->view->escapeHtml($membership->membershipType()); ?></td>
+                                                        </tr>
+                                                     
+                                                        <tr>
+                                                            <td>Land line with STD Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->landline); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>WhatsApp</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->whatsapp); ?></td>
+                                                        </tr>
+                                                       <tr>
+                                                            <td>PAN Number</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->pan_number); ?></td>
+                                                        </tr>     
+                                                        <tr>
+                                                            <td>Approved On</td>
+                                                            <td><?php echo $membership->approvedDate(); ?></td>
+                                                        </tr>    
+                                                         <tr>
+                                                            <td>location</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->location); ?></td>
+                                                        </tr> 
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Photo</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <?php $photo = $membership->photo(); ?>
+                                                            <?php if (! empty($photo)): ?>
+                                                            <?php echo $this->view->photo($photo); ?>
+                                                            <?php else: ?>
+                                                            
+                                                            <div class="alert">Photo not uploaded</div>
+                                                            <?php endif; ?>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

@@ -1,0 +1,98 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$auctionChit = $store->auctionChit();
+$fmc = $store->fmc();
+$member = $store->member();
+$id = $auctionChit->id;
+$title = [
+    $fmc->code, '-', $id, '-', $this->view->formatDateTime('d-m-Y', $auctionChit->auction_date),
+    '-', $member->code, $member->name,
+];
+
+$balanceReceived = $auctionChit->deduction_balance;
+
+$filtered = $store->filtered();
+$style = 'print-deduction-bill-a5';
+if ($this->view->getVariable('size') > 0) {
+    $style = 'print-deduction-bill-a4';
+}
+
+?><!DOCTYPE html>
+<html lang="ml" dir="ltr">
+<head>
+    <title>Deduction Bill - <?php echo $this->view->escapeHtml(implode(' ', $title)); ?></title>
+    <?php $this->block($style); ?>
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 210mm;  /* landscape height */
+            width: 297mm;   /* landscape width */
+        }
+
+        .page {
+            width: 297mm;
+            height: 210mm;
+            display: flex;
+            flex-direction: row;   /* side by side */
+            page-break-before: avoid;
+            page-break-after: avoid;
+            page-break-inside: avoid;
+        }
+
+        .half-page {
+            width: 50%;     
+            height: 100%;   /* full page height */
+            padding: 8mm;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bill-wrapper {
+            flex: 1;  /* stretch to equal height */
+            display: flex;
+        }
+
+        .bill-table {
+            width: 100%;
+            border-collapse: collapse;
+            height: 100%;   /* force full height */
+        }
+
+        @media print {
+            .half-page:not(:last-child) {
+                border-right: 1px dashed #000; /* vertical separator */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="half-page">
+            <div class="bill-wrapper">
+                <table class="bill-table" cellpadding="2" cellspacing="0" border="0">
+                    <?php include 'receipt-template.php'; ?>
+                </table>
+            </div>
+        </div>
+
+        <div class="half-page">
+            <div class="bill-wrapper">
+                <table class="bill-table" cellpadding="2" cellspacing="0" border="0">
+                    <?php include 'receipt-template.php'; ?>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <?php $this->block('print-button'); ?>
+</body>
+</html>

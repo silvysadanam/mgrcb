@@ -1,0 +1,165 @@
+[17:46:49 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 560 : Class "Backend\Controller\LoanTotalReport" not found
+[19:19:20 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 574 : syntax error, unexpected variable "$this", expecting "function" or "const"
+[19:25:56 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 576 : syntax error, unexpected variable "$this", expecting "function" or "const"
+[19:25:57 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 576 : syntax error, unexpected variable "$this", expecting "function" or "const"
+[19:26:30 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 562 : Class "Backend\Controller\MemberReport" not found
+[19:26:39 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 562 : Class "Backend\Controller\MemberReport" not found
+[19:27:06 IST] EXCEPTION: \lib\shared\Shared\src\Utility\MemberReport.php on line 118 : Class "Shared\Utility\LoanSummary" not found
+[19:27:26 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 434 : Too few arguments to function Backend\Controller\MembershipController::_breadcrumb(), 0 passed in C:\laragon\www\mgrcb\lib\module\Backend\src\Controller\MembershipController.php on line 577 and exactly 1 expected
+[19:30:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 27 : Undefined variable $branchManager
+[19:30:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 89 : Undefined array key "total"
+[19:30:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 89 : Trying to access array offset on value of type null
+[19:31:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 27 : Undefined variable $branchManager
+[19:31:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 89 : Undefined array key "total"
+[19:31:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 89 : Trying to access array offset on value of type null
+[19:34:32 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 28 : Undefined variable $filters
+[19:34:32 IST] EXCEPTION: \lib\module\Backend\view\scripts\membership\filter.phtml on line 28 : Call to a member function getValue() on null
+[19:35:53 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 28 : Undefined variable $filters
+[19:35:53 IST] EXCEPTION: \lib\module\Backend\view\scripts\membership\filter.phtml on line 28 : Call to a member function getValue() on null
+[19:35:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 28 : Undefined variable $filters
+[19:35:54 IST] EXCEPTION: \lib\module\Backend\view\scripts\membership\filter.phtml on line 28 : Call to a member function getValue() on null
+[19:36:24 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 28 : Undefined variable $filters
+[19:36:24 IST] EXCEPTION: \lib\module\Backend\view\scripts\membership\filter.phtml on line 28 : Call to a member function getValue() on null
+[19:37:28 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 28 : Undefined variable $filters
+[19:37:28 IST] EXCEPTION: \lib\module\Backend\view\scripts\membership\filter.phtml on line 28 : Call to a member function getValue() on null
+[19:41:02 IST] EXCEPTION: \lib\module\Backend\view\scripts\membership\filter.phtml on line 28 : Call to a member function getValue() on null
+[19:49:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:49:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:51:26 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:51:26 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:51:27 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:51:27 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:51:29 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:51:29 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:52:08 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:52:08 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:52:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 99 : Undefined array key "total"
+[19:52:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 99 : Trying to access array offset on value of type null
+[19:53:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:53:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:55:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 88 : Undefined array key "total"
+[19:55:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 88 : Trying to access array offset on value of type null
+[19:56:29 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 85 : Undefined array key "total"
+[19:56:29 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 85 : Trying to access array offset on value of type null
+[19:57:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:57:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:58:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:58:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:58:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:58:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:58:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:58:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:59:18 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:59:18 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[19:59:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[19:59:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:07:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:07:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:17:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:17:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:18:01 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:18:01 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:40:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:40:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:41:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:41:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:41:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:41:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:43:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:43:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:43:18 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:43:18 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:43:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:43:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:43:29 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 519 : Undefined array key "fmc_id"
+[20:43:29 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 526 : Undefined array key "start_date"
+[20:43:29 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 526 : Undefined variable $minDate
+[20:43:29 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 530 : Undefined array key "end_date"
+[20:43:29 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 531 : Undefined array key "end_date"
+[20:43:29 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[20:43:29 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 540 : Undefined array key "source"
+[20:43:29 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 544 : Undefined array key "type"
+[20:43:29 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:43:29 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:43:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:43:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:43:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:43:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:44:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:44:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:46:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:46:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:55:14 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 519 : Undefined array key "fmc_id"
+[20:55:14 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 526 : Undefined array key "start_date"
+[20:55:14 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 526 : Undefined variable $minDate
+[20:55:14 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 530 : Undefined array key "end_date"
+[20:55:14 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 531 : Undefined array key "end_date"
+[20:55:14 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[20:55:14 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 540 : Undefined array key "source"
+[20:55:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:55:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:55:18 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 519 : Undefined array key "fmc_id"
+[20:55:18 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 526 : Undefined array key "start_date"
+[20:55:18 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 526 : Undefined variable $minDate
+[20:55:18 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 530 : Undefined array key "end_date"
+[20:55:18 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 531 : Undefined array key "end_date"
+[20:55:18 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[20:55:18 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 540 : Undefined array key "source"
+[20:55:18 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:55:18 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:55:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:55:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:55:26 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 519 : Undefined array key "fmc_id"
+[20:55:26 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 526 : Undefined array key "start_date"
+[20:55:26 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 526 : Undefined variable $minDate
+[20:55:26 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 530 : Undefined array key "end_date"
+[20:55:26 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 531 : Undefined array key "end_date"
+[20:55:26 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[20:55:26 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 540 : Undefined array key "source"
+[20:55:26 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:55:26 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:55:28 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:55:28 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:55:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:55:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[20:58:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[20:58:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[21:40:18 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 564 : syntax error, unexpected variable "$this"
+[21:47:32 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 536 : Undefined variable $defaultFmc
+[21:47:32 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[21:47:32 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[22:00:34 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[22:00:34 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[22:05:38 IST] EXCEPTION: \lib\module\Backend\src\Form\Membership\SearchForm.php on line 76 : Call to a member function mobile() on null
+[22:08:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[22:08:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[22:08:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[22:08:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[22:09:55 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 562 : syntax error, unexpected token "*"
+[22:10:09 IST] ERROR [2]: \lib\shared\Shared\src\Utility\MemberReport.php line 217 : Undefined array key "total"
+[22:10:09 IST] ERROR [2]: \lib\shared\Shared\src\Utility\MemberReport.php line 217 : Trying to access array offset on value of type null
+[22:10:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[22:10:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[22:12:23 IST] ERROR [2]: \lib\shared\Shared\src\Utility\MemberReport.php line 217 : Undefined array key "total"
+[22:12:23 IST] ERROR [2]: \lib\shared\Shared\src\Utility\MemberReport.php line 217 : Trying to access array offset on value of type null
+[22:12:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[22:12:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[22:13:14 IST] ERROR [2]: \lib\shared\Shared\src\Utility\MemberReport.php line 217 : Undefined array key "total"
+[22:13:14 IST] ERROR [2]: \lib\shared\Shared\src\Utility\MemberReport.php line 217 : Trying to access array offset on value of type null
+[22:13:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[22:13:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[22:14:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[22:14:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[22:18:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Undefined array key "total"
+[22:18:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 91 : Trying to access array offset on value of type null
+[22:18:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 121 : foreach() argument must be of type array|object, bool given
+[22:19:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 121 : foreach() argument must be of type array|object, bool given
+[22:27:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 121 : foreach() argument must be of type array|object, null given
+[22:27:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 121 : foreach() argument must be of type array|object, null given
+[22:29:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 130 : Undefined property: stdClass::$parish
+[22:29:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 130 : Undefined property: stdClass::$parish
+[22:29:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 130 : Undefined property: stdClass::$parish
+[22:29:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 130 : Undefined property: stdClass::$parish
+[22:29:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 130 : Undefined property: stdClass::$parish
+[22:29:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 130 : Undefined property: stdClass::$parish
+[22:29:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\membership\filter.phtml line 130 : Undefined property: stdClass::$parish

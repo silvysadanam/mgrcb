@@ -1,0 +1,411 @@
+<?php
+
+$beneficiary = $this->view->getVariable('beneficiary');
+
+//$fmc    = $beneficiary->fmc();
+$member = $beneficiary->member();
+
+?>
+
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+
+    <title>
+        Beneficiary - <?php echo $this->view->escapeHtml($member->name); ?>
+    </title>
+
+    <?php $this->block('print-auction'); ?>
+
+</head>
+
+<body>
+
+<table cellpadding="5"
+       cellspacing="0"
+       border="0"
+       style="margin:10px 10px 5px 0;"
+       width="800">
+
+    <thead>
+
+        <tr>
+            <th class="main-heading center" colspan="2">
+                Mar Gregorios Rehabilitation Centre For The Blind
+            </th>
+        </tr>
+
+        <tr>
+            <th colspan="2" class="center">
+                BENEFICIARY DETAILS
+            </th>
+        </tr>
+
+    </thead>
+
+
+    <tbody>
+
+        <!-- Basic Details -->
+
+        <tr>
+            <td width="50%">
+                <strong>Name:</strong>
+                <?php echo $this->view->escapeHtml($member->name); ?>
+            </td>
+
+            <td>
+                <strong>Panchayath:</strong>
+                <?php echo $this->view->escapeHtml($member->panchayath); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>Address:</strong>
+                <?php echo $this->view->escapeHtml($member->address); ?>
+            </td>
+
+            <td>
+                <strong>Gender:</strong>
+                <?php echo $this->view->escapeHtml($member->gender); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>Education:</strong>
+                <?php echo $this->view->escapeHtml($member->beducation); ?>
+            </td>
+
+            <td>
+                <strong>Date of Birth:</strong>
+                <?php echo $beneficiary->dateOfBirth(); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>Monthly Income:</strong>
+                <?php echo $this->view->escapeHtml($member->monthly_income); ?>
+            </td>
+
+            <td>
+                <strong>Ration Card:</strong>
+                <?php echo $this->view->escapeHtml($member->ration_card); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>Mobile:</strong>
+                <?php echo $this->view->escapeHtml($member->mobile); ?>
+            </td>
+
+            <td>
+                <strong>Aadhar Number:</strong>
+                <?php echo $this->view->escapeHtml($member->aadhar_number); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>House Type:</strong>
+                <?php echo $beneficiary->houseType(); ?>
+            </td>
+
+            <td>
+                <strong>Rent Amount:</strong>
+                <?php echo $this->view->escapeHtml($member->rented_amount); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>House Ownership:</strong>
+                <?php echo $beneficiary->houseOwnership(); ?>
+            </td>
+
+            <td>
+                <strong>Total Land Area:</strong>
+                <?php echo $this->view->escapeHtml($member->land_area); ?>
+            </td>
+        </tr>
+
+
+        <!-- Disability Details -->
+
+        <tr>
+            <td colspan="2">
+                <strong>DISABILITY DETAILS</strong>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>Year Disability Occurred:</strong>
+                <?php echo $this->view->escapeHtml($member->disability_occurred); ?>
+            </td>
+
+            <td>
+                <strong>Cause of Disability:</strong>
+                <?php echo $beneficiary->disabilityTypes(); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2">
+                <strong>Description of Disease / Disability:</strong><br>
+                <?php echo $this->view->escapeHtml($member->disability); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>Medical Examination Date:</strong>
+                <?php echo $beneficiary->dateOfMedicalExam(); ?>
+            </td>
+
+            <td>
+                <strong>Various Pensions Received:</strong>
+                <?php echo $this->view->escapeHtml($member->pensions); ?>
+            </td>
+        </tr>
+
+
+        <!-- Rehabilitation Details -->
+
+        <tr>
+            <td colspan="2">
+                <strong>REHABILITATION DETAILS</strong>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>Community Worker:</strong>
+                <?php echo $this->view->escapeHtml($member->worker_name); ?>
+            </td>
+
+            <td>
+                <strong>Proposed Date:</strong>
+                <?php echo $beneficiary->proposedDate(); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2">
+                <strong>Recommendation of Committee Member:</strong><br>
+                <?php echo $this->view->escapeHtml($member->worker_opinion); ?>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <strong>Approved Date:</strong>
+                <?php echo $beneficiary->approvedDate(); ?>
+            </td>
+
+            <td>
+                <strong>Status:</strong>
+                <?php echo $beneficiary->active() ? 'Active' : 'Inactive'; ?>
+            </td>
+        </tr>
+
+
+        <!-- Family Details -->
+
+        <tr>
+            <td colspan="2">
+                <strong>FAMILY DETAILS</strong>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+
+                <table cellpadding="4"
+                       cellspacing="0"
+                       border="1"
+                       width="100%">
+
+                    <thead>
+
+                        <tr>
+                            <th width="6%">Sl.</th>
+                            <th>Name</th>
+                            <th>Relation</th>
+                            <th>Category</th>
+                            <th>Age</th>
+                            <th>Education</th>
+                            <th>Disability</th>
+                            <th>Occupation</th>
+                            <th>Income</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <?php foreach ($beneficiary->entries() as $item): ?>
+
+                        <tr>
+
+                            <td class="center">
+                                <?php echo $this->view->counter(); ?>
+                            </td>
+
+                            <td>
+                                <?php echo $this->view->escapeHtml($item->family_name); ?>
+                            </td>
+
+                            <td>
+                                <?php echo $this->view->escapeHtml($item->family_relation); ?>
+                            </td>
+
+                            <td>
+                                <?php echo $this->view->escapeHtml($item->family_category); ?>
+                            </td>
+
+                            <td class="center">
+                                <?php echo $this->view->escapeHtml($item->family_age); ?>
+                            </td>
+
+                            <td>
+                                <?php echo $this->view->escapeHtml($item->family_education); ?>
+                            </td>
+
+                            <td>
+                                <?php echo $this->view->escapeHtml($item->family_disability); ?>
+                            </td>
+
+                            <td>
+                                <?php echo $this->view->escapeHtml($item->family_occupation); ?>
+                            </td>
+
+                            <td class="right">
+                                <?php echo $this->view->escapeHtml($item->family_income); ?>
+                            </td>
+
+                        </tr>
+
+                        <?php endforeach; ?>
+
+                    </tbody>
+
+                </table>
+
+            </td>
+        </tr>
+
+
+        <!-- Photo -->
+
+        <?php $photo = $beneficiary->photo(); ?>
+
+        <?php if (!empty($photo)): ?>
+
+        <tr>
+
+            <td colspan="2">
+
+                <strong>PHOTO</strong><br><br>
+
+                <?php echo $this->view->photo($photo); ?>
+
+            </td>
+
+        </tr>
+
+        <?php endif; ?>
+
+
+        <!-- Documents -->
+
+        <?php $documents = $beneficiary->documents(); ?>
+
+        <?php if (!empty($documents)): ?>
+
+        <tr>
+
+            <td colspan="2">
+
+                <strong>DOCUMENTS</strong>
+
+                <table cellpadding="4"
+                       cellspacing="0"
+                       border="1"
+                       width="100%"
+                       style="margin-top:5px;">
+
+                    <thead>
+
+                        <tr>
+                            <th>Document Type</th>
+                            <th>Description</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <?php foreach ($documents as $document): ?>
+
+                        <tr>
+
+                            <td>
+                                <?php
+                                echo $this->view->lookup(
+                                    'documentType',
+                                    $document->document_type_id
+                                );
+                                ?>
+                            </td>
+
+                            <td>
+                                <?php
+                                echo $this->view->escapeHtml(
+                                    $document->description
+                                );
+                                ?>
+                            </td>
+
+                        </tr>
+
+                        <?php endforeach; ?>
+
+                    </tbody>
+
+                </table>
+
+            </td>
+
+        </tr>
+
+        <?php endif; ?>
+
+
+    </tbody>
+
+</table>
+
+
+<?php $this->block('print-button'); ?>
+
+
+</body>
+
+</html>

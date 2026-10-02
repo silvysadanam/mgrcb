@@ -1,0 +1,71 @@
+<?php
+
+?>
+
+        <div class="modal fade" id="modal-loan" tabindex="-1" role="dialog" aria-labelledby="myModalLabelLoan" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="myModalLabelLoan"> 
+                            New Loans
+                        </h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>FMC</th>
+                                            <th>Month</th>
+                                            <th>Source</th>
+                                            <th>Type</th>
+                                            <th>Loans</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td id="summary-fmc"></td>
+                                            <td id="summary-month"></td>
+                                            <td id="summary-source"></td>
+                                            <td id="summary-type"></td>
+                                            <td id="summary-loans"></td>
+                                            <td id="summary-amount"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Member</th>
+                                            <th>Date</th>
+                                            <th>Amount</th>
+                                            <th>Source</th>
+                                            <th>Type</th>
+                                            <th>Loan A/c</th>
+                                            <th>View</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="loans-block">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="summary-url" value="<?php echo $this->view->actionUrl('new-loan/summary'); ?>">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>

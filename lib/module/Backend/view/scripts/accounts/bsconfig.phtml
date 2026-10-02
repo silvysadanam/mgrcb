@@ -1,0 +1,66 @@
+<?php
+
+$fmcList = $this->view->getVariable('fmc');
+$heads = $this->view->getVariable('heads');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Manage Balance Sheet Heads
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th>Sl. No.</th>
+                                                        <th>FMC</th>
+                                                        <th>Status</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($fmcList as $fmcId => $name): ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($name); ?></td>
+                                                        <td>
+                                                            <?php if (in_array($fmcId, $heads)): ?>
+                                                            Configured
+                                                            <?php else: ?>
+                                                            Not set
+                                                            <?php endif; ?>
+                                                            
+                                                        </td>
+                                                        <td>
+                                                            <?php if (in_array($fmcId, $heads)): ?>
+                                                            
+                                                            <a class="btn btn-info btn-sm" title="View" href="<?php
+                                                            echo $this->view->actionUrl('accounts/bsview/id/' . $fmcId); ?>"><i class="ft-eye"></i> View</a>
+                                                            <?php else: ?>
+                                                            <a class="btn btn-info btn-sm" title="Configure" href="<?php
+                                                            echo $this->view->actionUrl('accounts/bscreate/id/' . $fmcId); ?>"><i class="ft-eye"></i> Configure</a>
+                                                            <?php endif; ?>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </section>
+            

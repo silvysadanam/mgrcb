@@ -1,0 +1,139 @@
+<?php
+
+$form = $this->getForm();
+
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$entry = $store->entry();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">CURRENT INSTLMNT DCB</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>Member</th>
+                                                            <th>Code</th>
+                                                            <th>Type</th>
+                                                            <th>Source</th>
+                                                            <th>Loan Amount</th>
+                                                            <th>EMI</th>
+                                                            <th>Date</th>
+                                                            <th>Loan A/C</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                                            <td><?php echo $this->view->integer($loan->loan_amount); ?></td>
+                                                            <td><?php echo $this->view->integer($loan->emi); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($loan->account_number); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <?php if ($entry->instalment == $loan->tenure): ?>
+                                        
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="alert alert-warning">
+                                                    To close the loan on tenure end without delinquency, 
+                                                    please use the CLOSE LOAN option in View Loan page.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                        
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="alert alert-danger" id="validation-message" style="display:none;">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <form class="form form-horizontal" name="form-data-entry" id="form-data-entry" method="post" action="" autocomplete="off">
+                                                    <div class="form-body">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <table class="table table-striped table-bordered" id="list-table-7">
+                                                                    <thead class="bg-blue-grey white">
+                                                                        <tr>
+                                                                            <th>Crnt Ins</th>
+                                                                            <th>Date</th>
+                                                                            <th>LR</th>
+                                                                            <th>Catch</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="instalment"><?php echo $entry->instalment; ?></td>
+                                                                            <td><?php echo $this->view->datepicker($entry->instalment_date); ?></td>
+                                                                            <td>
+                                                                                <input type="text" name="repayment" class="form-control input-sm number-decimal repayment" value="<?php
+                                                                                echo $form->getEscapedValue('repayment'); ?>" placeholder="LR" required="required" maxlength="10">
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="number" name="catch" class="form-control input-sm catch" value="<?php 
+                                                                                echo $form->getEscapedValue('catch'); ?>" placeholder="Catch" required="required" min="0" step="1" max="10000000">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="4">
+                                                                                <div class="form-group">
+                                                                                    <label class="label-control" for="note">Notes</label>
+                                                                                    <textarea name="note" id="note" class="form-control" placeholder="Notes"><?php 
+                                                                                    echo $form->getEscapedValue('note'); ?></textarea>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p class="help-block"><em>Instructions</em></p>
+                                                                <p class="help-block">Enter "0" (ZERO) for NO-Payment instalment</p>
+                                                                <p class="help-block">Instalment entry cannot be modified after submit</p>
+                                                                <p class="help-block">LR should not exceed total outstanding amount</p>
+                                                                <p class="help-block">LR and Catch fields are mandatory</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-actions center">
+                                                        <?php echo $form->getCsrf(); ?>
+                                                         <input type="hidden" id="dcbPaymentMode" name="dcbPaymentMode" value="current_installment">
+                                                         <a class="btn btn-outline-secondary mr-1" title="CANCEL" href="<?php 
+                                                         echo $this->view->actionUrl('modify-dcb/view/id/' . $loan->id); ?>"><i class="ft-rewind"></i> CANCEL</a>
+                                                        <button type="submit" class="btn btn-primary" title="CONFIRM"><i class="ft-save"></i> CONFIRM</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

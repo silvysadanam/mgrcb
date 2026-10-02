@@ -1,0 +1,101 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Withdrawals
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-withdrawal" class="form-horizontal" id="form-withdrawal" method="get" action="<?php
+                                        echo $this->view->actionUrl('withdrawal/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">Date &raquo; </div>
+                                                    <input type="text" name="date" id="withdrawal-date" class="form-control single-date-clearable" data-min-date="01/04/2022" data-max-date="<?php
+                                                    echo $this->view->getVariable('maxDate'); ?>" readonly="readonly" value="<?php
+                                                    echo $filters->getEscapedValue('date'); ?>">
+                                                    <div class="input-group-addon"> &laquo; [<a href="javascript:;" class="clear-date" data-target="withdrawal-date" title="Clear Date">Clear</a>]</div>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Member &raquo; </div>
+                                                    <select name="member" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('member'), $filters->getValue('member')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Deduction Type &raquo; </div>
+                                                    <select name="type" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('deductionType'), $filters->getValue('type')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-5">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">Sl. No.</th>
+                                                        <th class="cursor-pointer">Date</th>
+                                                        <th class="cursor-pointer">Member</th>
+                                                        <th class="cursor-pointer">Deduction Type</th>
+                                                        <th class="cursor-pointer">Amount</th>
+                                                        <th>
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td data-sort="<?php echo $this->view->timestamp($row->withdrawal_date); ?>"><?php echo $this->view->datepicker($row->withdrawal_date); ?></td>
+                                                        <td>
+                                                            <?php echo $this->view->lookup('member_code', $row->member_id); ?>
+                                                            <?php echo $this->view->lookup('member_name', $row->member_id); ?>
+                                                        
+                                                        </td>
+                                                        <td><?php echo $this->view->lookup('deductionType', $row->deduction_type_id); ?></td>
+                                                        <td><?php echo $row->withdrawal_amount; ?></td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('withdrawal/view/id/' . $row->id); ?>" title="View"><i class="ft-eye"></i> View</a>
+                   
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

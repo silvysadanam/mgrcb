@@ -1,0 +1,11 @@
+[12:28:41 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[15:02:27 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[15:02:27 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[15:02:27 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[15:02:27 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[15:02:27 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : Call to a member function query() on null
+[15:02:31 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[15:02:31 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[15:02:31 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[15:02:31 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[15:02:31 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : Call to a member function query() on null

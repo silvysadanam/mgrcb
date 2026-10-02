@@ -1,0 +1,896 @@
+<?php
+/**
+ * Branch Deduction Report Utility
+ * 
+ * @category Branch
+ * @package  Branch\Utility
+ */
+
+namespace Branch\Utility;
+use Model\{RPTransMember, RPTransMemberDetails, RPTransactionDetails, RPHeads, RPBSHeads, Member};
+use Model\DeductionMemberDaily;
+use Shared\Utility\ReportHelper;
+use Web\Utility\DateHelper;
+use Model\DeductionType;
+
+class BSReport
+{
+    /**
+     * 
+     * @var \Branch\Utility\BranchStore
+     */
+    private $_branch;
+    
+    /**
+     *
+     * @var \Model\DeductionMemberDaily 
+     */
+    private $_model;
+
+    /**
+     * 
+     * @var \Web\Database\Sql
+     */
+    private $_sql;
+    
+    /**
+     * 
+     * @var string
+     */
+    private $_startDate = '';
+    
+    /**
+     * 
+     * @var string
+     */
+    private $_endDate = '';
+    
+    /**
+     * 
+     * @var int
+     */
+    private $_groupId = 0;
+    private $_membTrans;
+    private $_headModel;
+    private $_transactionModel;
+    /**
+     * 
+     * @var array
+     */
+    private $_report = [];
+    
+    public function __construct($branch)
+    {
+        $this->_branch = $branch;
+        $this->_model = new RPTransMember();
+        $this->_membTrans = new RPTransMemberDetails();
+        $this->_headModel = new RPHeads();
+        $this->_bsHeadModel = new RPBSHeads();
+        $this->_transactionModel = new RPTransactionDetails();
+        $this->_sql = $this->_model->getSql();
+        $this->_member = new Member();
+    }
+    
+    /**
+     * set start date
+     * @param string $date
+     * @return $this
+     */
+    public function setStartDate($date)
+    {
+        $this->_startDate = $date;
+        return $this;
+    }
+    
+    /**
+     * set emd date
+     * 
+     * @param string $date
+     * @return $this
+     */
+    public function setEndDate($date)
+    {
+        $this->_endDate = $date;
+        return $this;
+    }
+    
+   
+    /**
+     * get report
+     * 
+     * @return array
+     */
+    public function report()
+    {
+        return $this->_report;
+    }
+    
+    /**
+     * run report
+     * 
+     * @return boolean
+     */
+    public function run()
+    {
+        $this->_preload();
+        $this->_loadReport();
+       // if (0 == $this->_report['total']) {
+       //     return false;
+       // }
+        $this->_report['total'] = 1;
+        return true;
+    }
+    
+    private function _loadReport()
+    {
+        $this->_sql->clear();
+        $fmc_id = $this->_branch->id();
+        $catchOpening = 0;
+        $catchOpeningTotal = 0;
+        $totalMemberPayments = 0;
+        $memberAdvanceSum =0;
+        $donorOutStandingOpening =0;
+        $donorCollectionPayment = 0;
+        $donorCollectionPaymentTotal= 0;
+        $totalAssetsBalance = 0;
+        $totalFMCLoanAmount = 0;
+        $fmcLoanOpening = 0;
+        $donorAssets =0;
+        $fmcLoanReceipt = 0;
+        $fmcLoanReceiptTotal = 0;
+        $fmcAdvReceipt = 0;
+        $fmcAdvOpening = 0;
+        $fmcAdvTotals = 0;
+        $fmcOpening =0;
+        $fmcAssetsTotals =0;
+        $fmcReceiptTotal =0;
+        $liquidated = 0;
+        $currentYearLiability = 0;
+        $refundedLiability = 0;
+        $currentYearTotalLiability = 0;
+        ///
+        $bankOpening = [];
+        $bankClosing = [];
+        $assetsItems = [];
+        $liablilityItems = [];
+        $this->_report['opb'] = 0;
+        $this->_report['report'] = [];
+        $bankTransTotal = [];
+        $cashTotal = 0;
+        $reportTotal = 0;
+        $cashTransTotal = [];
+        $cashPaymentTotal = 0;
+        $receiptBankTotal = 0;
+        $cashClosing = 0;
+        $byBankTotal = 0;
+        $bycashTotal = 0;
+        $bankTotal = 0;
+        $bankClosing = 0 ;
+        $toBankPaymentTotal = 0;
+        $getMemberReceipts = [];
+        $paymentTotal = 0;
+        $cashReciptTotal = 0;
+        $fmcAdvReceiptTotal = 0;
+        $x = 0;
+        $matchingHeadId = 0;
+        $catchTotal =0;
+        $memberAdvancePaid = 0;
+        $month = date("F", strtotime($this->_endDate));
+        $year = date('Y', strtotime($this->_endDate));
+             
+        
+        $headsQuery = "select * from " . $this->_bsHeadModel->getTableQuoted()." where TransType in ('Assets','Liability') and status='N' and fmc_id = {$fmc_id} order by id";
+        $BSHeads = $this->_bsHeadModel->queryRows($headsQuery);
+        $liabilityCount = 0;
+        $assetsCount = 0;
+        foreach($BSHeads as $bs_item){
+            $headSum = 0;
+            $y = 0;
+            $monthTotal = 0;
+            $cumulativeTotal = 0;
+             if($bs_item->code === 'FWS_loan_repayment'){
+                $headsQuery = "select * from " . $this->_headModel->getTableQuoted()." where code ='liquidated_assets' and fmc_id = {$fmc_id} order by head_name";
+                $fmcPaymentHeads = $this->_bsHeadModel->queryRows($headsQuery);
+                foreach($fmcPaymentHeads as $item){
+                     $headSum = $this->getPaymentyHeadID($item->id);
+                     $refundedLiability += $headSum; 
+                }
+                //get fixed assets transactions
+                $headsQuery = "select * from " . $this->_headModel->getTableQuoted()." where code ='fixed_assets' and fmc_id = {$fmc_id} order by head_name";
+                $receiptHeads = $this->_headModel->queryRows($headsQuery);
+                foreach($receiptHeads as $item){
+                     $fmcReceipt = $this->getPaymentyHeadID($item->id);  
+                     $currentYearLiability += $fmcReceipt;
+                }
+
+                $y = 0;
+                $fmcOpening = $bs_item->opb;
+                $currentYearTotalLiability = $currentYearLiability + $fmcOpening;
+             
+                $this->_report['report'][$x]['liability'][$y]['head_name'] =  $bs_item->head_name;
+                $this->_report['report'][$x]['liability'][$y]['opening'] = $fmcOpening;
+                $this->_report['report'][$x]['liability'][$y]['assets_total'] = ''; 
+                $this->_report['report'][$x]['liability'][$y]['assets_balance'] = ''; 
+                $y++;
+                $this->_report['report'][$x]['liability'][$y]['head_name'] = 'Add Current Year';
+                $this->_report['report'][$x]['liability'][$y]['opening'] = '';
+                $this->_report['report'][$x]['liability'][$y]['assets_total'] = $currentYearLiability; 
+                $this->_report['report'][$x]['liability'][$y]['assets_balance'] = ''; 
+                $y++;
+                $this->_report['report'][$x]['liability'][$y]['head_name'] = 'Less Current Year';
+                $this->_report['report'][$x]['liability'][$y]['opening'] = '';
+                $this->_report['report'][$x]['liability'][$y]['assets_total'] = $refundedLiability ; 
+                $this->_report['report'][$x]['liability'][$y]['assets_balance'] = $currentYearTotalLiability - $refundedLiability; 
+                $x++;
+             }
+                 
+            //FMC Loan Repayable
+           //get FMC loan payment transactions
+            if($bs_item->code === 'FMC_Loan_rep'){
+                $loanHeadsQuery = "select * from " . $this->_headModel->getTableQuoted()." where code in ('relief', 'personal', 'thattumady', 'production', 'labour') and fmc_id = {$fmc_id} order by head_name";
+                $fmcLoanHeads = $this->_bsHeadModel->queryRows($loanHeadsQuery);
+                foreach($fmcLoanHeads as $item){
+                     $headSum = $this->getPaymentyHeadID($item->id);
+                     $totalFMCLoanAmount += $headSum; 
+                     $fmcLoanReceipt = $this->getSumByHeadID($item->id);  
+                     $fmcLoanReceiptTotal += $fmcLoanReceipt;
+                }
+                //get FMC loan receipt transactions
+                $loanRHeadsQuery = "select * from " . $this->_headModel->getTableQuoted()." where code in ('DCB_re_finance', 'fmc_loan', 'relief_loan', 'production_loan') and fmc_id = {$fmc_id} order by head_name";
+                $fmcLoanRHeads = $this->_headModel->queryRows($loanRHeadsQuery);
+                foreach($fmcLoanRHeads as $item){
+                     $fmcLoanReceipt = $this->getSumByHeadID($item->id);  
+                     $fmcLoanReceiptTotal += $fmcLoanReceipt;
+                }
+
+                $y = 0;
+                $fmcLoanOpening = $bs_item->opb;
+                $fmcLoanTotals = $totalFMCLoanAmount + $fmcLoanOpening;               
+
+                $this->_report['report'][$x]['assets'][$y]['head_name'] =  $bs_item->head_name;
+                $this->_report['report'][$x]['assets'][$y]['opening'] = $fmcLoanOpening;
+                $this->_report['report'][$x]['assets'][$y]['assets_total'] = ''; 
+                $this->_report['report'][$x]['assets'][$y]['assets_balance'] = ''; 
+                $y++;
+                $this->_report['report'][$x]['assets'][$y]['head_name'] = 'Loans disbursed this year';
+                $this->_report['report'][$x]['assets'][$y]['opening'] = '';
+                $this->_report['report'][$x]['assets'][$y]['assets_total'] = $totalFMCLoanAmount; 
+                $this->_report['report'][$x]['assets'][$y]['assets_balance'] = ''; 
+                $y++;
+                $this->_report['report'][$x]['assets'][$y]['head_name'] = 'Repayment by members';
+                $this->_report['report'][$x]['assets'][$y]['opening'] = '';
+                $this->_report['report'][$x]['assets'][$y]['assets_total'] = $fmcLoanReceiptTotal ; 
+                $this->_report['report'][$x]['assets'][$y]['assets_balance'] = $fmcLoanTotals - $fmcLoanReceiptTotal; 
+                $x++;
+            }
+         else if($bs_item->code === 'FMC_Advance'){
+                //Advance paid 
+                $fmcAdvancePaid = 0;
+                //get FMC advance receipt transactions
+                $loanFHeadsQuery = "select * from " . $this->_headModel->getTableQuoted()." where code ='inc_FMC_Advance' and fmc_id = {$fmc_id} order by head_name";
+                $fmcLoanFHeads = $this->_bsHeadModel->queryRows($loanFHeadsQuery);
+                foreach($fmcLoanFHeads as $item){
+                     $fmcAdvReceipt = $this->getSumByHeadID($item->id);  
+                     $fmcAdvReceiptTotal += $fmcAdvReceipt;
+                }
+                $fmcAdvOpening = $bs_item->opb;
+                $y = 0;
+                $fmcAdvTotals = $fmcAdvancePaid + $fmcAdvOpening;
+                $this->_report['report'][$x]['assets'][$y]['head_name'] = 'Advance paid';
+                $this->_report['report'][$x]['assets'][$y]['opening'] = $fmcAdvOpening;
+                $this->_report['report'][$x]['assets'][$y]['assets_total'] = ''; 
+                $this->_report['report'][$x]['assets'][$y]['assets_balance'] = ''; 
+                $y++;
+                $this->_report['report'][$x]['assets'][$y]['head_name'] = 'Advance disbursed this year';
+                $this->_report['report'][$x]['assets'][$y]['opening'] = '';
+                $this->_report['report'][$x]['assets'][$y]['assets_total'] = $fmcAdvancePaid; 
+                $this->_report['report'][$x]['assets'][$y]['assets_balance'] = ''; 
+                $y++;
+                $this->_report['report'][$x]['assets'][$y]['head_name'] = 'Advance recovered';
+                $this->_report['report'][$x]['assets'][$y]['opening'] = '';
+                $this->_report['report'][$x]['assets'][$y]['assets_total'] = $fmcAdvReceiptTotal ; 
+                $this->_report['report'][$x]['assets'][$y]['assets_balance'] = $fmcAdvTotals - $fmcAdvReceiptTotal; 
+                $x++;
+         }
+   
+         else if($bs_item->code === 'Auct_out'){
+               //Get donors opening amount. 
+                    //Check donor ledger
+                    $donorOutStandingOpening = $bs_item->opb;
+                    $donorQuery = "select * from " . $this->_member->getTableQuoted()." where disabled=0 and fmc_id = {$fmc_id} and member_type_id = 2";
+                    $donors = $this->_member->queryRows($donorQuery);
+                    foreach($donors as $donor){
+                        $auctHeadQuery = "select * from " . $this->_headModel->getTableQuoted()." where code='{$donor->code}' and fmc_id = {$fmc_id} order by head_name";
+                        $heads = $this->_headModel->queryRows($auctHeadQuery);
+                        $openingChits = $this->auctionChitIdsOpening($donor->id, $fmc_id);
+                        if(is_array($openingChits)){
+                            $catchOpening = $this->periodSumOpening($openingChits); //Catch Total   
+                        }
+                        $donorCollectionPayment = $this->getSumByHeadID($heads[0]->id);
+                        $donorCollectionPaymentTotal += $donorCollectionPayment;
+                    } 
+                    $MemberAdvanceHeadQuery = "select * from " . $this->_headModel->getTableQuoted()." where head_name='Member Advance' and code='memb_advance' and fmc_id = {$fmc_id} order by head_name";
+                    $advanceHeads = $this->_headModel->queryRows($MemberAdvanceHeadQuery);
+                    $memberAdvanceHeadID = $advanceHeads[0]->id;
+                    $memberAdvanceSum = $this->getPaymentyHeadID($memberAdvanceHeadID);
+                    $MemberPaymentHeadQuery = "select * from " . $this->_headModel->getTableQuoted()." where head_name='Member Payment' and code='memb_payment' and fmc_id = {$fmc_id} order by head_name";
+                    $memberPaymentHeads = $this->_headModel->queryRows($MemberPaymentHeadQuery);
+                    $memberPaymentHeadID = $memberPaymentHeads[0]->id;
+                    $memberPaymentSum = $this->getPaymentyHeadID($memberPaymentHeadID);
+                    $totalMemberPayments = $memberAdvanceSum + $memberPaymentSum;
+                    //$donorOutStandingOpening = $catchOpeningTotal - $totalMemberPayments;
+                    $donorAssets = ($totalMemberPayments + $donorOutStandingOpening)  - $donorCollectionPaymentTotal;
+                    $totalAssetsBalance = $totalMemberPayments + $donorOutStandingOpening;
+                                    
+                    $this->_report['report'][$x]['assets'][$y]['head_name'] = $bs_item->head_name;
+                    $this->_report['report'][$x]['assets'][$y]['opening'] = $donorOutStandingOpening;
+                    $this->_report['report'][$x]['assets'][$y]['assets_total'] = ''; 
+                    $this->_report['report'][$x]['assets'][$y]['assets_balance'] = ''; 
+                    $y++;
+                    $this->_report['report'][$x]['assets'][$y]['head_name'] = 'Sales of this year';
+                    $this->_report['report'][$x]['assets'][$y]['opening'] = '';
+                    $this->_report['report'][$x]['assets'][$y]['assets_total'] = $totalMemberPayments; 
+                    $this->_report['report'][$x]['assets'][$y]['assets_balance'] = ''; 
+                    $y++;
+                    $this->_report['report'][$x]['assets'][$y]['head_name'] = 'Repaid';
+                    $this->_report['report'][$x]['assets'][$y]['opening'] = '';
+                    $this->_report['report'][$x]['assets'][$y]['assets_total'] = $donorCollectionPaymentTotal ; 
+                    $this->_report['report'][$x]['assets'][$y]['assets_balance'] = $donorAssets; 
+                    $x++;
+            }
+            else if($bs_item->code === 'Fixed_Assets'){
+                $headsQuery = "select * from " . $this->_headModel->getTableQuoted()." where code ='liquidated_assets' and fmc_id = {$fmc_id} order by head_name";
+                $fmcPaymentHeads = $this->_bsHeadModel->queryRows($headsQuery);
+                foreach($fmcPaymentHeads as $item){
+                     $headSum = $this->getPaymentyHeadID($item->id);
+                     $liquidated += $headSum; 
+                }
+                //get fixed assets transactions
+                $headsQuery = "select * from " . $this->_headModel->getTableQuoted()." where code ='fixed_assets' and fmc_id = {$fmc_id} order by head_name";
+                $receiptHeads = $this->_headModel->queryRows($headsQuery);
+                foreach($receiptHeads as $item){
+                     $fmcReceipt = $this->getPaymentyHeadID($item->id);  
+                     $fmcReceiptTotal += $fmcReceipt;
+                }
+
+                $y = 0;
+                $fmcOpening = $bs_item->opb;
+                $fmcAssetsTotals = $fmcReceiptTotal + $fmcOpening;
+             
+                $this->_report['report'][$x]['assets'][$y]['head_name'] =  $bs_item->head_name;
+                $this->_report['report'][$x]['assets'][$y]['opening'] = $fmcOpening;
+                $this->_report['report'][$x]['assets'][$y]['assets_total'] = ''; 
+                $this->_report['report'][$x]['assets'][$y]['assets_balance'] = ''; 
+                $y++;
+                $this->_report['report'][$x]['assets'][$y]['head_name'] = 'Add Current Year';
+                $this->_report['report'][$x]['assets'][$y]['opening'] = '';
+                $this->_report['report'][$x]['assets'][$y]['assets_total'] = $fmcReceiptTotal; 
+                $this->_report['report'][$x]['assets'][$y]['assets_balance'] = ''; 
+                $y++;
+                $this->_report['report'][$x]['assets'][$y]['head_name'] = 'Less Current Year';
+                $this->_report['report'][$x]['assets'][$y]['opening'] = '';
+                $this->_report['report'][$x]['assets'][$y]['assets_total'] = $liquidated ; 
+                $this->_report['report'][$x]['assets'][$y]['assets_balance'] = $fmcAssetsTotals - $liquidated; 
+                $x++;
+            }
+        }
+       
+         $receiptTotal =0; 
+         $paymentsCurrenTotal =0;
+         $paymentsCumilativeTotal= 0;
+         $paymentTotal = 0;
+         $paymentGrandSubTotal =0;
+         $paymentGrandTotal =0;
+         $paymentSubTotal =0;
+         $paymentCumulative=0;
+         $overCumulativeIncome =0;
+         $overCumulativeExpense =0;
+         $overTotalIncome =0;
+         $receiptGrandSubTotal =0;
+         $receiptGrandTotal =0;
+         $overTotalExpense =0;
+        $receiptsCurrentTotal =0;
+        $receiptSubTotal =0;
+        $receiptCumulative =0;
+        $receiptsCumilativeTotal =0;
+        $receipts['receiptsCurrentTotal'] = sprintf('%0.2f', $receiptsCurrentTotal);
+        $receipts['receiptSubTotal'] = sprintf('%0.2f', $receiptSubTotal);
+        $receipts['cumulativeSubTotal'] = sprintf('%0.2f', $receiptCumulative);
+        
+        $receipts['receiptsCumilativeTotal'] = sprintf('%0.2f', $receiptsCumilativeTotal);
+        $receipts['receiptTotal'] = sprintf('%0.2f', $receiptTotal);
+        $payments['paymentsCurrenTotal'] = sprintf('%0.2f', $paymentsCurrenTotal);
+        $payments['paymentsCumilativeTotal'] = sprintf('%0.2f', $paymentsCumilativeTotal);
+        $payments['paymentTotal'] = sprintf('%0.2f', $paymentTotal);
+        $payments['paymentGrandSubTotal'] = sprintf('%0.2f', $paymentGrandSubTotal);
+        
+        //$payments['paymentCumulativeSubTotal'] = sprintf('%0.2f', $paymentCumulativeSubTotal);
+        $payments['paymentGrandTotal'] = sprintf('%0.2f', $paymentGrandTotal);
+        $payments['paymentSubTotal'] = sprintf('%0.2f', $paymentSubTotal);
+        $payments['cumulativeSubTotal'] = sprintf('%0.2f', $paymentCumulative);
+        $payments['overCumulativeIncome'] = sprintf('%0.2f', $overCumulativeIncome);
+        $receipts['overCumulativeExpense'] = sprintf('%0.2f', $overCumulativeExpense);
+        
+        $payments['overTotalIncome'] = sprintf('%0.2f', $overTotalIncome);
+        $receipts['receiptGrandSubTotal'] = sprintf('%0.2f', $receiptGrandSubTotal);
+        $receipts['receiptGrandTotal'] = sprintf('%0.2f', $receiptGrandTotal);
+        $receipts['overTotalExpense'] = sprintf('%0.2f', $overTotalExpense);
+       
+        $this->_report['receipts'] = $receipts;
+        $this->_report['payments'] = $payments;
+        $this->_report['Month'] = strtoupper($month);
+        $this->_report['Year'] = $year;
+    }
+    
+    private function getCashOpening($date = null )
+    {
+            $cashTotal = 0;
+            $fmc_id = $this->_branch->id();
+            $date = $this->_startDate;
+            $opb =0;
+        //Get Opening amount
+            $sql = "SELECT opb from   " . $this->_headModel->getTableQuoted(). " `h` "
+                    . "where 1=1 and `h`.`head_name` = 'Cash' and `h`.`fmc_id` = {$fmc_id}";
+            $data = $this->_headModel->queryRows($sql);  
+            if(isset($data[0]->opb)){
+                $opb = $data[0]->opb;
+            }
+        //Cash Receipts start here
+            $sql = "SELECT sum(amount) as sum from ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'R' and `t`.`status` = '1' "
+                    . "and `t`.`transBy` = 0 and `t`.`transDate` < '$date' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);   
+            $receiptSum = $data[0]->sum;
+            $sql = "SELECT sum(amount) as sum FROM ". $this->_membTrans->getTableQuoted() . " `t` "
+                    . "inner join " . $this->_model->getTableQuoted()." `m` ON `m`.`id` = `t`.`transID` " 
+                    . " left join " . $this->_headModel->getTableQuoted()." `h` ON `h`.`id` = `t`.`headID` "
+                    . "  where 1=1  and `m`.`transBy` = 0 and `m`.`status` = '1' and `m`.`transDate` < '$date' and `m`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);   
+            $memberReceipt = $data[0]->sum;
+            $cashTotal = $receiptSum + $memberReceipt + $opb;
+        //Cash Receipts ends here
+        //Cash Payments start here
+            $sql = "SELECT sum(amount) as sum from ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'P' and `t`.`status` = '1' "
+                    . "and `t`.`transBy` = 0 and `t`.`transDate` < '$date' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql); 
+            $cashPayment =  $data[0]->sum;
+        //Cash payment ends here
+            return round(($cashTotal - $cashPayment),2);
+    }
+
+    private function getCashTransactions($opb)
+    {
+            $cashTotal = 0;
+            $fmc_id = $this->_branch->id();
+        //Cash Receipts start here
+            $sql = "SELECT sum(amount) as sum from ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'R' and `t`.`status` = '1' "
+                    . "and `t`.`transBy` = 0 and `t`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);   
+            $receiptSum = $data[0]->sum;
+            $sql = "SELECT sum(amount) as sum FROM ". $this->_membTrans->getTableQuoted() . " `t` "
+                    . "inner join " . $this->_model->getTableQuoted()." `m` ON `m`.`id` = `t`.`transID` " 
+                    . " left join " . $this->_headModel->getTableQuoted()." `h` ON `h`.`id` = `t`.`headID` "
+                    . "  where 1=1  and `m`.`transBy` = 0 and `m`.`status` = '1' and  `m`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `m`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);   
+            $memberReceipt = $data[0]->sum;
+            $cashTotal = $receiptSum + $memberReceipt + $opb;
+        //Cash Receipts ends here
+        //Cash Payments start here
+            $sql = "SELECT sum(amount) as sum from ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'P' and `t`.`status` = '1' "
+                    . "and `t`.`transBy` = 0 and `t`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql); 
+            $cashPayment =  $data[0]->sum;
+        //Cash payment ends here
+            return round(($cashTotal - $cashPayment),2);
+    }
+
+    private function getBankOpening($headID , $date = null)
+    {
+            $opb = 0;
+            $fmc_id = $this->_branch->id();
+            $date = $this->_startDate;
+        //Get Opening amount
+            $sql = "SELECT opb from   " . $this->_headModel->getTableQuoted(). " `h` "
+                    . "where 1=1 and `h`.`id` = '{$headID}' and `h`.`fmc_id` = {$fmc_id}";
+            $data = $this->_headModel->queryRows($sql);   
+            if(isset($data[0]->opb)){
+               $opb = $data[0]->opb;
+            }
+        //Cash Deposit to Bank
+            $sql = "SELECT sum(amount) as sum from  ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'P' and `t`.`status` = '1' "
+                    . "and `t`.`headID` = $headID and `t`.`transDate` < '$date' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+            $deposit =  $data[0]->sum;
+        //Bank Receipts start here (Interest, tds refund etc
+            $sql = "SELECT sum(amount) as sum from  ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'R' and `t`.`status` = '1' "
+                    . "and `t`.`transBy` = $headID and `t`.`transDate` < '$date' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+            $receiptSum = $data[0]->sum;
+            //Member Receipts
+            $sql = "SELECT sum(amount) as sum FROM ". $this->_membTrans->getTableQuoted() . " `t` "
+                    . "inner join " . $this->_model->getTableQuoted()." `m` ON `m`.`id` = `t`.`transID` " 
+                    . "left join " . $this->_headModel->getTableQuoted()." `h` ON `h`.`id` = `t`.`headID` where 1=1 "
+                    . "and `m`.`transBy` = $headID and `m`.`status` = '1' and `m`.`transDate` < '$date' and `m`.`fmc_id` = {$fmc_id}";
+            $data = $this->_membTrans->queryRows($sql);
+            $memberReceipt =  $data[0]->sum;
+            $cashTotal = $receiptSum + $memberReceipt + $opb + $deposit;
+        //Bank Receipts ends here
+        //Payments through Bank start here
+            $sql = "SELECT sum(amount) as sum from  ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'P' and `t`.`status` = '1' "
+                    . "and `t`.`transBy` = $headID and `t`.`transDate` < '$date' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+            $bankPayment =  $data[0]->sum;
+        //Bank payment ends here
+        //Bank Withdrawl start here
+            $sql = "SELECT sum(amount) as sum from ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'R' and `t`.`status` = '1' "
+                    . "and `t`.`headID` = $headID and `t`.`transDate` < '$date' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+            $withdrawl = $data[0]->sum;
+        //Bank payment ends here 
+            $payments = $bankPayment + $withdrawl;
+
+            return round(($cashTotal - $payments),2);
+    }
+    
+    private function getBankTransactions($headID, $opb)
+    {
+            $fmc_id = $this->_branch->id();
+       
+        //Cash Deposit to Bank
+            $sql = "SELECT sum(amount) as sum from  ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'P' and `t`.`status` = '1' "
+                    . "and `t`.`headID` = $headID and `t`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+            $deposit =  $data[0]->sum;
+        //Bank Receipts start here (Interest, tds refund etc
+            $sql = "SELECT sum(amount) as sum from  ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'R' and `t`.`status` = '1' "
+                    . "and `t`.`transBy` = $headID and `t`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+            $receiptSum = $data[0]->sum;
+            //Member Receipts
+            $sql = "SELECT sum(amount) as sum FROM ". $this->_membTrans->getTableQuoted() . " `t` "
+                    . "inner join " . $this->_model->getTableQuoted()." `m` ON `m`.`id` = `t`.`transID` " 
+                    . "left join " . $this->_headModel->getTableQuoted()." `h` ON `h`.`id` = `t`.`headID` where 1=1 "
+                    . "and `m`.`transBy` = $headID and `m`.`status` = '1' and `m`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `m`.`fmc_id` = {$fmc_id}";
+            $data = $this->_membTrans->queryRows($sql);
+            $memberReceipt =  $data[0]->sum;
+            $cashTotal = $receiptSum + $memberReceipt + $opb + $deposit;
+        //Bank Receipts ends here
+        //Payments through Bank start here
+            $sql = "SELECT sum(amount) as sum from  ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'P' and `t`.`status` = '1' "
+                    . "and `t`.`transBy` = $headID and `t`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+            $bankPayment =  $data[0]->sum;
+        //Bank payment ends here
+        //Bank Withdrawl start here
+            $sql = "SELECT sum(amount) as sum from ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`transType` = 'R' and `t`.`status` = '1' "
+                    . "and `t`.`headID` = $headID and `t`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+            $withdrawl = $data[0]->sum;
+        //Bank payment ends here 
+            $payments = $bankPayment + $withdrawl;
+
+            return round(($cashTotal - $payments),2);
+    }
+   private function getSumByHeadID($headID)
+   {
+        $fmc_id = $this->_branch->id();
+        $sql = "SELECT sum(`t`.`amount`) as sum FROM ". $this->_membTrans->getTableQuoted() . " `t` "
+                . "inner join " . $this->_model->getTableQuoted()." `m` ON `m`.`id` = `t`.`transID` "
+                . "left join " . $this->_headModel->getTableQuoted()." `h` ON `h`.`id` = `t`.`headID` "
+                . "where 1=1 and `t`.`headID` ={$headID} and `m`.`fmc_id` = {$fmc_id} and `m`.`status` = '1' "
+                . "and `m`.`transDate` between '{$this->_startDate}' and '{$this->_endDate}'";
+        $data = $this->_membTrans->queryRows($sql);
+        if(!$data[0]->sum) {
+             $sql = "SELECT sum(`t`.`amount`) as sum FROM ". $this->_transactionModel->getTableQuoted() . " `t` "
+                     . " where 1=1 and `t`.headID='{$headID}' and `t`.`transType` ='R' and `t`.`transBy` >0 and `t`.`status` = '1' "
+                     . "and `t`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+        }
+        return $data[0]->sum;
+    }
+    private function getCumulativeByHeadID($headID)
+    {
+        $fmc_id = $this->_branch->id();
+        $cumHeadAmount = 0;
+        $fydata = $this->getFinancialYearInfo();
+        $end_date = $this->getPreviousDay($this->_startDate);
+        //$fydata['year'] = '2023-04-01';
+        $sql = "SELECT sum(`t`.`amount`) as sum FROM ". $this->_membTrans->getTableQuoted() . " `t` "
+                . "inner join " . $this->_model->getTableQuoted()." `m`  ON `m`.`id` = `t`.`transID` "
+                . "left join " . $this->_headModel->getTableQuoted()." `h` ON `h`.`id` = `t`.`headID` where 1=1 and `t`.`headID` ={$headID} "
+                . "and `m`.`transDate` between '{$fydata['year']}' and '{$end_date}'  and `m`.`status` = '1' and `m`.`fmc_id` = {$fmc_id}";
+        $data = $this->_membTrans->queryRows($sql);
+        if(!$data[0]->sum){
+            $sql = "SELECT sum(`t`.`amount`) as sum FROM ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "where 1=1 and `t`.`headID` = {$headID} and `t`.`transType` ='R' and `t`.`status` = '1' "
+                    . "and `t`.`transBy` >0 and `t`.`transDate` between '{$fydata['year']}'  and '{$end_date}' and `t`.`fmc_id` = {$fmc_id} "
+                    . "group by `t`.`headID`";
+           $data = $this->_transactionModel->queryRows($sql);
+        }
+        if(isset($data[0]->sum)){
+            return $data[0]->sum;
+        }
+        else {
+            return $cumHeadAmount;
+        }
+    }
+
+    private function getPaymentyHeadID($headID)
+    {
+        $fmc_id = $this->_branch->id();
+        $sql = "SELECT sum(`t`.`amount`) as sum FROM ". $this->_transactionModel->getTableQuoted() . " `t` "
+                . "where 1=1 and `t`.`headID` ={$headID} and `t`.`status` = '1' "
+                . "and `t`.`transType` = 'P' and `t`.`transDate` between '{$this->_startDate}' and '{$this->_endDate}' and `t`.`fmc_id` = {$fmc_id}";
+        $data = $this->_headModel->queryRows($sql);
+        return $data[0]->sum;
+    }
+
+    private function cumulativePaymentyHeadID($headID)
+    {
+        $fmc_id = $this->_branch->id();
+        $fydata = $this->getFinancialYearInfo();
+        $end_date = $this->getPreviousDay($this->_startDate);
+        $sql = "SELECT sum(`t`.`amount`) as sum FROM ". $this->_transactionModel->getTableQuoted() . " `t` "
+                . "where 1=1 and `t`.`headID`={$headID} and `t`.`status` = '1' "
+                . "and `t`.`transType` = 'P' and `t`.`transDate` between '{$fydata['year']}' and '{$end_date}' and `t`.`fmc_id` = {$fmc_id}";
+        $data = $this->_headModel->queryRows($sql);
+        return $data[0]->sum;
+    }
+
+ 
+    
+    private function getFinancialYearInfo()
+    {
+    /*
+        $today = date("Y-m-d");
+        $date=date_create($today);
+
+      //  echo "<br> Month: ".date_format($date,"m");
+        if (date_format($date,"m") >= 4) {//On or After April (FY is current year - next year)
+            $financial_year = (date_format($date,"Y")) . '-' . (date_format($date,"y")+1);
+            $currentYear = (date_format($date,"Y"));
+        } else {//On or Before March (FY is previous year - current year)
+            $financial_year = (date_format($date,"Y")-1) . '-' . date_format($date,"y");
+            $currentYear = (date_format($date,"Y")-1);
+        }
+        $currentFinancialYearWithDate = $currentYear."-04-01";
+        //echo "<br> FY ".$financial_year;
+        return array('year' => $currentFinancialYearWithDate, 'FY' => $financial_year);*/
+        
+           //$yrdata= strtotime($this->_startDate);
+        //echo date('m', $yrdata);
+        $today = date("Y-m-d");
+        $date=date_create($this->_startDate);
+        //echo date_format($date,"m");
+      //  echo "<br> Month: ".date_format($date,"m");
+        if (date_format($date,"m") >= 4) {//On or After April (FY is current year - next year)
+            $financial_year = (date_format($date,"Y")) . '-' . (date_format($date,"y")+1);
+            $currentYear = (date_format($date,"Y"));
+        } else {//On or Before March (FY is previous year - current year)
+            $financial_year = (date_format($date,"Y")-1) . '-' . date_format($date,"y");
+            $currentYear = (date_format($date,"Y")-1);
+        }
+        $currentFinancialYearWithDate = $currentYear."-04-01";
+        //echo "<br> FY ".$financial_year;
+        return array('year' => $currentFinancialYearWithDate, 'FY' => $financial_year);
+    }
+    
+    /**
+     * preload
+     */
+    private function _preload()
+    {
+        $this->_report['filters'] = [
+            'start' => $this->_startDate,
+            'end' => $this->_endDate,
+            'group' => $this->_groupId,
+            'period' => [
+                DateHelper::datepicker($this->_startDate),
+                DateHelper::datepicker($this->_endDate),
+            ],
+        ];
+        
+        $start = DateHelper::getDateTime($this->_startDate);
+        $end = DateHelper::getDateTime($this->_endDate);
+        
+        $this->_report['params'] = 'group=' . $this->_groupId
+                                 . '&amp;start=' . $start->format('Ymd')
+                                 . '&amp;end=' . $end->format('Ymd');
+        
+        $deductions = $this->_branch->deductionTypes();
+        $brachDeductionIds = array_keys($deductions);
+       // $groupedDeductions = ReportHelper::groupedDeductionTypeIdsSelection($brachDeductionIds);
+       // $this->_report['deductions'] = $groupedDeductions[$this->_groupId];
+        
+        $this->_report['titles'] = [
+            'opening' => 'Opening',
+            'collection' => 'Collection',
+            'withdrawal' => 'Withdrawal',
+            'closing' => 'Balance',
+        ];
+    }
+    
+    private function getPreviousDay($date)
+    {
+       $date = isset($date) ? $date : date('Y-m-d');
+       $prev_date = date('Y-m-d', strtotime($date .' -1 day'));
+       return $prev_date;
+    }
+    
+    /*
+     * print report
+     */
+    private function _print()
+    {
+        echo '<pre>';
+        print_r($this->_report);
+        exit;
+    }
+    public function auctionChitIdsOpening($donor_id, $fmc_id)
+    {
+        $sql = $this->_model->getSql();
+        $sql->where("`transDate` between '{$this->_startDate}' and '{$this->_endDate}'   and `fmc_id` = {$fmc_id} and `status` = '1' and action_chit_id > 0")
+            ->whereId('donor_id', $donor_id);
+        $where = $sql->getWhere();
+        
+        if (0 == $this->_model->selectTotal($where)) {
+            return false;
+        }
+        
+        return $this->_model->selectColumns('action_chit_id', $where);
+    }
+    public function periodSumOpening($auctionChitID)
+    {
+        $sql = $this->_transactionModel->getSql();
+        $sql->whereIn('action_chit_id', $auctionChitID);
+        $where = $sql->getWhere();
+        if (0 == $this->_transactionModel->selectTotal($where)) {
+            return 0;
+        }
+        
+        return $this->_transactionModel->selectSum('amount', $where);
+    }
+    public function periodSumOpeningByHeadID($auctionChitID, $headID)
+    {
+        $sql = $this->_transactionModel->getSql();
+        $sql->whereIn('action_chit_id', $auctionChitID)
+             ->whereId('headID', $headID);
+        $where = $sql->getWhere();
+        if (0 == $this->_transactionModel->selectTotal($where)) {
+            return 0;
+        }
+        
+        return $this->_transactionModel->selectSum('amount', $where);
+    }
+     public function periodSum($auctionChitID)
+    {
+        $sql = $this->_transactionModel->getSql();
+        $sql->whereIn('action_chit_id', $auctionChitID);
+        $where = $sql->getWhere();
+        if (0 == $this->_transactionModel->selectTotal($where)) {
+            return 0;
+        }
+        
+        return $this->_transactionModel->selectSum('amount', $where);
+    }
+    public function ledgerPaymentTransactions($fmc_id)
+    {
+        
+    }
+    
+    public function deductionOpeningAmount($headID, $fmc_id)
+    {
+            $amount = 0;
+            $this->_deductionTypeModel = new DeductionType();
+            if ($headID > 0) {
+                 $head = $this->_headModel->checkByColumnByFmc('id', $headID, $fmc_id);
+                 if(isset($head->code)){
+                    $deductionType = $this->_deductionTypeModel->selectByColumn('code', $head->code);
+                    $generator = new DeductionReport($this->_branch);
+                    if(isset($deductionType->id)){
+                        $amount = $generator->getDeductionOpening($deductionType->id);
+                     //   $amount = $reportTotal[$deductionType->id]['opening'];
+                    }
+                 }
+            }
+            return $amount;
+    }
+    
+    public function collectionAmountAction($headID, $fmc_id)
+    {
+            $amount = 0;
+            $this->_deductionTypeModel = new DeductionType();
+            if ($headID > 0) {
+                 $head = $this->_headModel->checkByColumnByFmc('id', $headID, $fmc_id);
+                 if(isset($head->code)){
+                    $deductionType = $this->_deductionTypeModel->selectByColumn('code', $head->code);
+                    $generator = new DeductionReport($this->_branch);
+                    if(isset($deductionType->id)){
+                        $reportTotal = $generator->getReport($deductionType->id);
+                        $amount = $reportTotal[$deductionType->id]['opening'];
+                    }
+                 }
+            }
+            return $amount;
+    }
+     private function getAuctioneerCollectionOpening($donorID, $headId)
+    {
+        $receiptSum = 0;
+        $fmc_id = $this->_branch->id();
+        $sql = "SELECT sum(`t`.`amount`) as sum FROM ". $this->_membTrans->getTableQuoted() . " `t` "
+                    . "inner join " . $this->_model->getTableQuoted()." `m` ON `m`.`id` = `t`.`transID` " 
+                    . "  where 1=1 and `m`.`transType` = 'R' and receiptNo > 0 and `t`.`headID` = {$headId} and `m`.`donor_id` = {$donorID}  and `m`.`status` = '1' and  `m`.`transDate` between '{$this->_startDate}' and '{$this->_endDate}'  and `m`.`fmc_id` = {$fmc_id}";
+        $data = $this->_transactionModel->queryRows($sql);   
+        $receiptSum = $data[0]->sum;
+        return $receiptSum;
+    }
+    private function getAuctioneerOpening($headID)
+    {
+            $cashTotal = 0;
+            $fmc_id = $this->_branch->id();
+            $date = $this->_startDate;
+        //Get Opening amount
+            $sql = "SELECT opb from   " . $this->_headModel->getTableQuoted(). " `h` "
+                    . "where 1=1 and `h`.`id` = {$headID} and `h`.`fmc_id` = {$fmc_id}";
+            $data = $this->_headModel->queryRows($sql);   
+            $opb = $data[0]->opb;
+            return $opb;
+    }
+    
+    public function auctionChitIds($donor_id, $fmc_id)
+    {
+        
+        $sql = $this->_model->getSql();
+        $fydata = $this->getFinancialYearInfo();
+        $end_date = $this->getPreviousDay($this->_startDate);
+        $sql->where("`transDate` between '{$fydata['year']}'  and '{$end_date}' and `fmc_id` = {$fmc_id} and `status` = '1' and action_chit_id > 0")
+       // $sql->where($this->_where)
+            ->whereId('donor_id', $donor_id);
+        $where = $sql->getWhere();
+        
+        if (0 == $this->_model->selectTotal($where)) {
+            return false;
+        }
+        
+        return $this->_model->selectColumns('action_chit_id', $where);
+    }
+    private function getMemberTransactions($matchingHeadId = 0)
+    {
+         $fmc_id = $this->_branch->id();
+         if($matchingHeadId > 0 ){              
+           $sql = "SELECT `h`.`transType`,`m`.`receiptNo`, `m`.`action_chit_id`, `m`.`loan_id`, `a`.`name`, `m`.`transDate`,  `t`.`remarks`, `t`.`amount`, `m`.`transBy` FROM ". $this->_membTrans->getTableQuoted() . " `t` "
+                    . "inner join " . $this->_model->getTableQuoted()." `m` ON `m`.`id` = `t`.`transID` " 
+                    . "left join " . $this->_member->getTableQuoted()." `a` ON `a`.`id` = `m`.`member_id` "
+                    . "left join " . $this->_headModel->getTableQuoted()." `h` ON `h`.`id` = `t`.`headID` "
+                    . "  where 1=1 and `m`.`transType` = 'R' and `t`.`headID` = {$matchingHeadId} and `m`.`status` = '1' and  `m`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `m`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);   
+            return $data;    
+         }
+    }
+    
+     private function getIncomeTransactions($matchingHeadId = 0)
+    {
+        $fmc_id = $this->_branch->id();
+        $sql = "SELECT `h`.`transType`, `t`.`transNo`, `t`.`action_chit_id`, `t`.`loan_id`,  `m`.`name`, `t`.`transDate`, `t`.`particulars`, `t`.`amount`, `t`.`transBy` from ". $this->_transactionModel->getTableQuoted() . " `t` "
+                    . "left join " . $this->_member->getTableQuoted()." `m` ON `m`.`id` = `t`.`member_id` "
+                    . "left join " . $this->_headModel->getTableQuoted()." `h` ON `h`.`id` = `t`.`headID` "
+                     . "where 1=1 and `t`.`transType` = 'R' and `t`.`status` = '1'  and `t`.`headID` = {$matchingHeadId} "
+                    . "and `t`.`transDate` between '{$this->_startDate}'  and '{$this->_endDate}' and `t`.`fmc_id` = {$fmc_id}";
+            $data = $this->_transactionModel->queryRows($sql);
+            return $data;    
+    }
+    
+    //////
+    
+}

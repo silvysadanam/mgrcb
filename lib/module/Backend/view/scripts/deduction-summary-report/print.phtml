@@ -1,0 +1,158 @@
+<?php
+
+$generator = $this->view->getVariable('generator');
+$groups = $this->view->getVariable('groups');
+$report = $generator->report();
+$filters = $report['filters'];
+$fmc = $filters['fmc'];
+$members = $this->view->lookupStore('member_code');
+$list = $report['report'];
+$deductions = $report['deductions'];
+$deductionIds = array_keys($deductions);
+$summary = $report['summary'];
+$dates = $report['dates'];
+$span = count($deductions) + 5;
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>
+            FMC <?php echo $this->view->escapeHtml($fmc); ?>
+            Sanghom Statement <?php echo $this->view->formatDateTime('d-m-Y', $filters['start']); ?> to <?php
+            echo $this->view->formatDateTime('d-m-Y', $filters['end']); ?>
+            
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style media="all">
+            html {
+                overflow: auto;
+            }
+            body {
+                font-family: "Calibri", sans-serif;
+                font-size: 11pt;
+                text-align: left;
+                color: black;
+            }
+            thead th {
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            thead th.center, tbody td.center, tfoot th.center {
+                text-align: center;
+            }
+            thead th.right, tbody td.right, tfoot th.right {
+                text-align: right;
+            }
+            tfoot th {
+                font-weight: bold;
+            }
+            tbody tr td {
+                white-space: nowrap;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            p#print-button {
+                margin: 10px 0px 10px 5px;
+            }
+            p#print-button button {
+                cursor: pointer;
+                padding: 5px 15px 5px 15px;
+            }
+            
+            @media print {
+                @page {
+                  size: A4 landscape;
+                  margin: auto;
+                }
+                p#print-button {
+                    display: none;
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="0" border="0" style="margin:10px 10px 5px 0;" width="700">
+            <thead>
+                <tr>
+                    <th class="main-heading center">
+                        FMC <?php echo $this->view->escapeHtml($fmc); ?> - Sanghom Statement the period of <?php
+                        echo $filters['period'][0]; ?> to <?php echo $filters['period'][1]; ?>
+                        
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="center">Sl. No.</th>
+                                    <th class="center">Code</th>
+                                    <th class="center">Name</th>
+                                    <th class="center">Catching</th>
+                                    <?php foreach ($deductions as $type): ?>
+
+                                    <th class="center"><?php echo preg_replace('/\s+/', '<br>', $this->view->escapeHtml($type)); ?></th>
+                                    <?php endforeach; ?>
+
+                                    <th class="center">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($dates as $key => $date): ?>
+                                <?php $this->view->counter(0); ?>
+
+                                <tr><td colspan="<?php echo $span; ?>"><?php echo $this->view->datepicker($date); ?></td></tr>
+                                <?php foreach ($members as $memberId => $code): ?>
+                                <?php if (isset($list[$key][$memberId])): ?>
+
+                                <tr>
+                                    <td class="center"><?php echo $this->view->counter(); ?></td>
+                                    <td class="center"><?php echo $this->view->escapeHtml($code); ?></td>
+                                    <td style="white-space: nowrap;"><?php echo $this->view->lookup('member_name', $memberId); ?></td>
+                                    <td class="center"><?php echo $report['catch'][$key][$memberId]; ?></td>
+
+                                    <?php foreach ($deductionIds as $id): ?>
+                                    <?php if (isset($list[$key][$memberId][$id])): ?>
+
+                                    <td class="right"><?php echo $list[$key][$memberId][$id]; ?></td>
+                                    <?php else: ?>
+
+                                    <td class="right">&nbsp;</td>
+                                    <?php endif; ?>
+                                    <?php endforeach; ?>
+
+                                    <td class="right"><?php echo $summary['members'][$key][$memberId]; ?></td>
+                                </tr>
+                                <?php endif; ?>
+                                <?php endforeach; ?>
+
+                                <tr><td colspan="<?php echo $span; ?>">&nbsp;</td></tr>
+                                <?php endforeach; ?>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3" class="center">Total</th>
+                                    <th class="right"><?php echo $summary['catch']; ?></th>
+                                    <?php foreach ($summary['deductions'] as $value): ?>
+
+                                    <th class="right"><?php echo $value; ?></th>
+                                    <?php endforeach; ?>
+
+                                    <th class="right"><?php echo array_sum($summary['deductions']); ?></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>

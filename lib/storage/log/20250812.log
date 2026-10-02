@@ -1,0 +1,4 @@
+[21:11:51 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[21:11:51 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[21:23:36 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 148 : Undefined array key "loan_id"
+[21:23:36 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId

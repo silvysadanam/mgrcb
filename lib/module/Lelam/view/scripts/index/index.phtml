@@ -1,0 +1,77 @@
+<?php
+$branch = $this->view->getVariable('branch');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        WELCOME TO FWS / FMC - <?php
+                                        echo $this->view->escapeHtml($branch->fmcName()); ?>
+                                    
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                        <p>AUCTION CHIT ENTRY PROGRAMME</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Quick Links</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="btn btn-outline-primary w-100" href="<?php
+                                                echo $this->view->actionUrl('create'); ?>" title="Add Auction Chit">Add Auction Chit</a>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a class="btn btn-outline-primary w-100" href="<?php
+                                                echo $this->view->actionUrl('auction-chit/today'); ?>" title="Auction Chits Today">Auction Chits - Today</a>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a class="btn btn-outline-primary w-100" href="<?php
+                                                echo $this->view->actionUrl('auction-chit/last-day'); ?>" title="Auction Chits Yesterday">Auction Chits - Last Day</a>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-4">
+                                                <a class="btn btn-outline-primary w-100" href="<?php
+                                                echo $this->view->actionUrl('auction-chit'); ?>" title="Auction Chits All">Auction Chits - All</a>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a class="btn btn-outline-primary w-100" href="<?php
+                                                echo $this->view->actionUrl('auction-chit/day-select'); ?>" title="Auction Chits All">Auction Chits - View by Day</a>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a class="btn btn-outline-primary w-100" href="<?php
+                                                echo $this->view->actionUrl('auction-chit/monthly'); ?>" title="Auction Chits Monthly Summary">Auction Chits - Monthly Summary</a>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-4">
+                                                <a class="btn btn-outline-primary w-100" href="<?php
+                                                echo $this->view->actionUrl('profile/password'); ?>" title="Change Password">Change Password</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            

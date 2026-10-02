@@ -1,0 +1,169 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$entries = $store->payment();
+$summary = $store->summary();
+
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>DCB <?php echo $loan->id; ?> REPAYMENT HISTORY</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style media="all">
+            html {
+                overflow: auto;
+            }
+            body {
+                font-family: "Calibri", sans-serif;
+                font-size: 11pt;
+                text-align: left;
+                color: black;
+                width: fit-content;
+            }
+            thead th, tfoot th {
+                font-weight: bold;
+                white-space: nowrap;
+                text-align: center;
+            }
+            tbody td {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table cellpadding="2" cellspacing="0" border="0" style="margin:10px 10px 5px 0;">
+            <tr>
+                <td>
+                    <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                        <thead>
+                            <tr>
+                                <th colspan="12">DCB Summary - ID <?php echo $loan->id; ?></th>
+                            </tr>
+                            <tr>
+                                <th>FMC</th>
+                                <th>Member</th>
+                                <th>Code</th>
+                                <th>A/C</th>
+                                <th>Source</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Tenure</th>
+                                <th>Interest<br>Rate</th>
+                                <th>Penal<br>Interest</th>
+                                <th>EMI</th>
+                            </tr>
+                         </thead>
+                         <tbody>
+                            <tr>
+                                <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                <td><?php echo $loan->account_number; ?></td>
+                                <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                <td><?php echo $this->view->integer($loan->loan_amount); ?></td>
+                                <td><?php echo $loan->tenure; ?></td>
+                                <td><?php echo $this->view->amount($loan->interest_rate); ?>%</td>
+                                <td><?php echo $this->view->amount($loan->penal_interest_rate); ?>%</td>
+                                <td><?php echo $this->view->integer($loan->emi); ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php if (! empty($entries)): ?>
+                    
+                    <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                        <thead>
+                            <tr>
+                                <th colspan="11">Repayment History</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="text-center">Instalment</th>
+                                <th rowspan="2">Loan<br>Outstanding</th>
+                                <th colspan="2" class="text-center">Demand</th>
+                                <th colspan="4" class="text-center">Collection</th>
+                                <th colspan="2" class="text-center">Balance</th>
+                            </tr>
+                            <tr>
+                                <th>Number</th>
+                                <th>Date</th>
+                                <th>Arrears</th>
+                                <th>Total</th>
+                                <th>Repaid</th>
+                                <th>Interest</th>
+                                <th>Principal</th>
+                                <th>Prepay</th>
+                                <th>Overdue</th>
+                                <th>Outstanding</th>
+                            </tr>
+                         </thead>
+                         <tbody>
+                            <?php foreach ($entries as $instalment): ?>
+                            <?php
+                            $interest = $instalment->collection_penal_interest
+                                      + $instalment->collection_interest_arrears
+                                      + $instalment->collection_current_interest;
+                            $principal = $instalment->collection_principal_arrears
+                                       + $instalment->collection_current_principal;
+                            ?>
+
+                            <tr>
+                                <td><?php echo $this->view->instalmentNumber($instalment->instalment); ?></td>
+                                <td><?php echo $this->view->datepicker($instalment->instalment_date); ?></td>
+                                <td><?php echo $this->view->amount($instalment->scheduled_demand_loan_outstanding); ?></td>
+                                <td><?php echo $this->view->amount($instalment->arrears_demand_total); ?></td>
+                                <td><?php echo $this->view->amount($instalment->total_demand); ?></td>
+                                <td><?php echo $this->view->amount($instalment->collection_repaid); ?></td>
+                                <td><?php echo $this->view->amount($interest); ?></td>
+                                <td><?php echo $this->view->amount($principal); ?></td>
+                                <td><?php echo $this->view->amount($instalment->collection_prepayment); ?></td>
+                                <td><?php echo $this->view->amount($instalment->balance_total_overdue); ?></td>
+                                <td><?php echo $this->view->amount($instalment->balance_actual_principal_interest_outstanding); ?></td>
+                            </tr>
+                            <?php endforeach; ?>
+
+                        </tbody>
+                        <tfoot>
+                            <?php
+                            $interest = $summary->collection_penal_interest
+                                      + $summary->collection_interest_arrears
+                                      + $summary->collection_current_interest;
+                            $principal = $summary->collection_principal_arrears
+                                       + $summary->collection_current_principal;
+                            ?>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th><?php echo $this->view->amount($summary->scheduled_demand_loan_outstanding); ?></th>
+                                <th><?php echo $this->view->amount($summary->arrears_demand_total); ?></th>
+                                <th><?php echo $this->view->amount($summary->total_demand); ?></th>
+                                <th><?php echo $this->view->amount($summary->collection_repaid); ?></th>
+                                <th><?php echo $this->view->amount($interest); ?></th>
+                                <th><?php echo $this->view->amount($principal); ?></th>
+                                <th><?php echo $this->view->amount($summary->collection_prepayment); ?></th>
+                                <th><?php echo $this->view->amount($summary->balance_total_overdue); ?></th>
+                                <th><?php echo $this->view->amount($summary->balance_actual_principal_interest_outstanding); ?></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <?php else: ?>
+                    
+                    No payment entries
+                    <?php endif; ?>
+                    
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+            

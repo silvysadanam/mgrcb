@@ -1,0 +1,17 @@
+[20:03:22 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:03:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:03:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:03:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:04:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 158 : Undefined array key "non_member"
+[20:04:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:02:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:02:29 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:03:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:03:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:03:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:03:44 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 158 : Undefined array key "non_member"
+[21:03:44 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:25:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:25:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:25:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[21:25:57 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 158 : Undefined array key "non_member"

@@ -1,0 +1,16 @@
+[10:36:15 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 1026 : Unsupported operand types: string * int
+[10:36:48 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 1026 : Unsupported operand types: string * int
+[10:37:25 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 1026 : Unsupported operand types: float + string
+[10:42:32 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 1028 : Unsupported operand types: int + string
+[10:55:56 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 234 : Undefined array key "operatingProfit"
+[10:56:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 234 : Undefined variable $liability
+[10:56:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 234 : Trying to access array offset on value of type null
+[13:22:30 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 1089 : syntax error, unexpected variable "$operatingProfitCol1"
+[13:22:51 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 1095 : Undefined variable $operatingProfit
+[13:22:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 234 : Undefined array key "$operatingProfitCol1"
+[13:23:48 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 1095 : Undefined variable $operatingProfit
+[13:47:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 240 : Undefined array key "operatingProfitCol3"
+[14:00:51 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 1104 : Undefined array key "totalAssetsCol1"
+[14:00:51 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 1104 : Undefined array key "totalAssetsCol2"
+[14:02:10 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 1104 : Undefined array key "totalAssetsCol2"
+[19:33:55 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 193 : Attempt to read property "FY" on array

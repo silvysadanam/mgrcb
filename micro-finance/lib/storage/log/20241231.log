@@ -1,0 +1,5 @@
+[16:31:26 IST] EXCEPTION: \lib\module\Application\view\scripts\modify-dcb\view.phtml on line 8 : Object of class stdClass could not be converted to string
+[16:40:43 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 174 : Undefined property: Application\Utility\LoanStore::$_loan_loan_status_id
+[16:47:04 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[16:49:27 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[16:49:29 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated

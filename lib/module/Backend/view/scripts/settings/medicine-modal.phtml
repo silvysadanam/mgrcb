@@ -1,0 +1,39 @@
+        <form name="form-medicine-modal" id="form-medicine-modal" method="post" action="">
+            <div class="modal fade" id="modal-medicine" tabindex="-1" role="dialog" aria-labelledby="myModalLabelFish" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelFish"> 
+                                Add Medicine
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label for="medicine">Medicine Name <span class="red">*</span></label>
+                                    <input type="text" id="medicine" class="form-control" maxlength="50" required="required" placeholder="Common Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name_english">English Name</label>
+                                    <input type="text" id="name_english" class="form-control" maxlength="50" placeholder="English Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name_malayalam">Malayalam Name</label>
+                                    <input type="text" id="name_malayalam" class="form-control" maxlength="100" placeholder="മലയാളത്തിൽ മത്സ്യത്തിന്റെ പേര്">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('settings/manage-type/type/medicine'); ?>">
+                            <input type="hidden" id="medicine-id" value="0">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

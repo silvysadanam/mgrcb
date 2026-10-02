@@ -1,0 +1,103 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$Receipt = $store->transaction();
+$fmc = $store->fmc();
+$member = $store->member();
+$auctioneer = $store->auctioneer();
+$entries = $store->entries();
+$id = $Receipt->id;
+$title = [
+    $fmc->code, $id, $this->view->dateFormat('d-m-Y', $Receipt->transDate),
+    //$member->code, $member->name,
+];
+$transBy = $store->transBy();
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>Member Receipt - <?php echo $this->view->escapeHtml(implode(' ', $title)); ?></title>
+        <?php $this->block('print-auction'); ?>
+        
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="0" border="0" style="margin:10px 10px 5px 0;" width="700">
+            <thead>
+                <tr>
+                    <th class="main-heading center" colspan="2">
+                        FISHERMEN WELFARE SOCIETY - KOLLAM
+                    </th>
+                </tr>
+                <tr>
+                    <th class="center" colspan="2">
+                        FMC: <?php echo $this->view->escapeHtml($fmc->name); ?>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="main-heading center" colspan="2">
+                        Member Receipt
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>No. <?php echo $this->view->escapeHtml($Receipt->receiptNo); ?></td>
+                    <td class="right">Date: <?php echo $this->view->datepicker($Receipt->transDate); ?></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                          <?php
+                         if(isset($auctioneer->code))  { echo "Code: {$this->view->escapeHtml($auctioneer->code)}"; } ?>
+                         <?php if(isset($member->code))  { echo "Code : {$this->view->escapeHtml($member->code)}"; } ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> 
+                        <?php
+                         if(isset($auctioneer->name))  { echo "Auctioneer: {$this->view->escapeHtml($auctioneer->name)}"; } ?>
+                         <?php if(isset($member->name))  { echo "Member : {$this->view->escapeHtml($member->name)}"; } ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="center" width="10%">Sl No</th>
+                                    <th width="50%">Head</th>
+                                    <th class="center">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($entries as $item): ?>
+                                
+                                <tr>
+                                    <td class="center"><?php echo $this->view->counter(); ?></td>
+                                    <td><?php echo $this->view->lookup('receiptHead', $item->headID); ?></td>
+                                    <td class="center"><?php echo $item->amount; ?></td>
+                                </tr>
+                                <?php endforeach; ?>
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Total</th>
+                                    <th class="center"><?php echo $store->totalReceiptAmount();  ?></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                         <?php
+                         if($transBy)  { echo "Payment Type: Bank (" .$this->view->escapeHtml($store->getBankName()).")"; } else {?>
+                         <?php echo "Payment Type : Cash"; } ?>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>

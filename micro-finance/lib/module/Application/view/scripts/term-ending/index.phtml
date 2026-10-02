@@ -1,0 +1,143 @@
+<?php
+
+$filters = $this->view->getVariable('filters');
+$generator = $this->view->getVariable('generator');
+$report = $generator->report();
+$list = $report['list'];
+$members = $report['members'];
+$summary = $report['summary'];
+$fields = ['fmc', 'instalment'];
+$queryParams = [];
+foreach ($fields as $field) {
+    $value = $filters->getValue($field);
+    if ($value > 0) {
+        $queryParams[$field] = $value;
+    }
+}
+
+$params = '';
+if (! empty($queryParams)) {
+    $params = '/?' . $this->view->escapeHtml(http_build_query($queryParams));
+}
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Term Ending Loans Report</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-dcb-filter" class="form-horizontal" id="form-dcb-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('term-ending/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">FMC &raquo;</div>
+                                                    <select name="fmc" class="form-control" title="FMC">
+                                                        <option value="0">--ALL--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $filters->getValue('fmc')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <div class="input-group-addon">Term Ending &raquo;</div>
+                                                    <select name="instalment" class="form-control" title="Instalments">
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('instalment'), $filters->getValue('instalment')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>                                                    
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-info">
+                                                    <i class="ft-info"></i> Number of Loan records fetched in the current filter: <strong><?php echo $report['total']; ?></strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php if ($report['total'] > 0): ?>
+                                        
+                                        <div class="row mt-1">
+                                            <div class="col-12">
+                                                <a class="btn btn-outline-primary" title="Print" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('term-ending/print') . $params; ?>">PRINT</a>
+                                                <a class="btn btn-outline-info ml-2" title="Download" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('term-ending/download') . $params; ?>">DOWNLOAD</a>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered" id="list-table-11">
+                                                        <thead class="bg-blue-grey white">
+                                                            <tr>
+                                                                <th class="cursor-pointer">FMC</th>
+                                                                <th class="cursor-pointer">Member</th>
+                                                                <th class="cursor-pointer">Code</th>
+                                                                <th class="cursor-pointer">Loan<br>Amount</th>
+                                                                <th class="cursor-pointer">Date</th>
+                                                                <th class="cursor-pointer">Source</th>
+                                                                <th class="cursor-pointer">Type</th>
+                                                                <th class="cursor-pointer">Tenure</th>
+                                                                <th class="cursor-pointer">Term<br>End Date</th>
+                                                                <th class="cursor-pointer">Pending<br>Instalments</th>
+                                                                <th class="cursor-pointer">PIOS</th>
+                                                                <th>
+                                                                    Actions
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php foreach ($list as $row): ?>
+                                                            <?php $member = $members[$row->member_id]; ?>
+                                                            <tr>
+                                                                <td><?php echo $this->view->lookup('fmc', $member->fmc_id); ?></td>
+                                                                <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                                <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                                <td data-sort="<?php echo $row->loan_amount; ?>" data-type="num">
+                                                                    <?php echo $this->view->integer($row->loan_amount); ?>
+                                                                    
+                                                                </td>
+                                                                <td data-sort="<?php echo $this->view->timestamp($row->loan_date); ?>" data-type="num">
+                                                                    <?php echo $this->view->datepicker($row->loan_date); ?>
+                                                                    
+                                                                </td>
+                                                                <td><?php echo $this->view->lookup('source', $row->loan_source_id); ?></td>
+                                                                <td><?php echo $this->view->lookup('type', $row->loan_type_id); ?></td>
+                                                                <td><?php echo $row->tenure; ?></td>
+                                                                <td data-sort="<?php echo $this->view->timestamp($row->end_date); ?>" data-type="num">
+                                                                    <?php echo $this->view->datepicker($row->end_date); ?>
+                                                                    
+                                                                </td>
+                                                                <td><?php echo $row->tenure - $row->paid_tenures; ?></td>
+                                                                <td><?php echo $this->view->amount($summary[$row->id]->balance_actual_principal_interest_outstanding); ?></td>
+                                                                <td style="white-space: nowrap;">
+                                                                    <a class="btn btn-primary btn-sm mr-1" title="VIEW/PRINT DCB STATEMENT" target="_blank" href="<?php 
+                                                                    echo $this->view->actionUrl('view-dcb/view/id/' . $row->id); ?>"><i class="ft-clipboard"></i> DCB</a>
+                                                                    <a class="btn btn-primary btn-sm" title="MANAGE OD" target="_blank" href="<?php 
+                                                                    echo $this->view->actionUrl('modify-dcb/view/id/' . $row->id); ?>"><i class="ft-edit"></i> Loan</a>
+                                                                </td>
+                                                            </tr>
+                                                            <?php endforeach; ?>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

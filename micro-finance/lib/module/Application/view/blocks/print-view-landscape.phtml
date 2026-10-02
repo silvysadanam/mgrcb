@@ -1,0 +1,76 @@
+
+        <style media="all">
+            html {
+                overflow: auto;
+            }
+            body {
+                font-family: "Calibri", sans-serif;
+                font-size: 11pt;
+                text-align: left;
+                color: black;
+                width: fit-content;
+            }
+            thead th {
+                font-weight: bold;
+            }
+            thead th.center, tbody td.center {
+                text-align: center;
+            }
+            thead th.right, tbody td.right {
+                text-align: right;
+            }
+            tfoot th {
+                font-weight: bold;
+                text-align: right;
+            }
+            tfoot th.center {
+                text-align: center;
+            }
+            tbody tr td {
+                white-space: nowrap;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .amount {
+                text-align: right;
+            }
+            .number {
+                text-align: center;
+            }
+            p#print-button {
+                margin: 10px 0px 10px 5px;
+            }
+            p#print-button button {
+                cursor: pointer;
+                padding: 5px 15px 5px 15px;
+            }
+            
+            @media screen {
+                thead#sticky {
+                    top: 0;
+                    position: sticky;
+                    z-index: 10;
+                    background-color: #F5F5F5;
+                }
+            }
+            
+            @media print {
+                @page {
+                  size: A4 landscape;
+                  margin: auto;
+                }
+                thead th {
+                    background-color: white;
+                }
+                tr {
+                    page-break-inside: avoid;
+                }
+                p#print-button {
+                    display: none;
+                }
+                .do-not-print {
+                    display: none;
+                }
+            }
+        </style>

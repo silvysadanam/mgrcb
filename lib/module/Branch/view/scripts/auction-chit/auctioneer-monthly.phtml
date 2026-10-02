@@ -1,0 +1,99 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+$minDate = $this->view->getVariable('min_date');
+$url = $this->view->actionUrl('auction-chit/donor-monthly-print');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Monthly Auctioneer Summary
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-auction-filter" class="form-horizontal" id="form-auction-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('auction-chit/donor-monthly'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">Month &raquo; </div>
+                                                    <input type="text" name="date" id="date" class="form-control single-date-clearable" data-min-date="<?php
+                                                    echo $minDate; ?>" readonly="readonly" value="<?php
+                                                    echo $filters->getEscapedValue('date'); ?>">
+                                                    <div class="input-group-addon"> &laquo; [<a href="javascript:;" class="clear-date" data-target="date" title="Clear Date">Clear</a>]</div>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Auctioneer &raquo; </div>
+                                                    <select name="donor" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('donor'), $filters->getValue('donor')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-7">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">Sl. No.</th>
+                                                        <th class="cursor-pointer">Month</th>
+                                                        <th class="cursor-pointer">Auctioneer</th>
+                                                        <th class="cursor-pointer">Amount</th>
+                                                        <th class="cursor-pointer">Weight</th>
+                                                        <th class="cursor-pointer">Advance</th>
+                                                        <th class="cursor-pointer">Balance</th>
+                                                        <th>
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): ?>
+                                                    <?php $params = ['donor' => $row->donor_id, 'date' => $this->view->formatDateTime('Ymd', $row->auction_date)]; ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td data-sort="<?php echo $this->view->timestamp($row->auction_date); ?>">
+                                                            <?php echo $this->view->formatDateTime('F Y', $row->auction_date); ?>
+                                                        
+                                                        </td>
+                                                        <td><?php echo $this->view->lookup('donor', $row->donor_id); ?></td>
+                                                        <td><?php echo $row->amount; ?></td>
+                                                        <td><?php echo $row->quantity; ?></td>
+                                                        <td><?php echo $row->advance; ?></td>
+                                                        <td><?php echo $row->balance; ?></td>
+                                                        <td>
+                                                            <a class="btn btn-info btn-sm" target="_blank" href="<?php 
+                                                            echo $url; ?>/?<?php echo http_build_query($params); ?>" title="Print Auction Chits"><i class="ft-printer"></i> Print</a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

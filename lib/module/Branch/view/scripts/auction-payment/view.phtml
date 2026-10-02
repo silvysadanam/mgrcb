@@ -1,0 +1,119 @@
+<?php
+
+$payment = $this->view->getVariable('payment');
+$dailyAccount = $this->view->getVariable('dailyAccount');
+$auctioneer = $this->view->getVariable('auctioneer');
+$fmc = $this->view->getVariable('fmc');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Auction Payment - No. <?php echo $payment->id; ?>
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>FMC</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auctioneer Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($auctioneer->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auctioneer Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($auctioneer->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date</td>
+                                                            <td><?php echo $this->view->datepicker($payment->payment_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount</td>
+                                                            <td><?php echo $payment->amount; ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Receipt No.</td>
+                                                            <td><?php echo $payment->id; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Description</td>
+                                                            <td><?php echo $this->view->escapeHtml($payment->description); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Notes</td>
+                                                            <td><?php echo $this->view->textareaHtml($payment->notes); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <a class="btn btn-outline-dark" title="Print Receipt" target="_blank" href="<?php
+                                                                echo $this->view->actionUrl('auction-payment/print-receipt/id/' . $payment->id); ?>"><i class="ft-printer"></i> Print</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">
+                                                            Closing Balance as on <?php
+                                                            echo $this->view->datepicker($payment->payment_date); ?>
+                                                        
+                                                        </h4>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-bordered">
+                                                                        <thead class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th class="text-center">Opening Balance</th>
+                                                                                <th class="text-center">Catch Amount</th>
+                                                                                <th class="text-center">Advance</th>
+                                                                                <th class="text-center">Amount Paid</th>
+                                                                                <th class="text-center">Closing Balance</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="text-center"><?php echo $dailyAccount->opening_balance; ?></td>
+                                                                                <td class="text-center"><?php echo $dailyAccount->auction_amount; ?></td>
+                                                                                <td class="text-center"><?php echo $dailyAccount->advance; ?></td>
+                                                                                <td class="text-center"><?php echo $dailyAccount->amount_paid; ?></td>
+                                                                                <td class="text-center"><?php echo $dailyAccount->closing_balance; ?></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

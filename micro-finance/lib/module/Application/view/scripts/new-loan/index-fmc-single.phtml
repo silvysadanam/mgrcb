@@ -1,0 +1,248 @@
+<?php
+
+$form = $this->getForm();
+$branchManager = $this->view->getVariable('branchManager');
+$generator = $this->view->getVariable('generator');
+$report = $generator->report();
+$members = $report['members'];
+$fmcList = $this->view->lookupStore('fmc');
+$fmcId = $report['filters']['fmc'];
+$fmcName = $fmcList[$fmcId];
+
+$reportOptions = ['FMC wise', 'Month wise'];
+
+?>
+
+                <section class="do-not-print">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">New Loans Report</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-summary" id="form-summary" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="fmc_id" class="label-control col-md-4 text-left">FMC</label>
+                                                            <select name="fmc_id" id="fmc_id" class="form-control col-md-8" title="FMC">
+                                                                <?php if (! $branchManager): ?>
+                                                                
+                                                                <option value="0">--ALL--</option>
+                                                                <?php endif; ?>
+                                                                
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $form->getValue('fmc_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="start_date" class="label-control col-md-4 text-left">From date</label>
+                                                            <input type="text" name="start_date" id="start_date" class="form-control col-md-8" value="<?php
+                                                            echo $form->getEscapedValue('start_date'); ?>" readonly="readonly">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="end_date" class="label-control col-md-4 text-left">To date</label>
+                                                            <input type="text" name="end_date" id="end_date" class="form-control col-md-8" value="<?php
+                                                            echo $form->getEscapedValue('end_date'); ?>" readonly="readonly">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="source" class="label-control col-md-4 text-left">SOURCE</label>
+                                                            <select name="source" id="source" class="form-control col-md-8" title="SOURCE">
+                                                                <option value="0">--ALL--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('source'), $form->getValue('source')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="type" class="label-control col-md-4 text-left">TYPE</label>
+                                                            <select name="type" id="type" class="form-control col-md-8" title="Type">
+                                                                <option value="0">--ALL--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $form->getValue('type')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="wise" class="label-control col-md-4 text-left">Report Option</label>
+                                                            <select name="wise" id="wise" class="form-control col-md-8" title="Report Option">
+                                                                <?php echo $this->view->formHelper('select', $reportOptions, $form->getValue('wise')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="help-block text-italic">Instructions</p>
+                                                                <p class="help-block">Select "FMC" for FMC-wise report.</p>
+                                                                <p class="help-block">Select dates for report period </p>
+                                                                <p class="help-block">Selected dates are used for determining report start and end months </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                
+                                                <button type="submit" class="btn btn-primary" title="SUBMIT">SUBMIT</button>
+                                                <input type="hidden" id="min-date" value="<?php echo $this->view->getVariable('min_date'); ?>">
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Summary</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>Report Period</th>
+                                                            <th>Source</th>
+                                                            <th>Type</th>
+                                                            <th>Loans</th>
+                                                            <th>Amount</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($fmcName); ?></td>
+                                                            <td>
+                                                                <?php echo $report['options']['start_month']; ?> - <?php
+                                                                echo $report['options']['end_month']; ?>
+                                                            
+                                                            </td>
+                                                            <td>
+                                                                <?php if ($report['filters']['source'] > 0): ?>
+                                                                <?php echo $this->view->lookup('source', $report['filters']['source']); ?>
+                                                                <?php else: ?>
+                                                                
+                                                                ALL
+                                                                <?php endif; ?>
+                                                                
+                                                            </td>
+                                                            <td>
+                                                                <?php if ($report['filters']['type'] > 0): ?>
+                                                                <?php echo $this->view->lookup('type', $report['filters']['type']); ?>
+                                                                <?php else: ?>
+                                                                
+                                                                ALL
+                                                                <?php endif; ?>
+                                                                
+                                                            </td>
+                                                            <td><?php echo $report['total']['loans']; ?></td>
+                                                            <td><?php echo $generator->amount($report['total']['amount']); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <?php $params = $report['params']; ?>
+                                        
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="<?php echo $this->view->actionUrl('new-loan/print'); ?><?php
+                                                echo $this->view->escapeHtml($params); ?>" class="btn btn-outline-primary mr-2" title="Print" target="_blank">PRINT</a>
+                                                <a href="<?php echo $this->view->actionUrl('new-loan/download'); ?><?php
+                                                echo $this->view->escapeHtml($params); ?>" class="btn btn-outline-info" title="Download" target="_blank">DOWNLOAD</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title"><?php echo $this->view->escapeHtml($fmcName); ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>Month</th>
+                                                            <th>Loans</th>
+                                                            <th>Amount</th>
+                                                            <th>View</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($report['months'] as $year => $list): ?>
+                                                        <?php foreach ($list as $month => $monthTitle): ?>
+                                                        
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($monthTitle); ?></td>
+                                                            <?php if (isset($report['report'][$fmcId][$year][$month])): ?>
+                                                            
+                                                            <td class="text-center"><?php echo $report['report'][$fmcId][$year][$month]['loans']; ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($report['report'][$fmcId][$year][$month]['amount']); ?></td>
+                                                            <td>
+                                                                <a class="btn btn-outline-info btn-sm view-loans" href="javascript:;" title="View Loans &amp; Members" data-params="<?php 
+                                                                echo $generator->getLoansParams($fmcId, $year, $month); ?>"><i class="ft ft-list"></i></a>
+                                                            </td>
+                                                            <?php else: ?>
+                                                            
+                                                            <td class="text-center">--</td>
+                                                            <td class="text-center">--</td>
+                                                            <td>&nbsp;</td>
+                                                            <?php endif; ?>
+                                                            
+                                                        </tr>
+                                                        <?php endforeach; ?>
+                                                        <?php endforeach; ?>
+                                                        
+                                                    </tbody>
+                                                    <tfoot class="bg-info white">
+                                                        <tr>
+                                                            <th>TOTAL</th>
+                                                            <th class="text-center"><?php echo $report['total_fmc'][$fmcId]['loans']; ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['total_fmc'][$fmcId]['amount']); ?></th>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                

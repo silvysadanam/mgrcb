@@ -1,0 +1,178 @@
+<?php
+
+$form = $this->getForm();
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$summary = $store->summary();
+$schedule = $store->schedule();
+$last = $schedule[$summary->schedule_id];
+$options = $store->inactiveOptions();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">SET DCB AS INACTIVE</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>Code</th>
+                                                            <th>Member</th>
+                                                            <th>Type</th>
+                                                            <th>Source</th>
+                                                            <th>Amount</th>
+                                                            <th>Date</th>
+                                                            <th>RoI</th>
+                                                            <th>PRoI</th>
+                                                            <th>Tenure</th>
+                                                            <th>EMI</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                                            <td><?php echo $this->view->amount($loan->loan_amount); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                            <td><?php echo $this->view->interestRate($loan->interest_rate); ?>%</td>
+                                                            <td><?php echo $this->view->interestRate($loan->penal_interest_rate); ?>%</td>
+                                                            <td><?php echo $this->view->integer($loan->tenure); ?></td>
+                                                            <td><?php echo $this->view->amount($loan->emi); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>Start Date</th>
+                                                            <th>End Date</th>
+                                                            <th>Principal Repaid</th>
+                                                            <th>Total Repaid</th>
+                                                            <th>Principal OS</th>
+                                                            <th>Total OS</th>
+                                                            <th>Ageing</th>
+                                                            <th>As on date</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->datepicker($loan->start_date); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->end_date); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->collection_principal_arrears + $summary->collection_current_principal); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->collection_repaid); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->balance_actual_principal_outstanding); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->balance_actual_principal_interest_outstanding); ?></td>
+                                                            <td><?php echo $this->view->integer($summary->ageing_days); ?></td>
+                                                            <td><?php echo $this->view->datepicker($last->instalment_date); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>Completed Instalments</th>
+                                                            <th>Paid Instalments</th>
+                                                            <th>Unpaid Instalments</th>
+                                                            <th>Latest successive Non-payment Instalments</th>
+                                                            <th>Last payment</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $options['completed']; ?></td>
+                                                            <td><?php echo $options['paid']; ?></td>
+                                                            <td><?php echo $options['unpaid']; ?></td>
+                                                            <td><?php echo $options['successive']; ?></td>
+                                                            <td>
+                                                                <?php if (! empty($options['last_payment'])): ?>
+                                                                <?php echo $options['last_payment']->instalment; ?>, 
+                                                                <?php echo $this->view->datepicker($options['last_payment']->instalment_date); ?>
+                                                                <?php endif; ?>
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <hr>
+                                                <div class="card card-bordered border-info mt-2">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title  white">INACTIVE DETAILS</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <form class="form form-horizontal mt-2" name="form-loan-inactive" id="form-loan-inactive" method="post" action="" autocomplete="off">
+                                                                <div class="form-body">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="alert alert-danger" id="validation-message" style="display:none;"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left">Last Instalment to be retained</label>
+                                                                                <select name="last_instalment" id="last_instalment"  class="form-control col-md-8">
+                                                                                    <?php echo $this->view->formHelper('select', $options['instalments'], $form->getValue('last_instalment')); ?>
+                                                                                    
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left">Reason (required)</label>
+                                                                                <input type="text" name="reason" id="reason" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('reason'); ?>" required="required">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="comments">Notes</label>
+                                                                                <textarea name="comments" id="comments" class="form-control col-md-8" placeholder="Notes"><?php 
+                                                                                echo $form->getEscapedValue('comments'); ?></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-actions center">
+                                                                    <?php echo $form->getCsrf(); ?>
+                                                                    
+                                                                    <a class="btn btn-outline-secondary mr-1" title="CANCEL" href="<?php 
+                                                                    echo $this->view->actionUrl('modify-dcb/view/id/' . $loan->id); ?>"><i class="ft-rewind"></i> CANCEL</a>
+                                                                    <button type="submit" class="btn btn-primary" title="CONFIRM">CONFIRM</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

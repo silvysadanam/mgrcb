@@ -1,0 +1,244 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+$withdrawalOnly = $this->view->getVariable('withdrawalOnly');
+$bankOptions = $this->view->lookupStore('bank');
+$denominations =  $this->view->getVariable('currencyDenominations');
+$opening_amount = $this->view->getVariable('cashOpening');
+$opening_data = $this->view->getVariable('openingData');
+$counted_till = $this->view->getVariable('counted_till');
+$closeoutData = $this->view->getVariable('closeoutData');
+echo '<script>
+
+                if ( typeof Prototype !== "undefined" ) {
+                  // alert(\'Prototype Framework is included!\');
+                }
+                else {
+                  // alert(\'Prototype Framework is not included!\');
+                }
+
+		function cash_multiply_all(is_first_load)
+		{
+			document.getElementsByClassName("cash_count").each(function(e)
+			{
+				cash_multiply("a"+e.getAttribute("denomination"), e.getAttribute("tender_value"), is_first_load);
+			});
+		}
+		function cash_multiply(target, amount, is_first_load) {
+               
+			targetamt = target + "amt";
+			targetnum = target + "num";
+			cashamount = 0;
+			cashnum = document.getElementById(targetnum).value;
+                        
+			cashamount = parseDecimalNumber(cashnum) * amount;
+		
+			document.till_cash.elements[targetamt].value = myround(cashamount);
+			
+			var cashinpt = "";
+			if (!document.till_cash.elements[target]) {
+				var cashinpt = document.createElement("input");
+				cashinpt.setAttribute("type","hidden");
+				cashinpt.setAttribute("name",target);
+			} else {
+				cashinpt	= document.till_cash.elements[target];
+			}
+
+			cashinpt.setAttribute("value",cashnum);
+			document.till_cash.appendChild(cashinpt);
+			
+			sum_all(is_first_load);
+		}
+		
+		function sum_all(is_first_load) 
+		{
+			var sumamt = 0;';
+
+			//We're using the current locale's denominations, so set up this function with the proper fields
+	if($denominations)foreach($denominations as $denomination=>$value){
+		echo <<<HTML
+			sumamt += parseFloat(document.till_cash.a{$denomination}amt.value.replace(',', '.'));
+HTML;
+	}
+			echo '
+                        if(!is_first_load) {
+                            document.till_cash.counted_till.value = myround(sumamt);
+                        } 
+                        document.till_cash.total.value = myround(sumamt);
+			calc_cash_difference("KEEP_HELPER");
+		}		
+		
+		function calc_cash_difference(helperStatus)
+		{
+			var difference = 0;
+			
+			difference = myround(parseFloat(parseDecimalNumber(document.till_cash.counted_till.value))-parseFloat(parseDecimalNumber(document.till_cash.expected_till.value)));
+			document.till_cash.till_difference.value = difference;
+			
+			if (helperStatus == "CLEAN_HELPER") {
+				document.till_cash.total.value =  myround("0.00");
+			';
+	if($denominations)foreach($denominations as $denomination=>$value){
+		echo <<<HTML
+			document.till_cash.a{$denomination}num.value = 0;
+			document.till_cash.a{$denomination}amt.value = myround("0.00");
+			
+			var cashinpt = "";
+			if (!document.till_cash.elements["a{$denomination}"]) {
+				var cashinpt = document.createElement("input");
+				cashinpt.setAttribute("type","hidden");
+				cashinpt.setAttribute("name","a{$denomination}");
+			} else {
+				cashinpt	= document.till_cash.elements["a{$denomination}"];
+			}
+
+			cashinpt.setAttribute("value",0);
+			document.till_cash.appendChild(cashinpt);
+HTML;
+	}
+			echo '}
+		}
+		
+		function myround(myvalue) 
+		{
+                        let num = parseFloat(myvalue);
+                        if (isNaN(num)) return 0;
+
+                        return Math.round(num * 100) / 100; // number with 2-decimal rounding
+                                    }		
+	</script>
+';
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                               
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="till_cash" id="till_cash" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <?php if ($counted_till) { ?>
+                                                    <div class="alert alert-danger" id="validation-message">Completed</div>
+                                                <?php } else {?>
+                                                     <div class="alert alert-warning" id="validation-message">Incomplete</div>
+                                                <?php }?>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <table class="table table-bordered border-info table-striped">
+                                                                    <thead class="bg-info white">
+                                                                        <tr>
+                                                                            <th colspan="2">Cash Count Helper</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+       <TABLE CELLPADDING=2 CELLSPACING=0 ALIGN=CENTER CLASS="foreground border width-full height-500px">
+	<TR class="subheader">
+		<TD class="border-bottom subheader_text" ALIGN=CENTER>#</TD>
+		<TD class="border-bottom subheader_text" ALIGN=CENTER>Value</TD>
+	</TR>
+        <?php
+	if($denominations)foreach($denominations as $denomination=>$value){
+                $symbol ='₹';
+                $prev_val = 0;
+		$disp_val = $value; //Format the value nicely
+		//$prev_val = $_POST['cash_count'][$denomination];
+                $name = 'cash_'.$denomination;
+		/*$query = "SELECT $name FROM opening_details WHERE date='$today'";		
+		$results 			= $db->do_query($query);*/
+		$denominationValue	= isset($opening_data[0]->$name)? $opening_data[0]->$name:0;
+                if(!$prev_val)
+                {
+                    $prev_val = $denominationValue;
+                }
+                $notes = isset($closeoutData[0]->notes) ? $closeoutData[0]->notes : "";
+		?>
+<TR>
+		<TD ALIGN=right class="small_header_text"><?php echo $disp_val;?>&nbsp;<INPUT TYPE=text id=a<?php echo $denomination;?>num NAME="cash_count<?php echo $denomination;?>" value="<?php echo $prev_val;?>" SIZE=3 MAXLENGTH=5 tabindex=1 onchange="cash_multiply('a<?php echo $denomination;?>', <?php echo $value; ?>, 0)" tender_value="<?php echo $value;?>" denomination="<?php echo $denomination;?>" class="cash_count"></TD>
+		<TD ALIGN=CENTER class="small_header_text"><?php echo $symbol;?><input style="text-align:right;" TYPE=text NAME=a<?php echo $denomination;?>amt SIZE=10 MAXLENGTH=10 value="0" class="disabled" READONLY></TD>
+	</TR>
+<?php
+        }?>
+<TR>
+		<TD ALIGN=right class="subheader_text">Cash Total:</TD>
+		<TD ALIGN=CENTER class="small_header_text"><?php echo $symbol;?><INPUT style="text-align:right;" TYPE=text NAME=total SIZE=15 MAXLENGTH=10 VALUE="0.00" class="disabled" READONLY></TD>
+	</TR>
+</table></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <table class="table table-bordered border-info table-striped">
+                                                                    <thead class="bg-info white">
+                                                                        <tr>
+                                                                            <th colspan="2">Opening Till Cash</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td width="50%">Counted Opening Till Amount</td>
+                                                                            <td id="check-advance-date"><input type="text" name="counted_till" id="counted_till" class="form-control number-integer" onchange="calc_cash_difference('KEEP_HELPER');" value="<?php 
+                                                            echo $counted_till; ?>" placeholder="Amount" maxlength="6" required="required"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Carryover Opening Till Amount</td>
+                                                                            <td id="check-member"><input type="text" name="expected_till" id="expected_till" class="form-control number-integer" value="<?php 
+                                                            echo $opening_amount; ?>" placeholder="Amount" maxlength="6" readonly="readonly"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Difference</td>
+                                                                            <td id="check-deduction-type"><input type="text" name="till_difference" id="till_difference" class="form-control number-integer" value="<?php 
+                                                            echo round($counted_till - $opening_amount, 2); ?>" placeholder="Amount" maxlength="6" readonly="readonly"></td>
+                                                                        </tr>
+                                                                        <tr><td colspan="2"><textarea name="notes" style="width:100%;height:110px;"><?php echo $notes?></textarea></td></tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+<?php
+//To fill the value column on the opening
+if($denominations)foreach($denominations as $denomination=>$value){
+	echo <<<HTML
+	<script>
+	targetamt = 'a{$denomination}' + "amt";
+	targetnum = 'a{$denomination}' + "num";
+	cashamount = 0;
+		
+	cashnum = document.till_cash.elements[targetnum].value;
+		
+	cashamount = cashnum * {$value};
+		
+	document.till_cash.elements[targetamt].value = myround(cashamount);
+	
+	document.till_cash.total.value = parseFloat(document.till_cash.total.value) + parseFloat(cashamount);
+	document.till_cash.total.value = myround(document.till_cash.total.value);
+	</script>
+HTML;
+}
+?>

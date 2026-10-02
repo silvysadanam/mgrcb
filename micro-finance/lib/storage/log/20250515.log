@@ -1,0 +1,26 @@
+[19:41:06 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:41:38 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[19:42:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:42:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:43:15 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:43:15 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[19:43:27 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:43:27 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[19:43:34 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:44:08 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:44:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:44:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:45:19 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:45:24 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:45:32 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:45:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:46:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:46:57 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[19:49:08 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:04:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:06:19 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 155 : Undefined array key "loan_id"
+[20:07:01 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[20:07:15 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[20:08:57 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[20:09:22 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[20:09:25 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId

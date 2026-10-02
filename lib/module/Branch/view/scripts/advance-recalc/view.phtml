@@ -1,0 +1,191 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$advance = $store->advance();
+$fmc = $store->fmc();
+$member = $store->member();
+$repayments = $store->repayments();
+$hasBalance = $store->hasBalance();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Advance/withdrawal
+                                    </h4>
+                                    <input type="hidden" id="cancel-url" value="<?php echo $this->view->actionUrl('advance-withdrawal'); ?>">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>FMC</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date</td>
+                                                            <td><?php echo $this->view->datepicker($advance->advance_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Deduction type</td>
+                                                            <td><?php echo $this->view->escapeHtml($store->deductionType()); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Description</td>
+                                                            <td><?php echo $this->view->escapeHtml($advance->description); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Deduction Bill adjusted date</td>
+                                                            <td><?php echo $this->view->datepicker($advance->deduction_bill_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Status</td>
+                                                            <td><?php if ($advance->closed > 0) { ?>Closed<?php } else { ?>Pending<?php } ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Amount</td>
+                                                            <td><?php echo $advance->advance_amount; ?></td>
+                                                        </tr>
+                                                        
+                                                        <?php if ($store->withdrawal()): ?>
+                                                        
+                                                        <tr>
+                                                            <td>Advance Type</td>
+                                                            <td>Withdrawal</td>
+                                                        </tr>
+                                                        <?php else: ?>
+                                                        
+                                                        <tr>
+                                                            <td>Advance Type</td>
+                                                            <td>Advance with OD</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD Amount</td>
+                                                            <td><?php echo $advance->overdue_amount; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount Repaid</td>
+                                                            <td><?php echo $advance->repaid; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD Outstanding</td>
+                                                            <td><?php echo $advance->overdue_balance; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Outstanding</td>
+                                                            <td><?php echo $advance->balance; ?></td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        
+                                                        <tr>
+                                                            <td>Notes</td>
+                                                            <td><?php echo $this->view->textareaHtml($advance->note); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Created by</td>
+                                                            <td><?php echo $this->view->lookup('administrator', $advance->created_by); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <?php if (! $store->withdrawal()): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-bordered border-primary">
+                                <div class="card-header bg-primary">
+                                    <h4 class="card-title white">Repayments</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements white">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <?php if (! empty($repayments)): ?>
+                                                <?php $balance = $advance->overdue_amount; ?>
+                                                
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-secondary white">
+                                                        <tr>
+                                                            <th>Sl. No.</th>
+                                                            <th>Adjusted Date</th>
+                                                            <th>Amount</th>
+                                                            <th>OD Balance</th>
+                                                            <th>Payment Date</th>
+                                                            <th>Notes</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($repayments as $item): ?>
+                                                        <?php $balance -= $item->amount; ?>
+                                                        
+                                                        <tr>
+                                                            <td><?php echo $this->view->counter(); ?></td>
+                                                            <td><?php echo $this->view->datepicker($item->deduction_bill_date); ?></td>
+                                                            <td class="text-center"><?php echo $item->amount; ?></td>
+                                                            <td class="text-center"><?php echo $balance; ?></td>
+                                                            <td><?php echo $this->view->datepicker($item->payment_date); ?></td>
+                                                            <td><?php echo $this->view->textareaHtml($item->note); ?></td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                                <?php else: ?>
+                                                
+                                                <div class="alert alert-info">No repayments</div>
+                                                <?php endif; ?>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php if (! $store->withdrawal() && $store->hasOverdueBalance()): ?>
+                                    
+                                    <div class="card-footer">
+                                        <a class="btn btn-outline-primary" id="add-repayment" title="Add OD Repayment">
+                                            <i class="ft-plus"></i> Add OD Repayment</a>
+                                    </div>
+                                    <?php endif; ?>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; 
+                

@@ -1,0 +1,629 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+$yesOrNo = ['No', 'Yes'];
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">New Beneficiary</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-member" id="form-member" method="post" action="" autocomplete="off" enctype="multipart/form-data">
+                                            <div class="form-body">
+                                               <div class="row">
+
+                                                <!-- Name -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="name">
+                                                            Name <span class="red">*</span>
+                                                        </label>
+                                                        <input type="text"
+                                                               name="name"
+                                                               id="name"
+                                                               class="form-control"
+                                                               value="<?php echo $form->getEscapedValue('name'); ?>"
+                                                               placeholder="Name"
+                                                               required>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Panchayath -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="panchayath">
+                                                            Panchayath
+                                                        </label>
+                                                         <select name="panchayath" id="panchayath" class="form-control" title="Panchayath">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('panchayathBrand'), $form->getValue('panchayath')); ?>
+                                                            </select>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Address -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="address">
+                                                            Address
+                                                        </label>
+                                                        <textarea name="address"
+                                                                  id="address"
+                                                                  class="form-control"
+                                                                  placeholder="Address"
+                                                                  rows="2"><?php echo $form->getEscapedValue('address'); ?></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Gender -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="gender">Gender<span class="red">*</span></label>
+                                                        <select name="gender" id="gender" class="form-control" title="Gender">
+                                                            <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $form->getValue('gender')); ?>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Date of Birth -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="date_of_birth">
+                                                            Date of Birth
+                                                        </label>
+
+                                                        <input type="text"
+                                                               name="date_of_birth"
+                                                               id="date_of_birth"
+                                                               class="form-control"
+                                                               value="<?php echo $form->getEscapedValue('date_of_birth'); ?>"
+                                                               placeholder="Date of Birth"
+                                                               readonly>
+
+                                                        <small>
+                                                            [<a href="javascript:;" id="clear-date-of-birth">Clear</a>]
+                                                        </small>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Education -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="beducation">
+                                                            Education
+                                                        </label>
+                                                          <select name="beducation" id="beducation" class="form-control" title="Education">
+                                                            <?php echo $this->view->formHelper('select', $this->view->lookupStore('edutype'), $form->getValue('beducation')); ?>
+                                                        </select>
+                                                      
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Monthly Income -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="monthly_income">
+                                                            Monthly Income <span class="red">*</span>
+                                                        </label>
+
+                                                        <input type="number"
+                                                               name="monthly_income"
+                                                               id="monthly_income"
+                                                               class="form-control"
+                                                               value="<?php echo $form->getEscapedValue('monthly_income'); ?>"
+                                                               placeholder="Monthly Income"
+                                                               required>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Taluk -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="taluk">
+                                                            Family Status as per Ration Card
+                                                        </label>
+
+                                                          <select name="ration_card" class="form-control" title="Family Status" id="ration_card" >
+                                                            <option value="APL" selected="selected">APL</option>
+                                                            <option value="BPL">BPL</option>
+                                                          </select>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Mobile -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="mobile">
+                                                            Mobile
+                                                        </label>
+
+                                                        <input type="text"
+                                                               name="mobile"
+                                                               id="mobile"
+                                                               class="form-control"
+                                                               value="<?php echo $form->getEscapedValue('mobile'); ?>"
+                                                               placeholder="Mobile">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Kerosene -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="disability_occurred">
+                                                            Year in which Disability Occurred
+                                                        </label>
+
+                                                        <input type="text"
+                                                               name="disability_occurred"
+                                                               id="disability_occurred"
+                                                               class="form-control"
+                                                               value="<?php echo $form->getEscapedValue('disability_occurred'); ?>"
+                                                               placeholder="Disability Occurred">
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Aadhar -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="aadhar_number">
+                                                            Aadhar Number
+                                                        </label>
+
+                                                        <input type="text"
+                                                               name="aadhar_number"
+                                                               id="aadhar_number"
+                                                               class="form-control"
+                                                               value="<?php echo $form->getEscapedValue('aadhar_number'); ?>"
+                                                               placeholder="Aadhar Number">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Preferred location -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="pensions">
+                                                            Various Pensions Received
+                                                        </label>
+                                                        <textarea name="pensions"
+                                                                  id="address"
+                                                                  class="form-control"
+                                                                  placeholder="Pensions"
+                                                                  rows="2"><?php echo $form->getEscapedValue('pensions'); ?></textarea>
+                                                       
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Aadhar Linked Mobile -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="disability_reason">
+                                                            Cause of Disability
+                                                        </label>
+
+                                                         <select name="disability_reason" id="disability_reason" class="form-control" title="Cause of Disability">
+                                                            <?php echo $this->view->formHelper('select', $this->view->lookupStore('disability'), $form->getValue('disability_reason')); ?>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                              <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="examination_date">
+                                                            Date of Medical Examination Conducted though the Centre
+                                                        </label>
+
+                                                        <input type="text" name="examination_date" id="examination_date" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('examination_date'); ?>" placeholder="Date of Medical Examination" maxlength="10" readonly="readonly">
+                                                            <span>[<a href="javascript:;" id="clear-examination_date" title="Clear">Clear</a>]</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Photo -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="photo">
+                                                            Upload Photo
+                                                        </label>
+
+                                                        <input type="file"
+                                                               name="photo"
+                                                               id="photo"
+                                                               class="form-control">
+                                                        <small class="form-text text-muted">
+                                                            .jpg files only
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                 <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="disability">
+                                                            Description of Disease/Disability
+                                                        </label>
+                                                         <select name="disability[]" id="disability" class="form-control col-md-8 select2" title="Description of Disease/Disability" multiple="multiple">
+                                                            <?php echo $this->view->formHelper('select', $this->view->lookupStore('diseaseTypes'), $form->getValue('disability')); ?>
+                                                        </select>                                                       
+                                                    </div>
+                                                </div>
+                                                 <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="land_area">
+                                                            Total area of land owned by the family
+                                                        </label>
+
+                                                       <input type="text"
+                                                               name="land_area"
+                                                               id="land_area"
+                                                               class="form-control"
+                                                               value="<?php echo $form->getEscapedValue('land_area'); ?>"
+                                                               placeholder="Land Area">
+                                                    </div>
+                                                </div>
+                                                 <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="house_type">
+                                                            Details of the house
+                                                        </label>
+
+                                                         <select name="house_type" id="house_type" class="form-control" title="Details of the house">
+                                                            <?php echo $this->view->formHelper('select', $this->view->lookupStore('housetypes'), $form->getValue('house_type')); ?>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                 <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="house_ownership">
+                                                            Ownership status of the house
+                                                        </label>
+
+                                                      <select name="house_ownership" id="house_ownership" class="form-control" title="Ownership status">
+                                                            <?php echo $this->view->formHelper('select', $this->view->lookupStore('houseownership'), $form->getValue('house_ownership')); ?>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                 <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="rented_amount">
+                                                           Rent Amount
+                                                        </label>
+
+                                                        <input type="text"
+                                                               name="rented_amount"
+                                                               id="rented_amount"
+                                                               class="form-control"
+                                                               value="<?php echo $form->getEscapedValue('rented_amount'); ?>"
+                                                               placeholder="Rent Amount">
+                                                    </div>
+                                                </div>
+                                                 <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="worker_opinion">
+                                                            Recommendation of the Committee Member
+                                                        </label>
+
+                                                     <textarea name="worker_opinion"
+                                                                  id="worker_opinion"
+                                                                  class="form-control"
+                                                                  placeholder="Recommendation of the Committee Member"
+                                                                  rows="2"><?php echo $form->getEscapedValue('worker_opinion'); ?></textarea>
+                                                    </div>
+                                                </div>
+                                                 <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="worker_name">
+                                                           Community Worker Name
+                                                        </label>
+
+                                                        <input type="text"
+                                                               name="worker_name"
+                                                               id="worker_name"
+                                                               class="form-control"
+                                                               value="<?php echo $form->getEscapedValue('worker_name'); ?>"
+                                                               placeholder="Community Worker Name">
+                                                    </div>
+                                                </div>
+                                               <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="proposed_date">
+                                                            Proposed Date
+                                                        </label>
+
+                                                     <input type="text" name="proposed_date" id="proposed_date" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('proposed_date'); ?>" placeholder="Proposed Date" maxlength="10" readonly="readonly">
+                                                            <span>[<a href="javascript:;" id="clear-proposed_date" title="Clear">Clear</a>]</span>
+                                                    </div>
+                                                </div>
+                                                 <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="approved_date">
+                                                           Approved Date
+                                                        </label>
+
+                                                       <input type="text" name="approved_date" id="approved_date" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('approved_date'); ?>" placeholder="Approval Date" maxlength="10" readonly="readonly">
+                                                            <span>[<a href="javascript:;" id="clear-approved_date" title="Clear">Clear</a>]</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                                <hr>
+                                                <?php if (true == $this->view->getVariable('hasBanks')): ?>
+                                                
+                                                <div class="row mt-2">
+                                                    <div class="col-12">
+                                                        <div class="card card-bordered border-info">
+                                                            <div class="card-header bg-info">
+                                                                <h4 class="card-title white">Bank Account </h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="bank_id">Bank</label>
+                                                                                <select name="bank_id" id="bank_id" class="form-control" title="Bank">
+                                                                                    <option value="0">--select--</option>
+                                                                                    <?php echo $this->view->formHelper('select', $this->view->lookupStore('bank'), $form->getValue('bank_id')); ?>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="account_number">Account Number</label>
+                                                                                <input type="text" name="account_number" id="account_number" class="form-control" placeholder="Account Number" maxlength="16" value="<?php 
+                                                                                $form->getEscapedValue('account_number') ?>">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="account_type_id">Account type</label>
+                                                                                <select name="account_type_id" id="account_type_id" class="form-control" title="Account type">
+                                                                                    <option value="0">--select--</option>
+                                                                                    <?php echo $this->view->formHelper('select', $this->view->lookupStore('accountType'), $form->getValue('account_type_id')); ?>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="description">Description</label>
+                                                                                <input type="text" name="description" id="description" class="form-control" placeholder="Description" maxlength="50" value="<?php 
+                                                                                $form->getEscapedValue('description') ?>">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php endif; ?>
+                                               <div class="row mt-2">
+                                                    <div class="col-12">
+                                                        <div class="card card-bordered border-info">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title">
+                                                                    Entries
+                                                                    <a class="btn btn-sm btn-outline-primary float-right" id="add-entry-row" title="Add entry" href="javascript:;">
+                                                                        <i class="ft-plus-square"></i> Add entry
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+    <table class="table table-bordered">
+        <thead class="bg-secondary white">
+            <tr>
+                <th style="width: 5px;">നമ്പർ</th>
+                <th>പേര്</th>
+                <th>ബന്ധം</th>
+                <th>വിഭാഗം</th>
+                <th>വയസ്സ്</th>
+                <th>വിദ്യാഭ്യാസം</th>
+                <th>വികലാംഗത</th>
+                <th>തൊഴിൽ</th>
+                <th>മാസവരുമാനം</th>
+                <th style="width: 8%;">Delete</th>
+            </tr>
+        </thead>
+
+        <tbody id="entry-block">
+
+            <?php if (count($values['family_name']) > 0): ?>
+
+                <?php foreach ($values['family_name'] as $index => $familyName): ?>
+
+                    <tr>
+                        <!-- No. -->
+                        <td class="entry-number">
+                            <?php echo $this->view->counter(); ?>
+                        </td>
+
+                        <!-- പേര് -->
+                        <td>
+                            <input type="text"
+                                   name="family_name[]"
+                                   class="form-control"
+                                   value="<?php
+                                       echo $this->view->escapeHtml(
+                                           $values['family_name'][$index] ?? ''
+                                       );
+                                   ?>"
+                                   placeholder="പേര്" size="25">
+                        </td>
+
+                        <!-- ബന്ധം -->
+                        <td>
+                            <input type="text"
+                                   name="family_relation[]"
+                                   class="form-control"
+                                   value="<?php
+                                       echo $this->view->escapeHtml(
+                                           $values['family_relation'][$index] ?? ''
+                                       );
+                                   ?>"
+                                   placeholder="ബന്ധം">
+                        </td>
+
+                        <!-- വിഭാഗം -->
+                        <td>
+                            <input type="text"
+                                   name="family_category[]"
+                                   class="form-control"
+                                   value="<?php
+                                       echo $this->view->escapeHtml(
+                                           $values['family_category'][$index] ?? ''
+                                       );
+                                   ?>"
+                                   placeholder="വിഭാഗം">
+                        </td>
+
+                        <!-- വയസ്സ് -->
+                        <td>
+                            <input type="number"
+                                   name="family_age[]"
+                                   class="form-control"
+                                   value="<?php
+                                       echo $this->view->escapeHtml(
+                                           $values['family_age'][$index] ?? ''
+                                       );
+                                   ?>"
+                                   placeholder="വയസ്സ്">
+                        </td>
+
+                        <!-- വിദ്യാഭ്യാസം -->
+                        <td>
+                             <select name="family_education[]" class="form-control" title="വിദ്യാഭ്യാസം">
+                                <option value="0">--select--</option>
+                                 <?php echo $this->view->formHelper('select', $this->view->lookupStore('edutype'), $form->getValue('beducation')); ?>
+                            </select>
+                           
+                        </td>
+
+                        <!-- വികലാംഗത -->
+                        <td>
+                            <input type="text"
+                                   name="family_disability[]"
+                                   class="form-control"
+                                   value="<?php
+                                       echo $this->view->escapeHtml(
+                                           $values['family_disability'][$index] ?? ''
+                                       );
+                                   ?>"
+                                   placeholder="വികലാംഗത">
+                        </td>
+
+                        <!-- തൊഴിൽ -->
+                        <td>
+                            <input type="text"
+                                   name="family_occupation[]"
+                                   class="form-control"
+                                   value="<?php
+                                       echo $this->view->escapeHtml(
+                                           $values['family_occupation'][$index] ?? ''
+                                       );
+                                   ?>"
+                                   placeholder="തൊഴിൽ">
+                        </td>
+
+                        <!-- മാസവരുമാനം -->
+                        <td>
+                            <input type="number"
+                                   name="family_income[]"
+                                   class="form-control family-income"
+                                   value="<?php
+                                       echo $this->view->escapeHtml(
+                                           $values['family_income'][$index] ?? ''
+                                       );
+                                   ?>"
+                                   placeholder="മാസവരുമാനം"
+                                   min="0"
+                                   step="120">
+                        </td>
+
+                        <!-- Delete -->
+                         <td>
+                            <a href="javascript:;" class="btn btn-sm btn-outline-danger delete-entry-row" title="Delete"><i class="ft-x-square"></i> Delete</a>
+                        </td>
+                    </tr>
+
+                <?php endforeach; ?>
+
+            <?php endif; ?>
+
+        </tbody>
+
+      
+    </table>
+</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                                <div class="row mt-2">
+                                                    <div class="col-12">
+                                                        <div class="card card-bordered border-info">
+                                                            <div class="card-header bg-info">
+                                                                <h4 class="card-title white">Documents (.jpg or .pdf files only) </h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+                                                                    <table class="table table-borderless">
+                                                                        <thead class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th>Document Type</th>
+                                                                                <th>Description</th>
+                                                                                <th>Upload</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php $documentOptios = $this->view->lookupStore('documentType'); ?>
+                                                                            <?php foreach ($documentOptios as $documentId => $documentTitle): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td><label for="document_type_<?php echo $documentId; ?>"><?php echo $this->view->escapeHtml($documentTitle); ?></label></td>
+                                                                                <td>
+                                                                                    <input type="text" name="document_description[]" id="fishing_license_number_<?php echo $count; ?>" class="form-control" placeholder="Description" maxlength="50" value="<?php 
+                                                                                if (isset($values['document_description'][$documentId])) { echo $this->view->escapeHtml($values['document_description'][$documentId]); } ?>">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="file" name="document_type_<?php echo $documentId; ?>" id="document_type_<?php
+                                                                                    echo $documentId; ?>" class="form-control" accept=".jpg,.pdf">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                                <input type="hidden" id="start-date" value="<?php echo $this->view->getVariable('startDate'); ?>">
+                                                <input type="hidden" id="end-date" value="<?php echo $this->view->getVariable('endDate'); ?>">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

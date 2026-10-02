@@ -1,0 +1,123 @@
+[11:51:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:52:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:52:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:52:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:52:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:53:00 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:53:27 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:54:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:11:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:19:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:19:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:20:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:21:14 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:27:58 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:28:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:29:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:31:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:31:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:32:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:32:24 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:32:50 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:33:16 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[12:34:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:06:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:06:14 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:06:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:06:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:06:34 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[14:06:34 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:06:34 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[14:06:34 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:07:14 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:07:15 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[14:07:15 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:07:15 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[14:07:15 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:09:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:09:04 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[14:09:04 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:09:04 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[14:09:04 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:11:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:11:20 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[14:11:20 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:11:20 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[14:11:20 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:11:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:13:53 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:13:55 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[14:13:57 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:24:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:24:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:24:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:28:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:31:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:54:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:54:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:55:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:04:38 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:18:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:21:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:23:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:27:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:28:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:28:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:28:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:28:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:29:43 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:29:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:29:46 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:29:46 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:30:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:31:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:31:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:32:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:32:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:33:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:33:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:33:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:33:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:33:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:33:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:14:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:14:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:14:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:14:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:14:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:14:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:14:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:26:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:26:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:26:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:26:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:26:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:26:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[22:27:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:27:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[22:27:52 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[22:30:58 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 101 : Class "Backend\Form\Beneficiary\CreateForm" not found
+[22:31:56 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 101 : Class "Backend\Form\Beneficiary\CreateForm" not found
+[22:32:36 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 101 : Class "Backend\Form\Beneficiary\CreateForm" not found
+[22:33:59 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 80 : Undefined array key "gender"
+[22:33:59 IST] ERROR [8192]: \lib\shared\Shared\src\Utility\MembershipValidator.php line 117 : trim(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:33:59 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 142 : Undefined array key "registration_number"
+[22:33:59 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 142 : foreach() argument must be of type array|object, null given
+[22:33:59 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 166 : Undefined array key "bank_id"
+[22:33:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:33:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[22:33:59 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[22:34:37 IST] EXCEPTION: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php on line 80 : Call to undefined method Shared\Utility\MembershipValidator::gender()
+[22:36:48 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 80 : Undefined array key "gender"
+[22:36:48 IST] ERROR [8192]: \lib\shared\Shared\src\Utility\MembershipValidator.php line 117 : trim(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:36:48 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 142 : Undefined array key "registration_number"
+[22:36:48 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 142 : foreach() argument must be of type array|object, null given
+[22:36:48 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 166 : Undefined array key "bank_id"
+[22:36:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:36:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[22:36:48 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[22:38:50 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 80 : Undefined array key "gender"
+[22:38:50 IST] ERROR [8192]: \lib\shared\Shared\src\Utility\MembershipValidator.php line 117 : trim(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:38:50 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:38:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[22:38:50 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given

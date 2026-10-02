@@ -1,0 +1,87 @@
+<?php
+
+use Application\Constant\Tab;
+
+$active = ' active';
+$home = $active;
+$profile = '';
+$auction = '';
+$notification = '';
+
+$layoutVariables = $this->view->getVariable('layoutVariables');
+$tab = $layoutVariables['currentTab'];
+if ($tab != Tab::HOME) {
+    if ($tab == Tab::PROFILE) {
+        $profile = $active;
+        $home = '';
+    } elseif ($tab == Tab::NOTIFICATION) {
+        $notification = $active;
+        $home = '';
+    } elseif ($tab == Tab::AUCTION) {
+        $auction = $active;
+        $home = '';
+    }
+}
+
+$showEntitlement = true;
+
+?>
+
+    <!-- BEGIN: Main Menu-->
+    <div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-static navbar-dark navbar-without-dd-arrow navbar-shadow" role="navigation" data-menu="menu-wrapper">
+        <div class="navbar-container main-menu-content" data-menu="menu-container">
+            <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="nav-item<?php echo $home; ?>">
+                    <a class="dropdown-toggle nav-link" href="<?php echo $this->view->actionUrl(''); ?>" title="Home">
+                        <i class="ft-home"></i><span>Home</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-item<?php echo $auction; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Auction Chits"><i class="ft-file-text"></i><span>Auction Chits</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction'); ?>" title="Auction List" data-toggle="dropdown">List</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction/today'); ?>" title="Today" data-toggle="dropdown">Today</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction/create'); ?>" title="New Auction Chit" data-toggle="dropdown">New</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $profile; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Profile"><i class="ft-user"></i><span>Profile</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('profile'); ?>" title="View Profile" data-toggle="dropdown">View</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('profile/change'); ?>" title="Edit Profile" data-toggle="dropdown">Edit</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('profile/password'); ?>" title="Change Password" data-toggle="dropdown">Change Password</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                
+                <?php /* ?>
+                <li class="nav-item<?php echo $notification; ?>">
+                    <a class="dropdown-toggle nav-link" href="<?php echo $this->view->actionUrl('notification'); ?>" title="Notifications">
+                        <i class="ft-bell"></i><span>Notifications</span>
+                    </a>
+                </li><?php */ ?>
+                
+                <li class="nav-item">
+                    <a class="dropdown-toggle nav-link" href="<?php echo $this->view->actionUrl('logout'); ?>" onclick="return confirm('Proceed to logout from application?');" title="Logout">
+                        <i class="ft-power"></i><span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu -->

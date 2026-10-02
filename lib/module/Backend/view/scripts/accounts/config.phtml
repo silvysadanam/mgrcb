@@ -1,0 +1,82 @@
+<?php
+
+$list = $this->view->getVariable('list');
+$fmcId = $this->view->getVariable('fmcId');
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Settings - FMC <?php
+                                        echo $this->view->escapeHtml($this->view->getVariable('fmc')); ?>
+                                        <a href="javascript:;" class="btn btn-outline-primary btn-sm" id="add-settings-type" title="New Head Type" data-fmc_id="<?php echo $fmcId; ?>"><i class="ft-plus"></i> New Setting</a>
+                                        <a class="btn btn-sm btn-outline-secondary float-right" title="Back to Heads" href="<?php
+                                        echo $this->view->actionUrl('accounts/settings'); ?>">
+                                            <i class="ft-rewind"></i> Back to Settings
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                                <table class="table table-condensed table-bordered border-info" id="list-table-2">
+                                                    <thead class="bg-blue-grey white">                                                        
+                                                        <tr>
+                                                            <th width="10%">Sl. No.</th>
+                                                            <th width="25%">Code</th>
+                                                            <th>Voucher No</th>
+                                                            <th>Receipt No</th>
+                                                            <th>FY</th>
+                                                            <th width="25%">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                     <tbody>
+                                                     <?php $this->view->counter(0); ?>                                                       
+                                                        <tr>
+                                                              <?php if(empty($list)) {
+                                                             echo "<td colspan=\"6\">No Data Available</td>";
+                                                         } else {?>
+                                                            <?php foreach ($list as $Id => $item): ?>
+                                                            <td><?php echo $this->view->counter(); ?></td>
+                                                            <td>                                                               
+                                                            <input type="text" id="head_code" class="form-control" value="<?php
+                                                            echo $item->code; ?>" maxlength="30" required="required">
+                                                            </td>
+                                                            <td><input type="text" id="voucher_no" class="form-control" value="<?php
+                                                            echo $item->voucher_no; ?>" maxlength="30" required="required"></td>
+                                                            <td><input type="text" id="receipt_no" class="form-control" value="<?php
+                                                            echo $item->receipt_no; ?>" maxlength="30" required="required"></td>
+                                                             <td><input type="text" id="head_name" class="form-control" value="<?php
+                                                            echo $item->financial_year; ?>" maxlength="30" required="required"></td>
+                                                            <td>
+                                                            <a class="btn btn-info btn-sm edit-settings-type" href="javascript:;" data-id="<?php
+                                                            echo $item->id; ?>" data-fmc_id="<?php
+                                                            echo $fmcId; ?>" data-voucher_no="<?php
+                                                            echo $item->voucher_no; ?>" data-head_code="<?php
+                                                            echo $item->code; ?>" data-receipt_no="<?php echo $item->receipt_no; ?>" data-financial_year="<?php echo $item->financial_year; ?>" title="Edit"><i class="ft-edit"></i> Edit</a>
+                                                            </td>
+                                                             <?php endforeach; ?>
+                                                          <?php 
+                                                            }
+                                                          ?>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="<?php echo $this->view->actionUrl('accounts/settings'); ?>" class="btn btn-outline-secondary ml-1" title="Back"><i class="ft-arrow-left"></i> Back</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

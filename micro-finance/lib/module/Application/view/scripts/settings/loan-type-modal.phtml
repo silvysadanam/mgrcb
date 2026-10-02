@@ -1,0 +1,35 @@
+<?php
+
+?>
+
+        <form name="form-loan-type-modal" id="form-loan-type-modal" method="post" action="">
+            <div class="modal fade" id="modal-loan-type" tabindex="-1" role="dialog" aria-labelledby="myModalLabelLoanType" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelLoanType"> 
+                                Add Loan Type
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger" id="js-validation-error"></div>
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label for="loan-type">Loan Type <span class="red">*</span></label>
+                                    <input type="text" id="loan-type" class="form-control" value="" maxlength="30" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('settings/manage-loan-type'); ?>">
+                            <input type="hidden" id="loan-type-id" value="0">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

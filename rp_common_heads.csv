@@ -1,0 +1,33 @@
+NULL,Salary,5,Salary,Direct Expense,N,0,salary
+NULL,Salary Contribution,5,Salary Contribution,Direct Expense,N,0,sal_contribution
+NULL,Provident Fund,5,Provident Fund,Direct Expense,N,0,pf
+NULL,Gratuity,5,Gratuity,Direct Expense,N,0,gratuity
+NULL,Electricity charges,5,Electricity charges,Direct Expense,N,0,elect_charge
+NULL,Telephone charges,5,Telephone charges,Direct Expense,N,0,tc
+NULL,Printing & Stationery,5,Printing & Stationery,Direct Expense,N,0,ps
+NULL,Travelling expense,5,Travelling expense,Direct Expense,N,0,travel_exp
+NULL,Honorarium,5,Honorarium,Direct Expense,N,0,hon
+NULL,Meeting expense,5,Meeting expense,Direct Expense,N,0,me
+NULL,Cleaning/Watchman,5,Cleaning/Watchman,Direct Expense,N,0,cleaning
+NULL,Repair & Maintenance,5,Repair & Maintenance,Direct Expense,N,0,rep_main
+NULL,Furniture / Other Asset,5,Furniture / Other Asset,Direct Expense,N,0,furn_other_asset
+NULL,Allowance,5,Allowance,Direct Expense,N,0,allowance
+NULL,Rent,5,Rent,Direct Expense,N,0,rent
+NULL,Subsidy,5,Subsidy,Direct Expense,N,0,subsidy
+NULL,Sitting fees,5,Sitting fees,Direct Expense,N,0,sf
+NULL,General meeting expense,5,General meeting expense,Direct Expense,N,0,gme
+NULL,Other expense,5,Other expense,Direct Expense,N,0,oe
+NULL,Donation,5,Donation,Direct Expense,N,0,donation
+NULL,Catching prizes,5,Catching prizes,Direct Expense,N,0,cp
+NULL,Tea expense,5,Tea expense,Direct Expense,N,0,tea_exp
+NULL,Scholarship,5,Scholarship,Direct Expense,N,0,scholar
+NULL,Medical aid,5,Medical aid,Direct Expense,N,0,med_aid
+NULL,X mas gift,5,X mas gift,Direct Expense,N,0,xmasgift
+NULL,Union(Rice),5,Union(Rice),Direct Expense,N,0,union_rice
+NULL,Water Charges,5,Water Charges,Direct Expense,N,0,wc
+NULL,Bank Charges/Cess,5,Bank Charges/Cess,Direct Expense,N,0,bank_charge
+NULL,Out side loan Paid,5,Out side loan Paid,Direct Expense,N,0,outside_loan
+NULL,Interest Paid outside,5,Interest Paid outside,Direct Expense,N,0,int_paid_out
+NULL,Rice Bonus,5,Rice Bonus,Direct Expense,N,0,rice_bonus
+NULL,Union Contribution,5,Union Contribution,Direct Expense,N,0,union_cont
+NULL,FWS Contribution,5,FWS Contribution,Direct Expense,N,0,fws_cont

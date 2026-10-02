@@ -1,0 +1,14 @@
+[20:18:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:18:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:18:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:38:49 IST] ERROR [2]: \lib\module\Application\src\Controller\AuthController.php line 30 : Undefined array key "credential"
+[20:38:49 IST] ERROR [8192]: \lib\module\Application\src\Form\LoginForm.php line 196 : strlen(): Passing null to parameter #1 ($string) of type string is deprecated
+[20:38:49 IST] EXCEPTION: \lib\module\Application\src\Form\LoginForm.php on line 156 : Call to a member function checkByColumn() on null
+[20:39:43 IST] EXCEPTION: \lib\module\Application\src\Form\LoginForm.php on line 156 : Call to a member function checkByColumn() on null
+[20:41:01 IST] EXCEPTION: \lib\module\Application\src\Form\LoginForm.php on line 157 : Call to a member function checkByColumn() on null
+[20:54:01 IST] EXCEPTION: \lib\module\Application\src\Controller\AuthController.php on line 9 : Class "Application\Controller\ApplicationController" not found
+[20:54:40 IST] EXCEPTION: \lib\module\Application\src\Controller\AuthController.php on line 21 : Class "Application\Controller\Member" not found
+[20:56:48 IST] EXCEPTION: \lib\module\Application\src\Form\LoginForm.php on line 161 : Class "Application\Form\Password" not found
+[20:57:55 IST] ERROR [2]: \lib\module\Application\src\Form\LoginForm.php line 161 : Undefined property: Application\Form\LoginForm::$_passwordColumn
+[20:57:55 IST] ERROR [2]: \lib\module\Application\src\Form\LoginForm.php line 161 : Undefined property: stdClass::$
+[20:57:55 IST] ERROR [8192]: \lib\web\Web\src\Security\Password.php line 23 : password_verify(): Passing null to parameter #2 ($hash) of type string is deprecated

@@ -1,0 +1,481 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$filters = $this->view->getVariable('filters');
+$isManagr = $this->view->getVariable('isManager');
+//$params = $this->view->getVariable('queryParams');
+$fmcList = $this->view->lookupStore('fmc');
+$sourceList = $this->view->lookupStore('source');
+$report = $this->view->getVariable('report');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Active Loans Outstanding Report</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-dcb-filter" class="form-horizontal" id="form-dcb-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('outstanding/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">FMC &raquo;</div>
+                                                    <select name="fmc" id="fmc" class="form-control" title="FMC">
+                                                        <?php if (! $isManagr): ?>
+                                                        
+                                                        <option value="0">--ALL--</option>
+                                                        <?php endif; ?>
+                                                        <?php echo $this->view->formHelper('select', $fmcList, $filters->getValue('fmc')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon">Source  &raquo;</div>
+                                                    <select name="source" class="form-control">
+                                                        <option value="0">--ALL--</option>
+                                                        <?php echo $this->view->formHelper('select', $sourceList, $filters->getValue('source')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                    <a href="javascript:;" class="btn btn-outline-secondary btn-round" id="clear-filter" title="Clear">Clear</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-info">
+                                                    <i class="ft-info"></i> Number of DCB records fetched in the current filter: <strong><?php echo $total; ?></strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php if ($total > 0): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Summary</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-striped table-bordered">
+                                                    <thead class="bg-blue-grey white">
+                                                        <tr>
+                                                            <th>Loans</th>
+                                                            <th>Loan Amount</th>
+                                                            <th>Scheduled Outstanding</th>
+                                                            <th>Actual Principal Outstanding</th>
+                                                            <th>Actual Principal + Interest Outstanding</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $report['total']['grand']['loans']; ?></td>
+                                                            <td><?php echo $this->view->amount($report['total']['grand']['amount']); ?></td>
+                                                            <td><?php echo $this->view->amount($report['total']['grand']['scheduled']); ?></td>
+                                                            <td><?php echo $this->view->amount($report['total']['grand']['principal']); ?></td>
+                                                            <td><?php echo $this->view->amount($report['total']['grand']['outstanding']); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Date wise total</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-striped table-bordered">
+                                                    <thead class="bg-blue-grey white">
+                                                        <tr>
+                                                            <th>As on Date</th>
+                                                            <th>Loans</th>
+                                                            <th>Loan Amount</th>
+                                                            <th>Scheduled Outstanding</th>
+                                                            <th>Actual Principal Outstanding</th>
+                                                            <th>Actual Principal + Interest Outstanding</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($report['date'] as $index => $date): ?>
+                                                        
+                                                        <tr>
+                                                            <td><?php echo $this->view->datepicker($date); ?></td>
+                                                            <td><?php echo $report['total']['date'][$index]['loans']; ?></td>
+                                                            <td><?php echo $this->view->amount($report['total']['date'][$index]['amount']); ?></td>
+                                                            <td><?php echo $this->view->amount($report['total']['date'][$index]['scheduled']); ?></td>
+                                                            <td><?php echo $this->view->amount($report['total']['date'][$index]['principal']); ?></td>
+                                                            <td><?php echo $this->view->amount($report['total']['date'][$index]['outstanding']); ?></td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <?php foreach ($report['date'] as $index1 => $date1): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Loans with last LR on <?php echo $this->view->datepicker($date1); ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">FMC wise Report</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-striped table-bordered">
+                                                                        <thead class="bg-blue-grey white">
+                                                                            <tr>
+                                                                                <th>FMC</th>
+                                                                                <th>Loans</th>
+                                                                                <th>Loan Amount</th>
+                                                                                <th>Scheduled Outstanding</th>
+                                                                                <th>Actual Principal Outstanding</th>
+                                                                                <th>Actual Principal + Interest Outstanding</th>
+                                                                                <th>&nbsp;</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php foreach ($fmcList as $fmcId => $fmcName): ?>
+                                                                            <?php if (isset($report['fmc'][$index1][$fmcId])): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->escapeHtml($fmcName); ?></td>
+                                                                                <td><?php echo $report['fmc'][$index1][$fmcId]['loans']; ?></td>
+                                                                                <td><?php echo $this->view->amount($report['fmc'][$index1][$fmcId]['amount']); ?></td>
+                                                                                <td><?php echo $this->view->amount($report['fmc'][$index1][$fmcId]['scheduled']); ?></td>
+                                                                                <td><?php echo $this->view->amount($report['fmc'][$index1][$fmcId]['principal']); ?></td>
+                                                                                <td><?php echo $this->view->amount($report['fmc'][$index1][$fmcId]['outstanding']); ?></td>
+                                                                                <td>
+                                                                                    <a class="scroll-to" href="javascript:;" data-target="fmc-<?php
+                                                                                    echo $index1 . '-' . $fmcId; ?>" title="View loans">Loans</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endif; ?>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                    </table>
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Source wise Report</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-striped table-bordered">
+                                                                        <thead class="bg-blue-grey white">
+                                                                            <tr>
+                                                                                <th>Source</th>
+                                                                                <th>Loans</th>
+                                                                                <th>Loan Amount</th>
+                                                                                <th>Scheduled Outstanding</th>
+                                                                                <th>Actual Principal Outstanding</th>
+                                                                                <th>Actual Principal + Interest Outstanding</th>
+                                                                                <th>&nbsp;</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php foreach ($sourceList as $sourceId => $sourceName): ?>
+                                                                            <?php if (isset($report['source'][$index1][$sourceId])): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->escapeHtml($sourceName); ?></td>
+                                                                                <td><?php echo $report['source'][$index1][$sourceId]['loans']; ?></td>
+                                                                                <td><?php echo $this->view->amount($report['source'][$index1][$sourceId]['amount']); ?></td>
+                                                                                <td><?php echo $this->view->amount($report['source'][$index1][$sourceId]['scheduled']); ?></td>
+                                                                                <td><?php echo $this->view->amount($report['source'][$index1][$sourceId]['principal']); ?></td>
+                                                                                <td><?php echo $this->view->amount($report['source'][$index1][$sourceId]['outstanding']); ?></td>
+                                                                                <td>
+                                                                                    <a class="scroll-to" href="javascript:;" data-target="source-<?php
+                                                                                    echo $index1 . '-' . $sourceId; ?>" title="View loans">Loans</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endif; ?>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                    </table>
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endforeach; ?>
+                <?php foreach ($report['date'] as $index2 => $date2): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">FMC wise list of Loans as on <?php echo $this->view->datepicker($date2); ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <?php foreach ($fmcList as $fmcId => $fmcName): ?>
+                                        <?php if (isset($report['list'][$index2]['fmc'][$fmcId])): ?>
+                                        
+                                        <div class="row" id="fmc-<?php echo $index2 . '-' . $fmcId; ?>">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">FMC : <?php echo $this->view->escapeHtml($fmcName); ?></h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-plus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse fade">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-striped table-bordered">
+                                                                        <thead class="bg-blue-grey white">
+                                                                            <tr>
+                                                                                <th>Name</th>
+                                                                                <th>Code</th>
+                                                                                <th>Date</th>
+                                                                                <th>Source</th>
+                                                                                <th>Type</th>
+                                                                                <th>Loan A/c</th>
+                                                                                <th>Loan Amount</th>
+                                                                                <th>Scheduled OS</th>
+                                                                                <th>Actual POS</th>
+                                                                                <th>Actual PIOS</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php foreach ($report['list'][$index2]['fmc'][$fmcId] as $item): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->escapeHtml($item->name); ?></td>
+                                                                                <td><?php echo $this->view->escapeHtml($item->code); ?></td>
+                                                                                <td><?php echo $this->view->datepicker($item->loan_date); ?></td>
+                                                                                <td><?php echo $this->view->lookup('source', $item->loan_source_id); ?></td>
+                                                                                <td><?php echo $this->view->lookup('type', $item->loan_type_id); ?></td>
+                                                                                <td><?php echo $this->view->escapeHtml($item->account_number); ?></td>
+                                                                                <td><?php echo $this->view->amount($item->loan_amount); ?></td>
+                                                                                <td><?php echo $this->view->amount($item->scheduled); ?></td>
+                                                                                <td><?php echo $this->view->amount($item->principal); ?></td>
+                                                                                <td><?php echo $this->view->amount($item->outstanding); ?></td>
+                                                                            </tr>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                        <tfoot class="bg-blue-grey white">
+                                                                            <tr>
+                                                                                <th colspan="5">Total</th>
+                                                                                <th><?php echo $report['fmc'][$index2][$fmcId]['loans']; ?></th>
+                                                                                <th><?php echo $this->view->amount($report['fmc'][$index2][$fmcId]['amount']); ?></th>
+                                                                                <th><?php echo $this->view->amount($report['fmc'][$index2][$fmcId]['scheduled']); ?></th>
+                                                                                <th><?php echo $this->view->amount($report['fmc'][$index2][$fmcId]['principal']); ?></th>
+                                                                                <th><?php echo $this->view->amount($report['fmc'][$index2][$fmcId]['outstanding']); ?></th>
+                                                                            </tr>
+                                                                        </tfoot>
+                                                                    </table>
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Source wise list of Loans as on <?php echo $this->view->datepicker($date2); ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <?php foreach ($sourceList as $sourceId => $sourceName): ?>
+                                        <?php if (isset($report['list'][$index2]['source'][$sourceId])): ?>
+                                        
+                                        <div class="row" id="source-<?php echo $index2 . '-' . $sourceId; ?>">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Source : <?php echo $this->view->escapeHtml($sourceName); ?></h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-plus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse fade">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-striped table-bordered">
+                                                                        <thead class="bg-blue-grey white">
+                                                                            <tr>
+                                                                                <th>FMC</th>
+                                                                                <th>Name</th>
+                                                                                <th>Code</th>
+                                                                                <th>Date</th>
+                                                                                <th>Type</th>
+                                                                                <th>Loan A/c</th>
+                                                                                <th>Loan Amount</th>
+                                                                                <th>Scheduled OS</th>
+                                                                                <th>Actual POS</th>
+                                                                                <th>Actual PIOS</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php foreach ($report['list'][$index2]['source'][$sourceId] as $item): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->lookup('fmc', $item->fmc_id); ?></td>
+                                                                                <td><?php echo $this->view->escapeHtml($item->name); ?></td>
+                                                                                <td><?php echo $this->view->escapeHtml($item->code); ?></td>
+                                                                                <td><?php echo $this->view->datepicker($item->loan_date); ?></td>
+                                                                                <td><?php echo $this->view->lookup('type', $item->loan_type_id); ?></td>
+                                                                                <td><?php echo $this->view->escapeHtml($item->account_number); ?></td>
+                                                                                <td><?php echo $this->view->amount($item->loan_amount); ?></td>
+                                                                                <td><?php echo $this->view->amount($item->scheduled); ?></td>
+                                                                                <td><?php echo $this->view->amount($item->principal); ?></td>
+                                                                                <td><?php echo $this->view->amount($item->outstanding); ?></td>
+                                                                            </tr>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                        <tfoot class="bg-blue-grey white">
+                                                                            <tr>
+                                                                                <th colspan="5">Total</th>
+                                                                                <th><?php echo $report['source'][$index2][$sourceId]['loans']; ?></th>
+                                                                                <th><?php echo $this->view->amount($report['source'][$index2][$sourceId]['amount']); ?></th>
+                                                                                <th><?php echo $this->view->amount($report['source'][$index2][$sourceId]['scheduled']); ?></th>
+                                                                                <th><?php echo $this->view->amount($report['source'][$index2][$sourceId]['principal']); ?></th>
+                                                                                <th><?php echo $this->view->amount($report['source'][$index2][$sourceId]['outstanding']); ?></th>
+                                                                            </tr>
+                                                                        </tfoot>
+                                                                    </table>
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <?php endforeach; ?>
+                <?php endif;
+            

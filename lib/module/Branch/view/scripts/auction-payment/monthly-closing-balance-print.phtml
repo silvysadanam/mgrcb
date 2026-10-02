@@ -1,0 +1,142 @@
+<?php
+
+$list = $this->view->getVariable('list');
+$auctionChits = $this->view->getVariable('auctionChits');
+$donor = $this->view->getVariable('donor');
+$month = $this->view->getVariable('month');
+$fmc = $this->view->getVariable('fmc');
+$title = [
+    $fmc->name, $this->view->formatDateTime('d-m-Y'),
+];
+
+if (! empty($month)) {
+    $title[] = $month;
+}
+if (! empty($donor)) {
+    $title[] = $donor->code;
+    $title[] = $donor->name;
+}
+
+$summary = [
+    'entries' => 0,
+    'catch' => 0,
+    'advance' => 0,
+    'balance' => 0,
+    'payment' => 0,
+];
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>Monthly Closing Balance - <?php echo $this->view->escapeHtml(implode(' ', $title)); ?></title>
+        <?php $this->block('print-auction'); ?>
+        
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="0" border="0" style="margin:10px 10px 5px 0;">
+            <thead>
+                <tr>
+                    <th class="main-heading center">
+                        FISHERMEN WELFARE SOCIETY - KOLLAM
+                    </th>
+                </tr>
+                <tr>
+                    <th class="center">
+                        FMC: <?php echo $this->view->escapeHtml($fmc->name); ?>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="main-heading center">MONTHLY CLOSING BALANCE</th>
+                </tr>
+                <?php if (!empty($month)): ?>
+                
+                <tr>
+                    <th class="main-heading center">MONTH: <?php echo $month; ?></th>
+                </tr>
+                <?php endif; ?>
+                <?php if (!empty($donor)): ?>
+                
+                <tr>
+                    <th class="main-heading center">
+                        CODE: <?php echo $this->view->escapeHtml($donor->code); ?>,
+                        NAME: <?php echo $this->view->escapeHtml($donor->name); ?>,
+                    </th>
+                </tr>
+                <?php endif; ?>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="center" width="10%">Sl. No.</th>
+                                    <th>Month</th>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                    <th class="center">Opening<br>Balance</th>
+                                    <th class="center">Auction<br>Chits</th>
+                                    <th class="center">Catch</th>
+                                    <th class="center">Advance</th>
+                                    <th class="center">Balance</th>
+                                    <th class="center">Payment</th>
+                                    <th class="center">Closing<br>Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($list as $item): ?>
+                                <?php $summary['catch'] += $item->auction_amount; ?>
+                                <?php $summary['advance'] += $item->advance; ?>
+                                <?php $summary['balance'] += $item->balance; ?>
+                                <?php $summary['payment'] += $item->amount_paid; ?>
+                                
+                                <tr>
+                                    <td class="center"><?php echo $this->view->counter(); ?></td>
+                                    <td><?php echo $this->view->paymentMonth($item->payment_year, $item->payment_month); ?></td>
+                                    <td><?php echo $this->view->lookup('donor_code', $item->donor_id); ?></td>
+                                    <td><?php echo $this->view->lookup('donor_name', $item->donor_id); ?></td>
+                                    <td class="center"><?php echo $item->opening_balance; ?></td>
+                                    <td class="center">
+                                        <?php if (isset($auctionChits[$item->donor_id][$item->payment_year][$item->payment_month])): ?>
+                                        <?php echo $auctionChits[$item->donor_id][$item->payment_year][$item->payment_month]; ?>
+                                        <?php $summary['entries'] += $auctionChits[$item->donor_id][$item->payment_year][$item->payment_month]; ?>
+                                        <?php else: ?>
+                                        0
+                                        <?php endif; ?>
+                                    
+                                    </td>
+                                    
+                                    <td class="center"><?php echo $item->auction_amount; ?></td>
+                                    <td class="center"><?php echo $item->advance; ?></td>
+                                    <td class="center"><?php echo $item->balance; ?></td>
+                                    <td class="center"><?php echo $item->amount_paid; ?></td>
+                                    <td class="center"><?php echo $item->closing_balance; ?></td>
+                                </tr>
+                                <?php endforeach; ?>
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Total</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th class="center"><?php echo $summary['entries']; ?></th>
+                                    <th class="center"><?php echo $summary['catch']; ?></th>
+                                    <th class="center"><?php echo $summary['advance']; ?></th>
+                                    <th class="center"><?php echo $summary['balance']; ?></th>
+                                    <th class="center"><?php echo $summary['payment']; ?></th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>

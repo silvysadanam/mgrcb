@@ -1,0 +1,52 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+$withdrawalOnly = $this->view->getVariable('withdrawalOnly');
+$bankOptions = $this->view->lookupStore('bank');
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Advance Adjustment</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-advance" id="form-advance" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="alert alert-danger" id="validation-message" style="display:none;"></div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="advance_date">Date <span class="red">*</span></label>
+                                                            <input type="text" name="advance_date" id="advance_date" class="form-control single-date-max-today" data-min-date="01/04/2022" value="<?php 
+                                                            echo $form->getEscapedValue('advance_date'); ?>" placeholder="Advance Date" maxlength="10" readonly="readonly">
+                                                        </div>                                                      
+                                                       
+                                                    </div>
+                                                     <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="help-block text-italic">Instructions</p>
+                                                                <p class="help-block">Select a date for reset the opening balance </p>
+                                                                <p class="help-block"></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

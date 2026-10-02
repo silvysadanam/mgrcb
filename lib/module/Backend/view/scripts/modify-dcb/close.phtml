@@ -1,0 +1,199 @@
+<?php
+
+$form = $this->getForm();
+
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$demand = $this->view->getVariable('demand');
+$outstandingDate = $this->view->datepicker($demand['outstanding_date']);
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Close Loan at End of Tenure</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>Member</th>
+                                                            <th>Code</th>
+                                                            <th>Type</th>
+                                                            <th>Source</th>
+                                                            <th>Loan Amount</th>
+                                                            <th>EMI</th>
+                                                            <th>Date</th>
+                                                            <th>Loan A/C</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                                            <td><?php echo $this->view->integer($loan->loan_amount); ?></td>
+                                                            <td><?php echo $this->view->integer($loan->emi); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($loan->account_number); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="alert alert-danger" id="validation-message" style="display:none;">
+
+                                                </div>
+                                                <input type="hidden" id="min-date" value="<?php echo $this->view->datepicker($demand['min_date']); ?>">
+                                                <input type="hidden" id="max-date" value="<?php echo $this->view->datepicker($demand['payment_date']); ?>">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <form class="form form-horizontal" name="form-data-entry" id="form-data-entry" method="post" action="" autocomplete="off">
+                                                    <div class="form-body">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <table class="table table-striped table-bordered" id="list-table-7">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label>Previous Instalment Date</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text" class="form-control input-sm" value="<?php
+                                                                                echo $outstandingDate; ?>" readonly="readonly">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label for="closing_date">Date for Closing</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text" name="closing_date" id="closing_date" class="form-control input-sm" value="<?php
+                                                                                echo $form->getEscapedValue('closing_date'); ?>" readonly="readonly">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label for="overdue">PIOS Previous Month</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text" name="outstanding" id="outstanding" class="form-control input-sm" value="<?php
+                                                                                echo $form->getEscapedValue('outstanding'); ?>" readonly="readonly">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label for="overdue">Total OD on <?php echo $outstandingDate; ?></label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text" name="overdue" id="overdue" class="form-control input-sm" value="<?php
+                                                                                echo $form->getEscapedValue('overdue'); ?>" readonly="readonly">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label for="interest">Interest on PIOS</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text" name="interest" id="interest" class="form-control input-sm" value="<?php
+                                                                                echo $form->getEscapedValue('interest'); ?>" readonly="readonly">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label for="penal_interest">Penal Interest on Total OD</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text" name="penal_interest" id="penal_interest" class="form-control input-sm" value="<?php
+                                                                                echo $form->getEscapedValue('penal_interest'); ?>" readonly="readonly">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label for="total">Total To Be paid</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text" name="total" id="total" class="form-control input-sm" value="<?php
+                                                                                echo $form->getEscapedValue('total'); ?>" readonly="readonly">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                               <table class="table table-striped table-bordered" id="list-table-7">
+                                                                   <tbody>
+                                                                       <tr>
+                                                                            <td><label for="paid_amount">Amount Paid</label></td>
+                                                                            <td>
+                                                                                <input type="text" name="paid_amount" id="paid_amount" class="form-control input-sm number-decimal" value="<?php
+                                                                                echo $form->getEscapedValue('paid_amount'); ?>">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><label for="payment_date">Date for Payment</label></td>
+                                                                            <td>
+                                                                                <input type="text" name="payment_date" id="payment_date" class="form-control input-sm" value="<?php 
+                                                                                echo $form->getEscapedValue('payment_date'); ?>" readonly="readonly">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><label for="receipt_number">Receipt No</label></td>
+                                                                            <td>
+                                                                                <input type="text" name="receipt_number" id="receipt_number" class="form-control input-sm" value="<?php 
+                                                                                echo $form->getEscapedValue('receipt_number'); ?>">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><label for="fmc_voucher_number">FMC Voucher No</label></td>
+                                                                            <td>
+                                                                                <input type="text" name="fmc_voucher_number" id="fmc_voucher_number" class="form-control input-sm" value="<?php 
+                                                                                echo $form->getEscapedValue('fmc_voucher_number'); ?>">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2">
+                                                                                <div class="form-group">
+                                                                                    <label class="label-control" for="note">Notes</label>
+                                                                                    <textarea name="note" id="note" class="form-control" placeholder="Notes"><?php 
+                                                                                    echo $form->getEscapedValue('note'); ?></textarea>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                   </tbody>
+                                                               </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-actions center">
+                                                        <?php echo $form->getCsrf(); ?>
+                                                        
+                                                         <a class="btn btn-outline-secondary mr-1" title="CANCEL" href="<?php 
+                                                         echo $this->view->actionUrl('modify-dcb/view/id/' . $loan->id); ?>"><i class="ft-rewind"></i> CANCEL</a>
+                                                        <button type="submit" class="btn btn-primary" title="CONFIRM"><i class="ft-save"></i> CONFIRM</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

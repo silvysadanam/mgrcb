@@ -1,0 +1,73 @@
+[15:05:25 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 150 : syntax error, unexpected token "!="
+[18:28:20 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\index.phtml on line 205 : Class "LocaleDisplay" not found
+[18:28:39 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\index.phtml on line 211 : Call to undefined function encodeURIComponent()
+[18:28:55 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 215 : Undefined variable $tab2
+[18:28:55 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 216 : Undefined variable $total_counted
+[18:28:55 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 218 : Undefined variable $over_short_color
+[18:28:55 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 218 : Undefined variable $difference
+[18:30:12 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\index.phtml on line 203 : syntax error, unexpected token "="
+[18:30:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 219 : Undefined variable $over_short_color
+[18:30:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 219 : Undefined variable $difference
+[18:38:28 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[18:45:03 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\index.phtml on line 208 : syntax error, unexpected token "<"
+[19:40:02 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[19:40:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:40:37 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:40:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:40:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:40:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:41:00 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:43:02 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:43:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:43:14 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:43:14 IST] ERROR [2]: \lib\module\Backend\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[19:43:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:43:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:43:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:44:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:44:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:45:27 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:45:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:45:58 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:46:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:46:58 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:47:13 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:47:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:47:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:48:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:56:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:56:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:56:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:56:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:56:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:56:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:56:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:52:19 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 250 : Undefined variable $allow_closing_till_edit
+[21:56:04 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cash' in 'field list'
+[22:16:12 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.type' in 'where clause'
+[22:18:00 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\index.phtml on line 13 : Undefined constant "opening_till_data"
+[22:18:20 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 13 : Undefined array key "counted_till"
+[22:57:54 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:57:54 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:57:54 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:57:54 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:58:18 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:58:18 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:58:18 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:58:18 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:58:28 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:58:28 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:58:28 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:58:28 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:59:19 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:59:19 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:59:19 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:59:19 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:59:51 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:59:51 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:59:51 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:59:51 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[23:01:00 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[23:01:00 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[23:01:00 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[23:01:00 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found

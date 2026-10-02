@@ -1,0 +1,8 @@
+[08:00:43 IST] EXCEPTION: \lib\module\Branch\src\Utility\MReceiptsReport.php on line 136 : Call to undefined method Branch\Utility\MReceiptsReport::_loadReport()
+[08:02:14 IST] EXCEPTION: \lib\module\Branch\src\Utility\MReceiptsReport.php on line 136 : Call to undefined method Branch\Utility\MReceiptsReport::_loadReport()
+[08:05:00 IST] EXCEPTION: \lib\module\Branch\src\Utility\MReceiptsReport.php on line 599 : Too few arguments to function Branch\Utility\MReceiptsReport::getPaymentTransactions(), 1 passed in C:\laragon\www\fws_main\lib\module\Branch\src\Utility\MReceiptsReport.php on line 314 and exactly 2 expected
+[08:53:26 IST] EXCEPTION: \lib\module\Branch\src\Utility\MReceiptsReport.php on line 599 : Too few arguments to function Branch\Utility\MReceiptsReport::getPaymentTransactions(), 1 passed in C:\laragon\www\fws_main\lib\module\Branch\src\Utility\MReceiptsReport.php on line 314 and exactly 2 expected
+[10:19:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "bankTotal"
+[10:19:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bycashTotal"
+[10:19:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "bankTotal"
+[10:19:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bycashTotal"

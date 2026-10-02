@@ -1,0 +1,74 @@
+[20:03:19 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[20:04:41 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 52 : Call to undefined method stdClass::getEscapedValue()
+[20:11:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 101 : Undefined variable $form
+[20:11:10 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 101 : Call to a member function getValue() on null
+[20:12:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 101 : Undefined variable $form
+[20:12:42 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 101 : Call to a member function getValue() on null
+[20:13:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 101 : Undefined variable $form
+[20:13:50 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 101 : Call to a member function getValue() on null
+[20:18:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 101 : Undefined variable $form
+[20:18:48 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 101 : Call to a member function getValue() on null
+[20:18:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 101 : Undefined variable $form
+[20:18:50 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 101 : Call to a member function getValue() on null
+[20:20:31 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 152 : Undefined variable $edit
+[20:20:31 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 324 : Undefined variable $form
+[20:20:31 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 324 : Call to a member function getCsrf() on null
+[20:20:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 294 : Undefined variable $form
+[20:20:59 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 294 : Call to a member function getCsrf() on null
+[20:21:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 295 : Undefined variable $form
+[20:21:35 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 295 : Call to a member function getCsrf() on null
+[20:22:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 292 : Undefined variable $form
+[20:22:06 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 292 : Call to a member function getCsrf() on null
+[20:22:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 292 : Undefined variable $form
+[20:22:07 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 292 : Call to a member function getCsrf() on null
+[20:22:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 292 : Undefined variable $form
+[20:22:30 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 292 : Call to a member function getCsrf() on null
+[20:24:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 230 : Undefined variable $form
+[20:24:58 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 230 : Call to a member function getCsrf() on null
+[20:25:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 230 : Undefined variable $form
+[20:25:47 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 230 : Call to a member function getCsrf() on null
+[20:25:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 230 : Undefined variable $form
+[20:25:58 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 230 : Call to a member function getCsrf() on null
+[20:33:18 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 233 : Undefined variable $form
+[20:33:18 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 233 : Call to a member function getCsrf() on null
+[20:35:35 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:35:35 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:35:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 251 : Undefined variable $membership
+[20:35:42 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 251 : Call to a member function photo() on null
+[20:36:24 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:36:24 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[21:10:57 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change.phtml line 204 : Undefined variable $edit
+[21:23:37 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:30:47 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:32:32 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:32:46 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:33:19 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:33:52 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:34:06 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:35:15 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:36:18 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:38:37 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_photo`, CONSTRAINT `member_photo_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:42:55 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 239 : Object of class stdClass could not be converted to string
+[21:43:39 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 239 : Object of class stdClass could not be converted to string
+[21:43:40 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change.phtml on line 239 : Object of class stdClass could not be converted to string
+[21:47:44 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Insert.php on line 125 : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mgrcb`.`member_document`, CONSTRAINT `member_document_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[21:49:15 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[21:49:15 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[21:57:05 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[21:57:05 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:02:15 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:02:15 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:09:13 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:09:13 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:10:14 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:10:14 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:15:29 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 506 : syntax error, unexpected token "echo"
+[22:15:33 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 506 : syntax error, unexpected token "echo"
+[22:15:50 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 506 : Undefined array key "id"
+[22:18:47 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 506 : Undefined array key "id"
+[22:18:48 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 506 : Undefined array key "id"
+[22:19:36 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:19:36 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:19:58 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 506 : Undefined array key "id"
+[22:22:38 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 506 : Undefined array key "id"
+[22:23:00 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 506 : Array to string conversion

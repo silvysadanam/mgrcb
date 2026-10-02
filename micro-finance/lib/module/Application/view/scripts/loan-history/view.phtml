@@ -1,0 +1,364 @@
+<?php
+
+use Application\Utility\LoanHelper;
+
+$total = $this->view->getVariable('total');
+$loans = $this->view->getVariable('loans');
+$member = $this->view->getVariable('member');
+$fmc = $this->view->getVariable('fmc');
+$info = $this->view->getVariable('info');
+$yesOrNo = ['No', 'Yes'];
+
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Loan History</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-primary">
+                                                    <div class="card-header bg-primary">
+                                                        <h4 class="card-title white">Member</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <table class="table table-bordered">
+                                                                <thead class="bg-info white">
+                                                                    <tr>
+                                                                        <th>FMC</th>
+                                                                        <th>Code</th>
+                                                                        <th>Name</th>
+                                                                        <th>Total Loans</th>
+                                                                        <th>Total Loan Amount</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><?php echo $this->view->escapeHtml($fmc->name); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                                        <td><?php echo $total; ?></td>
+                                                                        <td><?php echo $this->view->currency($info['amount'], 0); ?></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-2">
+                                                <div class="card card-bordered border-primary">
+                                                    <div class="card-header bg-primary">
+                                                        <h4 class="card-title white">Summary</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <table class="table table-bordered">
+                                                                <thead class="bg-info white">
+                                                                    <tr>
+                                                                        <th>Active</th>
+                                                                        <th>Closed within tenure</th>
+                                                                        <th>Closed with delinqeuncy</th>
+                                                                        <th>Refinanced &amp; Rescheduled</th>
+                                                                        <th>Rescheduled</th>
+                                                                        <th>Written off</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><?php echo $info['active']; ?></td>
+                                                                        <td><?php echo $info['closed']; ?></td>
+                                                                        <td><?php echo $info['delinquent']; ?></td>
+                                                                        <td><?php echo $info['refinanced']; ?></td>
+                                                                        <td><?php echo $info['rescheduled']; ?></td>
+                                                                        <td><?php echo $info['written_off']; ?></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <?php if ($total > 0): ?>
+                <?php foreach ($loans as $store): ?>
+                <?php $loan = $store->loan(); ?>
+                <?php $summary = $store->loanSummary(); ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        #<?php echo $this->view->counter(); ?> DCB ID: <?php echo $loan->id; ?> |
+                                        Loan A/C: <?php echo $this->view->escapeHtml($loan->account_number); ?> |
+                                        Loan Date: <?php echo $this->view->datepicker($loan->loan_date); ?> |
+                                        Amount: <?php echo $this->view->currency($loan->loan_amount); ?> |
+                                        Tenure: <?php echo $this->view->integer($loan->tenure); ?> |
+                                        EMI: <?php echo $this->view->currency($loan->emi); ?> |
+                                        End Date: <?php echo $this->view->datepicker($loan->end_date); ?> |
+                                        Status:
+                                        <?php $status = $store->status(); ?>
+                                        <?php if ($store->closed()): ?>
+                                        <?php if (in_array($loan->loan_status_id, [0, LoanHelper::STATUS_PRECLOSED])): ?>
+                                        
+                                        <span class="badge badge-success"><?php echo $status; ?></span>
+                                        <?php else: ?>
+                                        
+                                        <span class="badge badge-danger"><?php echo $status; ?></span>
+                                        <?php endif; ?>
+                                        <?php else: ?>
+                                        
+                                        <span class="badge badge-info"><?php echo $status; ?></span>
+                                        <?php endif; ?>
+                                    </h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th colspan="2">Loan</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>DCB ID</td>
+                                                            <td><?php echo $loan->id; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Loan A/C</td>
+                                                            <td><?php echo $this->view->escapeHtml($loan->account_number); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Loan Date</td>
+                                                            <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Type</td>
+                                                            <td><?php echo $store->loanType(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Source</td>
+                                                            <td><?php echo $store->loanSource(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount</td>
+                                                            <td><?php echo $this->view->currency($loan->loan_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>RoI</td>
+                                                            <td><?php echo $this->view->interestRate($loan->interest_rate); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Penal RoI</td>
+                                                            <td><?php echo $this->view->interestRate($loan->penal_interest_rate); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tenure</td>
+                                                            <td><?php echo $loan->tenure; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>EMI</td>
+                                                            <td><?php echo $this->view->currency($loan->emi); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Status</td>
+                                                            <td><?php echo $status; ?></td>
+                                                        </tr>
+                                                        <?php if ($store->closed()): ?>
+                                                        
+                                                        <tr>
+                                                            <td>Closed Date</td>
+                                                            <td><?php echo $this->view->datepicker($loan->closing_date); ?></td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th colspan="2">DCB</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Start Date</td>
+                                                            <td><?php echo $this->view->datepicker($loan->start_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>End Date</td>
+                                                            <td><?php echo $this->view->datepicker($loan->end_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Has broken period</td>
+                                                            <td><?php echo $yesOrNo[$loan->has_broken_period]; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Instalments</td>
+                                                            <td><?php echo $summary->instalments; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Paid tenures</td>
+                                                            <td><?php echo $summary->paid_tenures; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total paid amount</td>
+                                                            <td><?php echo $this->view->amount($summary->collection_repaid); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Principal collected</td>
+                                                            <td><?php echo $this->view->amount($summary->collection_principal_arrears + $summary->collection_current_principal); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Interest collected</td>
+                                                            <td><?php echo $this->view->amount($summary->collection_penal_interest + $summary->collection_interest_arrears + $summary->collection_current_interest); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th colspan="2">Credit Portfolio</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php if (! $store->closed()): ?>
+                                                        <tr>
+                                                            <td>As on Date</td>
+                                                            <td><?php echo $this->view->datepicker($summary->as_on_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Scheduled Principal OS</td>
+                                                            <td><?php echo $this->view->amount($summary->balance_scheduled_principal_outstanding); ?></td>
+                                                        </tr>
+                                                        <?php if ($summary->paid_tenures > 0): ?>
+                                                        
+                                                        <tr>
+                                                            <td>Actual Principal OS</td>
+                                                            <td><?php echo $this->view->amount($summary->balance_actual_principal_outstanding); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Actual Principal/Interest OS</td>
+                                                            <td><?php echo $this->view->amount($summary->balance_actual_principal_interest_outstanding); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Overdue</td>
+                                                            <td><?php echo $this->view->amount($summary->balance_total_overdue); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Ageing</td>
+                                                            <td><?php echo $summary->ageing; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>PAR</td>
+                                                            <td><?php echo $this->view->amount($summary->par); ?></td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        <?php if ($store->closed()): ?>
+                                                        <?php if ($loan->loan_status_id > 0): ?>
+                                                        <?php if ($summary->refinanced > 0): ?>
+                                                        
+                                                        <tr>
+                                                            <td>Refinance</td>
+                                                            <td><?php echo $status; ?> to DCB ID <?php  echo $summary->refinanced_to; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Refinanced Date</td>
+                                                            <td><?php echo $this->view->datepicker($summary->refinanced_date); ?> </td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        <?php if ($summary->written_off > 0): ?>
+                                                        
+                                                        <tr>
+                                                            <td>Write off</td>
+                                                            <td>
+                                                                Written off on <?php
+                                                                echo $this->view->datepicker($summary->write_off_date); ?>
+                                                            
+                                                            </td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        <?php endif; ?>
+                                                        <?php endif; ?>
+                                                        <?php else: ?>
+                                                        
+                                                        <tr>
+                                                            <td>Repayment</td>
+                                                            <td>Not started</td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        <?php if ($summary->refinanced_loan > 0): ?>
+                                                        
+                                                        <tr>
+                                                            <td>Refinance</td>
+                                                            <td>
+                                                                Refinanced / Rescheduled from DCB ID <?php
+                                                                echo $summary->refinanced_from; ?>
+                                                            
+                                                            </td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <hr>
+                                                <a class="btn btn-outline-primary" title="View Loan" href="<?php
+                                                echo $this->view->actionUrl('modify-dcb/view/id/' . $loan->id); ?>">View Loan</a>
+                                                <a class="btn btn-outline-primary ml-1" title="View DCB" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('view-dcb/view/id/' . $loan->id); ?>">View DCB</a>
+                                                <a class="btn btn-outline-primary ml-1" title="Download DCB" href="<?php
+                                                echo $this->view->actionUrl('view-dcb/download/id/' . $loan->id); ?>">Download DCB</a>
+                                                <a class="btn btn-outline-primary ml-1" title="View Schedule" href="<?php
+                                                echo $this->view->actionUrl('modify-dcb/schedule/id/' . $loan->id); ?>">View Schedule</a>
+                                                <a class="btn btn-outline-primary ml-1" title="Print Schedule" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('modify-dcb/schedule-print/id/' . $loan->id); ?>">Print Schedule</a>
+                                                <a class="btn btn-outline-primary ml-1" title="View Payment" href="<?php
+                                                echo $this->view->actionUrl('modify-dcb/payment/id/' . $loan->id); ?>">View Payment</a>
+                                                <a class="btn btn-outline-primary ml-1" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('modify-dcb/payment-print/id/' . $loan->id); ?>" title="Print Payment">Print Payment</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endforeach; ?>
+
+                <?php endif; 
+
+            

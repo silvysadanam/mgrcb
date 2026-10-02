@@ -1,0 +1,29 @@
+[18:24:10 IST] EXCEPTION: \lib\module\Backend\src\Utility\Dashboard.php on line 194 : Undefined constant Shared\Constant\MemberType::LIFEMEMBER
+[18:50:53 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[18:50:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[18:54:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 156 : Undefined variable $trans
+[18:54:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 156 : Undefined variable $trans
+[18:54:43 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 156 : Undefined variable $trans
+[19:16:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 156 : Undefined variable $trans
+[19:16:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 156 : Undefined variable $trans
+[19:37:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[19:37:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[19:38:29 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[19:39:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[20:10:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[20:37:51 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 324 : Undefined constant Shared\Constant\MemberType::AUCTIONEER
+[20:38:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[20:39:46 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[20:41:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[20:41:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 186 : Undefined array key "fish"
+[20:41:21 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 186 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[20:46:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[20:46:01 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 193 : Undefined array key "family_name"
+[20:46:01 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 193 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[20:46:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[20:46:03 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 193 : Undefined array key "family_name"
+[20:46:03 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 193 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[20:46:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans
+[20:46:03 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 193 : Undefined array key "family_name"
+[20:46:03 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 193 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[20:47:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 153 : Undefined variable $trans

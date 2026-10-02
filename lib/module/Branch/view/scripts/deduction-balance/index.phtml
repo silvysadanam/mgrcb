@@ -1,0 +1,54 @@
+<?php
+
+$list = $this->view->getVariable('list');
+
+?>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Select Member</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <?php if (! empty($list)): ?>
+                                                
+                                                <table class="table table-striped table-bordered" id="list-table-2">
+                                                    <thead class="bg-blue-grey white">
+                                                        <tr>
+                                                            <th>Member</th>
+                                                            <th>Closing Date</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($list as $memberId => $date): ?>
+
+                                                        <tr>
+                                                            <td><?php echo $this->view->lookup('member', $memberId); ?></td>
+                                                            <td><?php echo $this->view->datepicker($date); ?></td>
+                                                            <td>
+                                                                <a class="btn btn-info btn-sm" href="<?php 
+                                                                echo $this->view->actionUrl('deduction-balance/view/id/' . $memberId); ?>" title="View Balance"><i class="ft-bookmark"></i> View</a>
+                                                            </td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+
+                                                    </tbody>
+                                                </table>
+                                                <?php else: ?>
+                                                
+                                                <div class="alert alert-warning">No records found</div>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

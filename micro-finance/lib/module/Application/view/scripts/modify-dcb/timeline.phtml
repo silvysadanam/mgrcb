@@ -1,0 +1,108 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$timeline = $store->timeline();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">DCB SUMMARY</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12 text-right">
+                                                <a  class="btn btn-outline-primary" title="PRINT" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('modify-dcb/schedule-print/id/' . $loan->id); ?>">
+                                                    <i class="ft-printer"></i> PRINT
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>Member</th>
+                                                            <th>Code</th>
+                                                            <th>Type</th>
+                                                            <th>Source</th>
+                                                            <th>Ln Amnt</th>
+                                                            <th>Date</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                                            <td><?php echo $this->view->integer($loan->loan_amount); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>     
+                <section>                   
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Activity Timeline</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <?php if (! empty($timeline)): ?>
+                                        
+                                        <table class="table table-bordered" id="table-timeline">
+                                             <thead class="bg-info white">
+                                                <tr>
+                                                    <th>Date &amp; Time</th>
+                                                    <th>Title</th>
+                                                    <th>Description</th>
+                                                    <th>User</th>
+                                                 </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($timeline as $row): ?>
+
+                                                <tr>
+                                                    <td data-sort="<?php echo $row->created_at; ?>"><?php echo $this->view->userTime($row->created_at); ?></td>
+                                                    <td><?php echo $this->view->escapeHtml($row->title); ?></td>
+                                                    <td><?php echo $this->view->textareaHtml($row->description); ?></td>
+                                                    <td><?php echo $this->view->lookup('administrator', $row->administrator_id); ?></td>
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                        </table>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">
+                                            No entries found
+                                        </div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

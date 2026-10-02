@@ -1,0 +1,356 @@
+<?php
+
+use Shared\Column\PqrMember;
+use Application\Utility\LoanHelper;
+
+$form = $this->getForm();
+$branchManager = $this->view->getVariable('branchManager');
+$hasReport = $this->view->getVariable('hasReport');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">PQR - Members Level Report</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-pqr" id="form-pqr" method="post" action="" target="_blank" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="fmc_id" class="label-control col-md-4 text-left">FMC</label>
+                                                            <select name="fmc_id" id="fmc_id" class="form-control col-md-8" title="FMC">
+                                                                <?php if (! $branchManager): ?>
+                                                                
+                                                                <option value="0">--ALL--</option>
+                                                                <?php endif; ?>
+                                                                
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $form->getValue('fmc_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="amount" class="label-control col-md-4 text-left">Total Loan Amount </label>
+                                                            <select name="amount[]" id="amount" class="form-control col-md-8 select2" title="Total Loan Amount" multiple="multiple">
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('amount'), $form->getValue('amount')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="reporting_date" class="label-control col-md-4 text-left">As on Date</label>
+                                                            <select name="reporting_date" id="reporting_date" class="form-control col-md-8" title="Date">
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('date'), $form->getValue('reporting_date')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="report_option" class="label-control col-md-4 text-left">Report Option</label>
+                                                            <select name="report_option" id="report_option" class="form-control col-md-8" title="Report Option">
+                                                                <option value="0">PRINT VIEW</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->getVariable('reportOptions'), $form->getValue('report_option')); ?>
+                                                                
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <a href="javascript:;" id="check-loan-filter" class="btn btn-outline-info" title="CHECK FILTER">CHECK FILTER</a>
+                                                            </div>
+                                                            <div class="col-12 mt-2">
+                                                                <div class="alert" id="check-result" style="display:none;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <hr>
+                                                                <p class="help-block text-italic">Instructions</p>
+                                                                <p class="help-block">Select "DOWNLOAD" option to save the report as file.</p>
+                                                                <p class="help-block">The downloaded file will be saved to the browser's "Downloads" folder as .csv file</p>
+                                                                <p class="help-block">Open the csv file with Excel and save as ".xlsx" file</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                
+                                                <button type="submit" class="btn btn-primary" title="SUBMIT">SUBMIT</button>
+                                            </div>
+                                        </form>
+                                        <input type="hidden" id="view-pqr-url" value="<?php
+                                        echo $this->view->actionUrl('pqr/view-member'); ?>/">
+                                        <input type="hidden" id="check-pqr-url" value="<?php
+                                        echo $this->view->actionUrl('pqr/check-member'); ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+<?php if ($hasReport):
+
+$cell = new PqrMember();
+$columns = $cell->get();
+$span = PqrMember::COLUMNS;
+
+$generator = $this->view->getVariable('generator');
+$entries = $generator->entries();
+$total = $generator->total();
+$filters = $generator->filters();
+$ageing = $this->view->lookupStore('ageing_title');
+$backgrounds = [
+    LoanHelper::AGEING_ONTIME => ' bg-success white font-weight-bold',
+    LoanHelper::AGEING_365 => ' bg-danger white font-weight-bold',
+];
+?>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">OVERVIEW - PORTFOLIO QUALITY - MEMBERS LEVEL</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body overflow-x-scroll">
+                                        <table class="table table-responsive-lg table-bordered table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th class="bg-warning" title="A">&nbsp;</th>
+                                                    <th class="bg-warning text-center" title="B"><span><?php echo $columns[PqrMember::C2]['html']; ?></span></th>
+                                                    <th class="bg-warning text-center" title="C"><?php echo $columns[PqrMember::C3]['html']; ?></th>
+                                                    <th class="bg-warning text-center" title="D"><?php echo $columns[PqrMember::C4]['html']; ?></th>
+                                                    <th class="bg-warning text-center" title="E"><?php echo $columns[PqrMember::C5]['html']; ?></th>
+                                                    <th class="bg-warning text-center" title="F"><?php echo $columns[PqrMember::C6]['html']; ?></th>
+                                                    <th class="bg-warning text-center" title="G"><?php echo $columns[PqrMember::C7]['html']; ?></th>
+                                                    <th class="bg-warning text-center" title="H"><?php echo $columns[PqrMember::C8]['html']; ?></th>
+                                                    <th class="bg-amber text-center" title="I"><?php echo $columns[PqrMember::C9]['html']; ?></th>
+                                                    <th class="bg-amber text-center" title="J"><?php echo $columns[PqrMember::C10]['html']; ?></th>
+                                                    <th class="bg-warning text-center" title="K"><?php echo $columns[PqrMember::C11]['html']; ?></th>
+                                                    <th class="bg-warning text-center" title="L"><?php echo $columns[PqrMember::C12]['html']; ?></th>
+                                                    <th class="bg-warning text-center" title="M"><?php echo $columns[PqrMember::C13]['html']; ?></th>
+                                                    <th class="bg-warning text-center" title="N"><?php echo $columns[PqrMember::C14]['html']; ?></th>
+                                                    <th class="bg-amber text-center" title="O"><?php echo $columns[PqrMember::C15]['html']; ?></th>
+                                                </tr>
+                                                <tr>
+                                                    <?php for ($column = 1; $column < 9; $column++): ?>
+
+                                                    <th class="bg-warning text-center"><?php echo $column; ?></th>
+                                                    <?php endfor; ?>
+                                                    <?php for ($column = 9; $column < 11; $column++): ?>
+
+                                                    <th class="bg-amber text-center"><?php echo $column; ?></th>
+                                                    <?php endfor; ?>
+                                                    <?php for ($column = 11; $column < 15; $column++): ?>
+
+                                                    <th class="bg-warning text-center"><?php echo $column; ?></th>
+                                                    <?php endfor; ?>
+
+                                                    <th class="bg-amber text-center">15</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($entries as $ageingIndex => $entry): ?>
+                                                <?php $count = $this->view->counter(); ?>
+                                                <?php $background = ''; ?>
+                                                <?php $gold = ' bg-amber'; ?>
+                                                <?php $first = ''; ?>
+                                                <?php
+                                                if (isset($backgrounds[$ageingIndex])) { 
+                                                    $background = $backgrounds[$ageingIndex];
+                                                    $gold = '';
+                                                    if (LoanHelper::AGEING_365 == $ageingIndex) {
+                                                        $first = $background;
+                                                    }
+                                                }
+                                                ?>
+                                                <?php if ($entry['members'] > 0): ?>
+
+                                                <tr>
+                                                    <td class="text-right<?php echo $first; ?>"><?php echo $count; ?></td>
+                                                    <td class="text-left<?php echo $background; ?>" style="white-space: nowrap;">
+                                                        <a class="scroll-to" href="javascript:;" data-target="ageing-<?php
+                                                        echo $ageingIndex; ?>" title="View Members with ageing <?php
+                                                        echo $this->view->escapeHtml($ageing[$ageingIndex]); ?>"><?php echo $this->view->escapeHtml($ageing[$ageingIndex]); ?></a>
+                                                    </td>
+                                                    <td class="text-center<?php echo $background; ?>">
+                                                        <?php echo $entry['members']; ?>
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background; ?>">
+                                                        <?php echo $this->view->integer($entry['amount']); ?>
+
+                                                    </td>
+                                                    <td class="text-center<?php echo $background; ?>">
+                                                        <?php echo $entry['loans']; ?>
+
+                                                    </td>
+                                                    <td class="amount<?php echo $background; ?>">
+                                                        <?php echo $this->view->integer($entry['scheduled_outstanding']); ?>
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background; ?>">
+                                                        <?php echo $this->view->integer($entry['principal_outstanding']); ?>
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background; ?>">
+                                                        <?php echo $this->view->integer($entry['actual_outstanding']); ?>
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background . $gold; ?>" >
+                                                        <?php echo $this->view->integer($entry['overdue']); ?>
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background . $gold; ?>">
+                                                        <?php echo $this->view->integer($entry['par']); ?>
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background; ?>">
+                                                        <?php echo $this->view->integer($entry['percentage_members']); ?>%
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background; ?>">
+                                                        <?php echo $this->view->integer($entry['percentage_portfolio']); ?>%
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background; ?>">
+                                                        <?php echo $this->view->integer($entry['percentage_loans']); ?>%
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background; ?>">
+                                                        <?php echo $this->view->integer($entry['llr_percentage']); ?>%
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background . $gold; ?>">
+                                                        <?php echo $this->view->integer($entry['llr_amount']); ?>
+
+                                                    </td>
+                                                </tr>
+                                                <?php else: ?>
+                                                
+                                                <tr>
+                                                    <td class="text-right<?php echo $first; ?>"><?php echo $count; ?></td>
+                                                    <td class="text-left<?php echo $background; ?>" style="white-space: nowrap;">
+                                                        <?php echo $this->view->escapeHtml($ageing[$ageingIndex]); ?>
+
+                                                    </td>
+                                                    <td class="text-center<?php echo $background; ?>">&nbsp;</td>
+                                                    <td class="text-right<?php echo $background; ?>">&nbsp;</td>
+                                                    <td class="text-center<?php echo $background; ?>">&nbsp;</td>
+                                                    <td class="amount<?php echo $background; ?>">&nbsp;</td>
+                                                    <td class="text-right<?php echo $background; ?>">&nbsp;</td>
+                                                    <td class="text-right<?php echo $background; ?>">&nbsp;</td>
+                                                    <td class="text-right<?php echo $background . $gold; ?>" >&nbsp;</td>
+                                                    <td class="text-right<?php echo $background . $gold; ?>">&nbsp;</td>
+                                                    <td class="text-right<?php echo $background; ?>">&nbsp;</td>
+                                                    <td class="text-right<?php echo $background; ?>">&nbsp;</td>
+                                                    <td class="text-right<?php echo $background; ?>">&nbsp;</td>
+                                                    <td class="text-right<?php echo $background; ?>">
+                                                        <?php echo $this->view->integer($entry['llr_percentage']); ?>%
+
+                                                    </td>
+                                                    <td class="text-right<?php echo $background . $gold; ?>">&nbsp;</td>
+                                                </tr>
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th>&nbsp;</th>
+                                                    <th class="text-center"><?php echo $total['members']; ?></th>
+                                                    <th class="text-right"><?php echo $this->view->integer($total['amount']); ?></th>
+                                                    <th class="text-center"><?php echo $total['loans']; ?></th>
+                                                    <th class="text-right"><?php echo $this->view->integer($total['scheduled_outstanding']); ?></th>
+                                                    <th class="text-right"><?php echo $this->view->integer($total['principal_outstanding']); ?></th>
+                                                    <th class="text-right"><?php echo $this->view->integer($total['actual_outstanding']); ?></th>
+                                                    <th class="bg-amber text-right"><?php echo $this->view->integer($total['overdue']); ?></th>
+                                                    <th class="bg-amber text-right"><?php echo $this->view->integer($total['par']); ?></th>
+                                                    <th class="text-right"><?php echo $this->view->integer($total['percentage_members']); ?>%</th>
+                                                    <th class="text-right"><?php echo $this->view->integer($total['percentage_portfolio']); ?>%</th>
+                                                    <th class="text-right"><?php echo $this->view->integer($total['percentage_loans']); ?>%</th>
+                                                    <th>&nbsp;</th>
+                                                    <th class="text-right bg-amber"><?php echo $this->view->integer($total['llr_amount']); ?></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+<?php
+$loans = $generator->loans();
+$members = $generator->members();
+$ageingMembers = $generator->ageingMembers();
+
+foreach ($ageing as $index1 => $title1):
+if (isset($ageingMembers[$index1])): ?>
+
+                <section id="ageing-<?php echo $index1; ?>">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Ageing: <?php echo $this->view->escapeHtml($title1); ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>No</th>
+                                                            <th>FMC</th>
+                                                            <th>Member</th>
+                                                            <th>Code</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php $this->view->counter(0); ?>
+                                                        <?php foreach ($ageingMembers[$index1] as $memberId): ?>
+                                                        <?php $member = $members[$memberId]; ?>
+
+                                                        <tr>
+                                                            <td><?php echo $this->view->counter(); ?></td>
+                                                            <td><?php echo $this->view->lookup('fmc', $member->fmc_id); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td>
+                                                                <a class="btn btn-sm btn-outline-info" title="VIEW MEMBER LOANS" href="<?php
+                                                                echo $this->view->actionUrl('loan-history/view/id/' . $memberId); ?>" target="_blank">LOANS</a>
+                                                            </td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+<?php endif; ?>
+<?php endforeach; ?>
+
+<?php endif;

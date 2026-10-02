@@ -1,0 +1,325 @@
+<?php
+
+$form = $this->getForm();
+$branchManager = $this->view->getVariable('branchManager');
+$generator = $this->view->getVariable('generator');
+$report = $generator->report();
+
+
+?>
+
+                <section class="do-not-print">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Loan Status-wise Report</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-summary" id="form-summary" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="fmc_id" class="label-control col-md-4 text-left">FMC</label>
+                                                            <select name="fmc_id" id="fmc_id" class="form-control col-md-8" title="FMC">
+                                                                <?php if (! $branchManager): ?>
+                                                                
+                                                                <option value="0">--ALL--</option>
+                                                                <?php endif; ?>
+                                                                
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $form->getValue('fmc_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="start_date" class="label-control col-md-4 text-left">From date</label>
+                                                            <input type="text" name="start_date" id="start_date" class="form-control col-md-8" value="<?php
+                                                            echo $form->getEscapedValue('start_date'); ?>" readonly="readonly">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="end_date" class="label-control col-md-4 text-left">To date</label>
+                                                            <input type="text" name="end_date" id="end_date" class="form-control col-md-8" value="<?php
+                                                            echo $form->getEscapedValue('end_date'); ?>" readonly="readonly">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="source" class="label-control col-md-4 text-left">SOURCE</label>
+                                                            <select name="source" id="source" class="form-control col-md-8" title="SOURCE">
+                                                                <option value="0">--ALL--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('source'), $form->getValue('source')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="type" class="label-control col-md-4 text-left">TYPE</label>
+                                                            <select name="type" id="type" class="form-control col-md-8" title="Type">
+                                                                <option value="0">--ALL--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $form->getValue('type')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="help-block text-italic">Instructions</p>
+                                                                <p class="help-block">Select "FMC" for FMC-wise report.</p>
+                                                                <p class="help-block">Select dates for specific report period </p>
+                                                                <p class="help-block">Report period is inclusive of selected dates</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                
+                                                <button type="submit" class="btn btn-primary" title="SUBMIT">SUBMIT</button>
+                                                <input type="hidden" id="min-date" value="<?php echo $this->view->getVariable('min_date'); ?>">
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php if ($report['total']['loans'] > 0): ?>
+                <?php $statusTitles = $report['status_list']; ?>
+                <?php $active = $report['status'][0]; ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Summary</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>From Date</th>
+                                                            <th>To Date</th>
+                                                            <th>Source</th>
+                                                            <th>Type</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <?php if ($report['filters']['fmc'] > 0): ?>
+                                                                <?php echo $this->view->lookup('fmc', $report['filters']['fmc']); ?>
+                                                                <?php else: ?>
+                                                                
+                                                                ALL
+                                                                <?php endif; ?>
+                                                                
+                                                            </td>
+                                                            <td>
+                                                                <?php if ('' != $report['filters']['start']): ?>
+                                                                <?php echo $this->view->datepicker($report['filters']['start']); ?>
+                                                                <?php else: ?>
+                                                                <?php echo $form->getEscapedValue('start_date'); ?>
+                                                                <?php endif; ?>
+                                                                
+                                                            </td>
+                                                            <td>
+                                                                <?php if ('' != $report['filters']['end']): ?>
+                                                                <?php echo $this->view->datepicker($report['filters']['end']); ?>
+                                                                <?php else: ?>
+                                                                <?php echo $form->getEscapedValue('end_date'); ?>
+                                                                <?php endif; ?>
+                                                                
+                                                            </td>
+                                                            <td>
+                                                                <?php if ($report['filters']['source'] > 0): ?>
+                                                                <?php echo $this->view->lookup('source', $report['filters']['source']); ?>
+                                                                <?php else: ?>
+                                                                
+                                                                ALL
+                                                                <?php endif; ?>
+                                                                
+                                                            </td>
+                                                            <td>
+                                                                <?php if ($report['filters']['type'] > 0): ?>
+                                                                <?php echo $this->view->lookup('type', $report['filters']['type']); ?>
+                                                                <?php else: ?>
+                                                                
+                                                                ALL
+                                                                <?php endif; ?>
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Report</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>Loan Status</th>
+                                                            <th>Loans</th>
+                                                            <th>Members</th>
+                                                            <th>Loan<br>Amount</th>
+                                                            <th>Principal<br>Paid</th>
+                                                            <th>Interest<br>Paid</th>
+                                                            <th>Total<br>Paid</th>
+                                                            <th>OD<br>Amount</th>
+                                                            <th>Scheduled<br>Principal OS</th>
+                                                            <th>Actual<br>Principal OS</th>
+                                                            <th>PIOS</th>
+                                                            <th>PAR</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($report['status'] as $statusId => $item): ?>
+                                                        
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($statusTitles[$statusId]); ?></td>
+                                                            <td class="text-center"><?php echo $item['loans']; ?></td>
+                                                            <td class="text-center"><?php echo $item['members']; ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($item['amount']); ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($item['principal_paid']); ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($item['interest_paid']); ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($item['principal_paid'] + $item['interest_paid']); ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($item['overdue']); ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($item['scheduled_principal_outstanding']); ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($item['actual_principal_outstanding']); ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($item['actual_principal_interest_outstanding']); ?></td>
+                                                            <td class="text-center"><?php echo $generator->amount($item['par']); ?></td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+                                                        
+                                                    </tbody>
+                                                    <tfoot class="bg-info white">
+                                                        <tr>
+                                                            <th>TOTAL</th>
+                                                            <th class="text-center"><?php echo $report['summary']['loans']; ?></th>
+                                                            <th class="text-center"><?php echo $report['summary']['members']; ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['amount']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['principal_paid']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['interest_paid']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['total_paid']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['overdue']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['scheduled_principal_outstanding']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['actual_principal_outstanding']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['actual_principal_interest_outstanding']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['par']); ?></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>All Closed Loans</th>
+                                                            <th class="text-center"><?php echo $report['summary']['loans'] - $active['loans']; ?></th>
+                                                            <th class="text-center"><?php echo $report['total']['closed']; ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['amount'] - $active['loans']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['principal_paid'] - $active['principal_paid']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['interest_paid'] - $active['interest_paid']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['total_paid'] - $active['total_paid']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['overdue'] - $active['overdue']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['scheduled_principal_outstanding'] - $active['scheduled_principal_outstanding']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['actual_principal_outstanding'] - $active['actual_principal_outstanding']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['actual_principal_interest_outstanding'] - $active['actual_principal_interest_outstanding']); ?></th>
+                                                            <th class="text-center"><?php echo $generator->amount($report['summary']['par'] - $active['par']); ?></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">List of Loans &amp; Members</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>Loan Status</th>
+                                                            <th>Loans</th>
+                                                            <th>Members</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($report['status'] as $statusId => $item): ?>
+                                                        <?php if ($item['loans'] > 0): ?>
+                                                        
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($statusTitles[$statusId]); ?></td>
+                                                            <td>
+                                                                <a class="btn btn-outline-info btn-sm" href="<?php echo $this->view->actionUrl('loan-total/loan'); ?><?php
+                                                                echo $this->view->escapeHtml($report['params']); ?>&amp;status=<?php echo $statusId; ?>" target="_blank" title="View Loans">View Loans</a>
+                                                            </td>
+                                                            <td>
+                                                                <a class="btn btn-outline-primary btn-sm" href="<?php
+                                                                echo $this->view->actionUrl('loan-total/member'); ?><?php
+                                                                echo $this->view->escapeHtml($report['params']); ?>&amp;status=<?php echo $statusId; ?>" target="_blank" title="View Members">View Members</a>
+                                                            </td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <?php endif;
+                

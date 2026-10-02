@@ -1,0 +1,221 @@
+<?php
+
+$form = $this->getForm();
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$summary = $store->summary();
+$schedule = $store->schedule();
+$last = $schedule[$summary->schedule_id];
+$loanSummary = $store->loanSummary();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">WRITE OFF DCB</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>Code</th>
+                                                            <th>Member</th>
+                                                            <th>Type</th>
+                                                            <th>Source</th>
+                                                            <th>Amount</th>
+                                                            <th>Date</th>
+                                                            <th>RoI</th>
+                                                            <th>PRoI</th>
+                                                            <th>Tenure</th>
+                                                            <th>EMI</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                                            <td><?php echo $this->view->amount($loan->loan_amount); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                            <td><?php echo $this->view->interestRate($loan->interest_rate); ?>%</td>
+                                                            <td><?php echo $this->view->interestRate($loan->penal_interest_rate); ?>%</td>
+                                                            <td><?php echo $this->view->integer($loan->tenure); ?></td>
+                                                            <td><?php echo $this->view->amount($loan->emi); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>Start Date</th>
+                                                            <th>End Date</th>
+                                                            <th>Principal Repaid</th>
+                                                            <th>Total Repaid</th>
+                                                            <th>Principal OS</th>
+                                                            <th>Total OS</th>
+                                                            <th>Ageing</th>
+                                                            <th>As on date</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->datepicker($loan->start_date); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->end_date); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->collection_principal_arrears + $summary->collection_current_principal); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->collection_repaid); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->balance_actual_principal_outstanding); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->balance_actual_principal_interest_outstanding); ?></td>
+                                                            <td><?php echo $this->view->integer($summary->ageing_days); ?></td>
+                                                            <td><?php echo $this->view->datepicker($last->instalment_date); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <hr>
+                                                <div class="card card-bordered border-info mt-2">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title  white">WRITE OFF DETAILS</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <form class="form form-horizontal mt-2" name="form-loan-write-off" id="form-loan-write-off" method="post" action="" autocomplete="off">
+                                                                <div class="form-body">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="alert alert-danger" id="validation-message" style="display:none;"></div>
+                                                                            <input type="hidden" id="last-date" value="<?php
+                                                                            echo $this->view->datepicker($loanSummary->as_on_date); ?>">
+                                                                            <input type="hidden" id="date-today" value="<?php
+                                                                            echo $this->view->getVariable('today'); ?>">
+                                                                            <input type="hidden" id="calculate-overdue-url" value="<?php
+                                                                            echo $this->view->actionUrl('modify-dcb/calculate-overdue'); ?>">
+                                                                            <input type="hidden" id="loan-id" value="<?php echo $loan->id; ?>">
+                                                                            <input type="hidden" id="interest-rate" value="<?php echo $loan->interest_rate; ?>">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left">Date of closure of tenure</label>
+                                                                                <input type="text" class="form-control col-md-8" value="<?php 
+                                                                                echo $this->view->datepicker($loan->end_date); ?>" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left">PIOS on end of tenure</label>
+                                                                                <input type="text" id="outstanding-amount" class="form-control col-md-8" value="<?php 
+                                                                                echo $summary->balance_actual_principal_interest_outstanding; ?>" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="write_off_date">Write off date</label>
+                                                                                <input type="text" name="write_off_date" id="write_off_date" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('write_off_date'); ?>" maxlength="10" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="write_off_interest">Interest due from end of tenure to write off date</label>
+                                                                                <input type="text" name="write_off_interest" id="write_off_interest" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('write_off_interest'); ?>" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="write_off_amount">Total Write Off Amount</label>
+                                                                                <input type="text" name="write_off_amount" id="write_off_amount" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('write_off_amount'); ?>" placeholder="Amount" readonly="readonly">
+                                                                            </div>
+                                                                            <hr>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="member_paid_amount">Amount paid by member</label>
+                                                                                <input type="text" name="member_paid_amount" id="member_paid_amount" class="form-control col-md-8 number-decimal" value="<?php 
+                                                                                echo $form->getEscapedValue('member_paid_amount'); ?>" placeholder="Amount">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="member_paid_receipt_number">Receipt No.</label>
+                                                                                <input type="text" name="member_paid_receipt_number" id="member_paid_receipt_number" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('member_paid_receipt_number'); ?>" placeholder="Receipt Number">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="member_paid_date">Receipt Date</label>
+                                                                                <input type="text" name="member_paid_date" id="member_paid_date" class="form-control col-md-6 paid-date" value="<?php 
+                                                                                echo $form->getEscapedValue('member_paid_date'); ?>" maxlength="10" readonly="readonly">
+                                                                                <div class="col-md-2">
+                                                                                    <a href="javascript:;" class="clear-date" data-target="member_paid_date" title="Clear Date">Clear</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="balance_written_off_amount">Balance written off by FMC</label>
+                                                                                <input type="text" name="balance_written_off_amount" id="balance_written_off_amount" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('balance_written_off_amount'); ?>" placeholder="Amount" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="fmc_voucher_number">FMC Voucher No.</label>
+                                                                                <input type="text" name="fmc_voucher_number" id="fmc_voucher_number" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('fmc_voucher_number'); ?>" placeholder="Voucher Number">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="fmc_voucher_date">FMC Voucher Date</label>
+                                                                                <input type="text" name="fmc_voucher_date" id="fmc_voucher_date" class="form-control col-md-6 paid-date" value="<?php 
+                                                                                echo $form->getEscapedValue('fmc_voucher_date'); ?>" maxlength="10" readonly="readonly">
+                                                                                <div class="col-md-2">
+                                                                                    <a href="javascript:;" class="clear-date" data-target="fmc_voucher_date" title="Clear Date">Clear</a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <hr>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="fmc_lr_receipt_number">FMC LR Reciept No.</label>
+                                                                                <input type="text" name="fmc_lr_receipt_number" id="fmc_lr_receipt_number" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('fmc_lr_receipt_number'); ?>" placeholder="LR Reciept Number">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="fmc_lr_receipt_date">FMC LR Reciept Date</label>
+                                                                                <input type="text" name="fmc_lr_receipt_date" id="fmc_lr_receipt_date" class="form-control col-md-6 paid-date" value="<?php 
+                                                                                echo $form->getEscapedValue('fmc_lr_receipt_date'); ?>" maxlength="10" readonly="readonly">
+                                                                                <div class="col-md-2">
+                                                                                    <a href="javascript:;" class="clear-date" data-target="fmc_lr_receipt_date" title="Clear Date">Clear</a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <hr>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="write_off_comments">Notes</label>
+                                                                                <textarea name="write_off_comments" id="write_off_comments" class="form-control col-md-8" placeholder="Notes"><?php 
+                                                                                echo $form->getEscapedValue('write_off_comments'); ?></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-actions center">
+                                                                    <?php echo $form->getCsrf(); ?>
+                                                                    
+                                                                    <a class="btn btn-outline-secondary mr-1" title="CANCEL" href="<?php 
+                                                                    echo $this->view->actionUrl('modify-dcb/view/id/' . $loan->id); ?>"><i class="ft-rewind"></i> CANCEL</a>
+                                                                    <button type="submit" class="btn btn-primary" title="CONFIRM">CONFIRM</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

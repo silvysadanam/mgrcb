@@ -1,0 +1,83 @@
+<?php
+
+$list = $this->view->getVariable('list');
+$groups = $this->view->getVariable('groups');
+$grouped = $this->view->getVariable('grouped');
+$historyUrl = $this->view->actionUrl('deduction-bill/balance-history/id') . '/';
+
+?>
+                <?php if (! empty($list)): ?>
+                <?php foreach ($list as $memberId => $balance): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        <?php echo $this->view->lookup('member', $memberId); ?> &nbsp; <a href="<?php
+                                            echo $historyUrl . $memberId; ?>" class="btn btn-outline-primary btn-sm" title="View History">View History</a>
+                                    </h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row match-height">
+                                            <?php foreach ($grouped as $groupId => $items): ?>
+
+                                            <div class="col-md-4">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h5 class="card-title white"><?php echo $this->view->escapeHtml($groups[$groupId]); ?></h5>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <table class="table table-striped table-bordered">
+                                                                    <thead class="bg-blue-grey white">
+                                                                        <tr>
+                                                                            <th>Deduction Item</th>
+                                                                            <th>Date</th>
+                                                                            <th>Balance</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <?php foreach ($items as $typeId): ?>
+                                                                        <?php if (isset($balance[$typeId])): ?>
+
+                                                                        <tr>
+                                                                            <td><?php echo $this->view->lookup('deductionType', $typeId); ?></td>
+                                                                            <td><?php echo $this->view->datepicker($balance[$typeId]->deduction_date); ?></td>
+                                                                            <td class="text-center"><?php echo $balance[$typeId]->closing_balance; ?></td>
+                                                                        </tr>
+                                                                        <?php endif; ?>
+                                                                        <?php endforeach; ?>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php endforeach; ?>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endforeach; ?>
+                <?php else: ?>
+<section>                               <section>
+                    <div class="alert alert-warning">No records found</div>
+                </section>
+                <?php endif; ?>
+            

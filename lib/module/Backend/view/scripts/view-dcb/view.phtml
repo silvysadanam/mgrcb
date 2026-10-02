@@ -1,0 +1,585 @@
+<?php
+
+use Application\Utility\DcbColumn;
+
+
+
+$dcbColumn = new DcbColumn();
+
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$type = $store->loanType();
+$source = $store->loanSource();
+$schedule = $store->schedule();
+$summary = $store->summary();
+$viewer = $this->view->getVariable('viewer');
+$columns = $dcbColumn->get();
+$footerBlank = true;
+$titleItems = [
+    'DCB', $loan->id, $fmc->code, $member->code, $source, 
+    $this->view->formatDateTime('d-m-Y', $loan->loan_date), 
+    $type, intval($loan->loan_amount),
+    'as on', $this->view->formatDateTime('d-m-Y'),
+];
+
+$scheduleCatch = $store->scheduleCatch();
+$loanCatch = $store->loanCatch();
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title><?php echo $this->view->escapeHtml(implode(' ', $titleItems)); ?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style media="all">
+            html {
+                overflow: auto;
+            }
+            body {
+                font-family: "Calibri", sans-serif;
+                font-size: 11pt;
+                text-align: left;
+                color: black;
+                width: fit-content;
+            }
+            thead th {
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            thead th.center, tbody td.center {
+                text-align: center;
+            }
+            thead th.right, tbody td.right {
+                text-align: right;
+            }
+            tfoot th {
+                font-weight: bold;
+                text-align: right;
+            }
+            tfoot th.center {
+                text-align: center;
+            }
+            tbody tr td {
+                white-space: nowrap;
+            }
+            .main-heading {
+               background-color: #F3B183;
+            }
+            .yellow {
+                background-color: #FFFF1F;
+            }
+            .green {
+                background-color: #92D050;
+            }
+            .gold {
+                background-color: #F5C018;
+            }
+            .collection-title {
+                background-color: #8FAADC;
+            }
+            .collection, .demand {
+                background-color: #BFBFBF;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .amount {
+                text-align: right;
+            }
+            .number {
+                text-align: center;
+            }
+            .danger {
+                color: red;
+            }
+            p#print-button {
+                margin: 10px 0px 10px 5px;
+            }
+            p#print-button button {
+                cursor: pointer;
+                padding: 5px 15px 5px 15px;
+            }
+            @media print {
+                @page {
+                  size: A3 landscape;
+                  margin: auto;
+                }
+                tr {
+                    page-break-inside: avoid;
+                }
+                p#print-button {
+                    display: none;
+                }
+            }
+        </style>
+        <style media="screen">
+            thead {
+                top: 0;
+                position: sticky;
+                z-index: 10;
+                background-color: #F5F5F5;
+            }
+        </style>
+    </head>
+    <body>
+        <table cellpadding="2" cellspacing="0" border="1" style="margin:10px 10px 5px 0;">
+            <thead>
+                <tr>
+                    <th colspan="29" class="main-heading center">
+                        DEMAND/COLLECTION/BALANCE STATEMENT - 
+                        
+                        <?php if ('' != $loan->account_number): ?>
+                        Loan A/C: <?php echo $this->view->escapeHtml($loan->account_number); ?> -
+                        <?php endif; ?>
+                        Status: <?php echo $this->view->escapeHtml($store->status()); ?>
+                        
+                    </th>
+                </tr>
+                <tr>
+                    <th class="yellow center" colspan="2" title="A:B">FMC: <?php echo $this->view->escapeHtml($fmc->code); ?></th>
+                    <th class="center" colspan="4" title="C:F">Member: <?php echo $this->view->escapeHtml($member->name); ?></th>
+                    <th class="green center" colspan="2" title="G:H">Code: <?php echo $this->view->escapeHtml($member->code); ?></th>
+                    <th class="yellow center" colspan="3" title="J:K">Source: <?php echo $this->view->escapeHtml($source); ?></th>
+                    <th class="green center" colspan="2" title="L:M">Date: <?php echo $this->view->datepicker($loan->loan_date); ?></th>
+                    <th class="yellow center" colspan="3" title="N:P">Amount: <?php echo $this->view->amount($loan->loan_amount); ?></th>
+                    <th class="green center" colspan="2" title="Q:R">Tenure: <?php echo $loan->tenure; ?></th>
+                    <th class="yellow center" colspan="2" title="S:T">Penal Int: <?php echo $this->view->amount($loan->penal_interest_rate); ?>%</th>
+                    <th class="green center"colspan="2" title="U:V">RoI: <?php echo $this->view->amount($loan->interest_rate); ?>%</th>
+                    <th class="yellow center" colspan="3" title="W:Y">Type: <?php echo $this->view->escapeHtml($type); ?></th>
+                    <th class="green center" colspan="2" title="Z:AA">EMI: <?php echo $this->view->currency($loan->emi); ?></th>
+                    <th class="center" colspan="2" title="AB:AC">ID: <?php echo $loan->id; ?></th>
+                </tr>
+                <tr>
+                    <th class="gold center" colspan="7" title="A:G">SCHEDULED DEMAND</th>
+                    <th class="gold center" colspan="4" title="H:K">ARREARS DEMAND</th>
+                    <th class="gold center" rowspan="2" title="L">TOTAL<br>DEMAND</th>
+                    <th class="collection-title center" colspan="9" title="M:U">COLLECTION</th>
+                    <th class="collection-title center" colspan="6" title="V:AA">BALANCE</th>
+                    <th class="gold center" rowspan="2" colspan="4" title="AB:AC">AGEING</th>
+                </tr>
+                <tr>
+                    <th class="center" title="A"><?php echo $columns[DcbColumn::C1]['title']; ?></th>
+                    <th class="demand center" title="B"><?php echo $columns[DcbColumn::C2]['title']; ?></th>
+                    <th class="demand center" title="C"><?php echo $columns[DcbColumn::C3]['title']; ?></th>
+                    <th class="demand center" title="D"><?php echo $columns[DcbColumn::C4]['title']; ?></th>
+                    <th class="demand center" title="E"><?php echo $columns[DcbColumn::C5]['title']; ?></th>
+                    <th class="demand center" title="F"><?php echo $columns[DcbColumn::C6]['title']; ?></th>
+                    <th class="demand center" title="G"><?php echo $columns[DcbColumn::C7]['title']; ?></th>
+                    <th class="center" title="H"><?php echo $columns[DcbColumn::C8]['title']; ?></th>
+                    <th class="center" title="I"><?php echo $columns[DcbColumn::C9]['title']; ?></th>
+                    <th class="center" title="J"><?php echo $columns[DcbColumn::C10]['title']; ?></th>
+                    <th class="center" title="K"><?php echo $columns[DcbColumn::C11]['title']; ?></th>
+                    <th class="collection center" title="M"><?php echo $columns[DcbColumn::C13]['title']; ?></th>
+                    <th class="collection center" title="N"><?php echo $columns[DcbColumn::C14]['title']; ?></th>
+                    <th class="collection center" title="O"><?php echo $columns[DcbColumn::C15]['title']; ?></th>
+                    <th class="collection center" title="P"><?php echo $columns[DcbColumn::C16]['title']; ?></th>
+                    <th class="collection center" title="Q"><?php echo $columns[DcbColumn::C17]['title']; ?></th>
+                    <th class="collection center" title="R"><?php echo $columns[DcbColumn::C18]['title']; ?></th>
+                    <th class="collection center" title="S"><?php echo $columns[DcbColumn::C19]['title']; ?></th>
+                    <th class="collection center" title="T"><?php echo $columns[DcbColumn::C20]['title']; ?></th>
+                    <th class="collection center" title="U"><?php echo $columns[DcbColumn::C21]['title']; ?></th>
+                    <th class="center" title="V"><?php echo $columns[DcbColumn::C22]['title']; ?></th>
+                    <th class="center" title="W"><?php echo $columns[DcbColumn::C23]['title']; ?></th>
+                    <th class="center" title="X"><?php echo $columns[DcbColumn::C24]['title']; ?></th>
+                    <th class="center" title="Y"><?php echo $columns[DcbColumn::C25]['title']; ?></th>
+                    <th class="center" title="Z"><?php echo $columns[DcbColumn::C26]['title']; ?></th>
+                    <th class="center" title="AA"><?php echo $columns[DcbColumn::C27]['title']; ?></th>
+                </tr>
+                <tr>
+                    <?php for ($column = 1; $column <  30; $column++): ?>
+                    
+                    <th class="yellow center"><?php echo $column; ?></th>
+                    <?php endfor; ?>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($schedule as $instalment): ?>
+                <?php if ($instalment->has_dcb_entry > 0): ?>
+                
+                <tr>
+                    <td class="center" title="<?php echo $instalment->instalment; ?>:1">
+                        <?php echo $instalment->instalment; ?>
+                        
+                    </td>
+                    <td class="demand right" title="<?php echo $instalment->instalment; ?>:2">
+                        <?php echo $this->view->instalmentDate($instalment->instalment_date); ?>
+                    
+                    </td>
+                    <td class="demand amount" title="<?php echo $instalment->instalment; ?>:3">
+                        <?php echo $this->view->amount($instalment->scheduled_demand_loan_outstanding); ?>
+                    
+                    </td>
+                    <td class="demand amount" title="<?php echo $instalment->instalment; ?>:4">
+                        <?php echo $this->view->amount($instalment->scheduled_demand_interest); ?>
+                    
+                    </td>
+                    <td class="demand amount" title="<?php echo $instalment->instalment; ?>:5">
+                        <?php echo $this->view->amount($instalment->scheduled_demand_principal); ?>
+                    
+                    </td>
+                    <td class="demand amount" title="<?php echo $instalment->instalment; ?>:6">
+                        <?php echo $this->view->amount($instalment->emi); ?>
+                    
+                    </td>
+                    <td class="demand amount" title="<?php echo $instalment->instalment; ?>:7">
+                        <?php echo $this->view->amount($instalment->scheduled_demand_principal_outstanding); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $instalment->instalment; ?>:8">
+                        <?php echo $this->view->amount($instalment->arrears_demand_penal_interest); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $instalment->instalment; ?>:9">
+                        <?php echo $this->view->amount($instalment->arrears_demand_interest_arrears); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $instalment->instalment; ?>:10">
+                        <?php echo $this->view->amount($instalment->arrears_demand_principal_arrears); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $instalment->instalment; ?>:11">
+                        <?php echo $this->view->amount($instalment->arrears_demand_total); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $instalment->instalment; ?>:12">
+                        <?php echo $this->view->amount($instalment->total_demand); ?>
+                    
+                    </td>
+                    <td class="collection amount" title="<?php echo $instalment->instalment; ?>:13">
+                        <?php echo $this->view->amount($instalment->collection_penal_interest); ?>
+                    
+                    </td>
+                    <td class="collection amount" title="<?php echo $instalment->instalment; ?>:14">
+                        <?php echo $this->view->amount($instalment->collection_interest_arrears); ?>
+                    
+                    </td>
+                    <td class="collection amount" title="<?php echo $instalment->instalment; ?>:15">
+                        <?php echo $this->view->amount($instalment->collection_current_interest); ?>
+                    
+                    </td>
+                    <td class="collection amount" title="<?php echo $instalment->instalment; ?>:16">
+                        <?php echo $this->view->amount($instalment->collection_principal_arrears); ?>
+                    
+                    </td>
+                    <td class="collection amount" title="<?php echo $instalment->instalment; ?>:17">
+                        <?php echo $this->view->amount($instalment->collection_current_principal); ?>
+                    
+                    </td>
+                    <td class="collection amount" title="<?php echo $instalment->instalment; ?>:18">
+                        <?php echo $this->view->amount($instalment->collection_prepayment); ?>
+                    
+                    </td>
+                    <td class="collection amount" title="<?php echo $instalment->instalment; ?>:19">
+                        <?php echo $this->view->amount($instalment->collection_repaid); ?>
+                    
+                    </td>
+                    <td class="collection amount" title="<?php echo $instalment->instalment; ?>:20">
+                        <?php echo $this->view->integer($scheduleCatch[$instalment->id]); ?>
+                    
+                    </td>
+                    <td class="collection center" title="<?php echo $instalment->instalment; ?>:21">
+                        <?php echo $this->view->percentage($instalment->collection_repaid, $scheduleCatch[$instalment->id]); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $instalment->instalment; ?>:22">
+                        <?php echo $this->view->amount($instalment->balance_interest_overdue); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $instalment->instalment; ?>:23">
+                        <?php echo $this->view->amount($instalment->balance_principal_overdue); ?>
+                    
+                    </td>
+                    <td class="amount bold" title="<?php echo $instalment->instalment; ?>:24">
+                        <?php echo $this->view->amount($instalment->balance_total_overdue); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $instalment->instalment; ?>:25">
+                        <?php echo $this->view->amount($instalment->closing_principal); ?>
+                    
+                    </td>
+                    <td class="amount bold" title="<?php echo $instalment->instalment; ?>:26">
+                        <?php echo $this->view->amount($instalment->balance_actual_principal_outstanding); ?>
+                    
+                    </td>
+                    <td class="amount bold" title="<?php echo $instalment->instalment; ?>:27">
+                        <?php echo $this->view->amount($instalment->balance_actual_principal_interest_outstanding); ?>
+                    
+                    </td>
+                    <td class="center" title="<?php echo $instalment->instalment; ?>:28">
+                        <?php echo sprintf('%0.1f', $instalment->ageing_factor); ?>
+                    
+                    </td>
+                    <td class="center bold" title="<?php echo $instalment->instalment; ?>:29">
+                        <?php echo $instalment->ageing_days; ?>
+                    
+                    </td>
+                </tr>
+                <?php else: ?>
+                
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="amount" title="<?php echo $instalment->instalment; ?>:25">
+                        <?php echo $this->view->amount($instalment->closing_principal); ?>
+                        
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <?php endif; ?>
+                
+                <?php endforeach; ?>
+                <?php if ($footerBlank): ?>
+                
+                <tr>
+                    <td colspan="29">&nbsp;</td>
+                </tr>
+                <?php else: ?>
+                
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                
+                <?php endif; ?>
+                
+            </tbody>
+            <tfoot>
+                <?php if (! empty($summary)): ?>
+                
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th class="yellow amount" title="4">
+                        <?php echo $this->view->amount($summary->scheduled_demand_interest); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="5">
+                        <?php echo $this->view->amount($summary->scheduled_demand_principal); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="6">
+                        <?php echo $this->view->amount($summary->emi); ?>
+                        
+                    </th>
+                    <th>&nbsp;</th>
+                    <th class="yellow amount" title="8">
+                        <?php echo $this->view->amount($summary->arrears_demand_penal_interest); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="9">
+                        <?php echo $this->view->amount($summary->arrears_demand_interest_arrears); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="10">
+                        <?php echo $this->view->amount($summary->arrears_demand_principal_arrears); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="11">
+                        <?php echo $this->view->amount($summary->arrears_demand_total); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="12">
+                        <?php echo $this->view->amount($summary->total_demand); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="13">
+                        <?php echo $this->view->amount($summary->collection_penal_interest); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="14">
+                        <?php echo $this->view->amount($summary->collection_interest_arrears); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="15">
+                        <?php echo $this->view->amount($summary->collection_current_interest); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="16">
+                        <?php echo $this->view->amount($summary->collection_principal_arrears); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="17">
+                        <?php echo $this->view->amount($summary->collection_current_principal); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="18">
+                        <?php echo $this->view->amount($summary->collection_prepayment); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="19">
+                        <?php echo $this->view->amount($summary->collection_repaid); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="20">
+                        <?php echo $this->view->integer($loanCatch); ?>
+                        
+                    </th>
+                    <th class="yellow center" title="21">
+                        <?php echo $this->view->percentage($summary->collection_repaid, $loanCatch); ?>
+                        
+                    </th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th class="yellow center" title="27">
+                        <?php echo $this->view->amount($summary->balance_actual_principal_interest_outstanding - $summary->scheduled_demand_principal_outstanding); ?>
+                        
+                    </th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <?php else: ?>
+                
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th class="yellow amount" title="4">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="5">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="6">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th>&nbsp;</th>
+                    <th class="yellow amount" title="8">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="9">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="10">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="11">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="12">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="13">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="14">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="15">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="16">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="17">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="18">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="19">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow amount" title="20">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th class="yellow center" title="21">0</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th class="yellow center" title="27">
+                        <?php echo $this->view->amount(0); ?>
+                        
+                    </th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <?php endif; ?>
+                
+            </tfoot>
+        </table>
+        <p id="print-button">
+            <button type="button" onclick="window.print();" title="PRINT">PRINT</button> &nbsp; 
+            <button type="button" onclick="window.location='<?php echo $this->view->actionUrl('view-dcb/download/id/' . $loan->id); ?>';" title="DOWNLOAD">DOWNLOAD</button>
+        </p>
+    </body>
+</html>
+
+                
+            

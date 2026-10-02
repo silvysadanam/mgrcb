@@ -1,0 +1,446 @@
+[08:29:43 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:29:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:29:50 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:29:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 143 : Undefined variable $edit
+[08:29:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 162 : Undefined variable $auctionChit
+[08:29:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 162 : Attempt to read property "id" on null
+[08:29:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 168 : Undefined variable $auctionChit
+[08:29:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 168 : Attempt to read property "id" on null
+[08:29:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 207 : Undefined variable $values
+[08:29:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 207 : Trying to access array offset on value of type null
+[08:29:50 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view.phtml on line 207 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[08:30:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:30:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 147 : Undefined variable $auctionChit
+[08:30:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 147 : Attempt to read property "id" on null
+[08:30:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 168 : Undefined variable $auctionChit
+[08:30:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 168 : Attempt to read property "id" on null
+[08:30:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 207 : Undefined variable $values
+[08:30:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 207 : Trying to access array offset on value of type null
+[08:30:39 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view.phtml on line 207 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[08:31:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:31:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 147 : Undefined variable $auctionChit
+[08:31:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 147 : Attempt to read property "id" on null
+[08:31:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 168 : Undefined variable $auctionChit
+[08:31:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 168 : Attempt to read property "id" on null
+[08:31:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 207 : Undefined variable $values
+[08:31:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 207 : Trying to access array offset on value of type null
+[08:31:44 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view.phtml on line 207 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[08:32:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:32:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined variable $auctionChit
+[08:32:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Attempt to read property "id" on null
+[08:32:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Undefined variable $values
+[08:32:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Trying to access array offset on value of type null
+[08:32:21 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view.phtml on line 203 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[08:33:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:33:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[08:33:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Undefined variable $values
+[08:33:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Trying to access array offset on value of type null
+[08:33:11 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view.phtml on line 203 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[08:48:03 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 140 : Undefined property: Shared\Utility\BeneficiaryAccount::$_sql
+[08:48:03 IST] EXCEPTION: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php on line 140 : Call to a member function whereId() on null
+[08:48:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:48:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[08:48:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Undefined property: Shared\Utility\BeneficiaryAccount::$entries
+[08:48:52 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view.phtml on line 204 : Call to undefined method Shared\Utility\BeneficiaryAccount::entries()
+[08:58:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:58:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[08:58:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Undefined property: Shared\Utility\BeneficiaryAccount::$entries
+[08:58:39 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view.phtml on line 204 : Call to undefined method Shared\Utility\BeneficiaryAccount::entries()
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Undefined property: Shared\Utility\BeneficiaryAccount::$entries
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Undefined variable $auctionChit
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Attempt to read property "quantity" on null
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Undefined variable $auctionChit
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Attempt to read property "amount" on null
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Undefined variable $auctionChit
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Attempt to read property "advance" on null
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Undefined variable $auctionChit
+[08:59:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Attempt to read property "balance" on null
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Undefined property: Shared\Utility\BeneficiaryAccount::$entries
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Undefined variable $auctionChit
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Attempt to read property "quantity" on null
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Undefined variable $auctionChit
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Attempt to read property "amount" on null
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Undefined variable $auctionChit
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Attempt to read property "advance" on null
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Undefined variable $auctionChit
+[09:01:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Attempt to read property "balance" on null
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Undefined property: Shared\Utility\BeneficiaryAccount::$entries
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Undefined variable $auctionChit
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Attempt to read property "quantity" on null
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Undefined variable $auctionChit
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Attempt to read property "amount" on null
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Undefined variable $auctionChit
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Attempt to read property "advance" on null
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Undefined variable $auctionChit
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Attempt to read property "balance" on null
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Undefined property: Shared\Utility\BeneficiaryAccount::$entries
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Undefined variable $auctionChit
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Attempt to read property "quantity" on null
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Undefined variable $auctionChit
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Attempt to read property "amount" on null
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Undefined variable $auctionChit
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Attempt to read property "advance" on null
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Undefined variable $auctionChit
+[09:01:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Attempt to read property "balance" on null
+[15:53:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[15:53:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[15:53:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[15:53:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[15:53:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[15:53:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[15:53:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[15:53:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[15:55:55 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[15:55:55 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[15:55:55 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[16:03:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:03:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[16:03:11 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[16:06:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:08:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:08:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:08:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:08:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:08:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:08:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:09:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:09:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:09:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:09:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:09:37 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:09:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:09:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:10:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:10:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:10:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:11:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:11:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[16:11:07 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[16:11:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:11:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:11:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:11:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:11:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:11:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:17:00 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:17:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:17:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:17:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:17:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:17:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[16:18:30 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 179 : Undefined array key "Sajan"
+[16:18:30 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 180 : Undefined array key "Sajan"
+[16:18:30 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 181 : Undefined array key "Sajan"
+[16:18:30 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 182 : Undefined array key "Sajan"
+[16:18:30 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 183 : Undefined array key "Sajan"
+[16:18:30 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 184 : Undefined array key "Sajan"
+[16:18:30 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 185 : Undefined array key "Sajan"
+[16:18:30 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 186 : Undefined array key "Sajan"
+[16:18:30 IST] ERROR [2]: \lib\web\Web\src\Plugin\Redirect.php line 132 : Cannot modify header information - headers already sent by (output started at C:\laragon\www\mgrcb\lib\web\Web\src\Core\ErrorManager.php:125)
+[16:20:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 203 : Undefined property: Shared\Utility\BeneficiaryAccount::$entries
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Undefined variable $auctionChit
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Attempt to read property "quantity" on null
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Undefined variable $auctionChit
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Attempt to read property "amount" on null
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Undefined variable $auctionChit
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Attempt to read property "advance" on null
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Undefined variable $auctionChit
+[16:20:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Attempt to read property "balance" on null
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Undefined variable $auctionChit
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 237 : Attempt to read property "quantity" on null
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Undefined variable $auctionChit
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 238 : Attempt to read property "amount" on null
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Undefined variable $auctionChit
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 245 : Attempt to read property "advance" on null
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Undefined variable $auctionChit
+[16:21:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 252 : Attempt to read property "balance" on null
+[16:21:38 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:21:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[16:22:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:22:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[16:22:50 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:22:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[16:23:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[16:23:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[17:52:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[17:52:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[17:52:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[17:52:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:10:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:10:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:10:06 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:10:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:10:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:10:11 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:37:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:37:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:37:23 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:40:58 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:40:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:40:58 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:41:02 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:41:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:41:02 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:45:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:45:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:45:06 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:45:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:45:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:45:07 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:45:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:45:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:45:07 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:45:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:45:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:45:07 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:45:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:45:08 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:45:08 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:45:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:45:08 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:45:08 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:45:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:45:08 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:45:08 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:45:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:45:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:45:09 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:11 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:17 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:17 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:18 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:18 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:19 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:19 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:19 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:19 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:19 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:20 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:20 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:20 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:48:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[18:48:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[18:48:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[18:48:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[18:48:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[18:48:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:38 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:48:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:48:38 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml on line 4 : Call to a member function auctionChit() on null
+[18:49:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:49:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:49:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Undefined variable $auctionChit
+[18:49:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Attempt to read property "amount" on null
+[18:49:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:49:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:49:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:49:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Undefined variable $auctionChit
+[18:49:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Attempt to read property "amount" on null
+[18:49:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:49:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:49:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Undefined variable $auctionChit
+[18:49:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Attempt to read property "amount" on null
+[18:50:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:50:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:50:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Undefined variable $auctionChit
+[18:50:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Attempt to read property "amount" on null
+[18:50:18 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:50:18 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:50:18 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:50:18 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:50:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:50:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:50:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Undefined variable $auctionChit
+[18:50:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Attempt to read property "amount" on null
+[18:50:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:50:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:50:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Undefined variable $auctionChit
+[18:50:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Attempt to read property "amount" on null
+[18:52:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:52:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:52:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Undefined variable $auctionChit
+[18:52:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Attempt to read property "amount" on null
+[18:52:24 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:52:24 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:52:24 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Undefined variable $auctionChit
+[18:52:24 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Attempt to read property "amount" on null
+[18:52:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:52:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:52:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Undefined variable $auctionChit
+[18:52:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view-modal.phtml line 74 : Attempt to read property "amount" on null
+[18:53:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:53:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:53:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:53:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:53:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:53:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[18:53:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[18:53:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:31:43 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[19:32:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:32:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:32:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:32:08 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:32:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:32:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:32:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:32:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:32:25 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:32:25 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:32:25 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:32:25 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:32:29 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:32:29 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:33:24 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:33:24 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:33:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:33:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:33:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:33:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:33:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:33:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 164 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:38:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:38:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 165 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:38:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:38:34 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 165 : Undefined property: Shared\Utility\BeneficiaryAccount::$id
+[19:38:58 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:39:06 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:39:06 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:39:06 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:39:06 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:39:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:42:27 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:42:27 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:42:28 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:42:28 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:43:45 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:43:45 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:43:45 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:43:45 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:51:40 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:51:40 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:51:40 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:51:40 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:52:45 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:52:45 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:52:45 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:52:45 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:53:16 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:53:16 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:53:16 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:53:16 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:01:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 19 : Undefined variable $auctionChit
+[20:01:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 19 : Attempt to read property "id" on null
+[20:03:24 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:03:24 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:03:24 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:03:24 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:04:05 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 141 : Class "Shared\Utility\BeneficiaryEntry" not found
+[20:04:10 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:04:10 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:04:10 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:04:10 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:04:19 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 141 : Class "Shared\Utility\BeneficiaryEntry" not found
+[20:05:08 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 176 : Undefined constant Shared\Utility\ManageBeneficiary::REMOVE_CARD
+[20:05:41 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1083 : Too few arguments to function Shared\Utility\ManageBeneficiary::_checkId(), 0 passed in C:\laragon\www\mgrcb\lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1263 and exactly 1 expected
+[20:07:11 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1492 : Undefined property: Shared\Utility\ManageBeneficiary::$_auctionChitEntryModel
+[20:07:11 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1492 : Call to a member function hasId() on null
+[20:07:47 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auction_chit_id' in 'field list'
+[22:27:48 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1402 : Undefined array key "fish_id"
+[22:27:48 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1406 : Undefined array key "amount"
+[22:27:48 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1408 : Call to undefined method Shared\Utility\ManageBeneficiary::_notNumber()
+[22:27:54 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:27:54 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:27:54 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:27:54 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:27:57 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1402 : Undefined array key "fish_id"
+[22:27:57 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1406 : Undefined array key "amount"
+[22:27:57 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1408 : Call to undefined method Shared\Utility\ManageBeneficiary::_notNumber()
+[22:32:16 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1349 : Undefined variable $familyName
+[22:32:16 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1350 : Undefined variable $index
+[22:32:16 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1351 : Undefined variable $index
+[22:32:16 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1352 : Undefined variable $index
+[22:32:16 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1353 : Undefined variable $index
+[22:32:16 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1354 : Undefined variable $index
+[22:32:16 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1355 : Undefined variable $index
+[22:32:16 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 1356 : Undefined variable $index
+[22:32:16 IST] ERROR [2]: \lib\web\Web\src\Mvc\View.php line 119 : Cannot modify header information - headers already sent by (output started at C:\laragon\www\mgrcb\lib\web\Web\src\Core\ErrorManager.php:122)
+[22:38:22 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:38:22 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:38:23 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:38:23 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:38:50 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:38:50 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:38:50 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:38:50 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:46:23 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:46:23 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:46:23 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:46:23 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:50:36 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1315 : syntax error, unexpected token "if"
+[22:51:07 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:51:07 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:51:07 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:51:07 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found

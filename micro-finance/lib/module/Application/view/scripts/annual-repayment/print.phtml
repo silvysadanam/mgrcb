@@ -1,0 +1,97 @@
+<?php
+
+$report = $this->view->getVariable('report');
+$months = $this->view->getVariable('months');
+$period = $this->view->getVariable('period');
+$monthOnly = $this->view->getVariable('monthOnly');
+$title = 'Loan Repayment for the period from ' . current($months) . ' to ' . end($months);
+$span = 8 + count($months);
+$column = 71;
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title><?php echo $title; ?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <?php $this->block('print-view-landscape'); ?>
+        
+    </head>
+    <body>
+        <table cellpadding="2" cellspacing="0" border="1" style="margin:10px 10px 5px 0;">
+            <thead id="sticky">
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="center">FISHERMEN WELFARE SOCIETY - KOLLAM</th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="center"><?php echo $title; ?></th>
+                </tr>
+                <tr>
+                    <th title="A">Sl No.</th>
+                    <th title="B">Name</th>
+                    <th title="C">Code Number</th>
+                    <th title="D">GRADE</th>
+                    <th title="E">FMC</th>
+                    <th title="F">LOAN DATE</th>
+                    <th title="G">Loan No.</th>
+                    <?php foreach ($monthOnly as $month): ?>
+                    <?php ++$column; ?>
+                    <th title="<?php echo chr($column); ?>"><?php echo $month; ?></th>
+                    <?php endforeach; ?>
+                    <?php ++$column; ?>
+                    
+                    <th title="<?php echo chr($column); ?>">Loan Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($report['member_lookup'] as $memberId => $member): ?>
+                <?php foreach ($report['member_loans'][$memberId] as $loanId): ?>
+                <?php $loan = $report['loan_lookup'][$loanId]; ?>
+                <tr>
+                    <td class="center" title="A"><?php echo $this->view->counter(); ?></td>
+                    <td title="B"><?php echo $this->view->escapeHtml($member->name); ?></td>
+                    <td class="center" title="C"><?php echo $this->view->escapeHtml($member->code); ?></td>
+                    <td class="center" title="D">&nbsp;</td>
+                    <td title="E">FMC <?php echo $this->view->lookup('fmc', $member->fmc_id); ?></td>
+                    <td title="F">
+                        <?php if ($loan->closed > 0): ?>
+                        
+                        Closed
+                        <?php else: ?>
+                        <?php echo $this->view->datepicker($loan->loan_date); ?>
+                        <?php endif; ?>
+                        
+                    </td>
+                    <td title="G"><?php echo $this->view->escapeHtml($loan->account_number); ?></td>
+                    <?php $column = 71; ?>
+                    <?php foreach ($report['loans'][$loanId] as $repayment): ?>
+                    <?php ++$column; ?>
+                    
+                    <td title="<?php echo chr($column); ?>" class="amount"><?php if ('' != $repayment) { echo $this->view->integer($repayment); } ?></td>
+                    <?php endforeach; ?>
+                    <?php ++$column; ?>
+                    
+                    <td title="<?php echo chr($column); ?>:7" class="amount bold">
+                        <?php echo $this->view->integer($report['loan_total'][$loanId]); ?>
+                    
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                <?php endforeach; ?>
+                
+                <tr>
+                    <td colspan="7" class="center bold">Grand Total</td>
+                    <?php foreach ($report['monthly_total'] as $total): ?>
+                    
+                    <td class="amount bold"><?php echo $this->view->integer($total); ?></td>
+                    <?php endforeach; ?>
+                    
+                    <td class="amount bold"><?php echo $this->view->integer(array_sum($report['monthly_total'])); ?></td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>      
+            

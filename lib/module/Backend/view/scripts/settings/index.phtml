@@ -1,0 +1,81 @@
+<?php
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Settings</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Settings</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td>Card Types</td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('settings/card-type'); ?>" title="Manage Card Types"><i class="ft-settings"></i> Manage</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td>Document Types</td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('settings/document-type'); ?>" title="Manage Document Types"><i class="ft-settings"></i> Manage</a>
+                                                        </td>
+                                                    </tr>
+                                                    <!--tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td>Banks</td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('settings/bank'); ?>" title="Manage Banks"><i class="ft-settings"></i> Banks</a>
+                                                        </td>
+                                                    </tr-->
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td>Panchayath</td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('settings/panchayath-brand'); ?>" title="Manage Panchayath"><i class="ft-settings"></i> Panchayath</a>
+                                                        </td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td>Diseases</td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('settings/disease'); ?>" title="Manage Disease Names"><i class="ft-settings"></i> Manage</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td>Medicine Names</td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('settings/medicine'); ?>" title="Manage Medicine Names"><i class="ft-settings"></i> Manage</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

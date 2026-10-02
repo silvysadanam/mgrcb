@@ -1,0 +1,35 @@
+[22:38:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 137 : Undefined array key "opening"
+[22:38:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 137 : Undefined array key "opening"
+[22:38:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 137 : Undefined array key "opening"
+[22:38:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 137 : Undefined array key "opening"
+[22:38:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 137 : Undefined array key "opening"
+[22:38:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 137 : Undefined array key "opening"
+[22:38:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 137 : Undefined array key "opening"
+[22:38:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 137 : Undefined array key "opening"
+[22:38:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 137 : Undefined array key "opening"
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:41:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$id
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID
+[22:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 498 : Undefined property: stdClass::$headID

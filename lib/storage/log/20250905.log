@@ -1,0 +1,118 @@
+[17:01:16 IST] EXCEPTION: \lib\module\Branch\src\Controller\CloseoutController.php on line 112 : Call to a member function whereIn() on null
+[17:25:38 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.transBy' in 'where clause'
+[17:25:44 IST] EXCEPTION: \lib\module\Branch\src\Controller\CloseoutController.php on line 84 : Call to undefined method Branch\Controller\CloseoutController::_applyFilters()
+[17:43:49 IST] EXCEPTION: \lib\module\Branch\src\Controller\CloseoutController.php on line 84 : Call to undefined method Branch\Controller\CloseoutController::_applyFilters()
+[17:44:47 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'l.closeout_data' in 'field list'
+[17:45:06 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'l.closeout_data' in 'field list'
+[17:45:09 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'l.closeout_data' in 'field list'
+[17:45:19 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[17:45:19 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[17:45:19 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:03:52 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:03:52 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:03:52 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:15:41 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:15:41 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:15:41 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:16:00 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.transBy' in 'where clause'
+[18:17:24 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.transBy' in 'where clause'
+[18:17:44 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.transBy' in 'where clause'
+[18:19:22 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.transBy' in 'where clause'
+[18:21:08 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:21:08 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:21:08 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:25:27 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:25:27 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:25:27 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:28:09 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:28:09 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:28:09 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:28:09 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 100 : Undefined property: stdClass::$type
+[18:28:09 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 100 : Undefined property: stdClass::$type
+[18:28:09 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 100 : Undefined property: stdClass::$type
+[18:28:09 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 100 : Undefined property: stdClass::$type
+[18:28:09 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 100 : Undefined property: stdClass::$type
+[18:28:37 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:28:37 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:28:37 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:29:30 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:29:30 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:29:30 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:30:04 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:30:04 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:30:04 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:30:22 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[18:30:22 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:30:22 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[18:34:35 IST] EXCEPTION: \lib\module\Branch\src\Controller\CloseoutController.php on line 136 : Call to undefined method Branch\Controller\CloseoutController::_getId()
+[18:42:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Trying to access array offset on value of type null
+[18:42:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Attempt to read property "counted_till" on null
+[18:42:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Trying to access array offset on value of type null
+[18:42:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Attempt to read property "expected_till" on null
+[18:42:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Trying to access array offset on value of type null
+[18:42:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Attempt to read property "till_difference" on null
+[18:43:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Trying to access array offset on value of type null
+[18:43:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Attempt to read property "counted_till" on null
+[18:43:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Trying to access array offset on value of type null
+[18:43:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Attempt to read property "expected_till" on null
+[18:43:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Trying to access array offset on value of type null
+[18:43:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Attempt to read property "till_difference" on null
+[18:43:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 283 : Undefined variable $opening_counted_till
+[18:43:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Trying to access array offset on value of type null
+[18:43:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Attempt to read property "counted_till" on null
+[18:43:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Trying to access array offset on value of type null
+[18:43:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Attempt to read property "expected_till" on null
+[18:43:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Trying to access array offset on value of type null
+[18:43:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Attempt to read property "till_difference" on null
+[18:43:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 283 : Undefined variable $opening_counted_till
+[18:44:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Trying to access array offset on value of type null
+[18:44:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Attempt to read property "counted_till" on null
+[18:44:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Trying to access array offset on value of type null
+[18:44:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Attempt to read property "expected_till" on null
+[18:44:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Trying to access array offset on value of type null
+[18:44:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Attempt to read property "till_difference" on null
+[18:44:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 283 : Undefined variable $opening_counted_till
+[18:45:01 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Trying to access array offset on value of type null
+[18:45:01 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Attempt to read property "counted_till" on null
+[18:45:01 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Trying to access array offset on value of type null
+[18:45:01 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Attempt to read property "expected_till" on null
+[18:45:01 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Trying to access array offset on value of type null
+[18:45:01 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Attempt to read property "till_difference" on null
+[18:45:01 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 283 : Undefined variable $opening_counted_till
+[18:45:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Trying to access array offset on value of type null
+[18:45:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Attempt to read property "counted_till" on null
+[18:45:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 14 : Trying to access array offset on value of type null
+[18:45:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 14 : Attempt to read property "expected_till" on null
+[18:45:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 16 : Trying to access array offset on value of type null
+[18:45:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 16 : Attempt to read property "till_difference" on null
+[18:45:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 284 : Undefined variable $opening_counted_till
+[18:46:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Trying to access array offset on value of type null
+[18:46:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Attempt to read property "counted_till" on null
+[18:46:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 14 : Trying to access array offset on value of type null
+[18:46:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 14 : Attempt to read property "expected_till" on null
+[18:46:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 16 : Trying to access array offset on value of type null
+[18:46:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 16 : Attempt to read property "till_difference" on null
+[18:46:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 284 : Undefined variable $opening_counted_till
+[18:47:13 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 284 : Undefined variable $opening_counted_till
+[19:05:41 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[19:05:41 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[19:05:41 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[19:07:58 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[19:07:58 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[19:07:58 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[19:08:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 237 : Undefined array key 0
+[19:08:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 237 : Attempt to read property "notes" on null
+[19:08:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 239 : Undefined array key 0
+[19:08:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 239 : Attempt to read property "till_difference" on null
+[19:08:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 242 : Undefined array key 0
+[19:08:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 242 : Attempt to read property "counted_till" on null
+[19:12:26 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[19:16:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Undefined array key 0
+[19:16:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 12 : Attempt to read property "counted_till" on null
+[19:16:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Undefined array key 0
+[19:16:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 13 : Attempt to read property "expected_till" on null
+[19:16:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Undefined array key 0
+[19:16:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\create.phtml line 15 : Attempt to read property "till_difference" on null
+[19:22:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[19:22:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[19:22:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given

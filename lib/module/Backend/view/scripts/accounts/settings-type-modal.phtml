@@ -1,0 +1,53 @@
+<?php
+if (date('m') >= 6) {
+    $currentYear = date('Y') ."-".$year = date('Y') + 1;
+} else {
+    $currentYear = date('Y')-1 ."-". date('Y');
+}
+?>
+        <form name="form-settings-type-modal" id="form-settings-type-modal" method="post" action="">
+            <div class="modal fade" id="modal-settings-type" tabindex="-1" role="dialog" aria-labelledby="myModalLabelHeadType" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelHeadType"> 
+                                Add New Settings
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label for="head_code">Code<span class="red">*</span></label>
+                                    <input type="text" id="head_code" class="form-control" value="" maxlength="30" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="voucher_no">Voucher No<span class="red">*</span></label>
+                                    <input type="text" id="voucher_no" class="form-control" value="" maxlength="30" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="receipt_no">Receipt No<span class="red">*</span></label>
+                                    <input type="text" id="receipt_no" class="form-control" value="" maxlength="30" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="financial_year">Financial Year <span class="red">*</span></label>
+                                    <select id="financial_year"  class="form-control" disabled="disabled">                                        
+                                        <option value="<?php echo $currentYear;?>"><?php echo $currentYear;?></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('accounts/settings-type/type/setting'); ?>">
+                            <input type="hidden" id="head-id" value="0">
+                             <input type="hidden" id="fmc_id" value="0">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

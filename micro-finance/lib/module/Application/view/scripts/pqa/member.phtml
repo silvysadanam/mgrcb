@@ -1,0 +1,119 @@
+<?php
+
+$form = $this->getForm();
+$branchManager = $this->view->getVariable('branchManager');
+
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">PQA - Members Level</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-pqa" id="form-pqa" method="post" action="" target="_blank" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="alert alert-danger" id="validation-message" style="display:none;">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="fmc_id" class="label-control col-md-4 text-left">FMC</label>
+                                                            <select name="fmc_id" id="fmc_id" class="form-control col-md-8" title="FMC">
+                                                                <?php if (! $branchManager): ?>
+                                                                
+                                                                <option value="0">--ALL--</option>
+                                                                <?php endif; ?>
+                                                                
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $form->getValue('fmc_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="member_code" class="label-control col-md-4 text-left">Code</label>
+                                                            <input type="text" name="member_code" id="member_code" class="form-control col-md-8" value="<?php
+                                                            echo $form->getEscapedValue('member_code'); ?>" maxlength="10" placeholder="Code">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="member_name" class="label-control col-md-4 text-left">Member (Read only)</label>
+                                                            <input type="text" name="member_name" id="member_name" class="form-control col-md-8" value="<?php
+                                                            echo $form->getEscapedValue('member_name'); ?>" readonly="readonly">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="amount" class="label-control col-md-4 text-left">Loan Amount </label>
+                                                            <select name="amount[]" id="amount" class="form-control col-md-8 select2" title="Loan Amount" multiple="multiple">
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('amount'), $form->getValue('amount')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="ageing" class="label-control col-md-4 text-left">Ageing </label>
+                                                            <select name="ageing" id="ageing" class="form-control col-md-8 " title="Ageing">
+                                                                <option value="0">--ALL--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('ageing'), $form->getValue('ageing')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="reporting_date" class="label-control col-md-4 text-left">As on Date</label>
+                                                            <select name="reporting_date" id="reporting_date" class="form-control col-md-8" title="Date">
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('date'), $form->getValue('reporting_date')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="report_option" class="label-control col-md-4 text-left">Report Option</label>
+                                                            <select name="report_option" id="report_option" class="form-control col-md-8" title="Report Option">
+                                                                <option value="0">VIEW</option>
+                                                                <option value="1"<?php if ($form->getValue('report_option') > 0) { ?> selected="selected"<?php } ?>>DOWNLOAD</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <a href="javascript:;" id="check-member-filter" class="btn btn-outline-info" title="CHECK FILTER">CHECK FILTER</a>
+                                                            </div>
+                                                            <div class="col-12 mt-2">
+                                                                <div class="alert" id="check-result" style="display:none;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <hr>
+                                                                <p class="help-block text-italic">Instructions</p>
+                                                                <p class="help-block">Select "DOWNLOAD" option to save the report as file.</p>
+                                                                <p class="help-block">The downloaded file will be saved to the browser's "Downloads" folder In your computer as .csv file</p>
+                                                                <p class="help-block">Open the csv file with Excel Application and save as ".xlsx" file</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                
+                                                <button type="submit" class="btn btn-primary" title="SUBMIT">SUBMIT</button>
+                                            </div>
+                                        </form>
+                                        <input type="hidden" id="load-member-url" value="<?php
+                                        echo $this->view->actionUrl('pqa/member-name'); ?>">
+                                        <input type="hidden" id="view-pqa-url" value="<?php
+                                        echo $this->view->actionUrl('pqa/view-member'); ?>/">
+                                        <input type="hidden" id="check-pqa-url" value="<?php
+                                        echo $this->view->actionUrl('pqa/check-member'); ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

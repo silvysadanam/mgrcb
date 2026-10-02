@@ -1,0 +1,377 @@
+<?php
+
+$form = $this->getForm();
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$summary = $store->summary();
+$entries = $store->payment();
+$ageingColors = [
+    0 => 'success',
+    1 => '',
+    30 => 'info',
+    60 => 'teal',
+    90 => 'primary',
+    180 => 'warning',
+    365 => 'danger',
+];
+
+$ageingKeys = array_keys($ageingColors);
+rsort($ageingKeys);
+
+$schedule = $store->schedule();
+$last = $schedule[$summary->schedule_id];
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">RESCHEDULE DCB</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>Code</th>
+                                                            <th>Member</th>
+                                                            <th>Type</th>
+                                                            <th>Source</th>
+                                                            <th>Amount</th>
+                                                            <th>Date</th>
+                                                            <th>RoI</th>
+                                                            <th>PRoI</th>
+                                                            <th>Tenure</th>
+                                                            <th>EMI</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                                            <td><?php echo $this->view->amount($loan->loan_amount); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                            <td><?php echo $this->view->interestRate($loan->interest_rate); ?>%</td>
+                                                            <td><?php echo $this->view->interestRate($loan->penal_interest_rate); ?>%</td>
+                                                            <td><?php echo $this->view->integer($loan->tenure); ?></td>
+                                                            <td><?php echo $this->view->amount($loan->emi); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>Start Date</th>
+                                                            <th>End Date</th>
+                                                            <th>Principal Repaid</th>
+                                                            <th>Total Repaid</th>
+                                                            <th>Principal OS</th>
+                                                            <th>Total OS</th>
+                                                            <th>Ageing</th>
+                                                            <th>As on date</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->datepicker($loan->start_date); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->end_date); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->collection_principal_arrears + $summary->collection_current_principal); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->collection_repaid); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->balance_actual_principal_outstanding); ?></td>
+                                                            <td><?php echo $this->view->amount($summary->balance_actual_principal_interest_outstanding); ?></td>
+                                                            <td><?php echo $this->view->integer($summary->ageing_days); ?></td>
+                                                            <td><?php echo $this->view->datepicker($last->instalment_date); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <hr>
+                                                <div class="card card-bordered border-info mt-2">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title  white">NEW DCB</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <form class="form form-horizontal mt-2" name="form-loan-refinance" id="form-loan-refinance" method="post" action="" autocomplete="off">
+                                                                <div class="form-body">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="alert alert-danger" id="validation-message" style="display:none;">
+
+                                                                            </div>
+                                                                            <input type="hidden" id="calculate-emi-url" value="<?php
+                                                                            echo $this->view->actionUrl('create-dcb/emi'); ?>">
+                                                                            <input type="hidden" id="preview-schedule-url" value="<?php
+                                                                            echo $this->view->actionUrl('create-dcb/preview'); ?>">
+                                                                            <input type="hidden" id="loan-min-date" value="<?php
+                                                                            echo $this->view->datepicker($loan->end_date); ?>">
+                                                                            <input type="hidden" id="last-date" value="<?php
+                                                                            echo $this->view->datepicker($last->instalment_date); ?>">
+                                                                            <input type="hidden" id="date-today" value="<?php
+                                                                            echo $this->view->getVariable('today'); ?>">
+                                                                            <input type="hidden" id="new-start-date" value="<?php
+                                                                            echo $this->view->getVariable('new_start_date'); ?>">
+                                                                            <input type="hidden" id="calculate-overdue-url" value="<?php
+                                                                            echo $this->view->actionUrl('modify-dcb/calculate-overdue'); ?>">
+                                                                            <input type="hidden" id="loan-id" value="<?php echo $loan->id; ?>">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left">Tenure Ending Date</label>
+                                                                                <input type="text" id="loan-end-date" class="form-control col-md-8" value="<?php 
+                                                                                echo $this->view->datepicker($loan->end_date); ?>" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left">OD on TENURE End</label>
+                                                                                <input type="text" id="outstanding-amount"  class="form-control col-md-8" value="<?php 
+                                                                                echo $summary->balance_actual_principal_interest_outstanding; ?>" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="loan_date">Reschedule Date</label>
+                                                                                <input type="text" name="loan_date" id="loan_date" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('loan_date'); ?>" maxlength="10" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="overdue_interest_rate">OD Interst Rate (R date-T Date)</label>
+                                                                                <input type="text" name="overdue_interest_rate" id="overdue_interest_rate" class="form-control col-md-8 number-decimal" value="<?php 
+                                                                                echo $form->getEscapedValue('overdue_interest_rate'); ?>" placeholder="Rate of Interest" required="required">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="overdue_days">OD days</label>
+                                                                                <input type="number" name="overdue_days" id="overdue_days" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('overdue_days'); ?>" placeholder="OD days" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="overdue_amount">OD Amount</label>
+                                                                                <input type="text" name="overdue_amount" id="overdue_amount" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('overdue_amount'); ?>" placeholder="OD Amount" readonly="readonly">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="loan_amount">Total Loan Amount</label>
+                                                                                <input type="number" name="loan_amount" id="loan_amount" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('loan_amount'); ?>" placeholder="Total Loan Amount" readonly="readonly">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12"><hr></div>
+                                                                    </div>
+                                                                    <div class="row mt-1">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="account_number">Loan A/C</label>
+                                                                                <input type="text" name="account_number" id="account_number" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('account_number'); ?>" maxlength="30" required="required">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label for="loan_source_id" class="label-control col-md-4 text-left">SOURCE</label>
+                                                                                <select name="loan_source_id" id="loan_source_id" class="form-control col-md-8" title="Source">
+                                                                                    <?php echo $this->view->formHelper('select', $this->view->lookupStore('source'), $form->getValue('loan_source_id')); ?>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label for="loan_type_id" class="label-control col-md-4 text-left">Type</label>
+                                                                                <select name="loan_type_id" id="loan_type_id" class="form-control col-md-8" title="Type">
+                                                                                    <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $form->getValue('loan_type_id')); ?>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="interest_rate">RoI</label>
+                                                                                <input type="text" name="interest_rate" id="interest_rate" class="form-control col-md-8 number-decimal" value="<?php 
+                                                                                echo $form->getEscapedValue('interest_rate'); ?>" placeholder="Rate of Interest" required="required">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="penal_interest_rate">PRoI</label>
+                                                                                <input type="text" name="penal_interest_rate" id="penal_interest_rate" class="form-control col-md-8 number-decimal" value="<?php 
+                                                                                echo $form->getEscapedValue('penal_interest_rate'); ?>" placeholder="Penal Interest Rate" required="required">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="tenure">TENURE</label>
+                                                                                <input type="number" name="tenure" id="tenure" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('tenure'); ?>" placeholder="TENURE" required="required" min="6" max="120" step="1">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="emi">EMI</label>
+                                                                                <input type="number" name="emi" id="emi" class="form-control col-md-8" value="<?php 
+                                                                                echo $form->getEscapedValue('emi'); ?>" placeholder="EMI" required="required" min="1" max="50000" step="1">
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="note1">Notes for current DCB</label>
+                                                                                <textarea name="note1" id="note1" class="form-control col-md-8" placeholder="Notes"><?php 
+                                                                                echo $form->getEscapedValue('note1'); ?></textarea>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="label-control col-md-4 text-left" for="note2">Notes for new DCB</label>
+                                                                                <textarea name="note2" id="note2" class="form-control col-md-8" placeholder="Notes"><?php 
+                                                                                echo $form->getEscapedValue('note2'); ?></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-actions center">
+                                                                    <?php echo $form->getCsrf(); ?>
+                                                                    
+                                                                    <a class="btn btn-outline-secondary mr-1" title="CANCEL" href="<?php 
+                                                                    echo $this->view->actionUrl('modify-dcb/view/id/' . $loan->id); ?>"><i class="ft-rewind"></i> CANCEL</a>
+                                                                    <button type="button" class="btn btn-outline-primary mr-1" title="Preview Schedule" id="preview-schedule">Preview Schedule</button>
+                                                                    <button type="submit" class="btn btn-primary" title="CONFIRM">CONFIRM</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>                   
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Repayment History</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <?php if (! empty($entries)): ?>
+                                        
+                                        <table class="table table-bordered">
+                                             <thead class="bg-info white">
+                                                <tr>
+                                                    <th colspan="2" class="text-center">Instalment</th>
+                                                    <th rowspan="2">Loan<br>Outstanding</th>
+                                                    <th colspan="2" class="text-center">Demand</th>
+                                                    <th colspan="4" class="text-center">Collection</th>
+                                                    <th colspan="2" class="text-center">Balance</th>
+                                                    <th rowspan="2">Ageing</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Number</th>
+                                                    <th>Date</th>
+                                                    <th>Arrears</th>
+                                                    <th>Total</th>
+                                                    <th>Repaid</th>
+                                                    <th>Interest</th>
+                                                    <th>Principal</th>
+                                                    <th>Prepay</th>
+                                                    <th>Overdue</th>
+                                                    <th>Outstanding</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($entries as $instalment): ?>
+                                                <?php
+                                                $interest = $instalment->collection_penal_interest
+                                                          + $instalment->collection_interest_arrears
+                                                          + $instalment->collection_current_interest;
+                                                $principal = $instalment->collection_principal_arrears
+                                                           + $instalment->collection_current_principal;
+                                                
+                                                $color = '';
+                                                if ($instalment->balance_total_overdue > 0.00 ) { $color = ' class="text-danger"'; }
+                                                $key = 0;
+                                                if ($instalment->ageing_days > 0) {
+                                                    foreach ($ageingKeys as $item) {
+                                                        if ($instalment->ageing_days > $item) {
+                                                            $key = $item;
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                                ?>
+                                                
+                                                <tr>
+                                                    <td<?php echo $color; ?>><?php echo $this->view->instalmentNumber($instalment->instalment); ?></td>
+                                                    <td><?php echo $this->view->datepicker($instalment->instalment_date); ?></td>
+                                                    <td><?php echo $this->view->amount($instalment->scheduled_demand_loan_outstanding); ?></td>
+                                                    <td><?php echo $this->view->amount($instalment->arrears_demand_total); ?></td>
+                                                    <td><?php echo $this->view->amount($instalment->total_demand); ?></td>
+                                                    <td><?php echo $this->view->amount($instalment->collection_repaid); ?></td>
+                                                    <td><?php echo $this->view->amount($interest); ?></td>
+                                                    <td><?php echo $this->view->amount($principal); ?></td>
+                                                    <td><?php echo $this->view->amount($instalment->collection_prepayment); ?></td>
+                                                    <td<?php echo $color; ?>><?php echo $this->view->amount($instalment->balance_total_overdue); ?></td>
+                                                    <td><?php echo $this->view->amount($instalment->balance_actual_principal_interest_outstanding); ?></td>
+                                                    <td class="<?php echo $ageingColors[$key]; ?>"><?php echo $instalment->ageing_days; ?></td>
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                            <tfoot class="bg-info white">
+                                                <?php
+                                                $interest = $summary->collection_penal_interest
+                                                          + $summary->collection_interest_arrears
+                                                          + $summary->collection_current_interest;
+                                                $principal = $summary->collection_principal_arrears
+                                                           + $summary->collection_current_principal;
+                                                ?>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th>&nbsp;</th>
+                                                    <th><?php echo $this->view->amount($summary->scheduled_demand_loan_outstanding); ?></th>
+                                                    <th><?php echo $this->view->amount($summary->arrears_demand_total); ?></th>
+                                                    <th><?php echo $this->view->amount($summary->total_demand); ?></th>
+                                                    <th><?php echo $this->view->amount($summary->collection_repaid); ?></th>
+                                                    <th><?php echo $this->view->amount($interest); ?></th>
+                                                    <th><?php echo $this->view->amount($principal); ?></th>
+                                                    <th><?php echo $this->view->amount($summary->collection_prepayment); ?></th>
+                                                    <th><?php echo $this->view->amount($summary->balance_total_overdue); ?></th>
+                                                    <th><?php echo $this->view->amount($summary->balance_actual_principal_interest_outstanding); ?></th>
+                                                    <th><?php echo ($summary->ageing_days); ?></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Instalment</th>
+                                                    <th>Date</th>
+                                                    <th>Loan<br>Outstanding</th>
+                                                    <th>Arrears<br>Demand</th>
+                                                    <th>Total<br>Demand</th>
+                                                    <th>Repaid</th>
+                                                    <th>Interest<br>Collected</th>
+                                                    <th>Principal<br>Collected</th>
+                                                    <th>Prepay</th>
+                                                    <th>Total<br>Overdue</th>
+                                                    <th>Actual<br>Outstanding</th>
+                                                    <th>Ageing</th>
+                                                 </tr>
+                                            </tfoot>
+                                        </table>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No payment entries found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

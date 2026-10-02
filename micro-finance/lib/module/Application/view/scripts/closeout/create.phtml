@@ -1,0 +1,342 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+$withdrawalOnly = $this->view->getVariable('withdrawalOnly');
+$bankOptions = $this->view->lookupStore('bank');
+$denominations =  $this->view->getVariable('currencyDenominations');
+$opening_amount = $this->view->getVariable('cashOpening');
+$closeout_details = $this->view->getVariable('closeOutDetails');
+$counted_till = $this->view->getVariable('counted_till');
+$opening_till_data = $this->view->getVariable('opening_till_data');
+$opening_counted_till = isset($opening_till_data[0]->counted_till) ? $opening_till_data[0]->counted_till : 0;
+$carry_over_opening = isset($opening_till_data[0]->expected_till) ? $opening_till_data[0]->expected_till : 0;
+$total_computed = $this->view->getVariable('total_computed');
+$opening_counted_difference = isset($opening_till_data[0]->till_difference) ? $opening_till_data[0]->till_difference : 0;
+$closeout_till_data = $this->view->getVariable('closeout_till_data');
+echo '<script>
+    
+function myround(myvalue) {
+
+	differ = 0;
+
+	myvalue = parseFloat(myvalue);
+
+	if (myvalue < 0)
+	{ differ = myvalue - .005; }
+	else {
+	  if (myvalue > 0) { differ = myvalue + .005; }
+	}
+
+	re = /\./;
+	index = differ.toString().search(re);
+
+	if (index!=-1) { differ = parseFloat(differ.toString().substr(0,index+3)); }
+
+	return differ;
+}	
+                
+function roundFloat(value)
+{
+	value=Math.round(parseFloat(value)*100)/100;
+
+	value_str=value.toString();
+
+	if (value_str == "NaN") {
+    value = 0;
+		value_str = "0";
+	}
+		
+	index=value_str.search(/\./);
+	
+	if (value_str.substr(index,1)!=".") { value+=".00"; }
+	else if (value_str.substr(index+1,1)=="") { value+=".00"; }
+	else if (value_str.substr(index+2,1)=="") { value+=".00"; }
+
+	return value;
+}
+
+                if ( typeof Prototype !== "undefined" ) {
+                  // alert(\'Prototype Framework is included!\');
+                }
+                else {
+                  // alert(\'Prototype Framework is not included!\');
+                }
+
+		function cash_multiply_all(is_first_load)
+		{
+			document.getElementsByClassName("cash_count").each(function(e)
+			{
+				cash_multiply("a"+e.getAttribute("denomination"), e.getAttribute("tender_value"), is_first_load);
+			});
+		}
+		function cash_multiply(target, amount, is_first_load) {
+               
+			targetamt = target + "amt";
+			targetnum = target + "num";
+			cashamount = 0;
+			cashnum = document.getElementById(targetnum).value;
+                        
+			cashamount = parseDecimalNumber(cashnum) * amount;
+		
+			document.till_cash.elements[targetamt].value = myround(cashamount);
+			
+			var cashinpt = "";
+			if (!document.till_cash.elements[target]) {
+				var cashinpt = document.createElement("input");
+				cashinpt.setAttribute("type","hidden");
+				cashinpt.setAttribute("name",target);
+			} else {
+				cashinpt	= document.till_cash.elements[target];
+			}
+
+			cashinpt.setAttribute("value",cashnum);
+			document.till_cash.appendChild(cashinpt);
+			
+			sum_all(is_first_load);
+		}
+		
+		function sum_all(is_first_load) 
+		{
+			var sumamt = 0;';
+
+			//We're using the current locale's denominations, so set up this function with the proper fields
+	if($denominations)foreach($denominations as $denomination=>$value){
+		echo <<<HTML
+			sumamt += parseFloat(document.till_cash.a{$denomination}amt.value.replace(',', '.'));
+HTML;
+	}
+			echo '
+                        if(!is_first_load) {
+                            document.till_cash.Cash_endday.value = myround(sumamt);
+                        } 
+                        document.till_cash.total.value = roundFloat(sumamt);
+                        document.till_cash.cash_deposit.value = roundFloat(sumamt);
+                       // findDOM("Cash_endday",0).value = roundFloat(cash_total);
+			//calc_cash_difference("KEEP_HELPER");
+                        payment_update();
+		}		
+             function payment_update() 
+                { 
+                
+                payment_counted = document.till_cash.Cash_endday.value; 
+                payment_computed = document.till_cash.Cash_computed.value; 
+                payment_difference= parseFloat(payment_counted)- parseFloat(payment_computed);
+                const el = document.getElementById("Cash_difference");
+                if (payment_difference < 0) {
+                    el.style.color = "red";
+                } else {
+                    el.style.color = "blue";
+                }
+                document.till_cash.Cash_difference.value=roundFloat(payment_difference); 
+            } 
+		function calc_cash_difference(helperStatus)
+		{
+			var difference = 0;
+			
+			difference = myround(parseFloat(parseDecimalNumber(document.till_cash.counted_till.value))-parseFloat(parseDecimalNumber(document.till_cash.expected_till.value)));
+			document.till_cash.till_difference.value = difference;
+			
+			if (helperStatus == "CLEAN_HELPER") {
+				document.till_cash.total.value =  myround("0.00");
+			';
+	if($denominations)foreach($denominations as $denomination=>$value){
+		echo <<<HTML
+			document.till_cash.a{$denomination}num.value = 0;
+			document.till_cash.a{$denomination}amt.value = myround("0.00");
+			
+			var cashinpt = "";
+			if (!document.till_cash.elements["a{$denomination}"]) {
+				var cashinpt = document.createElement("input");
+				cashinpt.setAttribute("type","hidden");
+				cashinpt.setAttribute("name","a{$denomination}");
+			} else {
+				cashinpt	= document.till_cash.elements["a{$denomination}"];
+			}
+
+			cashinpt.setAttribute("value",0);
+			document.till_cash.appendChild(cashinpt);
+HTML;
+	}
+			echo '}
+		}
+	</script>
+';
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                               
+                                <div class="card-content">
+                                    <div class="card-body">
+                                         <?php if ($opening_counted_till > 0): ?>
+                                        <form class="form form-horizontal" name="till_cash" id="till_cash" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <?php if ($counted_till) { ?>
+                                                    <div class="alert alert-danger" id="validation-message">Completed</div>
+                                                <?php } else {?>
+                                                     <div class="alert alert-warning" id="validation-message">Open</div>
+                                                <?php }?>
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <table class="table table-bordered border-info table-striped">
+                                                                    <thead class="bg-info white">
+                                                                        <tr>
+                                                                            <th colspan="3">Cash Count Helper</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                   
+                        <tr>
+                             <th>Payment</th>
+                            <th>Qty</th>
+                           <th>Value</th>
+                        </tr>
+                   
+        <?php
+	if($denominations)foreach($denominations as $denomination=>$value){
+                $symbol ='₹';
+                $prev_val = 0;
+		$disp_val = $value; //Format the value nicely
+		//$prev_val = $_POST['cash_count'][$denomination];
+                $name = 'cash_'.$denomination;
+		/*$query = "SELECT $name FROM opening_details WHERE date='$today'";		
+		$results 			= $db->do_query($query);*/
+		$denominationValue	= isset($closeout_details[0]->$name)? $closeout_details[0]->$name:0;
+                if(!$prev_val)
+                {
+                    $prev_val = $denominationValue;
+                }
+              
+		?>
+<tr>
+    <td align="right"><?php echo $disp_val;?></td>
+    <td><input type="text" id="a<?php echo $denomination;?>num" name="cash_count<?php echo $denomination;?>" value="<?php echo $prev_val;?>" size="5" maxlength="5" tabindex="1" onchange="cash_multiply('a<?php echo $denomination;?>', <?php echo $value; ?>, 0)" tender_value="<?php echo $value;?>" denomination="<?php echo $denomination;?>" class="cash_count"></td>
+    <td algin="center"><?php echo $symbol;?><input style="text-align:right;" TYPE="text" name="a<?php echo $denomination;?>amt" size="10" maxlength="10" value="0" class="disabled" readonly="readonly"></td>
+</tr>
+<?php
+        }?>
+<tr>
+    <td colspan="2" align="right" class="subheader_text">Cash Total:</td>
+    <td align="center" class="small_header_text"><?php echo $symbol;?>
+     <input style="text-align:right;" type="text" name="total" size="10" maxlength="10" value="0.00" class="disabled" readonly>
+    </td>
+</tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-12">
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                        <?php  
+                                                            $notes = isset($closeout_till_data[0]->notes) ? $closeout_till_data[0]->notes : '';
+                                                            $payment = 'Cash';
+                                                            $difference = isset($closeout_till_data[0]->till_difference) ? $closeout_till_data[0]->till_difference : 0; 
+                                                            $type = 'cash';
+                                                            $symbol ='₹';
+                                                            $endday_counted = isset($closeout_till_data[0]->counted_till) ? $closeout_till_data[0]->counted_till : 0; 
+                                                            $counted_till = 0;
+                                                            $endDayCountReadOnly = '';
+                                                            $total_counted =0;
+                                                            if ($difference<0) $over_short_color='color: red;text-align:right;';
+                                                            else $over_short_color='color: blue;text-align:right;';
+                                                           echo "<div class='table-responsive'>";
+                                                           echo  " <table class=\"table table-striped table-bordered\" id=\"list-table-6\">
+                                                               <thead class=\"bg-blue-grey white\">
+                                                            <tr valign=top>
+                                                            <td class=\"header_bg subheader_text font-bold align-center align-middle\" style=\"width:50px;\">Payment</td>
+                                                            <td class=\"header_bg subheader_text font-bold align-center align-middle\">End-day Count</td>
+                                                            <td class=\"header_bg subheader_text font-bold align-center align-middle\">Total Computed</td>
+                                                            <td class=\"header_bg subheader_text font-bold align-center align-middle\">Over/Short</td>
+                                                            </tr></thead>";
+                                                            $payment_js = $payment;
+                                                            echo "
+                                                            <tr>
+                                                            <td>Cash</td>
+                                                            <td class=\"align-right\"><nobr>".$symbol."&#32;"."<input id=\"{$payment_js}_endday\" type=\"text\" name=\"{$payment_js}_endday\" value=\"$endday_counted\" style=\"text-align:right;\" size=\"12\" maxlength=\"12\" onChange=\"payment_update('{$payment_js}'); calc_summary();\" $endDayCountReadOnly></nobr></td>
+                                                            <td class=\"align-right\"><nobr>".$symbol."&#32;"."<input id=\"{$payment_js}_computed\" type=\"text\"  size=\"12\" maxlength=\"12\" name=\"{$payment_js}_computed\" value=\"".sprintf('%0.2f', $total_computed)."\" style=\"text-align:right;background-color:lightgrey;\" readonly></nobr></td>
+                                                            <td class=\"align-right\"><nobr>".$symbol."&#32;"."<input id=\"{$payment_js}_difference\" size=\"12\" maxlength=\"12\" style=\"$over_short_color\" class=\"disabled\" type=\"text\" name=\"{$payment_js}_difference\" value=\"".sprintf('%0.2f', $difference)."\" style=\"text-align:right;\" class=\"disabled\" readonly></nobr></td>
+                                                            </tr>
+                                                          
+                                                            ";
+                                                             $misc['ending_till'] = 0;
+                                                            
+                                                             $payments['cash']['Cash']['deposit'] = 0;
+                                                             $misc['counted_till'] =0;
+                                                             $misc['opening_till_os'] =0;                                                             
+                                                             if ($opening_counted_difference<0) $over_short_color='color: red;text-align:right;';
+                                                             else $over_short_color='color: blue;text-align:right;';
+                                                            echo "
+	<tr class=\"header bg-info white\" style=\"background-color: #28afd0;\"><td class=\"font-bold align-center border-bottom\" colspan=5><b>Deposit Summary</b></td></tr>
+	<tr>
+	<td class=\"align-center\" colspan=5 style=\"padding:0px;margin:0px;\">
+	<table cellspacing=0 cellpadding=2  class=\"width-full\">
+	<tr>
+        <td align=\"right\"><nobr>Opening Till:</nobr></td><td><nobr>".$symbol."&#32;"."<input id=\"opening_till\" class=\"disabled\" type=\"text\" name=\"misc[opening_till][Opening Till]\" value=\"".sprintf('%0.2f', $carry_over_opening)."\" size=\"7\" style=\"text-align:right; \"  readonly></nobr></td>";
+	echo "<td align=\"right\" width=\"30%\">Cash Deposit:</td><td width=\"100%\"><nobr>".$symbol."&#32;"."<input id=\"cash_deposit\" onchange=\"calc_summary();\" type=\"text\" size=\"12\" maxlength=\"12\" name=\"misc[cash_deposit][Cash Deposit]\" value=\"".sprintf('%0.2f', $payments['cash']['Cash']['deposit'])."\" style=\"text-align:right; \"2 ></nobr></td>";
+        $defaultEndingTillValue = sprintf('%0.2f', $misc['ending_till']);
+	echo "
+	
+	<tr>
+	<td align=\"right\"><nobr>Counted Till':</nobr></td><td><nobr>".$symbol."&#32;"."<input id=\"counted_till\" class=\"disabled\" type=\"text\" name=\"misc[counted_till][Counted Till]\" value=\"".sprintf('%0.2f', $opening_counted_till)."\" size=\"7\" style=\"text-align:right; \"  readonly></nobr></td>
+	<td align=\"right\" colspan=\"2\">&nbsp;</td>
+	</tr>
+        <tr>	
+        <td align=\"right\"><nobr>Open Till +/-:</nobr></td><td><nobr>".$symbol."&#32;"."<input id=\"opening_till_os\" style=\"$over_short_color\" class=\"disabled\" type=\"text\" name=\"misc[opening_till_os][opening_till_os]\" value=\"".sprintf('%0.2f', $opening_counted_difference)."\" size=\"7\" style=\"text-align:right; \"  readonly></nobr></td>
+        <td align=\"right\" colspan=\"2\"><nobr>&nbsp;</nobr></td>
+        </tr></td></tr></table>";
+        echo"
+	<tr style=\"background-color: #28afd0;\" class=\"bg-info white\"><td class=\"font-bold header align-center border-bottom border-top\" colspan=\"5\" class=\"bg-info white\"><b>Notes</b></td></tr>
+	<tr><td class=\"align-center\" colspan=7><textarea name=\"notes\" style=\"width:100%;height:110px;\">$notes</textarea></td></tr>
+	
+	</table></div>
+	";
+                                                        ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                            </div>
+                                        </form>
+                                         <?php else: ?>                                        
+                                    <div class="alert alert-warning">Open Till activity is still pending for today. Go to Transactions->Daily Drawer-> Opening </div>
+                                    <?php endif; ?>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+<?php
+//To fill the value column on the opening
+if($denominations)foreach($denominations as $denomination=>$value){
+	echo <<<HTML
+	<script>
+	targetamt = 'a{$denomination}' + "amt";
+	targetnum = 'a{$denomination}' + "num";
+	cashamount = 0;
+		
+	cashnum = document.till_cash.elements[targetnum].value;
+		
+	cashamount = cashnum * {$value};
+		
+	document.till_cash.elements[targetamt].value = myround(cashamount);
+	
+	document.till_cash.total.value = parseFloat(document.till_cash.total.value) + parseFloat(cashamount);
+	document.till_cash.total.value = myround(document.till_cash.total.value);
+	</script>
+HTML;
+}
+?>

@@ -1,0 +1,428 @@
+<?php
+
+$beneficiary = $this->view->getVariable('beneficiary');
+$fmc = $beneficiary->fmc();
+$member = $beneficiary->member();
+$yesOrNo = ['No', 'Yes'];
+$edit = 1;
+$panchayath = $beneficiary->panchayath();
+$diseaseNames = [];
+$diseaseTypes = $this->view->lookupStore('diseaseTypes');
+$diseaseIds = array_filter(array_map('trim', explode(',', (string) $member->disability)));
+foreach ($diseaseIds as $diseaseId) {
+    if (isset($diseaseTypes[$diseaseId])) {
+        $diseaseNames[] = $diseaseTypes[$diseaseId];
+    }
+}
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Member &nbsp;
+                                        <a class="btn btn-sm btn-outline-primary" title="Edit" href="<?php
+                                        echo $this->view->actionUrl('beneficiary/change/id/' . $member->id); ?>">Edit</a></h4>
+                                    <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('beneficiary/manage/id/' . $member->id); ?>/action/">
+                                    <input type="hidden" id="cancel-url" value="<?php echo $this->view->actionUrl('beneficiary'); ?>">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Panchayath</td>
+                                                            <td><?php echo $panchayath->panchayath_brand; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Address</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->address); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gender</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->gender); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Education</td>
+                                                            <td><?php echo $beneficiary->educationType(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date of Birth</td>
+                                                            <td><?php echo $beneficiary->dateOfBirth(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Monthly Income</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->monthly_income); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date of Birth</td>
+                                                            <td><?php echo $beneficiary->dateOfBirth(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Monthly Income</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->monthly_income); ?></td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>Details of the house</td>
+                                                            <td><?php echo $beneficiary->houseType(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Rent Amount</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->rented_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Community Worker Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->worker_name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Proposed Date</td>
+                                                            <td><?php echo $beneficiary->proposedDate(); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Family Status as per Ration Card</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->ration_card); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mobile</td>
+                                                            <td><?php echo $this->view->textareaHtml($member->mobile); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Year in which Disability Occurred</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->disability_occurred); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td> Aadhar Number</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->aadhar_number); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td> Various Pensions Received</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->pensions); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cause of Disability</td>
+                                                            <td><?php echo $beneficiary->disabilityTypes(); ?></td>
+                                                        </tr>
+                                                       
+                                                        
+                                                        <tr>
+                                                            <td>Date of Medical Examination Conducted though the Centre</td>
+                                                            <td>
+                                                               <?php echo $beneficiary->dateOfMedicalExam(); ?>
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>Description of Disease/Disability</td>
+                                                            <td><?php echo $this->view->escapeHtml(implode(', ', $diseaseNames)); ?></td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>Total area of land owned by the family</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->land_area); ?></td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>Ownership status of the house</td>
+                                                            <td> <?php echo $beneficiary->houseOwnership(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Recommendation of the Committee Member</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->worker_opinion); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Approved Date</td>
+                                                            <td><?php echo $beneficiary->approvedDate(); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <table class="table table-borderless">
+                                                    <tbody>
+                                                        <?php if ($edit): ?>                                                        
+                                                       
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-primary w-100" href="javascript:;" id="add-entry" title="Add Entry to Auction Chit"><i class="ft-plus-square"></i> Add Entry</a></td>
+                                                        </tr>                                                      
+                                                        <tr>
+                                                            <td> <?php if ($beneficiary->active()): ?>
+                                                              
+                                                                  <a class="btn btn-outline-primary btn-outline-danger w-100" id="disable-beneficiary" title="Disable Member - Move to Inactive status" href="javascript:;">
+                                                                    <i class="ft-user"></i> Disable Member
+                                                                </a>
+                                                                <?php else: ?>
+                                                                
+                                                                <a class="btn btn-outline-primary btn-outline-success w-100" id="enable-beneficiary" title="Activate Member - Move to Active status" href="javascript:;">
+                                                                    <i class="ft-user"></i> Activate Member
+                                                                </a>
+                                                                <?php endif; ?></td>
+                                                        </tr>                                                        
+                                                        <?php endif; ?>
+                                                        
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-dark w-100" title="Print Beneficiary" target="_blank" href="<?php
+                                                            echo $this->view->actionUrl('beneficiary/print/id/' . $member->id); ?>"><i class="ft-printer"></i> Print</a></td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Entries</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-bordered">
+                                                                         <thead class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th style="width: 5px;">നമ്പർ</th>
+                                                                                <th>പേര്</th>
+                                                                                <th>ബന്ധം</th>
+                                                                                <th>വിഭാഗം</th>
+                                                                                <th>വയസ്സ്</th>
+                                                                                <th>വിദ്യാഭ്യാസം</th>
+                                                                                <th>വികലാംഗത</th>
+                                                                                <th>തൊഴിൽ</th>
+                                                                                <th>മാസവരുമാനം</th>
+                                                                                <th>Actions</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                      
+                                                                        <tbody>
+                                                                            <?php $delete = $beneficiary->entries() > 1; ?>
+                                                                            <?php foreach ($beneficiary->entries() as $item): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->counter(); ?></td>
+                                                                                <td class="text-right"><?php echo $item->family_name; ?></td>
+                                                                                <td class="text-right"><?php echo $item->family_relation; ?></td>
+                                                                                <td class="text-right"><?php echo $this->view->lookup('type', $item->family_category); ?></td>
+                                                                                <td class="text-right"><?php echo $item->family_age; ?></td>
+                                                                                <td class="text-right"><?php echo $this->view->lookup('edutype', $item->family_education); ?></td>
+                                                                                <td class="text-right"><?php echo $item->family_disability; ?></td>
+                                                                                 <td class="text-right"><?php echo $item->family_occupation; ?></td>
+                                                                                  <td class="text-right"><?php echo $item->family_income; ?></td>
+                                                                                <td>
+                                                                                    <?php if ($edit): ?>
+                                                                                    
+                                                                                    <a class="btn btn-outline-info btn-sm edit-entry" href="javascript:;" data-id="<?php
+                                                                                    echo $item->id; ?>" title="Edit Entry"><i class="ft-edit"></i> Edit</a>
+                                                                                    <?php if ($delete): ?>
+                                                                                    
+                                                                                    <a class="btn btn-outline-danger btn-sm ml-1 delete-entry" href="javascript:;" data-id="<?php
+                                                                                    echo $item->id; ?>" title="Delete Entry"><i class="ft-delete"></i> Delete</a>
+                                                                                    <?php endif; ?>
+                                                                                    <?php endif; ?>
+                                                                                    
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Photo</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <?php $photo = $beneficiary->photo(); ?>
+                                                            <?php if (! empty($photo)): ?>
+                                                            <?php echo $this->view->photo($photo); ?>
+                                                            <?php else: ?>
+                                                            
+                                                            <div class="alert">Photo not uploaded</div>
+                                                            <?php endif; ?>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Bank Accounts</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <?php $accounts = $beneficiary->accounts(); ?>
+                                                            <?php if (! empty($accounts)): ?>
+                                                            <?php $banks = $this->view->lookupStore('banks'); ?>
+                                                            
+                                                            <table class="table table-bordered">
+                                                                <thead class="bg-secondary white">
+                                                                    <tr>
+                                                                        <th>Account Number</th>
+                                                                        <th>Bank</th>
+                                                                        <th>Branch</th>
+                                                                        <th>IFSC</th>
+                                                                        <th>Account Type</th>
+                                                                        <th>Description</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php foreach ($accounts as $account): ?>
+                                                                    <?php $bank = $banks[$account->bank_id]; ?>
+                                                                    
+                                                                    <tr>
+                                                                        <td><?php echo $this->view->escapeHtml($account->account_number); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($bank->bank); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($bank->branch); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($bank->ifsc); ?></td>
+                                                                        <td><?php echo $this->view->lookup('accountType', $account->account_type_id); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($account->description); ?></td>
+                                                                    </tr>
+                                                                    <?php endforeach; ?>
+
+                                                                </tbody>
+                                                            </table>
+                                                            <?php else: ?>
+                                                            
+                                                            <div class="alert">No accounts</div>
+                                                            <?php endif; ?>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div-->
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Documents</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <?php $documents = $beneficiary->documents(); ?>
+                                                                    <?php if (! empty($documents)): ?>
+
+                                                                    <table class="table table-bordered">
+                                                                        <thead class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th>Document Type</th>
+                                                                                <th>Description</th>
+                                                                                <th>View</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php foreach ($documents as $document): ?>
+
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->lookup('documentType', $document->document_type_id); ?></td>
+                                                                                <td><?php echo $this->view->escapeHtml($document->description); ?></td>
+                                                                                <td><?php echo $this->view->documentLink($document); ?></td>
+                                                                            </tr>
+                                                                            <?php endforeach; ?>
+
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <?php else: ?>
+
+                                                                    <div class="alert">No documents uploaded</div>
+                                                                    <?php endif; ?>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <form name="form-disable-modal" id="form-disable-modal" method="post" action="">
+                                        <div class="modal fade" id="modal-disable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title" id="myModalLabel8"> 
+                                                        Disable Member
+                                                    </h3>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="alert alert-danger"></div>
+                                                    <div class="form-body">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="form-group">
+                                                                    <label class="label-control" for="inactive_date">Inactive from <span class="red">*</span></label>
+                                                                    <input type="text" id="inactive_date" class="form-control single-date-max-today" value="" readonly="readonly">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label-control" for="inactive_note">Notes <span class="red">*</span></label>
+                                                                    <input type="text" id="inactive_note" class="form-control" value="" placeholder="Reason" required="required">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary">Save</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

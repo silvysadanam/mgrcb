@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/laragon/www/mgrcb/micro-finance/lib/module/Application/view/scripts/loan-total/index.phtml</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/view/scripts/beneficiary/create.phtml</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/src/Controller/TransactionController.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Branch/view/scripts/auction-chit/auctioneer-monthly-print.phtml</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/src/BackendController.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/view/scripts/transaction/receipt.phtml</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/view/scripts/membership/member.phtml</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/view/scripts/membership/index.phtml</file>
+            <file>file:/C:/laragon/www/mgrcb/micro-finance/lib/web/Web/src/Database/Sql.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/view/scripts/membership/filter.phtml</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Branch/src/Form/AuctionChitForm.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/shared/Shared/src/Utility/MemberReport.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Branch/src/Utility/LedgerReport.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/src/Controller/VoucherController.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/shared/Shared/src/Utility/Membership.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/shared/Shared/src/Utility/AccountsHelper.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/src/Form/Membership/SearchForm.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Branch/src/Form/AuctionChitBulkForm.php</file>
+            <file>file:/C:/laragon/www/mgrcb/lib/module/Backend/src/Controller/MembershipController.php</file>
+        </group>
+    </open-files>
+</project-private>

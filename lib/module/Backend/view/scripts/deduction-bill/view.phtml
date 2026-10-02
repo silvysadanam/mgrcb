@@ -1,0 +1,65 @@
+<?php
+
+$fmc = $this->view->getVariable('fmc');
+$report = $this->view->getVariable('report');
+$list = $report['fmc'];
+$dates = $report['dates'];
+$summary = $report['summary'];
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        FMC: <?php echo $fmc; ?> - Monthly Summary 
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered">
+                                                <thead class="bg-info white">
+                                                    <tr>
+                                                        <th>Month</th>
+                                                        <th>Auction Chits</th>
+                                                        <th>Deduction Bills</th>
+                                                        <th>Pending</th>
+                                                        <th>% Pending</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $year => $items): ?>
+                                                    <?php foreach ($items as $month => $item): ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $dates[$year][$month]; ?></td>
+                                                        <td><?php echo $item['chits']; ?></td>
+                                                        <td><?php echo $item['bills']; ?></td>
+                                                        <td><?php echo $item['pending']; ?></td>
+                                                        <td><?php echo $this->view->percentage($item['pending'], $item['chits']); ?></td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>Total</th>
+                                                        <th><?php echo $summary['chits']; ?></th>
+                                                        <th><?php echo $summary['bills']; ?></th>
+                                                        <th><?php echo $summary['pending']; ?></th>
+                                                        <th><?php echo $this->view->percentage($summary['pending'], $summary['chits']); ?></th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </section>
+            

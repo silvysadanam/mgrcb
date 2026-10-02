@@ -1,0 +1,23 @@
+[08:46:57 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 155 : Undefined array key "non_member"
+[08:46:57 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[09:05:00 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[09:06:07 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 83 : Undefined array key "loan_source_id"
+[09:06:07 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 155 : Undefined array key "non_member"
+[09:06:07 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[09:08:21 IST] ERROR [2]: \lib\module\Application\src\Controller\ModifyDcbController.php line 636 : Attempt to read property "balance_actual_principal_interest_outstanding" on null
+[09:08:21 IST] ERROR [8192]: \lib\module\Application\src\Controller\ModifyDcbController.php line 636 : ceil(): Passing null to parameter #1 ($num) of type int|float is deprecated
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 24 : Attempt to read property "schedule_id" on null
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 24 : Undefined array key ""
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 92 : Attempt to read property "collection_principal_arrears" on null
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 92 : Attempt to read property "collection_current_principal" on null
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 93 : Attempt to read property "collection_repaid" on null
+[09:08:21 IST] ERROR [8192]: \lib\module\Application\src\ViewHelper\Amount.php line 26 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 94 : Attempt to read property "balance_actual_principal_outstanding" on null
+[09:08:21 IST] ERROR [8192]: \lib\module\Application\src\ViewHelper\Amount.php line 26 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 95 : Attempt to read property "balance_actual_principal_interest_outstanding" on null
+[09:08:21 IST] ERROR [8192]: \lib\module\Application\src\ViewHelper\Amount.php line 26 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 96 : Attempt to read property "ageing_days" on null
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 97 : Attempt to read property "instalment_date" on null
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 126 : Attempt to read property "instalment_date" on null
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 146 : Attempt to read property "balance_actual_principal_interest_outstanding" on null
+[09:08:21 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId

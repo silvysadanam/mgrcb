@@ -1,0 +1,32 @@
+
+        <form name="form-card-type-modal" id="form-card-type-modal" method="post" action="">
+            <div class="modal fade" id="modal-card-type" tabindex="-1" role="dialog" aria-labelledby="myModalLabelCardType" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelCardType"> 
+                                Add Card Type
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label for="card_type">Card Type <span class="red">*</span></label>
+                                    <input type="text" id="card_type" class="form-control" value="" maxlength="30" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('settings/manage-type/type/card'); ?>">
+                            <input type="hidden" id="card-type-id" value="0">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

@@ -1,0 +1,7 @@
+[21:17:00 IST] EXCEPTION: \lib\module\Application\view\scripts\login\index.phtml on line 60 : Class "Web\Utility\JSHelper" not found
+[21:17:48 IST] EXCEPTION: \lib\module\Application\view\scripts\login\index.phtml on line 60 : Undefined constant "HOME"
+[21:17:49 IST] EXCEPTION: \lib\module\Application\view\scripts\login\index.phtml on line 60 : Undefined constant "HOME"
+[21:17:49 IST] EXCEPTION: \lib\module\Application\view\scripts\login\index.phtml on line 60 : Undefined constant "HOME"
+[21:17:49 IST] EXCEPTION: \lib\module\Application\view\scripts\login\index.phtml on line 60 : Undefined constant "HOME"
+[21:17:50 IST] EXCEPTION: \lib\module\Application\view\scripts\login\index.phtml on line 60 : Undefined constant "HOME"
+[21:18:44 IST] EXCEPTION: \lib\module\Application\view\scripts\login\index.phtml on line 60 : Undefined constant "HOME"

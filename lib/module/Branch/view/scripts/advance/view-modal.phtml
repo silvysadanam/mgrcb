@@ -1,0 +1,107 @@
+<?php
+
+use Web\Utility\DateHelper;
+
+$store = $this->view->getVariable('store');
+$advance = $store->advance();
+
+$date = DateHelper::getDateTime($advance->advance_date);
+$date->modify('+1 day');
+$minDate = $date->format(DateHelper::DATEPICKER);
+$lastPaymentDate = '--';
+$repayments = $store->repayments();
+if (! empty($repayments)) {
+    $last = end($repayments);
+    $lastDate = DateHelper::getDateTime($last->payment_date);
+    $lastPaymentDate = $lastDate->format(DateHelper::DATEPICKER);
+    $lastDate->modify('+1 day');
+    $minDate = $lastDate->format(DateHelper::DATEPICKER);
+}
+
+?>
+
+        <form name="form-advance-modal" id="form-advance-modal" method="post" action="">
+            <div class="modal fade" id="modal-advance" tabindex="-1" role="dialog" aria-labelledby="myModalLabelAdvance" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelAdvance"> 
+                                Add Repayment
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table table-condensed">
+                                        <tbody>
+                                            <tr>
+                                                <td width="60%">Advance Amount</td>
+                                                <td class="text-center"><?php echo $advance->advance_amount; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Amount Repaid</td>
+                                                <td class="text-center"><?php echo $advance->repaid; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Outstanding</td>
+                                                <td class="text-center"><?php echo $advance->balance; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Overdue Outstanding</td>
+                                                <td class="text-center"><?php echo $advance->overdue_balance; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Payment</td>
+                                                <td class="text-center"><?php echo $lastPaymentDate; ?></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="form-body">
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="payment-date">Date <span class="red">*</span></label>
+                                            <input type="text" id="payment-date" class="form-control single-date-max-today" value="" data-min-date="<?php
+                                            echo $minDate; ?>" placeholder="Date" readonly="readonly">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="amount">Repaid Amount <span class="red">*</span></label>
+                                            <input type="number" id="amount" class="form-control" value="" placeholder="Amount" min="1" max="<?php echo $advance->balance; ?>" step="1" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="balance">Modified Balance</label>
+                                            <input type="text" id="balance" class="form-control" value="<?php echo $advance->balance; ?>" placeholder="Balance" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="note">Notes</label>
+                                            <textarea id="note" class="form-control"placeholder="Notes"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="advance-id" value="<?php echo $advance->id; ?>">
+                            <input type="hidden" id="advance-balance" value="<?php echo $advance->balance; ?>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

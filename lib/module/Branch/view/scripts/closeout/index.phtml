@@ -1,0 +1,127 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+$status = ['Pending', 'Closed'];
+$advanceType = ['Advance', 'Withdrawal'];
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Closeout Details
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-closeout" class="form-horizontal" id="form-closeout" method="get" action="<?php
+                                        echo $this->view->actionUrl('closeout/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">From Date &raquo; </div>
+                                                    <input type="text" name="from_date" id="from-date" class="form-control single-date-clearable" data-min-date="01/04/2025" data-max-date="<?php
+                                                    echo $this->view->getVariable('maxDate'); ?>" readonly="readonly" value="<?php
+                                                    echo $filters->getEscapedValue('date'); ?>">
+                                                    <div class="input-group-addon"> &laquo; [<a href="javascript:;" class="clear-date" data-target="advance-date" title="Clear Date">Clear</a>]</div>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">To Date &raquo; </div>
+                                                     <input type="text" name="to_date" id="to-date" class="form-control single-date-clearable" data-min-date="01/04/2025" data-max-date="<?php
+                                                    echo $this->view->getVariable('maxDate'); ?>" readonly="readonly" value="<?php
+                                                    echo $filters->getEscapedValue('date'); ?>">
+                                                    <div class="input-group-addon"> &laquo; [<a href="javascript:;" class="clear-date" data-target="advance-date" title="Clear Date">Clear</a>]</div>
+                                                    <!--div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Deduction Type &raquo; </div>
+                                                    <select name="deduction" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('selectGroup', $this->view->getVariable('groupedDeductionTypes'), $filters->getValue('deduction')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Advance Type &raquo; </div>
+                                                    <select name="type" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->getVariable('typeOptions'), $filters->getValue('type')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Status &raquo; </div>
+                                                    <select name="status" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->getVariable('statusOptions'), $filters->getValue('status')); ?>
+                                                    
+                                                    </select-->
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <?php if ($total > 0):   ?>                 
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-10">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">Sl. No.</th>
+                                                        <th class="cursor-pointer">Date</th>
+                                                        <th class="cursor-pointer">Payment</th>
+                                                        <th class="cursor-pointer">End-day Count</th>
+                                                        <th class="cursor-pointer">Total Computed</th>
+                                                        <th class="cursor-pointer">Over/Short</th>
+                                                        <th>
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): 
+                                                    $opening_counted_difference =   ($row->counted_till - $row->expected_till) ;
+                                                    if ($opening_counted_difference < 0) $over_short_color='color: red;';
+                                                    else $over_short_color='color: blue;';   ?>
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td data-sort="<?php echo $this->view->timestamp($row->closeout_date); ?>"><?php echo $this->view->datepicker($row->closeout_date); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->type); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->counted_till); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->expected_till); ?></td>
+                                                        <td style="<?php echo $over_short_color;?>"><?php echo $this->view->escapeHtml($row->till_difference); ?></td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('closeout/view/id/' . $row->id); ?>" title="View"><i class="ft-eye"></i> View</a>
+                   
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

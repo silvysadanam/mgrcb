@@ -1,0 +1,248 @@
+<?php
+
+use Shared\Column\PqrMember;
+use Application\Utility\LoanHelper;
+
+
+$cell = new PqrMember();
+$columns = $cell->get();
+$span = PqRMember::COLUMNS;
+
+$generator = $this->view->getVariable('generator');
+$entries = $generator->entries();
+$total = $generator->total();
+$filters = $generator->filters();
+$ageing = $this->view->lookupStore('ageing_title');
+$backgrounds = [
+    LoanHelper::AGEING_ONTIME => ' on-time',
+    LoanHelper::AGEING_365 => ' beyond-365',
+];
+
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>
+            OVERVIEW - PORTFOLIO QUALITY - MEMBERS LEVEL
+            
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style media="all">
+            html {
+                overflow: auto;
+            }
+            body {
+                font-family: "Calibri", sans-serif;
+                font-size: 11pt;
+                text-align: left;
+                color: black;
+                width: fit-content;
+            }
+            thead th {
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            thead th.center, tbody td.center {
+                text-align: center;
+            }
+            thead th.right, tbody td.right {
+                text-align: right;
+            }
+            tfoot th {
+                font-weight: bold;
+                text-align: right;
+            }
+            tfoot th.center {
+                text-align: center;
+            }
+            tbody tr td {
+                white-space: nowrap;
+            }
+            .main-heading {
+               background-color: #FFFF1F;
+            }
+            .yellow {
+                background-color: #FFFF1F;
+            }
+            .gold {
+                background-color: #F5C018;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .amount {
+                text-align: right;
+            }
+            .number {
+                text-align: center;
+            }
+            .left {
+                text-align: left;
+            }
+            .on-time {
+                background-color: #50B051;
+                font-weight: bold;
+                color: white;
+            }
+            .beyond-365 {
+                background-color: #E9280E;
+                font-weight: bold;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <table cellpadding="2" cellspacing="0" border="1" style="margin:10px 10px 5px 0;">
+            <thead>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center"><?php echo PqrMember::HEADING_MAIN; ?></th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center"><?php echo $this->view->escapeHtml($filters['fmc']); ?> Level</th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center">Total Loan Per Member Range: <?php echo $this->view->escapeHtml($filters['amount']); ?></th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center">As On <?php echo $this->view->escapeHtml($filters['date']); ?></th>
+                </tr>
+                <tr>
+                    <th class="yellow" title="A">&nbsp;</th>
+                    <th class="yellow center" title="B"><span><?php echo $columns[PqrMember::C2]['html']; ?></span></th>
+                    <th class="yellow center" title="C"><?php echo $columns[PqrMember::C3]['html']; ?></th>
+                    <th class="yellow center" title="D"><?php echo $columns[PqrMember::C4]['html']; ?></th>
+                    <th class="yellow center" title="E"><?php echo $columns[PqrMember::C5]['html']; ?></th>
+                    <th class="yellow center" title="F"><?php echo $columns[PqrMember::C6]['html']; ?></th>
+                    <th class="yellow center" title="G"><?php echo $columns[PqrMember::C7]['html']; ?></th>
+                    <th class="yellow center" title="H"><?php echo $columns[PqrMember::C8]['html']; ?></th>
+                    <th class="gold center" title="I"><?php echo $columns[PqrMember::C9]['html']; ?></th>
+                    <th class="gold center" title="J"><?php echo $columns[PqrMember::C10]['html']; ?></th>
+                    <th class="yellow center" title="K"><?php echo $columns[PqrMember::C11]['html']; ?></th>
+                    <th class="yellow center" title="L"><?php echo $columns[PqrMember::C12]['html']; ?></th>
+                    <th class="yellow center" title="M"><?php echo $columns[PqrMember::C13]['html']; ?></th>
+                    <th class="yellow center" title="N"><?php echo $columns[PqrMember::C14]['html']; ?></th>
+                    <th class="gold center" title="O"><?php echo $columns[PqrMember::C15]['html']; ?></th>
+                </tr>
+                <tr>
+                    <?php for ($column = 1; $column < 9; $column++): ?>
+                    
+                    <th class="yellow center"><?php echo $column; ?></th>
+                    <?php endfor; ?>
+                    <?php for ($column = 9; $column < 11; $column++): ?>
+                    
+                    <th class="gold center"><?php echo $column; ?></th>
+                    <?php endfor; ?>
+                    <?php for ($column = 11; $column < 15; $column++): ?>
+                    
+                    <th class="yellow center"><?php echo $column; ?></th>
+                    <?php endfor; ?>
+                    
+                    <th class="gold center">15</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($entries as $ageingIndex => $entry): ?>
+                <?php $count = $this->view->counter(); ?>
+                <?php $background = ''; ?>
+                <?php $gold = ' gold'; ?>
+                <?php $first = ''; ?>
+                <?php
+                if (isset($backgrounds[$ageingIndex])) { 
+                    $background = $backgrounds[$ageingIndex];
+                    $gold = '';
+                    if (LoanHelper::AGEING_365 == $ageingIndex) {
+                        $first = $background;
+                    }
+                }
+                ?>
+                
+                <tr>
+                    <td class="right<?php echo $first; ?>" title="<?php echo $count; ?>:1">
+                        <?php echo $count; ?>
+                        
+                    </td>
+                    <td class="left<?php echo $background; ?>" title="<?php echo $count; ?>:2">
+                        <?php echo $ageing[$ageingIndex]; ?>
+                    
+                    </td>
+                    <td class="center<?php echo $background; ?> " title="<?php echo $count; ?>:3">
+                        <?php echo $entry['members']; ?>
+                    
+                    </td>
+                    <td class="amount<?php echo $background; ?>" title="<?php echo $count; ?>:4">
+                        <?php echo $this->view->lakhs($entry['amount']); ?>
+                    
+                    </td>
+                    <td class="center<?php echo $background; ?> " title="<?php echo $count; ?>:5">
+                        <?php echo $entry['loans']; ?>
+                    
+                    </td>
+                    <td class="amount<?php echo $background; ?>" title="<?php echo $count; ?>:6">
+                        <?php echo $this->view->lakhs($entry['scheduled_outstanding']); ?>
+                    
+                    </td>
+                    <td class="amount<?php echo $background; ?>" title="<?php echo $count; ?>:7">
+                        <?php echo $this->view->lakhs($entry['principal_outstanding']); ?>
+                    
+                    </td>
+                    <td class="amount<?php echo $background; ?>" title="<?php echo $count; ?>:8">
+                        <?php echo $this->view->lakhs($entry['actual_outstanding']); ?>
+                    
+                    </td>
+                    <td class="amount<?php echo $background . $gold; ?>" title="<?php echo $count; ?>:9">
+                        <?php echo $this->view->lakhs($entry['overdue']); ?>
+                    
+                    </td>
+                    <td class="amount<?php echo $background . $gold; ?>" title="<?php echo $count; ?>:10">
+                        <?php echo $this->view->lakhs($entry['par']); ?>
+                    
+                    </td>
+                    <td class="amount<?php echo $background; ?>" title="<?php echo $count; ?>:11">
+                        <?php echo $this->view->integer($entry['percentage_members']); ?>%
+                    
+                    </td>
+                    <td class="amount<?php echo $background; ?>" title="<?php echo $count; ?>:12">
+                        <?php echo $this->view->integer($entry['percentage_portfolio']); ?>%
+                    
+                    </td>
+                    <td class="amount<?php echo $background; ?>" title="<?php echo $count; ?>:13">
+                        <?php echo $this->view->integer($entry['percentage_loans']); ?>%
+                    
+                    </td>
+                    <td class="amount<?php echo $background; ?>" title="<?php echo $count; ?>:14">
+                        <?php echo $this->view->integer($entry['llr_percentage']); ?>%
+                    
+                    </td>
+                    <td class="amount<?php echo $background . $gold; ?>" title="<?php echo $count; ?>:15">
+                        <?php echo $this->view->lakhs($entry['llr_amount']); ?>
+                    
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th class="center"><?php echo $total['members']; ?></th>
+                    <th><?php echo $this->view->lakhs($total['amount']); ?></th>
+                    <th class="center"><?php echo $total['loans']; ?></th>
+                    <th><?php echo $this->view->lakhs($total['scheduled_outstanding']); ?></th>
+                    <th><?php echo $this->view->lakhs($total['principal_outstanding']); ?></th>
+                    <th><?php echo $this->view->lakhs($total['actual_outstanding']); ?></th>
+                    <th class="gold"><?php echo $this->view->lakhs($total['overdue']); ?></th>
+                    <th class="gold"><?php echo $this->view->lakhs($total['par']); ?></th>
+                    <th><?php echo $this->view->integer($total['percentage_members']); ?>%</th>
+                    <th><?php echo $this->view->integer($total['percentage_portfolio']); ?>%</th>
+                    <th><?php echo $this->view->integer($total['percentage_loans']); ?>%</th>
+                    <th>&nbsp;</th>
+                    <th class="gold"><?php echo $this->view->lakhs($total['llr_amount']); ?></th>
+            </tfoot>
+        </table>
+        <?php $this->block('print-download-button'); ?>
+        
+    </body>
+</html>      
+            

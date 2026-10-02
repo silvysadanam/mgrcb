@@ -1,0 +1,75 @@
+<?php
+
+?>
+
+        <div class="modal fade" id="modal-schedule-preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabelSchedulePreview" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="myModalLabelSchedulePreview"> 
+                            Loan Repayment Schedule
+                        </h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">DATE</td>
+                                    <td class="text-center">AMOUNT</td>
+                                    <td class="text-center">RoI</td>
+                                    <td class="text-center">TENURE</td>
+                                    <td class="text-center">EMI</td>
+                                    <td class="text-center">Broken Period</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" id="preview-date"></td>
+                                    <td class="text-center" id="preview-amount"></td>
+                                    <td class="text-center" id="preview-rate"></td>
+                                    <td class="text-center" id="preview-tenure"></td>
+                                    <td class="text-center" id="preview-emi"></td>
+                                    <td class="text-center" id="preview-broken-period"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <table class="table table-bordered">
+                            <thead class="bg-info white">
+                                <th>Instalment</th>
+                                <th>Date</th>
+                                <th>Opening<br>Balance</th>
+                                <th>Interest<br>Amount</th>
+                                <th>Principal<br>Amount</th>
+                                <th>EMI</th>
+                                <th>Closing<br>Balance</th>
+                                <th>Cumulative<br>Interest</th>
+                                <th>Cumulative<br>Principal</th>
+                                <th>Cumulative<br>EMI</th>
+                            </thead>
+                            <tbody id="schedule-preview-content">
+                                
+                            </tbody>
+                            <tfoot class="bg-info white">
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th id="total-interest"></th>
+                                    <th id="total-principal"></th>
+                                    <th id="total-emi"></th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </tfoot>
+                        </table> 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>

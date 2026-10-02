@@ -1,0 +1,63 @@
+[14:54:00 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[14:54:00 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:28:01 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:28:01 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:31:11 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:31:11 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:41:42 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:41:42 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:42:51 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:42:51 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:42:52 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:42:52 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:43:16 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:43:16 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:43:27 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:43:27 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:46:34 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:46:34 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:46:35 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:46:35 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:46:36 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:46:36 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:49:11 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:49:11 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:54:49 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:54:49 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[15:55:42 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:55:42 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[16:13:41 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[16:13:41 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[16:14:24 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[16:14:58 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[16:15:55 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[16:15:55 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[16:16:36 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[16:16:36 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[16:16:37 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[16:16:37 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[16:16:49 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[16:18:36 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[16:18:36 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[16:19:38 IST] EXCEPTION: \lib\module\Application\src\ApplicationController.php on line 52 : Call to a member function id() on null
+[16:20:15 IST] EXCEPTION: \lib\module\Application\src\ApplicationController.php on line 53 : Call to a member function id() on null
+[16:34:32 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[17:43:52 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[17:44:21 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[17:55:12 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[18:06:42 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[18:09:10 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[18:10:04 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[18:10:12 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:10:39 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[18:10:43 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:11:15 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 97 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:12:30 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:12:55 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:13:21 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:14:05 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:14:57 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:17:27 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:20:19 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.l.loan_status_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[18:22:26 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[18:33:38 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId

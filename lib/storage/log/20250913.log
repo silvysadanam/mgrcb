@@ -1,0 +1,190 @@
+[10:48:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:49:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:50:17 IST] EXCEPTION: \lib\module\Backend\src\Controller\OpeningController.php on line 26 : Class "Backend\Controller\BackendController" not found
+[10:50:42 IST] ERROR [2]: \lib\module\Backend\src\Controller\OpeningController.php line 50 : Undefined property: Backend\Controller\OpeningController::$_branch
+[10:50:42 IST] EXCEPTION: \lib\module\Backend\src\Controller\OpeningController.php on line 50 : Call to a member function id() on null
+[10:51:17 IST] EXCEPTION: \lib\module\Backend\src\Controller\OpeningController.php on line 50 : Class "Backend\Controller\FormHelper" not found
+[10:51:43 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:51:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:52:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:52:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:53:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:53:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:53:29 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:53:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:53:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:54:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:55:55 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:56:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:56:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:57:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:57:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[11:01:16 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[11:01:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[11:01:27 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[11:03:12 IST] ERROR [2]: \lib\module\Backend\src\Controller\CloseoutController.php line 49 : Undefined property: Backend\Controller\CloseoutController::$_branch
+[11:03:12 IST] EXCEPTION: \lib\module\Backend\src\Controller\CloseoutController.php on line 49 : Call to a member function id() on null
+[11:03:55 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[11:03:55 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 355 : foreach() argument must be of type array|object, null given
+[11:03:55 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[11:03:55 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[11:03:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[11:04:16 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:53:27 IST] EXCEPTION: \lib\module\Branch\src\Controller\ReportsController.php on line 172 : Class "Branch\Controller\MReceiptsReportForm" not found
+[14:54:05 IST] EXCEPTION: \lib\module\Branch\src\Controller\ReportsController.php on line 173 : Class "Branch\Controller\MReceiptsReportForm" not found
+[14:56:42 IST] ERROR [2]: \lib\module\Branch\src\Form\Reports\MReceiptsReportForm.php line 47 : Undefined array key "member_id"
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 1039 : Undefined array key 0
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 1039 : Attempt to read property "opb" on null
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 184 : Undefined array key 0
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 184 : Attempt to read property "code" on null
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 321 : Undefined array key 0
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 321 : Attempt to read property "transType" on null
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 321 : Undefined array key 0
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 321 : Attempt to read property "transType" on null
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 483 : Undefined array key 0
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 483 : Attempt to read property "transType" on null
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 483 : Undefined array key 0
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 483 : Attempt to read property "transType" on null
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 647 : Undefined array key 0
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 647 : Attempt to read property "transType" on null
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 655 : Undefined array key 0
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 655 : Attempt to read property "transType" on null
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 753 : Undefined array key 0
+[14:56:53 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 753 : Attempt to read property "head_name" on null
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 1039 : Undefined array key 0
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 1039 : Attempt to read property "opb" on null
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 184 : Undefined array key 0
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 184 : Attempt to read property "code" on null
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 321 : Undefined array key 0
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 321 : Attempt to read property "transType" on null
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 321 : Undefined array key 0
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 321 : Attempt to read property "transType" on null
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 483 : Undefined array key 0
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 483 : Attempt to read property "transType" on null
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 483 : Undefined array key 0
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 483 : Attempt to read property "transType" on null
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 647 : Undefined array key 0
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 647 : Attempt to read property "transType" on null
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 655 : Undefined array key 0
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 655 : Attempt to read property "transType" on null
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 753 : Undefined array key 0
+[17:19:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 753 : Attempt to read property "head_name" on null
+[17:35:46 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 866 : Undefined array key 0
+[17:35:46 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 866 : Attempt to read property "opb" on null
+[17:35:46 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.member_id' in 'where clause'
+[17:37:16 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.member_id' in 'where clause'
+[17:37:53 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.member_id' in 'where clause'
+[17:38:33 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.member_id' in 'where clause'
+[17:39:38 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 875 : Undefined variable $opb
+[17:39:38 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 884 : Undefined variable $cashPayment
+[17:39:38 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.member_id' in 'where clause'
+[17:40:01 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 885 : Undefined variable $cashPayment
+[17:40:01 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.member_id' in 'where clause'
+[17:40:25 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.member_id' in 'where clause'
+[17:41:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 406 : Undefined array key 0
+[17:41:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 406 : Attempt to read property "head_name" on null
+[17:41:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 580 : Undefined array key 0
+[17:41:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 580 : Attempt to read property "head_name" on null
+[17:42:08 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 580 : Undefined array key 0
+[17:42:08 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 580 : Attempt to read property "head_name" on null
+[17:49:29 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[17:50:46 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 358 : Undefined variable $incomeTransaction
+[17:50:46 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[17:52:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 358 : Undefined variable $incomeTransaction
+[17:52:18 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[17:56:12 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[17:56:47 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 329 : Undefined variable $memberTransaction
+[17:56:47 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[17:57:17 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[17:58:10 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[17:59:10 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[18:00:02 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[18:00:46 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[18:01:28 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[18:02:23 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[18:03:05 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 189 : Undefined array key "head"
+[20:45:26 IST] ERROR [2]: \lib\module\Branch\src\Controller\ReportsController.php line 182 : Undefined array key "group_by"
+[20:45:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 78 : Undefined array key "filters"
+[20:46:36 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 78 : Undefined array key "filters"
+[20:51:36 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.m.receiptNo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[20:52:15 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.m.receiptNo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[20:52:25 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'fmcfwsko_fws.m.receiptNo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[20:56:49 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 659 : Undefined variable $groupBy
+[20:56:49 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 78 : Undefined array key "filters"
+[20:56:55 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 666 : Undefined variable $groupBy
+[20:56:55 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 78 : Undefined array key "filters"
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 345 : Undefined property: stdClass::$receiptNo
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 349 : Undefined property: stdClass::$action_chit_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 351 : Undefined property: stdClass::$loan_id
+[21:01:16 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 78 : Undefined array key "filters"
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 336 : Undefined property: stdClass::$transBy
+[21:02:09 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 78 : Undefined array key "filters"
+[21:02:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 78 : Undefined array key "filters"
+[21:02:44 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 666 : Undefined variable $groupBy
+[21:02:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 78 : Undefined array key "filters"
+[21:06:44 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 666 : Undefined variable $groupBy
+[21:06:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 79 : Undefined array key "filters"
+[21:11:50 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 666 : Undefined variable $groupBy
+[21:11:50 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 81 : Undefined array key "filters"
+[21:12:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 81 : Undefined array key "filters"
+[21:12:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 81 : Undefined array key "filters"
+[21:13:07 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 81 : Undefined array key "filters"
+[21:16:14 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 81 : Undefined array key "filters"
+[21:17:13 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 81 : Undefined array key "filters"
+[21:21:34 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 397 : Undefined property: stdClass::$particulars

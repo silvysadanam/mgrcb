@@ -1,0 +1,14 @@
+[22:29:58 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'loan_date' in 'field list'
+[22:30:30 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 501 : Undefined variable $minDate
+[22:30:30 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 514 : Class "Backend\Controller\LoanTotalForm" not found
+[22:30:47 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 514 : Class "Backend\Controller\LoanTotalForm" not found
+[22:31:39 IST] EXCEPTION: \lib\shared\Shared\src\Utility\Membership.php on line 124 : Too few arguments to function Shared\Utility\Membership::__construct(), 0 passed in C:\laragon\www\mgrcb\lib\module\Backend\src\Controller\MembershipController.php on line 514 and at least 1 expected
+[22:34:12 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 515 : Call to undefined method Shared\Form\FilterForm::isPost()
+[22:35:09 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 515 : Call to undefined method Shared\Form\FilterForm::isPost()
+[22:37:36 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 551 : Undefined variable $minDatepicker
+[22:37:36 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 560 : Class "Backend\Controller\LoanTotalReport" not found
+[22:37:55 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 560 : Class "Backend\Controller\LoanTotalReport" not found
+[22:38:25 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 579 : Undefined variable $valid
+[22:38:25 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 585 : Undefined variable $generator
+[22:38:25 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 586 : Undefined variable $minDatepicker
+[22:38:25 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 434 : Too few arguments to function Backend\Controller\MembershipController::_breadcrumb(), 0 passed in C:\laragon\www\mgrcb\lib\module\Backend\src\Controller\MembershipController.php on line 588 and exactly 1 expected

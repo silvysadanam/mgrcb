@@ -1,0 +1,103 @@
+<?php
+
+$list = $this->view->getVariable('list');
+$amount = 0;
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Current Closing Balance
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <?php if (! empty($list)): ?>
+                                        
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a class="btn btn-outline-primary" href="<?php 
+                                                echo $this->view->actionUrl('auction-payment/closing-balance-export'); ?>" title="Export"><i class="ft-download"></i> Export</a>
+                                                <a class="btn btn-outline-info ml-2" target="_blank" href="<?php 
+                                                echo $this->view->actionUrl('auction-payment/closing-balance-print'); ?>" title="Export"><i class="ft-printer"></i> Print</a>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered" id="list-table-8">
+                                                        <thead class="bg-secondary white">
+                                                            <tr>
+                                                                <th class="cursor-pointer">Sl. No.</th>
+                                                                <th class="cursor-pointer">Auctioneer<br>Code &amp; Name</th>
+                                                                <th class="cursor-pointer">As on Date</th>
+                                                                <th class="cursor-pointer">Opening<br>Balance</th>
+                                                                <th class="cursor-pointer">Catch</th>
+                                                                <th class="cursor-pointer">Advance</th>
+                                                                <th class="cursor-pointer">Payment</th>
+                                                                <th class="cursor-pointer">Closing<br>Balance</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php foreach ($list as $row): ?>
+                                                            <?php $amount += $row->closing_balance; ?>
+
+                                                            <tr>
+                                                                <td><?php echo $this->view->counter(); ?></td>
+                                                                <td><?php echo $this->view->lookup('donor', $row->donor_id); ?></td>
+                                                                <td data-sort="<?php echo $this->view->timestamp($row->payment_date); ?>">
+                                                                    <?php echo $this->view->datepicker($row->payment_date); ?>
+
+                                                                </td>
+                                                                <td><?php echo $row->opening_balance; ?></td>
+                                                                <td><?php echo $row->auction_amount; ?></td>
+                                                                <td><?php echo $row->advance; ?></td>
+                                                                <td><?php echo $row->amount_paid; ?></td>
+                                                                <td><?php echo $row->closing_balance; ?></td>
+                                                                <td>
+                                                                    <a class="btn btn-primary btn-sm" href="<?php 
+                                                                    echo $this->view->actionUrl('auction-payment/daily-closing-balance'); ?>/?donor=<?php
+                                                                    echo $row->donor_id; ?>" title="View Closing Balance History"><i class="ft-activity"></i> History</a>
+                                                                    <a class="btn btn-info btn-sm ml-1" href="<?php 
+                                                                    echo $this->view->actionUrl('auction-payment/index'); ?>/?donor=<?php
+                                                                    echo $row->donor_id; ?>" title="View Auctioneer Payments"><i class="ft-list"></i> Payments</a>
+
+                                                                </td>
+                                                            </tr>
+                                                            <?php endforeach; ?>
+
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <th>&nbsp;</th>
+                                                                <th>Total</th>
+                                                                <th>&nbsp;</th>
+                                                                <th>&nbsp;</th>
+                                                                <th>&nbsp;</th>
+                                                                <th>&nbsp;</th>
+                                                                <th>&nbsp;</th>
+                                                                <th><?php echo $amount; ?></th>
+                                                                <th>&nbsp;</th>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

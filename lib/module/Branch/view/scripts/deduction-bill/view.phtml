@@ -1,0 +1,372 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$deductionBill = $store->deductionBill();
+$fmc = $store->fmc();
+$member = $store->member();
+$daily = $store->daily();
+$grouped = $store->grouped();
+$subTotalItems = ['opening', 'deduction', 'adjustment', 'closing'];
+$summary = array_fill_keys($subTotalItems, 0);
+$notes = $store->notes();
+$hasAdjustments = false;
+
+$balanceReceived = $deductionBill->deduction_balance;
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Deduction Bill
+                                    </h4>
+                                    <input type="hidden" id="cancel-url" value="<?php echo $this->view->actionUrl('deduction-bill'); ?>">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>FMC</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date</td>
+                                                            <td><?php echo $this->view->datepicker($deductionBill->deduction_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>No. of Auction Chits</td>
+                                                            <td><?php echo $deductionBill->auction_chits; ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Auction Amount</td>
+                                                            <td><?php echo $deductionBill->auction_amount; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Advance received from Auctioneer</td>
+                                                            <td><?php echo $daily->advance; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount Paid by Member</td>
+                                                            <td><?php echo $deductionBill->member_paid_amount; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Deductions</td>
+                                                            <td><?php echo $deductionBill->deduction_amount; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Balance received by Member</td>
+                                                            <td><?php echo $balanceReceived; ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-12">
+                                                <a class="btn btn-outline-dark width-300 mr-2" title="Print Deduction Bill in English" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction-bill/print/id/' . $deductionBill->id); ?>"><i class="ft-printer"></i> Print Deduction Bill (English) </a>
+                                                <a class="btn btn-outline-dark width-300" title="Print Deduction Bill Receipt in Malayalam" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction-bill/receipt/id/' . $deductionBill->id); ?>"><i class="ft-printer"></i> Print Receipt (മലയാളം) </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-bordered border-primary">
+                                <div class="card-header bg-primary">
+                                    <h4 class="card-title white">Deductions</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements white">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <?php foreach ($grouped as $groupId => $entries): ?>
+                                        <?php $subTotal = array_fill_keys($subTotalItems, 0); ?>
+                                        <?php $this->view->counter(0); ?>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white"><?php echo $this->view->lookup('deductionGroup', $groupId); ?></h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0 white">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <table class="table table-bordered">
+                                                                <thead class="bg-secondary white">
+                                                                    <tr>
+                                                                        <th>Sl. No.</th>
+                                                                        <th>Deduction Item</th>
+                                                                        <th width="15%">Opening Balance</th>
+                                                                        <th width="15%">Deduction Amount</th>
+                                                                        <th width="15%">Adjustments</th>
+                                                                        <th width="15%">Closing Balance</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php foreach ($entries as $item): ?>
+                                                                    <?php $adjustment = $item->deposit - ($item->repayment + $item->advance + $item->withdrawal); ?>
+                                                                    <?php if (0 != $adjustment && ! $hasAdjustments) { $hasAdjustments = true; } ?>
+                                                                    <?php $subTotal['opening'] += $item->opening_balance; ?>
+                                                                    <?php $subTotal['deduction'] += $item->amount; ?>
+                                                                    <?php $subTotal['adjustment'] += $adjustment; ?>
+                                                                    <?php $subTotal['closing'] += $item->closing_balance; ?>
+                                                                    <?php $summary['opening'] += $item->opening_balance; ?>
+                                                                    <?php $summary['deduction'] += $item->amount; ?>
+                                                                    <?php $summary['adjustment'] += $adjustment; ?>
+                                                                    <?php $summary['closing'] += $item->closing_balance; ?>
+
+                                                                    <tr>
+                                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                                        <td><?php echo $this->view->lookup('deductionType', $item->deduction_type_id); ?></td>
+                                                                        <td class="text-right"><?php echo $item->opening_balance; ?></td>
+                                                                        <td class="text-right"><?php echo $item->amount; ?></td>
+                                                                        <td class="text-right"><?php echo $adjustment; ?></td>
+                                                                        <td class="text-right"><?php echo $item->closing_balance; ?></td>
+                                                                    </tr>
+
+                                                                    <?php endforeach; ?>
+
+                                                                </tbody>
+                                                                <tfoot class="bg-secondary white">
+                                                                    <tr>
+                                                                        <th colspan="2">Sub Total</th>
+                                                                        <th class="text-right"><?php echo $subTotal['opening']; ?></th>
+                                                                        <th class="text-right"><?php echo $subTotal['deduction']; ?></th>
+                                                                        <th class="text-right"><?php echo $subTotal['adjustment']; ?></th>
+                                                                        <th class="text-right"><?php echo $subTotal['closing']; ?></th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endforeach; ?>
+                                        
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-secondary white">
+                                                        <tr>
+                                                            <th>&nbsp;</th>
+                                                            <th width="15%">Opening Balance</th>
+                                                            <th width="15%">Deduction Amount</th>
+                                                            <th width="15%">Adjustments</th>
+                                                            <th width="15%">Closing Balance</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Total</td>
+                                                            <td class="text-right"><strong><?php echo $summary['opening']; ?></strong></td>
+                                                            <td class="text-right"><strong><?php echo $summary['deduction']; ?></strong></td>
+                                                            <td class="text-right"><strong><?php echo $summary['adjustment']; ?></strong></td>
+                                                            <td class="text-right"><strong><?php echo $summary['closing']; ?></strong></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-bordered border-primary">
+                                <div class="card-header bg-primary">
+                                    <h4 class="card-title white">Summary</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0 white">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Total Deductions</td>
+                                                            <td width="25%" class="text-right"><strong><?php echo $deductionBill->deduction_amount; ?></strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Advance received from Auctioneer</td>
+                                                            <td class="text-right"><strong><?php echo $daily->advance; ?></strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount paid by Member</td>
+                                                            <td class="text-right"><strong><?php echo $deductionBill->member_paid_amount; ?></strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Balance received by Member</td>
+                                                            <td class="text-right"><strong><?php echo $balanceReceived; ?></strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong>Total Amount</strong></td>
+                                                            <td class="text-right"><strong><?php echo $deductionBill->auction_amount; ?></strong></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php if (! empty($notes)): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-bordered border-primary">
+                                <div class="card-header bg-primary">
+                                    <h4 class="card-title white">Notes</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0 white">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-secondary white">
+                                                        <tr>
+                                                            <th>Date &amp; Time</th>
+                                                            <th>Name</th>
+                                                            <th>Notes</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($notes as $note): ?>
+                                                        
+                                                        <tr>
+                                                            <td><?php echo $this->view->userTime($note->created_at); ?></td>
+                                                            <td><?php echo $this->view->lookup('administrator', $note->created_by); ?></td>
+                                                            <td><?php echo $this->view->textareaHtml($note->note); ?></td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; ?>
+                <?php if ($hasAdjustments): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-bordered border-primary">
+                                <div class="card-header bg-primary">
+                                    <h4 class="card-title white">Adjustments</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0 white">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-secondary white">
+                                                        <tr>
+                                                            <th>Deduction Item</th>
+                                                            <th>Deduction Amount</th>
+                                                            <th>Advance payout (-)</th>
+                                                            <th>Advance OD recovery (-)</th>
+                                                            <th>Advance repayment (+)</th>
+                                                            <th>Withdrawal (-)</th>
+                                                            <th>Effective Amount</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php $entries = $store->entries(); ?>
+                                                        <?php foreach ($entries as $entry): ?>
+                                                        <?php if ($entry->advance > 0 || $entry->repayment > 0 || $entry->deposit > 0 || $entry->withdrawal > 0): ?>
+                                                        
+                                                        <tr>
+                                                            <td><?php echo $this->view->lookup('deductionType', $entry->deduction_type_id); ?></td>
+                                                            <td><?php echo $entry->amount; ?></td>
+                                                            <td><?php if ($entry->advance > 0) { echo $entry->advance; } ?></td>
+                                                            <td><?php if ($entry->repayment > 0) { echo $entry->repayment; } ?></td>
+                                                            <td><?php if ($entry->deposit > 0) { echo $entry->deposit; } ?></td>
+                                                            <td><?php if ($entry->withdrawal > 0) { echo $entry->withdrawal; } ?></td>
+                                                            <?php $effective = ($entry->amount + $entry->deposit) - ($entry->advance + $entry->repayment + $entry->withdrawal); ?>
+                                                            
+                                                            <td><?php echo $effective; ?></td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif;
+                

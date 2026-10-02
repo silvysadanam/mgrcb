@@ -1,0 +1,112 @@
+[19:04:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:04:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:04:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:04:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:04:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:04:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:04:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:05:38 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:05:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:05:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:05:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:05:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:05:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:06:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:07:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:07:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:07:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 612 : Undefined variable $count
+[19:08:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:08:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:08:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:08:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:08:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:08:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:12:08 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 91 : Attempt to read property "id" on bool
+[19:12:08 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 157 : Attempt to read property "code" on bool
+[19:12:08 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:12:08 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 137 : Attempt to read property "name" on bool
+[19:12:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 91 : Attempt to read property "id" on bool
+[19:12:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 157 : Attempt to read property "code" on bool
+[19:12:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:12:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:12:30 IST] EXCEPTION: \lib\module\Branch\src\Utility\BranchStore.php on line 287 : Undefined constant Shared\Constant\MemberType::LIFEMEMBER
+[19:13:35 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 91 : Attempt to read property "id" on bool
+[19:13:35 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 157 : Attempt to read property "code" on bool
+[19:13:35 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:13:35 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:13:35 IST] EXCEPTION: \lib\module\Branch\src\Utility\BranchStore.php on line 287 : Undefined constant Shared\Constant\MemberType::LIFEMEMBER
+[19:13:56 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 91 : Attempt to read property "id" on bool
+[19:13:56 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 157 : Attempt to read property "code" on bool
+[19:13:56 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:13:56 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:13:56 IST] EXCEPTION: \lib\module\Branch\src\Utility\BranchStore.php on line 287 : Undefined constant Shared\Constant\MemberType::LIFEMEMBER
+[19:14:39 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 91 : Attempt to read property "id" on bool
+[19:14:39 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 157 : Attempt to read property "code" on bool
+[19:14:39 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:14:39 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:14:39 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 587 : Attempt to read property "id" on bool
+[19:14:39 IST] EXCEPTION: \lib\module\Branch\src\Utility\BranchStore.php on line 298 : Undefined constant Shared\Constant\MemberType::AUCTIONEER
+[19:16:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 91 : Attempt to read property "id" on bool
+[19:16:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 157 : Attempt to read property "code" on bool
+[19:16:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:16:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 127 : Attempt to read property "id" on bool
+[19:16:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 587 : Attempt to read property "id" on bool
+[19:16:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 587 : Attempt to read property "id" on bool
+[19:16:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 137 : Attempt to read property "name" on bool
+[20:05:46 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[20:05:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[20:05:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:05:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:05:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:05:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:05:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:20:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:20:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:20:17 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:20:17 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:20:17 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:20:17 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:20:17 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:21:56 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 80 : Undefined array key "gender"
+[22:21:56 IST] ERROR [8192]: \lib\shared\Shared\src\Utility\MembershipValidator.php line 117 : trim(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:21:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:21:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[22:21:56 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[22:22:51 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 80 : Undefined array key "gender"
+[22:22:51 IST] ERROR [8192]: \lib\web\Web\src\Form\FormValidator.php line 49 : trim(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:22:51 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:22:51 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[22:22:51 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[22:27:36 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 80 : Undefined array key "gender"
+[22:27:36 IST] ERROR [8192]: \lib\web\Web\src\Form\FormValidator.php line 49 : trim(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:27:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:27:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[22:27:36 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[22:27:45 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 80 : Undefined array key "gender"
+[22:27:45 IST] ERROR [8192]: \lib\web\Web\src\Form\FormValidator.php line 49 : trim(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:27:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:27:45 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[22:27:45 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[22:28:27 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:28:27 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[22:28:27 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given

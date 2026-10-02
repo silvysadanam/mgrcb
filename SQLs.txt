@@ -1,0 +1,40 @@
+
+UPDATE deduction_bill SET origin_member_id=member_id, member_id=328;
+
+delete from auctioneer_account_daily where payment_date >= '2025-04-01';
+
+
+delete from auctioneer_account_monthly  WHERE `payment_month` = 4 AND `payment_year` = 2025;
+
+delete from auctioneer_daily WHERE `auction_date` >= '2025-04-01';
+delete FROM `auctioneer_monthly` WHERE `auction_date` >= '2025-04-01';
+
+delete FROM `auctioneer_payment` WHERE `payment_date` >= '2025-04-01';
+
+
+delete FROM `auction_daily` WHERE `auction_date` >= '2025-04-01';
+
+delete FROM `auction_fmc_daily` WHERE `auction_date` >= '2025-04-01';
+delete FROM `auction_fmc_monthly` WHERE `auction_date` >= '2025-04-01';
+
+delete FROM `auction_monthly` WHERE `auction_date` >= '2025-04-01';
+
+delete FROM `deduction_daily` WHERE `deduction_date` >= '2025-04-01';
+
+delete FROM `deduction_member_daily` WHERE `deduction_date` >= '2025-04-01';
+
+delete FROM `deduction_member_monthly` WHERE `deduction_date` >= '2025-04-01';
+
+delete FROM `deduction_monthly` WHERE `deduction_date` >= '2025-04-01';
+
+delete FROM `member_catch` WHERE `catch_date` >= '2025-04-01';
+
+
+delete deduction from deduction inner join auction_chit on (auction_chit.id=deduction.auction_chit_id) where  auction_chit.auction_date >= '2025-04-01';
+
+delete `auction_chit`, `auction_chit_entry` from `auction_chit` inner join auction_chit_entry on (auction_chit.id=auction_chit_entry.auction_chit_id) where   auction_date >= '2025-04-01';
+
+
+
+
+INSERT INTO `member` (`id`, `name`, `code`, `fmc_id`, `created_at`, `member_type_id`, `name_malayalam`, `mobile`, `aadhar_number`, `aadhar_mobile`, `address`, `village`, `taluk`, `district`, `fisheries_village`, `kerosene_distribution_center`, `preferred_inspection_location`, `date_of_birth`, `access_key`, `disabled`, `inactive_date`, `inactive_note`, `inactive_log`) VALUES (NULL, 'FWS-Admin', 'FWSADMIN', '8', '0', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', NULL, NULL, NULL);

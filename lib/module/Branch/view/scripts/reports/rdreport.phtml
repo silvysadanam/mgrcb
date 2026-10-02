@@ -1,0 +1,68 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+$receipt_date = $this->view->getVariable('receipt_date');
+$receipt_number = $this->view->getVariable('receipt_number');
+$status = ['Pending', 'Confirmed'];
+$fmcId = $this->view->getVariable('fmc_id');
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Receipts & Payment Report  
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-auction-filter" class="form-horizontal" id="form-auction-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('income/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">From &raquo; </div>
+                                                    <input type="text" name="sdate" id="start-date" class="form-control single-date-clearable" data-min-date="01/01/2020" readonly="readonly" value="<?php
+                                                    echo $filters->getEscapedValue('sdate'); ?>">
+                                                    <div class="input-group-addon"> &laquo; [<a href="javascript:;" class="clear-date" data-target="auction-date" title="Clear Date">Clear</a>]</div>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">To &raquo; </div>
+                                                    <input type="text" name="edate" id="end-date" class="form-control single-date-clearable" data-min-date="01/01/2020" readonly="readonly" value="<?php
+                                                    echo $filters->getEscapedValue('edate'); ?>">
+                                                    <div class="input-group-addon"> &laquo; [<a href="javascript:;" class="clear-date" data-target="auction-date" title="Clear Date">Clear</a>]</div>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <!--div class="input-group-addon">Auctioneer &raquo; </div>
+                                                    <select name="auctioneer" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php //echo $this->view->formHelper('select', $this->view->lookupStore('auctioneer'), $filters->getValue('auctioneer')); ?>
+                                                    
+                                                    </select-->
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <!--div class="input-group-addon">Deduction Bill &raquo; </div>
+                                                    <select name="deduction" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php //echo $this->view->formHelper('select', $this->view->getVariable('deductionOptions'), $filters->getValue('deduction')); ?>
+                                                    
+                                                    </select-->
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" name="report_eng" value="1" class="btn btn-primary btn-round" title="Filter">Generate</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div>
+                                             <div class="col-12">
+                                                <a class="btn btn-outline-dark mr-2" title="Generate Report in English" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction/print/id/'); ?>"><i class="ft-printer"></i> Generate Report in (English - A5) </a>
+                                                <a class="btn btn-outline-dark" title="Generate Report in Malayalam" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction/receipt/id/'); ?>/size/1"><i class="ft-printer"></i> Generate Report in (മലയാളം - A4) </a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

@@ -1,0 +1,8 @@
+[20:20:35 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 194 : Class "Branch\Utility\DateTime" not found
+[21:20:03 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 196 : Undefined variable $date
+[21:20:03 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 196 : Call to a member function getTimestamp() on null
+[21:23:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 505 : Array to string conversion
+[21:23:14 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 505 : Object of class DateTime could not be converted to string
+[21:24:06 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 505 : Array to string conversion
+[21:24:06 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 505 : Object of class DateTime could not be converted to string
+[21:24:41 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 505 : Object of class DateTime could not be converted to string

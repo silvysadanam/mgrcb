@@ -1,0 +1,77 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+$headOptions = $this->view->lookupStore('incomeHead');
+$bankOptions = $this->view->lookupStore('bank');
+?>
+        <form name="form-head-type-modal" id="form-head-type-modal" method="post" action="">
+            <div class="modal fade" id="modal-head-type" tabindex="-1" role="dialog" aria-labelledby="myModalLabelCashReceipt" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelCashReceipt"> 
+                                Add Cash Receipt
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="line-height:0.3px;">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div style='text-align:left'>
+                                <div style='width:40%;display:inline-block;' class="form-group">  
+                                    <label class="label-control" for="receipt_number">No. <span class="red">*</span></label>
+                                    <input type="text" width="20px" name="receipt_number" id="receipt_number" class="form-control" value="<?php 
+                                    echo $form->getEscapedValue('receipt_number'); ?>" readonly="readonly">
+                                </div>
+                               <div style='width:45%;display:inline-block' class="form-group"> 
+                                    <label class="label-control" for="receipt_date">Date <span class="red">*</span></label>
+                                    <input type="text" name="receipt_date" id="receipt_date" class="form-control single-date-max-today" data-min-date="01/01/2020" value="<?php 
+                                    echo $form->getEscapedValue('receipt_date'); ?>" placeholder="Receipt Date" maxlength="10" readonly="readonly">
+                               </div>
+                                </div>
+                                  <div class="form-group">
+                                   <label class="label-control" for="note">Narration <span class="red">*</span></label>
+                                    <textarea name="note" id="note" class="form-control" placeholder="Narration" required="required"><?php 
+                                    echo $form->getEscapedValue('note'); ?></textarea>
+                                </div>
+                                <div class="form-group">
+                                <label for="head_type">Head Type <span class="red">*</span></label>
+                                <select id="head_id" class="form-control" title="Head">
+                                          <option value="0">--select--</option>
+                                          <?php echo $this->view->formHelper('select', $this->view->lookupStore('incomeHead')); ?>
+                                </select>
+                                </div>
+                                 <div class="form-group">
+                                      <label class="label-control" for="amount">Amount <span class="red">*</span></label>
+                                            <input type="number" id="amount" class="form-control" value="" placeholder="Amount" min="1" max="9999999" step=".01" required="required">
+                                </div>
+                                <div class="form-group">
+                                   <label class="label-control" for="payment_type">By/To</label>
+                                    <select name="payment_type" class="form-control" title="Payment Type" id="payment_type" >
+                                        <option value="Cash" selected="selected">Cash</option>
+                                        <option value="Bank">Bank</option>
+                                      </select>
+                                </div>
+                                <div class="form-group">
+                                <label class="label-control" for="bank">Bank</label>
+                                <select name="bank_id" id="bank_id"  class="form-control" title="Bank" disabled="disabled">
+                                       <option value="0">--select--</option>
+                                       <?php echo $this->view->formHelper('select', $bankOptions, $headId); ?>
+                                   </select>
+                           </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('income/cash-receipt/type/head'); ?>">
+                            <input type="hidden" id="head-id" value="0">
+                             <input type="hidden" id="fmc_id" value="0">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

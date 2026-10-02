@@ -1,0 +1,2 @@
+[20:17:22 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 1140 : Too few arguments to function Branch\Utility\BSReport::getBankOpening(), 0 passed in C:\laragon\www\fws_main\lib\module\Branch\src\Utility\BSReport.php on line 189 and at least 1 expected
+[20:28:03 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 207 : Cannot use a scalar value as an array

@@ -1,0 +1,163 @@
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 86 : Undefined array key "Month"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 86 : Undefined array key "Year"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 90 : Undefined array key "Month"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 95 : Undefined array key "Month"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 137 : Undefined array key "receipts"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 138 : Undefined array key "payments"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 142 : Undefined array key "payments"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 142 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 143 : Undefined array key "payments"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 143 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 144 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 147 : Undefined array key "receipts"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 147 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 148 : Undefined array key "receipts"
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 148 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 149 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 154 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 155 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 156 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 159 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 160 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 161 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 168 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 169 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 170 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 173 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 174 : Trying to access array offset on value of type null
+[08:20:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 175 : Trying to access array offset on value of type null
+[08:34:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 147 : Undefined array key "receiptSubTotal"
+[08:34:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 148 : Undefined array key "cumulativeSubTotal"
+[08:34:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 154 : Undefined array key "overIncome"
+[08:34:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 159 : Undefined array key "overExpense"
+[08:34:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 174 : Undefined array key "receiptsCumilativeTotal"
+[08:35:02 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 147 : Undefined array key "receiptSubTotal"
+[08:35:02 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 148 : Undefined array key "cumulativeSubTotal"
+[08:35:02 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 161 : Undefined array key "receiptsCumilativeTotal"
+[08:36:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 240 : Undefined variable $receiptsCumilativeTotal
+[09:51:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 183 : Undefined array key "receipt_current"
+[09:51:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 190 : Undefined array key "receipt_current"
+[09:51:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 197 : Undefined array key "receipt_current"
+[10:13:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 160 : Undefined array key "receipt"
+[10:13:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 160 : Undefined array key "receipt"
+[10:14:55 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 163 : Undefined array key "receipt"
+[10:14:55 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 163 : Undefined array key "receipt"
+[10:15:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 162 : Undefined array key "receipt"
+[10:15:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 162 : Undefined array key "receipt"
+[10:29:51 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 226 : syntax error, unexpected variable "$x"
+[10:30:30 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 168 : Cannot access offset of type string on string
+[10:31:16 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 168 : Cannot access offset of type string on string
+[10:33:58 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 168 : Cannot access offset of type string on string
+[10:34:14 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 167 : Cannot access offset of type string on string
+[10:35:04 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 167 : Cannot access offset of type string on string
+[10:37:51 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 170 : Cannot access offset of type string on string
+[10:38:10 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 169 : Cannot access offset of type string on string
+[10:39:49 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 171 : Cannot access offset of type string on string
+[10:39:59 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 171 : Cannot access offset of type string on string
+[10:40:14 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 171 : Cannot access offset of type string on string
+[10:43:19 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\bsreport.phtml on line 166 : syntax error, unexpected token "<"
+[10:53:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:53:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[10:53:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[11:18:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:55:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:12 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[17:55:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\RDReport.php line 201 : Undefined property: stdClass::$head
+[18:34:07 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 206 : syntax error, unexpected token "++"
+[18:34:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 189 : Undefined variable $auctioneerAssets
+[18:34:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 190 : Undefined variable $auctioneerAssets
+[18:47:59 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 189 : Undefined variable $auctioneerAssets
+[18:47:59 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 190 : Undefined variable $auctioneerAssets
+[18:48:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 107 : Undefined variable $i
+[18:48:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 109 : Undefined variable $i
+[18:48:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 122 : Undefined variable $i
+[18:49:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 107 : Undefined variable $i
+[18:49:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 109 : Undefined variable $i
+[18:49:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\bsreport.phtml line 122 : Undefined variable $i
+[20:51:00 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:51:02 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:51:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsview.phtml line 61 : Undefined property: stdClass::$ie_item
+[20:51:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsview.phtml line 62 : Undefined property: stdClass::$bs_item
+[20:51:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsview.phtml line 61 : Undefined property: stdClass::$ie_item
+[20:51:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsview.phtml line 62 : Undefined property: stdClass::$bs_item
+[20:51:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:51:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:54:43 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:54:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans

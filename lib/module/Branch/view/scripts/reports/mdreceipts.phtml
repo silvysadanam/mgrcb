@@ -1,0 +1,149 @@
+<?php
+
+$form = $this->getForm();
+$generator = $this->view->getVariable('generator');
+$memberId = $this->view->getVariable('memberID');
+$group_by = $this->view->getVariable('group_by');
+$branch = $this->view->getVariable('branch');
+$groups = $this->view->getVariable('groups');
+$start_date = $this->view->getVariable('startDate');
+$end_date = $this->view->getVariable('endDate');
+?>
+
+                <section class="do-not-print">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Member Deductions Data - Summary</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-summary" id="form-summary" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="start_date" class="label-control col-md-4 text-left">From date</label>
+                                                            <input type="text" name="start_date" id="start_date" class="form-control col-md-8 single-date-max-today" value="<?php
+                                                            echo $form->getEscapedValue('start_date'); ?>" readonly="readonly" data-min-date="<?php
+                                                            echo $this->view->getVariable('min_date'); ?>">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="end_date" class="label-control col-md-4 text-left">To date</label>
+                                                            <input type="text" name="end_date" id="end_date" class="form-control col-md-8 single-date-max-today" value="<?php
+                                                            echo $form->getEscapedValue('end_date'); ?>" readonly="readonly" data-min-date="<?php
+                                                            echo $this->view->getVariable('min_date'); ?>">
+                                                        </div>
+                                                         <div class="form-group row">
+                                                            <label for="head" class="label-control col-md-4 text-left">Member <span class="red">*</span></label>
+                                                            <select name="member_id" id="member_id" required="required" class="form-control col-md-8" title="SOURCE">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('member'), $memberId) ?>
+
+                                                            </select>
+                                                        </div>
+                                                         <!--div class="form-group row">
+                                                            <label for="head" class="label-control col-md-4 text-left">Report Type <span class="red">*</span></label>
+                                                            <select name="group_by" id="group_by" required="required" class="form-control col-md-8" title="SOURCE">
+                                                                 <option value="group" <?php if($group_by === 'group') { echo "selected"; } ?>>Consolidated</option>
+                                                                 <option value="line" <?php if($group_by === 'line') { echo "selected"; } ?>>Line Item</option>
+                                                            </select>
+                                                        </div-->
+                                                        </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="help-block text-italic">Instructions</p>
+                                                                <p class="help-block">Select dates for specific report period </p>
+                                                                <p class="help-block">Report period is inclusive of selected dates</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                
+                                                <button type="submit" class="btn btn-primary" title="SUBMIT">SUBMIT</button>
+                                                <input type="hidden" id="min-date" value="<?php echo $this->view->getVariable('min_date'); ?>">
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php if (! empty($generator)): ?>
+                <?php $report = $generator->report(); ?>
+                <?php //$filters = $report['filters']; ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                       
+                                    </h4>
+                                     <h4 class="card-title">
+                                       
+                                    </h4>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12 overflow-x">
+                                                <table border =2 class="table table-bordered table-condensed table-responsive">
+                                                    <thead class="bg-info white">
+                                                        <tr> <th class="text-center" colspan="5"> <h4> FMC <?php echo $this->view->escapeHtml($branch->name()); ?> - Sanghom</h4> </th></tr>
+                                                        <tr> <th class="text-center" colspan="5"> <h5>Member Receipt from <?php echo $start_date ;?> to <?php echo $end_date ;?> </h5></th></tr>
+                                                <tr style="background-color: #ffffff;"> <th class="text-center"><h5> Name</h5> </th><th><h5><?php echo $report['ledgerName'];?> </h5></th><th><h5>Total Catch</h5></th><th><h5><?php echo $report['totalCatch'] ;?></h5></th><th><h5>Total Bill: <?php echo $report['totalBill'] ;?></h5></th></tr>
+                                                        <tr>
+                                                            <th class="text-center">Particulars</th>
+                                                            <th class="text-center">Opening</th>
+                                                            <th class="text-center">Collection</th>
+                                                            <th class="text-center">Withdrawal</th>
+                                                            <th class="text-center">Balance</th>
+                                                            
+                                                        </tr>                                                      
+                                                    </thead>
+                                                    <tbody>                                                   
+                                                       <?php if(isset($report['report'])):?>                                                      
+                                                        <?php $transactions = $report['report'];?>
+                                                         <?php $cashTotal = $report['cashTotal'];?>
+                                                        <?php foreach ($transactions as $item): ?>
+                                                        <?php if(isset($item['tobank'])) { $item['bank'] = $item['tobank']; } ?>
+                                                        <tr>
+                                                            <td class="text-center"><?php echo $this->view->escapeHtml($item['particulars']); ?></td>
+                                                            <td class="text-center"><?php echo $this->view->escapeHtml($item['opening']); ?></td>
+                                                            <td class="text-center"><?php if(isset($item['collection'])) { echo $this->view->escapeHtml($item['collection']); } else { echo "0"; }; ?></td>
+                                                            <td class="text-center"><?php if(isset($item['withdrawal'])) { echo $this->view->escapeHtml($item['withdrawal']); } else { echo "0"; } ?></td>   
+                                                            <td class="text-center"><?php if(isset($item['balance'])) { echo $this->view->escapeHtml($item['balance']); } else { echo "0"; } ?></td>  
+                                                        </tr>
+                                                        <?php endforeach; ?>  
+                                                        <!--tr>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"></td>
+                                                            <td class="text-center"><b>Total</b></td>
+                                                            <td class="text-center"><b><?php if($cashTotal> 0) { echo $this->view->escapeHtml($cashTotal); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['bankTotal']> 0) { echo $this->view->escapeHtml($report['bankTotal']); }  ?></b></td> 
+                                                            <td class="text-center"><b><?php if($report['bycashTotal']> 0) { echo $this->view->escapeHtml($report['bycashTotal']); }  ?></b></td>
+                                                            <td class="text-center"><b><?php if($report['byBankTotal']> 0) { echo $this->view->escapeHtml($report['byBankTotal']); }  ?></b></td>
+                                                        </tr-->
+                                                      
+                                                        <?php endif; ?>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif;
+                

@@ -1,0 +1,5 @@
+[19:22:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:25:51 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:25:51 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[19:26:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:49:39 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( and fmc_id = 4 and transType='Direct Income' order by head_name' at line 1

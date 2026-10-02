@@ -1,0 +1,215 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$auctionChit = $store->auctionChit();
+$fmc = $store->fmc();
+$member = $store->member();
+$auctioneer = $store->auctioneer();
+
+$hasDeductionBill = $store->hasDeductionBill();
+$edit = ! $hasDeductionBill;
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Auction Chit
+                                    </h4>
+                                    <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('auction-chit/manage/id/' . $auctionChit->id); ?>/action/">
+                                    <input type="hidden" id="cancel-url" value="<?php echo $this->view->actionUrl('auction-chit'); ?>">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>FMC</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date</td>
+                                                            <td><?php echo $this->view->escapeHtml($store->auctionDate()); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auctioneer Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($auctioneer->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auctioneer Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($auctioneer->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Deduction Bill</td>
+                                                            <td><?php if ($hasDeductionBill) { ?>Generated<?php } else { ?>Pending<?php } ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Entries</td>
+                                                            <td><?php echo $auctionChit->entries; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Amount</td>
+                                                            <td><?php echo $auctionChit->amount; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Weight</td>
+                                                            <td><?php echo $auctionChit->quantity; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Advance paid to Member</td>
+                                                            <td><?php echo $auctionChit->advance; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Balance Amount</td>
+                                                            <td><?php echo $auctionChit->balance; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Last updated</td>
+                                                            <td><?php echo $this->view->userTime($auctionChit->updated_at); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <table class="table table-borderless">
+                                                    <tbody>
+                                                        <?php if ($edit): ?>
+                                                        
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-success w-100" href="<?php
+                                                            echo $this->view->actionUrl('deduction/create/id/' . $auctionChit->id); ?>" title="Create Deduction Bill"><i class="ft-plus"></i> Create Deduction Bill</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-primary w-100" href="javascript:;" id="add-entry" title="Add Entry to Auction Chit"><i class="ft-plus-square"></i> Add Entry</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-info w-100" href="javascript:;" id="edit-advance" title="Edit Advance"><i class="ft-edit"></i> Edit Advance</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-danger w-100" href="javascript:;" id="delete-auction-chit" title="Delete Auction Chit"><i class="ft-x-square"></i> Delete Auction Chit</a></td>
+                                                        </tr>
+                                                        <?php else: ?>
+                                                        
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-primary w-100" href="<?php
+                                                            echo $this->view->actionUrl('deduction/view/id/' . $auctionChit->id); ?>" title="View Deduction Bill"><i class="ft-list"></i> View Deduction Bill</a></td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-dark w-100" title="Print Auction Chit" target="_blank" href="<?php
+                                                            echo $this->view->actionUrl('auction-chit/print/id/' . $auctionChit->id); ?>"><i class="ft-printer"></i> Print</a></td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Entries</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-bordered">
+                                                                        <thead class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th>Sl. No.</th>
+                                                                                <th>Medicine</th>
+                                                                                <th>Weight</th>
+                                                                                <th>Amount</th>
+                                                                                <th>Actions</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php $delete = $auctionChit->entries > 1; ?>
+                                                                            <?php foreach ($store->entries() as $item): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->counter(); ?></td>
+                                                                                <td><?php echo $this->view->lookup('medicine', $item->medicine_id); ?></td>
+                                                                                <td class="text-right"><?php echo $item->quantity; ?></td>
+                                                                                <td class="text-right"><?php echo $item->amount; ?></td>
+                                                                                <td>
+                                                                                    <?php if ($edit): ?>
+                                                                                    
+                                                                                    <a class="btn btn-outline-info btn-sm edit-entry" href="javascript:;" data-id="<?php
+                                                                                    echo $item->id; ?>" title="Edit Entry"><i class="ft-edit"></i> Edit</a>
+                                                                                    <?php if ($delete): ?>
+                                                                                    
+                                                                                    <a class="btn btn-outline-danger btn-sm ml-1 delete-entry" href="javascript:;" data-id="<?php
+                                                                                    echo $item->id; ?>" title="Delete Entry"><i class="ft-delete"></i> Delete</a>
+                                                                                    <?php endif; ?>
+                                                                                    <?php endif; ?>
+                                                                                    
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                        <tfoot class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Total</th>
+                                                                                <th class="text-right"><?php echo $auctionChit->quantity; ?></th>
+                                                                                <th class="text-right"><?php echo $auctionChit->amount; ?></th>
+                                                                                <th>&nbsp;</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Advance</th>
+                                                                                <th>&nbsp;</th>
+                                                                                <th class="text-right"><?php echo $auctionChit->advance; ?></th>
+                                                                                <th>&nbsp;</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Balance</th>
+                                                                                <th>&nbsp;</th>
+                                                                                <th class="text-right"><?php echo $auctionChit->balance; ?></th>
+                                                                                <th>&nbsp;</th>
+                                                                            </tr>
+                                                                        </tfoot>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

@@ -1,0 +1,10 @@
+[21:05:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 371 : Undefined property: stdClass::$code
+[21:05:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 371 : Undefined property: stdClass::$code
+[21:05:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 371 : Undefined property: stdClass::$code
+[21:05:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 371 : Undefined property: stdClass::$code
+[21:05:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 371 : Undefined property: stdClass::$code
+[21:05:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 371 : Undefined property: stdClass::$code
+[21:05:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 371 : Undefined property: stdClass::$code
+[21:05:11 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 371 : Undefined property: stdClass::$code
+[21:06:28 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'code' in field list is ambiguous
+[21:07:21 IST] EXCEPTION: \lib\module\Branch\src\Utility\MReceiptsReport.php on line 371 : syntax error, unexpected double-quote mark

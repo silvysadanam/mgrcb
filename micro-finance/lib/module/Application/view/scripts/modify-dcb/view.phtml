@@ -1,0 +1,1081 @@
+<?php
+use Application\Utility\LoanHelper;
+use Application\Constant\ManagerType;
+
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$disabled = '';
+if($loan->approval_status === 'Pending'){
+    $disabled = 'disabled';
+}
+//$approval_status = $store->loanStatus();
+$member = $store->member();
+$fmc = $store->fmc();
+$schedule = $store->schedule();
+$actions = $this->view->getVariable('actions');
+$entry = $store->entry();
+$summary = $store->summary();
+$reportingDate = $store->reportingDate();
+$timeline = $store->timeline();
+$notes = $store->notes();
+$rescheduled = $store->rescheduled();
+$loanSummary = $store->loanSummary();
+$writeOff = $store->writeOff();
+$inactive = $store->inactive();
+$layoutVariables = $this->view->getVariable('layoutVariables');
+$session = $layoutVariables['session'];
+$managerType = $session->get('manager_type');
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">MODIFY DCB</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">DCB OVERVIEW</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <table class="table table-bordered">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>FMC</td>
+                                                                                <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Member</td>
+                                                                                <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Code</td>
+                                                                                <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Type</td>
+                                                                                <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Source</td>
+                                                                                <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Loan Amount</td>
+                                                                                <td><?php echo $this->view->integer($loan->loan_amount); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Date</td>
+                                                                                <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>RoI</td>
+                                                                                <td><?php echo $this->view->interestRate($loan->interest_rate); ?>%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>PRoI</td>
+                                                                                <td><?php echo $this->view->interestRate($loan->penal_interest_rate); ?>%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Tenure</td>
+                                                                                <td><?php echo $this->view->integer($loan->tenure); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Loan Approval Status</td>
+                                                                                <td><?php echo $this->view->escapeHtml(($loan->approval_status)?? 'Approved'); ?></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <table class="table table-bordered">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>EMI</td>
+                                                                                <td><?php echo $this->view->amount($loan->emi); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Loan A/C</td>
+                                                                                <td><?php echo $this->view->escapeHtml($loan->account_number); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>DCB ID</td>
+                                                                                <td><?php echo $loan->id; ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Status</td>
+                                                                                <td><?php echo $store->status(); ?></td>
+                                                                            </tr>
+                                                                            <?php $keys = array_keys($schedule); ?>
+                                                                            <?php if ($schedule[$keys[0]]->first_instalment > 0) { $firstInstalment = $schedule[$keys[0]]; } else { $firstInstalment = $schedule[$keys[1]]; } ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td>First Instalment</td>
+                                                                                <td><?php echo $this->view->datepicker($firstInstalment->instalment_date); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>First EMI</td>
+                                                                                <td>
+                                                                                    <?php if ($schedule[$keys[0]]->first_emi > 0) { $firstEmi = $schedule[$keys[0]]; } else { $firstEmi = $schedule[$keys[1]]; } ?>
+                                                                                    <?php echo $this->view->datepicker($firstEmi->instalment_date); ?>
+                                                                                    
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Last Instalment</td>
+                                                                                <td><?php echo $this->view->datepicker($loan->end_date); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Has Broken Period</td>
+                                                                                <td><?php if (count($schedule) > $loan->tenure) { ?>Yes<?php } else { ?>No<?php } ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Payment Method</td>
+                                                                                <td><?php if ($loan->transBy) { ?>Bank<?php } else { ?>Cash<?php } ?></td>
+                                                                            </tr>
+                                                                            
+                                                                            <?php if ($loan->closed > 0): ?>
+                                                                            <?php if ($loanSummary->written_off > 0): ?>
+                                                                            <?php $writeOff = $store->writeOff(); ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td>Write off date</td>
+                                                                                <td><?php echo $this->view->datepicker($loanSummary->write_off_date); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Write off amount</td>
+                                                                                <td><?php echo $this->view->amount($writeOff->balance_written_off_amount); ?></td>
+                                                                            </tr>
+                                                                            <?php endif; ?>
+                                                                            
+                                                                            
+                                                                            <?php if (! empty($rescheduled)): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td>Refinance / Reschedule</td>
+                                                                                <td>
+                                                                                    
+                                                                                    <?php if (isset($rescheduled['source'])): ?>
+                                                                                    <?php if (LoanHelper::STATUS_REFINANCED == $loanSummary->refinance_type): ?>
+                                                                                    
+                                                                                    Refinanced &amp; Rescheduled
+                                                                                    <?php else: ?>
+                                                                                    Rescheduled
+                                                                                    <?php endif; ?>
+                                                                                    to <a  title="View New DCB" target="_blank" href="<?php
+                                                                                    echo $this->view->actionUrl('modify-dcb/view/id/' . $rescheduled['source']->new_loan_id); ?>">DCB ID <?php
+                                                                                    echo $rescheduled['source']->new_loan_id; ?></a>
+                                                                                    <?php endif; ?>
+                                                                                    <?php if (isset($rescheduled['target'])): ?>
+                                                                                    
+                                                                                    Refinanced/Rescheduled from <a  title="View Previous DCB" target="_blank" href="<?php
+                                                                                    echo $this->view->actionUrl('modify-dcb/view/id/' . $rescheduled['target']->source_loan_id); ?>">DCB ID <?php
+                                                                                    echo $rescheduled['target']->source_loan_id; ?></a>
+                                                                                    <?php endif; ?>
+                                                                                    
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endif; ?>
+                                                                            
+                                                                            <?php if (! empty($inactive)): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td>Inactive</td>
+                                                                                <td>
+                                                                                    Inactive as on <?php echo $this->view->datepicker($inactive->inactive_date); ?><br>
+                                                                                    Inactive amount: <?php echo $this->view->amount($inactive->inactive_amount); ?><br>
+                                                                                    Reason: <?php echo $this->view->escapeHtml($inactive->reason); ?>
+                                                                                    
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endif; ?>
+                                                                            <?php endif; ?>
+                                                                            
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <?php
+                                                                $interest = 0;
+                                                                $principal = 0;
+                                                                $overdue = 0;
+                                                                $outstanding = 0;
+                                                                $ageing = 0;
+                                                                $ageingDate = '';
+                                                                if (! empty($summary)) {
+                                                                    $interest = $summary->collection_penal_interest
+                                                                              + $summary->collection_interest_arrears
+                                                                              + $summary->collection_current_interest;
+                                                                    $principal = $summary->collection_principal_arrears
+                                                                               + $summary->collection_current_principal
+                                                                               + $summary->collection_prepayment;
+                                                                    $overdue = $summary->balance_total_overdue;
+                                                                    $outstanding = $summary->balance_actual_principal_interest_outstanding;
+                                                                    $ageing = $summary->ageing_days;
+                                                                    $lastSchedule = $schedule[$summary->schedule_id];
+                                                                    $ageing .= ' as on ' . $this->view->datepicker($lastSchedule->instalment_date);
+                                                                }
+                                                                ?>
+                                                                
+                                                                <div class="col-md-4">
+                                                                    <table class="table table-bordered">
+                                                                        <tbody>
+                                                                            <?php if (! $store->closed()): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td>Backlog</td>
+                                                                                <td>
+                                                                                    <?php if (in_array('backlog', $actions)): ?>
+                                                                                    <?php $backlog = $store->getBacklog(); ?>
+
+                                                                                    Yes, <?php echo count($backlog); ?> Instalment(s)
+                                                                                    <?php else: ?>
+
+                                                                                    No
+                                                                                    <?php endif; ?>
+                                                                                    
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Next Instalment</td>
+                                                                                <td>
+                                                                                    <?php if (! empty($entry)): ?>
+                                                                                    <?php echo $this->view->datepicker($entry->instalment_date); ?>
+                                                                                    <?php else: ?>
+
+                                                                                    N/A
+                                                                                    <?php endif; ?>
+
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Current Instalment</td>
+                                                                                <td>
+                                                                                    <?php if (in_array('current', $actions)): ?>
+
+                                                                                    Pending
+                                                                                    <?php elseif ($store->dataEntry()): ?>
+                                                                                    <?php $previous = $store->previous(); ?>
+                                                                                    <?php if (! empty($previous)): ?>
+                                                                                    <?php if ($reportingDate == $previous->instalment_date) { ?>Paid<?php } else { ?>N/A<?php } ?>
+                                                                                    <?php else: ?>
+                                                                                    N/A
+                                                                                    <?php endif; ?>
+                                                                                    <?php else: ?>
+                                                                                    N/A
+                                                                                    <?php endif; ?>
+
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endif; ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td>Paid Instalments</td>
+                                                                                <td><?php echo $loan->paid_tenures; ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Interest Paid</td>
+                                                                                <td><?php echo $this->view->amount($interest); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Principal Paid</td>
+                                                                                <td><?php echo $this->view->amount($principal); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Total Paid</td>
+                                                                                <td><?php echo $this->view->amount($interest + $principal); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Overdue</td>
+                                                                                <td><?php echo $this->view->amount($overdue); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Actual Outstanding</td>
+                                                                                <td><?php echo $this->view->amount($outstanding); ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Ageing</td>
+                                                                                <td><?php echo $ageing; ?></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row mt-1">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th colspan="4">
+                                                                Actions
+                                                                
+                                                                <input type="hidden" id="loan-id" value="<?php echo $loan->id; ?>">
+                                                                <input type="hidden" id="loan-manage-url" value="<?php echo $this->view->actionUrl('modify-dcb/manage'); ?>">
+                                                                <input type="hidden" id="loan-cancel-url" value="<?php echo $this->view->actionUrl('modify-dcb'); ?>">
+                                                                <input type="hidden" id="loan-reschedule-url" value="<?php echo $this->view->actionUrl('modify-dcb/refinance/id/' . $loan->id); ?>">
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>VIEW</th>
+                                                            <th>INPUT</th>
+                                                            <th>CHANGE</th>
+                                                            <th>MISCELLANEOUS</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="25%">
+                                                                <div class="row">
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('view-dcb/view/id/' . $loan->id); ?>" class="btn btn-outline-info w-100" title="VIEW DCB" target="_blank">
+                                                                            <i class="ft-list"></i> VIEW DCB
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('view-dcb/download/id/' . $loan->id); ?>" class="btn btn-outline-info w-100" title="DOWNLOAD DCB">
+                                                                            <i class="ft-download"></i> DOWNLOAD DCB
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/schedule/id/' . $loan->id); ?>" class="btn btn-outline-info w-100" title="VIEW REPAYMENT SCHEDULE">
+                                                                            <i class="ft-book"></i> VIEW SCHEDULE
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php if ($store->hasDcb()): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/payment/id/' . $loan->id); ?>" class="btn btn-outline-info w-100" title="VIEW PAYMENT HISTORY">
+                                                                            <i class="ft-credit-card"></i> VIEW PAYMENT
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td width="25%">
+                                                                <div class="row">
+                                                                    <?php if($loan->approval_status === 'Pending' && ManagerType::CEO == $managerType){
+                                                                    ?>
+                                                                       <div class="col-12 mb-1">
+                                                                        <a href="javascript:;" id="approve-dcb" class="btn btn-outline-success w-100" title="Approve Loan">
+                                                                            <i class="ft-pause"></i> APPROVE LOAN
+                                                                        </a>
+                                                                        </div>
+                                                                    <?php }?>
+                                                                    <?php if (in_array('current', $actions)): ?>
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('current-instalment/entry/id/' . $loan->id); ?>" class="btn btn-outline-success w-100 <?php echo $disabled;?>" title="CURRENT INSTALMENT DCB">
+                                                                            <i class="ft-calendar"></i> CURRENT INSTALMENT
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php
+                                                                     endif; ?>
+                                                                    <?php if (in_array('backlog', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('fill-backlog/entry/id/' . $loan->id); ?>" class="btn btn-outline-primary w-100" title="FILL BACKLOG">
+                                                                            <i class="ft-upload"></i> FILL BACKLOG
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    <?php if (in_array('update', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/update/id/' . $loan->id); ?>" class="btn btn-outline-primary w-100" title="UPDATE DCB">
+                                                                            <i class="ft-edit"></i> UPDATE DCB
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td width="25%">
+                                                                <div class="row">
+                                                                    <?php if (in_array('edit', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/edit/id/' . $loan->id); ?>" class="btn btn-outline-info w-100" title="EDIT LOAN">
+                                                                            <i class="ft-edit-2"></i> EDIT LOAN
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    <?php if (in_array('reset', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="javascript:;" id="reset-dcb" class="btn btn-outline-warning w-100" title="RESET DCB">
+                                                                            <i class="ft-rewind"></i> RESET DCB
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    <?php if (in_array('close', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/close/id/' . $loan->id); ?>" class="btn btn-outline-success w-100" title="CLOSE LOAN ON TENURE END">
+                                                                            <i class="ft-pause"></i> CLOSE LOAN ON TENURE END
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    <?php if (in_array('preclose', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/preclose/id/' . $loan->id); ?>" class="btn btn-outline-success w-100" title="PRE-CLOSE LOAN">
+                                                                            <i class="ft-pause"></i> PRE-CLOSE LOAN
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    <?php if (in_array('delete', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="javascript:;" id="delete-dcb" class="btn btn-outline-danger w-100" title="DELETE DCB">
+                                                                            <i class="ft-trash"></i> DELETE DCB
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    <?php if (in_array('reschedule', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/refinance/id/' . $loan->id); ?>" class="btn btn-outline-warning w-100" title="REFINANCE &amp; RESCHEDULE">
+                                                                            <i class="ft-copy"></i> REFINANCE &amp; RESCHEDULE
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/reschedule/id/' . $loan->id); ?>"  class="btn btn-outline-warning w-100" title="RESCHEDULE">
+                                                                            <i class="ft-copy"></i> RESCHEDULE
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    <?php if (in_array('writeoff', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/write-off/id/' . $loan->id); ?>" class="btn btn-outline-danger w-100" title="WRITE OFF">
+                                                                            <i class="ft-bell-off"></i> WRITE OFF
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    
+                                                                    <?php if (in_array('inactive', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/inactive/id/' . $loan->id); ?>" class="btn btn-outline-danger w-100" title="INACTIVE">
+                                                                            <i class="ft-bell-off"></i> INACTIVE
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    
+                                                                    <?php if (in_array('activate', $actions)): ?>
+                                                                    
+                                                                    <div class="col-12">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/activate/id/' . $loan->id); ?>" id="activate-dcb" class="btn btn-outline-success w-100" title="ACTIVATE">
+                                                                            <i class="ft-check"></i> ACTIVATE
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="row">
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="javascript:;" class="btn btn-outline-info w-100" title="Add Note" id="add-note">
+                                                                            <i class="ft-file-plus"></i> ADD NOTE
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/schedule-print/id/' . $loan->id); ?>" class="btn btn-outline-info w-100" target="_blank" title="PRINT REPAYMENT SCHEDULE">
+                                                                            <i class="ft-printer"></i> PRINT SCHEDULE
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php if ($store->hasDcb()): ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('modify-dcb/payment-print/id/' . $loan->id); ?>" class="btn btn-outline-info w-100" target="_blank" title="PRINT PAYMENT HISTORY">
+                                                                            <i class="ft-printer"></i> PRINT PAYMENT
+                                                                        </a>
+                                                                    </div>
+                                                                    <?php endif; ?>
+                                                                    
+                                                                    <div class="col-12 mb-1">
+                                                                        <a href="<?php echo $this->view->actionUrl('loan-history/view/id/' . $loan->member_id); ?>" class="btn btn-outline-info w-100" title="LOAN HISTORY">
+                                                                            <i class="ft-activity"></i> Member's Loan History
+                                                                        </a>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php if (! empty($notes)): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-info">
+                                    <h4 class="card-title white">Notes</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date &amp; Time</th>
+                                                    <th>Notes</th>
+                                                    <th>Added by</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($notes as $row): ?>
+
+                                                <tr>
+                                                    <td><?php echo $this->view->userTime($row->created_at); ?></td>
+                                                    <td><?php echo $this->view->textareaHtml($row->description); ?></td>
+                                                    <td><?php echo $this->view->lookup('administrator', $row->administrator_id); ?></td>
+
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; ?>
+                <?php if (! empty($timeline)): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-info">
+                                    <h4 class="card-title white">Activity Timeline</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <table class="table table-bordered" id="table-timeline">
+                                             <thead>
+                                                <tr>
+                                                    <th>Date &amp; Time</th>
+                                                    <th>Title</th>
+                                                    <th>Description</th>
+                                                    <th>User</th>
+                                                 </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($timeline as $row): ?>
+
+                                                <tr>
+                                                    <td data-sort="<?php echo $row->created_at; ?>"><?php echo $this->view->userTime($row->created_at); ?></td>
+                                                    <td><?php echo $this->view->escapeHtml($row->title); ?></td>
+                                                    <td><?php echo $this->view->textareaHtml($row->description); ?></td>
+                                                    <td><?php echo $this->view->lookup('administrator', $row->administrator_id); ?></td>
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; ?>
+
+                <?php if (! empty($writeOff)): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-info">
+                                    <h4 class="card-title white">Written Off</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Date of closure of tenure</td>
+                                                            <td><?php echo $this->view->datepicker($writeOff->tenure_end_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>PIOS on end of tenure</td>
+                                                            <td><?php echo $this->view->amount($writeOff->outstanding_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Write off date</td>
+                                                            <td><?php echo $this->view->datepicker($writeOff->write_off_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Interest due from end of tenure to write off date</td>
+                                                            <td><?php echo $this->view->amount($writeOff->interest_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total write off amount</td>
+                                                            <td><?php echo $this->view->amount($writeOff->total_write_off_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount paid by member</td>
+                                                            <td><?php echo $this->view->amount($writeOff->member_paid_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Receipt No.</td>
+                                                            <td><?php echo $this->view->escapeHtml($writeOff->member_receipt_number); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Receipt Date</td>
+                                                            <td><?php if (! empty($writeOff->member_paid_date)) { echo $this->view->datepicker($writeOff->member_paid_date); } ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Balance written off by FMC</td>
+                                                            <td><?php echo $this->view->amount($writeOff->balance_written_off_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>FMC Voucher No.</td>
+                                                            <td><?php echo $this->view->escapeHtml($writeOff->fmc_voucher_number); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>FMC Voucher Date</td>
+                                                            <td><?php if (! empty($writeOff->fmc_voucher_date)) { echo $this->view->datepicker($writeOff->fmc_voucher_date); } ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>FMC LR Reciept No.</td>
+                                                            <td><?php echo $this->view->escapeHtml($writeOff->fmc_lr_receipt_number); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>FMC LR Reciept Date</td>
+                                                            <td><?php if (! empty($writeOff->fmc_voucher_date)) { echo $this->view->datepicker($writeOff->fmc_lr_receipt_date); } ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Write off notes</td>
+                                                            <td><?php echo $this->view->textareaHtml($writeOff->comments); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; ?>
+                <?php if (! empty($rescheduled)): ?>
+                <?php if (isset($rescheduled['source'])): ?>
+                
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-info">
+                                    <h4 class="card-title white">
+                                        <?php echo $this->view->lookup('loanStatus', $rescheduled['source']->refinance_type); ?> to
+                                        DCB ID <?php echo $rescheduled['source']->new_loan_id; ?>
+                                    
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <?php if (LoanHelper::STATUS_REFINANCED == $loan->loan_status_id): ?>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Tenure Ending Date</td>
+                                                            <td><?php echo $this->view->datepicker($rescheduled['source']->tenure_ending_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD on TENURE End</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->outstanding); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD Interest Rate</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->overdue_interest_rate); ?>%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Refinance &amp; Reschedule Date</td>
+                                                            <td><?php echo $this->view->datepicker($rescheduled['source']->reschedule_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD Days</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->interest_days); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD Amount</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->interest_amount); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Fresh Loan Amount</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->refinance_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Loan Amount</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->loan_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Interest Rate</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->interest_rate); ?>%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tenure</td>
+                                                            <td><?php echo $rescheduled['source']->tenure; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>EMI</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->emi); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Notes</td>
+                                                            <td><?php echo $this->view->textareaHtml($rescheduled['source']->comments); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <?php else: ?>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Tenure Ending Date</td>
+                                                            <td><?php echo $this->view->datepicker($rescheduled['source']->tenure_ending_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD on TENURE End</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->outstanding); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD Interest Rate</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->overdue_interest_rate); ?>%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Reschedule Date</td>
+                                                            <td><?php echo $this->view->datepicker($rescheduled['source']->reschedule_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD Days</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->interest_days); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Loan Amount</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->loan_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Interest Rate</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->interest_rate); ?>%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tenure</td>
+                                                            <td><?php echo $rescheduled['source']->tenure; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>EMI</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['source']->emi); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Notes</td>
+                                                            <td><?php echo $this->view->textareaHtml($rescheduled['source']->comments); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; ?>
+                <?php if (isset($rescheduled['target'])): ?>
+                
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-info">
+                                    <h4 class="card-title white">
+                                        <?php echo $this->view->lookup('loanStatus', $rescheduled['target']->refinance_type); ?> from
+                                        DCB ID <?php echo $rescheduled['target']->source_loan_id; ?>
+                                    
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Tenure Ending Date</td>
+                                                            <td><?php echo $this->view->datepicker($rescheduled['target']->tenure_ending_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD on TENURE End</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['target']->outstanding); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Refinance &amp; Reschedule Date</td>
+                                                            <td><?php echo $this->view->datepicker($rescheduled['target']->reschedule_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>OD Days</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['target']->interest_days); ?></td>
+                                                        </tr>
+                                                        <?php if (LoanHelper::STATUS_REFINANCED == $rescheduled['target']->refinance_type): ?>
+                                                        
+                                                        <tr>
+                                                            <td>OD Amount</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['target']->interest_amount); ?></td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <?php if (LoanHelper::STATUS_REFINANCED == $rescheduled['target']->refinance_type): ?>
+                                                        
+                                                        <tr>
+                                                            <td>Fresh Loan Amount</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['target']->refinance_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Loan Amount</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['target']->loan_amount); ?></td>
+                                                        </tr>
+                                                        <?php else: ?>
+                                                        
+                                                        <tr>
+                                                            <td>Loan Amount</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['target']->loan_amount); ?></td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        
+                                                        <tr>
+                                                            <td>Interest Rate</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['target']->interest_rate); ?>%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tenure</td>
+                                                            <td><?php echo $rescheduled['target']->tenure; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>EMI</td>
+                                                            <td><?php echo $this->view->amount($rescheduled['target']->emi); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Notes</td>
+                                                            <td><?php echo $this->view->textareaHtml($rescheduled['target']->comments); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; ?>
+                <?php endif; ?>
+                <?php if ($loan->closed > 0 && $loanSummary->closed_within_tenure > 0): ?>
+                
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-info">
+                                    <h4 class="card-title white">
+                                        Loan closed within tenure
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Closing type</td>
+                                                            <td><?php if ($loan->loan_status_id > 0) { ?>Preclosed<?php } else { ?>Closed on tenure<?php } ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Scheduled loan closing date</td>
+                                                            <td><?php echo $this->view->datepicker($loan->end_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Closing date</td>
+                                                            <td><?php echo $this->view->datepicker($loan->closing_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Completed instalments</td>
+                                                            <td><?php echo $loanSummary->paid_tenures; ?> / <?php echo $loan->tenure; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total payable</td>
+                                                            <td><?php echo $this->view->amount($loanSummary->closing_amount_payable); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Amount Paid</td>
+                                                            <td><?php echo $this->view->amount($loanSummary->closing_amount_paid); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Payment date</td>
+                                                            <td><?php echo $this->view->datepicker($loanSummary->closing_payment_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Receipt No</td>
+                                                            <td><?php echo $this->view->escapeHtml($loanSummary->closing_receipt_number); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>FMC Voucher No</td>
+                                                            <td><?php echo $this->view->escapeHtml($loanSummary->closing_fmc_voucher_number); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; ?>
+                <?php if (! empty($inactive)): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-info">
+                                    <h4 class="card-title white">
+                                        Loan set as Inactive
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Inactive effective date</td>
+                                                            <td><?php echo $this->view->datepicker($inactive->inactive_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Actual outstanding</td>
+                                                            <td><?php echo $this->view->amount($inactive->outstanding_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Declared inactive amount</td>
+                                                            <td><?php echo $this->view->amount($inactive->inactive_amount); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Inactive Principal</td>
+                                                            <td><?php echo $this->view->amount($inactive->inactive_principal); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Reason</td>
+                                                            <td><?php echo $this->view->escapeHtml($inactive->reason); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Scheduled Tenure</td>
+                                                            <td><?php echo $loan->tenure; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Last instalment</td>
+                                                            <td><?php echo $inactive->last_instalment; ?> / <?php echo $loan->tenure; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Paid instalments</td>
+                                                            <td><?php echo $inactive->paid_instalments; ?> / <?php echo $inactive->last_instalment; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Unpaid instalments</td>
+                                                            <td><?php echo $inactive->unpaid_instalments; ?> / <?php echo $inactive->last_instalment; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Comments</td>
+                                                            <td><?php echo $this->view->textareaHtml($inactive->comments); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif;
+            

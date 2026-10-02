@@ -1,0 +1,4 @@
+[21:32:16 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[21:32:43 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:42:19 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:51:50 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId

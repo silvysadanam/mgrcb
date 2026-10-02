@@ -1,0 +1,85 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        select Member
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-staff-filter" class="form-horizontal" id="form-member-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('loan-history/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon"></div>
+                                                    <select name="fmc" id="fmc" class="form-control">
+                                                        <option value="0">--FMC--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $filters->getValue('fmc')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-4">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">Name</th>
+                                                        <th class="cursor-pointer">Member Code</th>
+                                                        <th class="cursor-pointer">FMC</th>
+                                                        <th class="cursor-pointer">Loans</th>
+                                                        <th>
+                                                            Actions
+                                                            <input type="hidden" id="view-summary-url" value="<?php
+                                                            echo $this->view->actionUrl('loan-history/summary'); ?>">
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->escapeHtml($row->name); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->code); ?></td>
+                                                        <td><?php echo $this->view->lookup('fmc', $row->fmc_id); ?></td>
+                                                        <td><?php echo $row->loans; ?></td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('loan-history/view/id/' . $row->id); ?>" title="Select"><i class="ft-arrow-right"></i> Select</a>
+                                                            <a class="btn btn-info btn-sm ml-1 member-summary" href="javscript:;" data-id="<?php
+                                                            echo $row->id; ?>" title="View Summary"><i class="ft-zoom-in"></i> Summary</a>
+                   
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

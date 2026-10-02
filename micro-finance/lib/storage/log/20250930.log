@@ -1,0 +1,24 @@
+[18:06:27 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:06:32 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:06:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:06:58 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:09:53 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:10:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:10:15 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:10:27 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:12:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[18:47:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:09:41 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:10:19 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:30:56 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:53:48 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:53:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:54:27 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:57:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:57:59 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:02:46 IST] EXCEPTION: \lib\module\Application\src\Utility\BSReport.php on line 1312 : Call to a member function id() on null
+[20:04:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:06:03 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:07:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:08:44 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:11:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans

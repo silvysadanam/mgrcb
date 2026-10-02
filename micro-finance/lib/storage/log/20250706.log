@@ -1,0 +1,27 @@
+[20:39:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:40:02 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:40:08 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:40:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:40:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:42:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:42:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:42:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:50:08 IST] EXCEPTION: \lib\module\Application\src\Utility\LedgerReport.php on line 625 : syntax error, unexpected variable "$this"
+[20:50:23 IST] EXCEPTION: \lib\module\Application\src\Utility\LedgerReport.php on line 264 : Call to undefined method Application\Utility\LedgerReport::getHeadOpening()
+[20:50:54 IST] EXCEPTION: \lib\module\Application\src\Utility\LedgerReport.php on line 650 : Call to a member function id() on null
+[20:51:38 IST] EXCEPTION: \lib\module\Application\src\Utility\LedgerReport.php on line 448 : Call to undefined method Application\Utility\LedgerReport::deductionOpeningAmount()
+[20:54:10 IST] EXCEPTION: \lib\module\Application\src\Utility\LedgerReport.php on line 650 : Class "Application\Utility\DeductionType" not found
+[20:55:17 IST] EXCEPTION: \lib\module\Application\src\Utility\LedgerReport.php on line 650 : Class "Model\DeductionType" not found
+[20:55:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:05:29 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:32:53 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:51:34 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:51:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:52:47 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:55:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:17:07 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:17:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:17:15 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:26:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:26:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:27:05 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans

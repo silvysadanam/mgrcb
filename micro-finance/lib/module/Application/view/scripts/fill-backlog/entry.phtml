@@ -1,0 +1,153 @@
+<?php
+
+$form = $this->getForm();
+
+$store = $this->view->getVariable('store');
+$backlog = $this->view->getVariable('backlog');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$repayment = $form->getValue('repayment');
+$catch = $form->getValue('catch');
+$last = $form->getValue('last');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">FILL BACKLOG - ENTRY</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>Member</th>
+                                                            <th>Code</th>
+                                                            <th>Type</th>
+                                                            <th>Source</th>
+                                                            <th>Loan Amount</th>
+                                                            <th>EMI</th>
+                                                            <th>Date</th>
+                                                            <th>Loan A/C</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                                            <td><?php echo $this->view->integer($loan->loan_amount); ?></td>
+                                                            <td><?php echo $this->view->integer($loan->emi); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($loan->account_number); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="alert alert-warning">
+                                                    To close the loan within tenure end without delinquency, 
+                                                    please do not enter last instalment here.
+                                                    Instead, please use the CLOSE LOAN option or PRECLOSE LOAN option in View Loan page. 
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="alert alert-danger" id="validation-message" style="display:none;">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <form class="form form-horizontal" name="form-data-entry" id="form-data-entry" method="post" action="" autocomplete="off">
+                                                    <div class="form-body">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <table class="table table-striped table-bordered" id="list-table-7">
+                                                                    <thead class="bg-blue-grey white">
+                                                                        <tr>
+                                                                            <th>Instlmnt</th>
+                                                                            <th>Date</th>
+                                                                            <th width="25%">LR</th>
+                                                                            <th width="25%">Catch</th>
+                                                                            <th>Fill Upto</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <?php foreach ($backlog as $row): ?>
+                                                                        
+                                                                        <tr>
+                                                                            <td class="instalment"><label for="last_<?php echo $row->instalment; ?>"><?php echo $row->instalment; ?></label></td>
+                                                                            <td><?php echo $this->view->datepicker($row->instalment_date); ?></td>
+                                                                            <td>
+                                                                                <input type="text" name="repayment[<?php echo $row->id; ?>]" class="form-control input-sm number-decimal repayment" value="<?php
+                                                                                echo $this->view->escapeHtml($repayment[$row->id]); ?>" placeholder="LR" maxlength="10">
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text" name="catch[<?php echo $row->id; ?>]" class="form-control input-sm catch number-integer" value="<?php 
+                                                                                echo $this->view->escapeHtml($catch[$row->id]); ?>" placeholder="Catch" maxlength="7">
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="radio" name="last" value="<?php echo $row->id; ?>" id="last_<?php echo $row->instalment; ?>"<?php
+                                                                                if ($last == $row->id) { ?> checked="checked"<?php } ?>>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <?php endforeach; ?>
+                                                                        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="form-group">
+                                                                            <label class="label-control" for="note">Notes</label>
+                                                                            <textarea name="note" id="note" class="form-control" placeholder="Notes"><?php 
+                                                                            echo $form->getEscapedValue('note'); ?></textarea>
+                                                                        </div>
+                                                                        <hr>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-12 mt-1">
+                                                                        <p class="help-block"><em>Instructions</em></p>
+                                                                        <p class="help-block">Select the "Fill Upto" instalment option upto which details are available</p>
+                                                                        <p class="help-block">Entries upto the selected "Fill Upto" instalments are to be filled </p>
+                                                                        <p class="help-block">Entries after the selected "Fill Upto" instalments will be ignored</p>
+                                                                        <p class="help-block">Enter "0" (ZERO) for NO-Payment instalment</p>
+                                                                        <p class="help-block">Instalment entry cannot be modified after submit</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-actions center">
+                                                        <?php echo $form->getCsrf(); ?>
+
+                                                        <a class="btn btn-outline-secondary mr-1" title="CANCEL" href="<?php 
+                                                        echo $this->view->actionUrl('modify-dcb/view/id/' . $loan->id); ?>"><i class="ft-rewind"></i> CANCEL</a>
+                                                        <button type="submit" class="btn btn-primary" title="CONFIRM">CONFIRM</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

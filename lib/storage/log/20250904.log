@@ -1,0 +1,80 @@
+[12:17:53 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 12 : Undefined array key 0
+[12:17:53 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 12 : Attempt to read property "counted_till" on null
+[12:17:53 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 13 : Undefined array key 0
+[12:17:53 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 13 : Attempt to read property "expected_till" on null
+[12:17:53 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 15 : Undefined array key 0
+[12:17:53 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 15 : Attempt to read property "till_difference" on null
+[13:08:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 12 : Undefined array key 0
+[13:08:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 12 : Attempt to read property "counted_till" on null
+[13:08:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 13 : Undefined array key 0
+[13:08:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 13 : Attempt to read property "expected_till" on null
+[13:08:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 15 : Undefined array key 0
+[13:08:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\closeout\index.phtml line 15 : Attempt to read property "till_difference" on null
+[13:33:28 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 126 : Undefined variable $dates
+[13:33:28 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 126 : Trying to access array offset on value of type null
+[13:33:28 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 152 : Undefined variable $dates
+[13:33:28 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 152 : Trying to access array offset on value of type null
+[13:33:35 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 126 : Undefined variable $dates
+[13:33:35 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 126 : Trying to access array offset on value of type null
+[13:33:35 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 152 : Undefined variable $dates
+[13:33:35 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 152 : Trying to access array offset on value of type null
+[13:33:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 126 : Undefined variable $dates
+[13:33:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 126 : Trying to access array offset on value of type null
+[13:33:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 152 : Undefined variable $dates
+[13:33:45 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 152 : Trying to access array offset on value of type null
+[17:53:26 IST] EXCEPTION: \lib\module\Branch\src\Controller\CloseoutController.php on line 45 : Class "Branch\Controller\RPTransMemberDetails" not found
+[17:53:45 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.fmc_id' in 'where clause'
+[18:09:25 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'opening_date' in 'where clause'
+[18:11:12 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'closeout_date' in 'where clause'
+[18:13:31 IST] ERROR [2]: \lib\module\Branch\src\Controller\CloseoutController.php line 206 : Undefined property: Branch\Controller\CloseoutController::$_membTrans
+[18:13:31 IST] EXCEPTION: \lib\module\Branch\src\Controller\CloseoutController.php on line 206 : Call to a member function getTableQuoted() on null
+[18:52:01 IST] EXCEPTION: \lib\module\Branch\view\scripts\closeout\index.phtml on line 25 : syntax error, unexpected identifier "NaN", expecting "," or ";"
+[20:07:09 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:07:09 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:07:09 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:07:09 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:08:35 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:08:35 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:08:35 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:08:35 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:08:37 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:08:37 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:08:37 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:08:37 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:08:48 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:08:48 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:08:48 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:08:48 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:09:37 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:09:37 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:09:37 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:09:37 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:09:52 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:09:52 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:09:52 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:09:52 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:11:28 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:11:28 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:11:29 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:11:29 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:12:45 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:12:45 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:12:45 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:12:45 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:13:03 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:13:03 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:13:03 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:13:03 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:13:23 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:13:23 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:13:23 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:13:23 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:15:07 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:15:07 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:15:07 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:15:07 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[21:05:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[21:10:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[21:39:47 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateCloseoutForm.php line 109 : Undefined array key "counted_till"
+[21:39:47 IST] ERROR [8192]: \lib\web\Web\src\Form\FormValidator.php line 49 : trim(): Passing null to parameter #1 ($string) of type string is deprecated
+[21:40:29 IST] EXCEPTION: \lib\module\Branch\src\Controller\CloseoutController.php on line 112 : Call to a member function whereIn() on null

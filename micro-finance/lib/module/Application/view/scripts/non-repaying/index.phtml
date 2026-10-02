@@ -1,0 +1,158 @@
+<?php
+
+$filters = $this->view->getVariable('filters');
+$generator = $this->view->getVariable('generator');
+$report = $generator->report();
+$list = $report['list'];
+$members = $report['members'];
+$schedules = $report['schedule'];
+$summary = $report['summary'];
+$fields = ['fmc', 'instalment', 'payment', 'ageing'];
+$queryParams = [];
+foreach ($fields as $field) {
+    $value = $filters->getValue($field);
+    if ($value > 0) {
+        $queryParams[$field] = $value;
+    }
+}
+
+$params = '';
+if (! empty($queryParams)) {
+    $params = '/?' . $this->view->escapeHtml(http_build_query($queryParams));
+}
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Non-repaying Loans Report</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-dcb-filter" class="form-horizontal" id="form-dcb-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('non-repaying/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">FMC &raquo;</div>
+                                                    <select name="fmc" class="form-control" title="FMC">
+                                                        <option value="0">--ALL--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $filters->getValue('fmc')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <div class="input-group-addon">Repayment &raquo;</div>
+                                                    <select name="payment" class="form-control" title="Repayment">
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('payment'), $filters->getValue('payment')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon">Latest successive non-repayment instalments &raquo;</div>
+                                                    <select name="instalment" class="form-control" title="Instalments">
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('instalment'), $filters->getValue('instalment')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon">Ageing &raquo;</div>
+                                                    <select name="ageing" class="form-control" title="Ageing">
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('ageing'), $filters->getValue('ageing')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon">Total non-repayment instalments &raquo;</div>
+                                                    <select name="unpaid" class="form-control" title="Total">
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('unpaid'), $filters->getValue('unpaid')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>                                                    
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-info">
+                                                    <i class="ft-info"></i> Number of Loan records fetched in the current filter: <strong><?php echo $report['total']; ?></strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php if ($report['total'] > 0): ?>
+                                        
+                                        <div class="row mt-1">
+                                            <div class="col-12">
+                                                <a class="btn btn-outline-primary" title="Print" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('non-repaying/print') . $params; ?>">PRINT</a>
+                                                <a class="btn btn-outline-info ml-2" title="Download" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('non-repaying/download') . $params; ?>">DOWNLOAD</a>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered" id="list-table-13">
+                                                        <thead class="bg-blue-grey white">
+                                                            <tr>
+                                                                <th class="cursor-pointer">FMC</th>
+                                                                <th class="cursor-pointer">Member</th>
+                                                                <th class="cursor-pointer">Code</th>
+                                                                <th class="cursor-pointer">Loan<br>Amount</th>
+                                                                <th class="cursor-pointer">Date</th>
+                                                                <th class="cursor-pointer">Loan A/C</th>
+                                                                <th class="cursor-pointer">Tenure</th>
+                                                                <th class="cursor-pointer">Last<br>Payment</th>
+                                                                <th class="cursor-pointer">Last Paid<br>Instalment</th>
+                                                                <th class="cursor-pointer">Latest Unpaid<br>Instalments</th>
+                                                                <th class="cursor-pointer">Total Unpaid<br>Instalments</th>
+                                                                <th class="cursor-pointer">PIOS</th>
+                                                                <th class="cursor-pointer">Ageing</th>
+                                                                <th>
+                                                                    Actions
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php foreach ($list as $row): ?>
+                                                            <?php $member = $members[$row->member_id]; ?>
+                                                            <tr>
+                                                                <td><?php echo $this->view->lookup('fmc', $member->fmc_id); ?></td>
+                                                                <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                                <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                                <td data-sort="<?php echo $row->loan_amount; ?>" data-type="num">
+                                                                    <?php echo $this->view->integer($row->loan_amount); ?>
+                                                                </td>
+                                                                <td data-sort="<?php echo $this->view->timestamp($row->loan_date); ?>" data-type="num">
+                                                                    <?php echo $this->view->datepicker($row->loan_date); ?>
+                                                                </td>
+                                                                <td><?php echo $this->view->escapeHtml($row->account_number); ?></td>
+                                                                <td><?php echo $row->tenure; ?></td>
+                                                                <td><?php echo $schedules[$row->id]['date']; ?></td>
+                                                                <td><?php echo $schedules[$row->id]['instalment']; ?></td>
+                                                                <td><?php echo $schedules[$row->id]['pending']; ?></td>
+                                                                <td><?php echo $schedules[$row->id]['unpaid']; ?></td>
+                                                                <td><?php echo $this->view->amount($summary[$row->id]->balance_actual_principal_interest_outstanding); ?></td>
+                                                                <td><?php echo $summary[$row->id]->ageing; ?></td>
+                                                                <td style="white-space: nowrap;">
+                                                                    <a class="btn btn-primary btn-sm mr-1" title="VIEW/PRINT DCB STATEMENT" target="_blank" href="<?php 
+                                                                    echo $this->view->actionUrl('view-dcb/view/id/' . $row->id); ?>"><i class="ft-clipboard"></i> DCB</a>
+                                                                    <a class="btn btn-primary btn-sm" title="MANAGE OD" target="_blank" href="<?php 
+                                                                    echo $this->view->actionUrl('modify-dcb/view/id/' . $row->id); ?>"><i class="ft-edit"></i> Loan</a>
+                                                                </td>
+                                                            </tr>
+                                                            <?php endforeach; ?>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

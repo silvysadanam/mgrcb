@@ -1,0 +1,80 @@
+[18:43:01 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mgrcb.medicine' doesn't exist
+[18:44:13 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 37 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'medicine' in 'order clause'
+[18:44:33 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:44:33 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:46:12 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:46:12 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:47:00 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:47:00 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:47:00 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:47:00 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:48:55 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:48:55 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:48:55 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:48:55 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:49:13 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:49:13 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:49:13 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:49:13 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:51:28 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:51:28 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:51:28 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:51:28 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:55:47 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 44 : Undefined constant Web\Database\Table\Db::Medicine
+[18:55:49 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 44 : Undefined constant Web\Database\Table\Db::Medicine
+[18:55:50 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 44 : Undefined constant Web\Database\Table\Db::Medicine
+[18:55:52 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 44 : Undefined constant Web\Database\Table\Db::Medicine
+[18:55:53 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 44 : Undefined constant Web\Database\Table\Db::Medicine
+[18:55:53 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 44 : Undefined constant Web\Database\Table\Db::Medicine
+[18:55:53 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 44 : Undefined constant Web\Database\Table\Db::Medicine
+[18:55:53 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 44 : Undefined constant Web\Database\Table\Db::Medicine
+[18:56:02 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 44 : Undefined constant Web\Database\Table\Db::Medicine
+[18:59:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[18:59:24 IST] ERROR [2]: \lib\module\Branch\src\Utility\BranchStore.php line 91 : Attempt to read property "id" on bool
+[19:52:21 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 84 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'member_type_id' in 'field list'
+[19:52:25 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 84 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'member_type_id' in 'field list'
+[21:18:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:18:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:18:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:18:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:18:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:18:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:18:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:18:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:18:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:18:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:15 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:19:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:09 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[21:21:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:07:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:07:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:07:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:07:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[22:07:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count

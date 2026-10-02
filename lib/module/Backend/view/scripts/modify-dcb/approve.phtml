@@ -1,0 +1,70 @@
+<?php
+
+$form = $this->getForm();
+$store = $this->view->getVariable('store');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">EDIT LOAN</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-loan-change" id="form-loan-change" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                 <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="alert alert-danger" id="validation-message" style="display:none;"></div>
+                                                    </div>
+                                                 </div>
+                                                <div class="row">
+                                                    <div class="col-md-5">
+                                                        <div class="form-group row">
+                                                            <label class="label-control col-md-4 text-left" for="account_number">Loan A/C</label>
+                                                            <input type="text" name="account_number" id="account_number" class="form-control col-md-8" value="<?php 
+                                                            echo $form->getEscapedValue('account_number'); ?>" maxlength="30" required="required">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="loan_source_id" class="label-control col-md-4 text-left">SOURCE</label>
+                                                            <select name="loan_source_id" id="loan_source_id" class="form-control col-md-8" title="Source">
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('source'), $form->getValue('loan_source_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="loan_type_id" class="label-control col-md-4 text-left">Type</label>
+                                                            <select name="loan_type_id" id="loan_type_id" class="form-control col-md-8" title="Type">
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $form->getValue('loan_type_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">&nbsp;</div>
+                                                    <div class="col-md-5">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="note">Notes</label>
+                                                            <textarea name="note" id="note" class="form-control" placeholder="Notes"><?php 
+                                                            echo $form->getEscapedValue('note'); ?></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                <?php echo $form->getOriginal(); ?>
+                                                
+                                                <a class="btn btn-outline-secondary mr-1" title="CANCEL" href="<?php 
+                                                echo $this->view->actionUrl('modify-dcb/view/id/' . $store->id()); ?>"><i class="ft-rewind"></i> CANCEL</a>
+                                                <button type="submit" class="btn btn-primary" title="CONFIRM">CONFIRM</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

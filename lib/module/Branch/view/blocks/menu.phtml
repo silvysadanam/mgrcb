@@ -1,0 +1,275 @@
+<?php
+
+use Branch\Constant\Tab;
+
+$layoutVariables = $this->view->getVariable('layoutVariables');
+$tabs = $this->view->tabSelector($layoutVariables['currentTab']);
+
+?>
+
+<!-- BEGIN: Main Menu-->
+    <div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-static navbar-dark navbar-without-dd-arrow navbar-shadow" role="navigation" data-menu="menu-wrapper">
+        <div class="navbar-container main-menu-content" data-menu="menu-container">
+            <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="nav-item<?php echo $tabs[Tab::DASHBOARD]; ?>">
+                    <a class="dropdown-toggle nav-link" href="<?php echo $this->view->actionUrl(''); ?>" title="Dashboard"><i class="ft-home"></i><span>Dashboard</span></a>
+                </li>
+                <li class="dropdown nav-item<?php echo $tabs[Tab::MEMBERSHIP]; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Membership"><i class="ft-list"></i><span>Membership</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('membership'); ?>" title="All" data-toggle="dropdown">All</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('membership/active'); ?>" title="Active" data-toggle="dropdown">Active</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('membership/inactive'); ?>" title="Inactive" data-toggle="dropdown">Inactive</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('membership/member'); ?>" title="Members" data-toggle="dropdown">Members</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('membership/donor'); ?>" title="Auctioneers" data-toggle="dropdown">Auctioneers</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('membership/create'); ?>" title="New Member" data-toggle="dropdown">New Member</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $tabs[Tab::AUCTION]; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Auction Chits"><i class="ft-activity"></i><span>Auction Chits</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit'); ?>" title="Auction Chits" data-toggle="dropdown">Auction Chits</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/active'); ?>" title="Auction Chits - Active Members" data-toggle="dropdown">Auction Chits (Active Members)</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/create'); ?>" title="New Auction Chit" data-toggle="dropdown">New Auction Chit</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/bulk'); ?>" title="Bulk Auction Chit" data-toggle="dropdown">Bulk Auction Chit</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/daily-catch'); ?>" title="FMC Daily Catch Summary" data-toggle="dropdown">Daily Catch</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/member-catch'); ?>" title="Monthly Member Catch Summary" data-toggle="dropdown">Member Catch</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/donor-daily'); ?>" title="Auctioneer Daily Summary" data-toggle="dropdown">Auctioneer Daily</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/donor-monthly'); ?>" title="Auctioneer Monthly Summary" data-toggle="dropdown">Auctioneer Monthly</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $tabs[Tab::DEDUCTION_BILL_NEW]; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Deduction Bills"><i class="ft-briefcase"></i><span>Deduction Bills</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction'); ?>" title="Deduction Bills" data-toggle="dropdown">Deduction Bills</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction-balance'); ?>" title="Closing Balance" data-toggle="dropdown">Closing Balance</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction-report'); ?>" title="Reports" data-toggle="dropdown">Reports</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction-summary'); ?>" title="Summary Report" data-toggle="dropdown">Summary Report</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction-daily'); ?>" title="Daily Report" data-toggle="dropdown">Daily Report</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction/configuration'); ?>" title="Deduction Bill Configuration" data-toggle="dropdown">Configuration</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction/opening-balance'); ?>" title="Deduction Bill Initial Opening Balance" data-toggle="dropdown">Initial Balance</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $tabs[Tab::ADVANCE_NEW]; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Advances"><i class="ft-briefcase"></i><span>Advances &amp; Withdrawals</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('advance-withdrawal'); ?>" title="List" data-toggle="dropdown">List</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('advance-withdrawal/create'); ?>" title="New Advance or Withdrawal" data-toggle="dropdown">New Advance/Withdrawal</a>
+                            </li>
+                            <!--li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('advance-recalc/create'); ?>" title="Advance Adjustment" data-toggle="dropdown">Advance Adjustment</a>
+                            </li-->
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $tabs[Tab::TRANSACTION]; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Transactions"><i class="ft-briefcase"></i><span>Transactions</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown" title="DailyDrawer">Daily Drawer</a>
+                                <ul class="dropdown-menu">
+                                    <div class="arrow_box">
+                                    <li><a class="dropdown-item" href="<?php echo $this->view->actionUrl('opening'); ?>">Opening</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo $this->view->actionUrl('closeout'); ?>">Closeout List</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo $this->view->actionUrl('closeout/create'); ?>">Closeout</a></li>  
+                                     <!--li data-menu="">
+                                    <a class="dropdown-item" href="<?php echo $this->view->actionUrl('reports/daybook'); ?>" title="Active" data-toggle="dropdown">Day Book</a>
+                                     </li-->
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown" title="Reports">Reports</a>
+                                <ul class="dropdown-menu">
+                                    <div class="arrow_box">
+                                    <li><a class="dropdown-item" href="<?php echo $this->view->actionUrl('reports'); ?>">Receipt & Payment</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo $this->view->actionUrl('reports/income'); ?>">Income & Expenditure</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo $this->view->actionUrl('reports/ledger'); ?>">Ledger Account</a></li>  
+                                    <li><a class="dropdown-item" href="<?php echo $this->view->actionUrl('reports/bsreport'); ?>">Balance Sheet</a></li>  
+                                    <li><a class="dropdown-item" href="<?php echo $this->view->actionUrl('reports/mreceipts'); ?>">Member Receipts</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo $this->view->actionUrl('reports/mdreceipts'); ?>">Member Deduction Summary</a></li>
+                                    <!--li data-menu="">
+                                    <a class="dropdown-item" href="<?php echo $this->view->actionUrl('reports/daybook'); ?>" title="Active" data-toggle="dropdown">Day Book</a>
+                                     </li-->
+                                    </div>
+                                </ul>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('transaction'); ?>" title="Receipt" data-toggle="dropdown">Receipts</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('transaction/receipt'); ?>" title="Receipt" data-toggle="dropdown">Member Receipt</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('income'); ?>" title="Cash Receipt" data-toggle="dropdown">Cash Receipt</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('voucher'); ?>" title="Voucher" data-toggle="dropdown">Voucher List</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('voucher/payment'); ?>" title="Voucher" data-toggle="dropdown">Payment Voucher</a>
+                            </li>
+                           
+                        </div>
+                    </ul>
+                </li>
+                <?php /* ?>
+                <li class="dropdown nav-item<?php echo $tabs[Tab::ADVANCE]; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Advances"><i class="ft-briefcase"></i><span>Advances (OLD)</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('advance'); ?>" title="Advances" data-toggle="dropdown">Advances</a>
+                            </li>
+                            
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('advance/create'); ?>" title="New Advances" data-toggle="dropdown">New Advance</a>
+                            </li>
+                            
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('withdrawal'); ?>" title="Withdrawals" data-toggle="dropdown">Withdrawals</a>
+                            </li>
+                            
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('withdrawal/create'); ?>" title="New Withdrawal" data-toggle="dropdown">New Withdrawal</a>
+                            </li>
+                            
+                            
+                        </div>
+                    </ul>
+                </li>
+                <?php */ ?>
+                
+                <li class="dropdown nav-item<?php echo $tabs[Tab::AUCTION_PAYMENT]; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Auction Payments"><i class="ft-award"></i><span>Auction Payments</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-payment'); ?>" title="Auction Payments" data-toggle="dropdown">Payments</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-payment/create'); ?>" title="New Payment" data-toggle="dropdown">New Payment</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-payment/today'); ?>" title="Auction Payments Today" data-toggle="dropdown">Payments Today</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-payment/closing-balance'); ?>" title="Current Closing Balance" data-toggle="dropdown">Closing Balance - Current</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-payment/daily-closing-balance'); ?>" title="Daily Closing Balance" data-toggle="dropdown">Closing Balance - Daily</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-payment/monthly-closing-balance'); ?>" title="Monthly Closing Balance" data-toggle="dropdown">Closing Balance - Monthly</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <?php /* ?>
+                <li class="dropdown nav-item<?php echo $tabs[Tab::DEDUCTION_BILL]; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Deduction Bills"><i class="ft-briefcase"></i><span>Deduction Bills (OLD)</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction-bill'); ?>" title="Confirmed Deduction Bills" data-toggle="dropdown">Confirmed</a>
+                            </li>
+                            
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction-bill/pending'); ?>" title="Pending Deduction Bills" data-toggle="dropdown">Pending</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction-bill/closing-balance'); ?>" title="Closing Balance" data-toggle="dropdown">Closing Balance</a>
+                            </li>
+                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown" title="Advances &amp; Withdrawals">Advances &amp; Withdrawals</a>
+                                <ul class="dropdown-menu">
+                                    <div class="arrow_box">
+                                        <li data-menu="">
+                                            <a class="dropdown-item" href="<?php echo $this->view->actionUrl('advance'); ?>" title="Advances" data-toggle="dropdown">Advances</a>
+                                        </li>
+                                        <li data-menu="">
+                                            <a class="dropdown-item" href="<?php echo $this->view->actionUrl('advance/create'); ?>" title="New Advances" data-toggle="dropdown">New Advance</a>
+                                        </li>
+                                        <li data-menu="">
+                                            <a class="dropdown-item" href="<?php echo $this->view->actionUrl('withdrawal'); ?>" title="Withdrawals" data-toggle="dropdown">Withdrawals</a>
+                                        </li>
+                                        <li data-menu="">
+                                            <a class="dropdown-item" href="<?php echo $this->view->actionUrl('withdrawal/create'); ?>" title="New Withdrawal" data-toggle="dropdown">New Withdrawal</a>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction-bill/configuration'); ?>" title="Deduction Bill Configuration" data-toggle="dropdown">Configuration</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('deduction-bill/opening-balance'); ?>" title="Deduction Bill Initial Opening Balance" data-toggle="dropdown">Initial Balance</a>
+                            </li>
+                            
+                        
+                        </div>
+                    </ul>
+                </li>
+                <?php */ ?>
+                
+                <li class="nav-item<?php echo $tabs[Tab::PROFILE]; ?>">
+                    <a class="dropdown-toggle nav-link" href="<?php echo $this->view->actionUrl('profile'); ?>" title="Profile"><i class="ft-user"></i><span>Profile</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu -->
+    

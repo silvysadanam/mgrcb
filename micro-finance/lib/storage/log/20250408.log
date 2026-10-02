@@ -1,0 +1,142 @@
+[12:16:36 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[12:27:45 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[12:45:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:45:28 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:45:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:07:41 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:07:45 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:07:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[15:32:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[15:32:27 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[15:32:27 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:33:02 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[15:36:14 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[15:36:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[15:57:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[15:58:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[15:58:49 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:59:22 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:01:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:01:36 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[16:03:06 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:03:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:03:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:03:45 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:14:48 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:17:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:17:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:17:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:17:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:17:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:17:56 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:17:56 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[16:18:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:20:55 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:20:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:23:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:23:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:23:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:23:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:23:44 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:23:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:24:42 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:24:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:24:44 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:24:45 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:24:59 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:25:00 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:26:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:26:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:26:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:26:39 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:26:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:26:50 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:27:23 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:27:23 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:27:24 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:27:24 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:27:24 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:27:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:29:39 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:29:39 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:29:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:29:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:53:41 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:53:41 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:53:56 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:53:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:57:55 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:57:55 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\index.phtml line 76 : Undefined property: stdClass::$status
+[16:57:55 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\index.phtml line 76 : Undefined property: stdClass::$status
+[16:57:55 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:58:56 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:58:56 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[16:59:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[17:02:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[17:18:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[17:18:08 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[17:18:08 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[17:18:09 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[17:18:14 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[17:22:50 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:07:43 IST] EXCEPTION: \lib\module\Application\src\Utility\DcbClose.php on line 310 : Call to undefined method stdClass::fmc()
+[19:13:33 IST] EXCEPTION: \lib\module\Application\src\Utility\DcbClose.php on line 343 : Call to undefined method Model\RPHeads::checkByColumnByFmc()
+[19:14:57 IST] EXCEPTION: \lib\module\Application\src\Utility\DcbClose.php on line 343 : Call to undefined method Model\RPHeads::checkByColumnByFmc()
+[19:16:02 IST] EXCEPTION: \lib\module\Application\src\Utility\DcbClose.php on line 343 : Call to undefined method Model\RPHeads::checkByColumnByFmc()
+[20:47:22 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 249 : Undefined variable $bankOptions
+[20:47:22 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 249 : Undefined variable $headId
+[20:47:22 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[20:47:59 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 249 : Undefined variable $bankOptions
+[20:47:59 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 249 : Undefined variable $headId
+[20:47:59 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[20:48:46 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $bankOptions
+[20:48:46 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[20:48:46 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[20:51:53 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $bankOptions
+[20:51:53 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[20:51:53 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[20:52:00 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $bankOptions
+[20:52:00 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[20:52:00 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[20:52:17 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $bankOptions
+[20:52:17 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[20:52:17 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[20:55:46 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[21:19:37 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 149 : Undefined constant "Application\Form\ModifyDcb\payment_type"
+[21:19:59 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 157 : Class "Application\Form\ModifyDcb\AccountSettings" not found
+[21:21:10 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 174 : Call to undefined method Application\Form\ModifyDcb\RefinanceForm::getHeadID()
+[21:21:46 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 210 : Undefined property: Application\Form\ModifyDcb\RefinanceForm::$_headModel
+[21:21:46 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 210 : Call to a member function checkByColumnByFmc() on null
+[21:23:17 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 240 : Undefined array key "loan_amount"
+[21:23:17 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 241 : Undefined array key "interest_rate"
+[21:23:17 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 242 : Undefined array key "loan_date"
+[21:23:17 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 243 : Undefined array key "tenure"
+[21:23:17 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 244 : Undefined array key "emi"
+[21:23:17 IST] EXCEPTION: \lib\module\Application\src\Utility\LoanHelper.php on line 128 : Division by zero
+[21:24:26 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 536 : Undefined array key "receipt_number"
+[21:51:21 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 197 : syntax error, unexpected token ","
+[21:53:50 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 197 : syntax error, unexpected token ","
+[21:54:27 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[21:54:45 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 181 : Undefined variable $heads
+[21:54:45 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 181 : Trying to access array offset on value of type null
+[21:54:45 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 187 : Undefined variable $fmcCode
+[21:57:27 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 186 : Undefined variable $particulars
+[21:57:27 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 187 : Undefined variable $fmcCode
+[21:57:48 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 186 : Undefined variable $fmcCode
+[22:01:40 IST] EXCEPTION: \lib\shared\Shared\src\Utility\Transactions.php on line 95 : Class "Shared\Utility\LoanType" not found
+[22:02:18 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 194 : Call to private method Shared\Utility\Transactions::generateVoucher() from scope Application\Form\ModifyDcb\RefinanceForm
+[22:02:58 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 505 : Call to undefined method Application\Form\ModifyDcb\RefinanceForm::getHeadID()
+[22:13:17 IST] EXCEPTION: \lib\shared\Shared\src\Utility\Transactions.php on line 191 : syntax error, unexpected token ","
+[22:13:29 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 508 : Undefined array key "receipt_number"
+[22:13:29 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 518 : Undefined variable $transModel
+[22:13:29 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 518 : Call to a member function insert() on null
+[22:14:36 IST] EXCEPTION: \lib\shared\Shared\src\Utility\Transactions.php on line 201 : Class "Shared\Utility\LoanHelper" not found
+[22:25:17 IST] ERROR [2]: \lib\module\Application\src\Utility\DcbClose.php line 327 : Undefined variable $transModel
+[22:25:17 IST] EXCEPTION: \lib\module\Application\src\Utility\DcbClose.php on line 327 : Call to a member function insert() on null
+[22:25:37 IST] EXCEPTION: \lib\module\Application\src\Utility\DcbClose.php on line 328 : Class "Application\Utility\Transactions" not found
+[22:26:18 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 119 : Undefined array key "receipt"
+[22:26:18 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 157 : Undefined variable $remarks
+[22:26:57 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[22:27:48 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 119 : Undefined array key "receipt"
+[22:27:48 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 157 : Undefined variable $remarks
+[22:35:43 IST] EXCEPTION: \lib\shared\Shared\src\Utility\Transactions.php on line 121 : syntax error, unexpected token "}"

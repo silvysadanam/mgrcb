@@ -1,0 +1,92 @@
+<?php
+
+use Model\Notification;
+use Web\Core\Registry;
+
+$unread = 0;
+$layoutVariables = $this->view->getVariable('layoutVariables');
+$session = $layoutVariables['session'];
+
+$model = new Notification();
+$sql = $model->getSql();
+$sql->whereId('administrator_id', $session->getId())
+    ->whereId('site_id', Registry::get('site_id'));
+$total = $model->selectTotal($sql->getWhere());
+
+if ($total > 0) {
+    $sql->whereZero('viewed');
+    $unread = $model->selectTotal($sql->getWhere());
+}
+
+?>
+
+                        <li class="dropdown dropdown-notification nav-item">
+                            <a class="nav-link nav-link-label" href="#" data-toggle="dropdown">
+                                <i class="ficon ft-bell bell-shake" id="notification-navbar-link"></i>
+                                <span class="badge badge-pill badge-sm badge-danger badge-up badge-glow"><?php echo $unread; ?></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                    <li class="dropdown-menu-header">
+                                        <h6 class="dropdown-header m-0">
+                                            <span class="grey darken-2">Notifications</span>
+                                        </h6>
+                                    </li>
+                                    <li class="scrollable-container media-list w-100">
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <a href="<?php echo $this->view->actionUrl('notification/unread'); ?>">
+                                            <div class="media">
+                                                <div class="media-left align-self-center">
+                                                    <i class="ft-share info font-medium-4 mt-2"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading info">Unread messages</h6>
+                                                    <p class="notification-text font-small-3 text-muted text-bold-600">
+                                                        <?php if ($unread > 0): ?>
+
+                                                        You have <?php echo $unread; ?> unread message(s)
+                                                        <?php else: ?>
+
+                                                        You have no unread messages
+                                                        <?php endif; ?>
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <?php endif; ?>
+                                        
+                                        <a href="javascript:void(0)">
+                                            <div class="media">
+                                                <div class="media-left align-self-center">
+                                                    <i class="ft-save font-medium-4 mt-2 warning"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading warning">All messages</h6>
+                                                    <p class="notification-text font-small-3 text-muted text-bold-600">
+                                                        <?php if ($total > 0): ?>
+
+                                                        You have <?php echo $total; ?> message(s)
+                                                        <?php else: ?>
+
+                                                        You have no messages
+                                                        <?php endif; ?>
+                                                        
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <?php if ($total > 0): ?>
+                                    
+                                    <li class="dropdown-menu-footer">
+                                        <a class="dropdown-item info text-right pr-1" href="<?php
+                                        echo $this->view->actionUrl('notification'); ?>" title="View all">View all</a>
+                                    </li>
+                                    <?php endif; ?>
+                                    
+                                </div>
+                            </ul>
+                        </li>
+                    

@@ -1,0 +1,20 @@
+[09:42:09 IST] EXCEPTION: \lib\module\Backend\src\Controller\MembershipController.php on line 576 : Undefined constant Backend\Controller\MembershipController::REPORT_DOWNLOAD
+[10:27:21 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 563 : Undefined variable $valid
+[10:27:21 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 569 : Undefined variable $generator
+[10:27:21 IST] EXCEPTION: \lib\module\Backend\view\scripts\membership\filter.phtml on line 6 : Call to a member function report() on null
+[10:29:37 IST] EXCEPTION: \lib\module\Backend\view\scripts\membership\filter.phtml on line 6 : Call to a member function report() on null
+[10:29:51 IST] EXCEPTION: \lib\module\Backend\view\scripts\membership\filter.phtml on line 6 : Call to a member function report() on null
+[10:54:58 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 543 : Undefined array key "report_option"
+[10:54:58 IST] ERROR [2]: \lib\module\Backend\src\Controller\MembershipController.php line 548 : Undefined array key "report_option"
+[11:13:27 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[11:13:27 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[11:14:16 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[11:14:42 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[11:16:14 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 139 : Undefined variable $branch
+[11:16:14 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 139 : Attempt to read property "code" on null
+[11:16:36 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 140 : Undefined variable $branch
+[11:16:36 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 140 : Attempt to read property "code" on null
+[11:16:45 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 140 : Undefined variable $branch
+[11:16:45 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 140 : Attempt to read property "code" on null
+[11:16:52 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 140 : Undefined variable $branch
+[11:16:52 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 140 : Attempt to read property "code" on null

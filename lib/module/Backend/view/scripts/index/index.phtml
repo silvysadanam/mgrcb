@@ -1,0 +1,126 @@
+<?php
+use Shared\Constant\ManagerType;
+$dashboard = $this->view->getVariable('dashboard');
+$report = $dashboard->report();
+$fmcs = $this->view->lookupStore('fmc');
+$deductionTypes = $this->view->lookupStore('deductionType');
+$typeToGroup = $this->view->lookupStore('deductionTypeToGroup');
+$groups = [];
+foreach ($typeToGroup as $t => $g) {
+    $groups[$t] = $this->view->lookup('deductionGroup', $g);
+}
+
+$layoutVariables = $this->view->getVariable('layoutVariables');
+$session = $layoutVariables['session'];
+$managerType = $session->get('manager_type');
+?>
+
+                <section>
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">WELCOME TO MGRCB / MEMBERSHIP UNIT</h4>
+                                </div>
+                                <?php if(ManagerType::CEO == $managerType) {?>  
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                        <p>MEMBERSHIP MANAGEMENT PROGRAMME</p>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row match-height">
+                        <div class="col-12">
+                          <?php if(ManagerType::CEO == $managerType) {?>  
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">FMC Level Current Deduction Closing Balance</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                        <?php foreach ($fmcs as $id => $fmc): ?>
+                                        <?php if (isset($report[$id])): ?>
+                                        <?php $fmcReport = $report[$id]; ?>
+                                        
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">
+                                                            FMC: <?php echo $this->view->escapeHtml($fmc); ?> [As on: <?php
+                                                            echo $this->view->datepicker($fmcReport['date']); ?>]
+                                                        </h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-bordered">
+                                                                        <thead class="bg-info white">
+                                                                            <tr>
+                                                                                <th>Deduction Type</th>
+                                                                                <th width="20%">Deduction Group</th>
+                                                                                <th class="text-center" width="15%">Total Collection</th>
+                                                                                <th class="text-center" width="15%">Advance/Withdrawal</th>
+                                                                                <th class="text-center" width="15%">Closing Balance</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php foreach ($deductionTypes as $typeId => $title): ?>
+                                                                            <?php if (in_array($typeId, $fmcReport['deductions'])): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->escapeHtml($title); ?></td>
+                                                                                <td><?php echo $groups[$typeId]; ?></td>
+                                                                                <td class="text-center"><?php echo $fmcReport['collection'][$typeId]; ?></td>
+                                                                                <td class="text-center">
+                                                                                    <?php echo $fmcReport['advance'][$typeId]; ?>
+                                                                                    
+                                                                                </td>
+                                                                                <td class="text-center">
+                                                                                    <?php if ($fmcReport['balance'][$typeId] >= 0): ?>
+                                                                                    
+                                                                                    <strong><?php echo $fmcReport['balance'][$typeId]; ?></strong>
+                                                                                    <?php else: ?>
+                                                                                    
+                                                                                    <span class="danger"><strong><?php echo $fmcReport['balance'][$typeId]; ?></strong></span>
+                                                                                    <?php endif; ?>
+                                                                                    
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endif; ?>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                          <?php } ?>
+                        </div>
+                    </div>
+                </section>
+
+
+            

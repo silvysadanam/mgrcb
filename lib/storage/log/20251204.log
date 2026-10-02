@@ -1,0 +1,9 @@
+[21:29:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:29:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:29:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:29:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:29:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[21:32:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:32:32 IST] ERROR [2]: \lib\module\Backend\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[21:32:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:32:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId

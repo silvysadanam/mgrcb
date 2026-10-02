@@ -1,0 +1,86 @@
+[13:36:25 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[13:36:25 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[13:37:11 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[13:37:11 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[13:38:20 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[13:38:20 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[13:41:42 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:42 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:42 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:42 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:42 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:41:43 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:43 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:43 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:41:43 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:43 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:41:43 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:44 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:44 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:41:44 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:44 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:44 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:41:44 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:44 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:41:45 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:41:45 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[13:41:45 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[13:42:29 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:29 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:42:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:42:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:42:30 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:31 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:31 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:42:31 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:31 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:31 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 378 : Undefined property: stdClass::$transBy
+[13:42:32 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 367 : Undefined property: stdClass::$transBy
+[13:42:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[13:42:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[13:54:43 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1140 In aggregated query without GROUP BY, expression #3 of SELECT list contains nonaggregated column 'fmcfwsko_fws.h.id'; this is incompatible with sql_mode=only_full_group_by
+[13:55:28 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1140 In aggregated query without GROUP BY, expression #3 of SELECT list contains nonaggregated column 'fmcfwsko_fws.h.id'; this is incompatible with sql_mode=only_full_group_by
+[13:56:10 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[13:56:10 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[16:30:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[16:30:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[16:32:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[16:32:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[16:36:08 IST] EXCEPTION: \lib\module\Branch\src\Utility\MDReceiptsReport.php on line 401 : syntax error, unexpected token "{"
+[16:36:37 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[16:36:37 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[16:37:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[16:37:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[17:07:24 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[17:07:24 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[17:07:58 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[17:07:58 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[17:08:18 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[17:08:18 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[17:10:41 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 413 : Undefined variable $auctioneerCashTotal
+[17:10:41 IST] ERROR [8192]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 413 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[17:10:41 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 414 : Undefined variable $catchTotal
+[17:10:41 IST] ERROR [8192]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 414 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[17:10:41 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 415 : Undefined variable $memberAdvancePaid
+[17:10:41 IST] ERROR [8192]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 415 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[17:11:03 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 413 : Undefined variable $catchTotal
+[17:11:03 IST] ERROR [8192]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 413 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[17:11:03 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 414 : Undefined variable $memberAdvancePaid
+[17:11:03 IST] ERROR [8192]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 414 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[17:11:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 413 : Undefined variable $memberAdvancePaid
+[17:11:19 IST] ERROR [8192]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 413 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[17:14:04 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 117 : Undefined array key "auctioneerCashTotal"
+[17:14:04 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[17:14:04 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[17:14:30 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "bankTotal"
+[17:14:30 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bycashTotal"
+[17:15:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "bankTotal"
+[17:15:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bycashTotal"

@@ -1,0 +1,4 @@
+[14:18:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:18:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:18:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsview.phtml line 61 : Undefined property: stdClass::$ie_item
+[14:18:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsview.phtml line 62 : Undefined property: stdClass::$bs_item

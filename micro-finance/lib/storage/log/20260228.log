@@ -1,0 +1,5 @@
+[19:34:16 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:35:21 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:36:14 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:36:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:36:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans

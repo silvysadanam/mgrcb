@@ -1,0 +1,178 @@
+<?php
+
+$form = $this->getForm();
+//$branchManager = $this->view->getVariable('branchManager');
+$generator = $this->view->getVariable('generator');
+//$filters = $this->view->getVariable('filters');
+$list = $this->view->getVariable('list');
+?>
+
+                <section class="do-not-print">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="form form-horizontal" name="form-summary" id="form-summary" method="post" action="" autocomplete="off">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Search Member Details</h4>
+                                    <a class="heading-elements-toggle">
+                                        <i class="la la-ellipsis-v font-medium-3"></i>
+                                    </a>
+
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li>
+                                                <label class="mb-0" style="cursor: pointer;">
+                                                    <input type="checkbox" name="show_all" id="show_all" value="1">
+                                                    Show All
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>                              
+                                <div class="card-content">
+                                    <div class="card-body">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="status" class="label-control col-md-4 text-left">Status</label>
+                                                            <select name="status" id="status" class="form-control col-md-4">
+                                                                <option value="0">--Status--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('status'), $form->getValue('source')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="mtype" class="label-control col-md-4 text-left">Membership Type</label>
+                                                            <select name="mtype" id="mtype" class="form-control col-md-4">
+                                                                <option value="0">--Membership Type--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('mtype'), $form->getValue('mtype')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                           <label for="type" class="label-control col-md-4 text-left">Member Type</label>
+                                                           <select name="type" id="type" class="form-control col-md-4">
+                                                                <option value="0">--Member Type--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $form->getValue('type')); ?>
+
+                                                            </select>
+                                                        </div>                                                       
+                                                       
+                                                        <div class="form-group row">
+                                                            <label for="report_option" class="label-control col-md-4 text-left">Report Option</label>
+                                                            <select name="report_option" id="report_option" class="form-control col-md-4" title="Report Option">
+                                                                <option value="0">PRINT VIEW</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->getVariable('reportOptions'), $form->getValue('report_option')); ?>
+                                                                
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="form-group row">
+                                                                    <label for="name" class="label-control col-md-4 text-left">Name</label>
+                                                                    <input type="text" name="name" id="name" class="form-control col-md-4" value="<?php
+                                                                    echo $form->getEscapedValue('name'); ?>">
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="parish" class="label-control col-md-4 text-left">Parish Name</label>
+                                                                    <input type="text" name="parish" id="parish" class="form-control col-md-4" value="<?php
+                                                                    echo $form->getEscapedValue('parish'); ?>">
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="location" class="label-control col-md-4 text-left">Location</label>
+                                                                    <input type="text" name="location" id="location" class="form-control col-md-4" value="<?php
+                                                                    echo $form->getEscapedValue('location'); ?>">
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="mobile" class="label-control col-md-4 text-left">Mobile</label>
+                                                                    <input type="text" name="mobile" id="mobile" class="form-control col-md-4" value="<?php
+                                                                    echo $form->getEscapedValue('mobile'); ?>">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                
+                                                <button type="submit" class="btn btn-primary" title="SUBMIT">SUBMIT</button>
+                                                <input type="hidden" id="min-date" value="<?php echo $this->view->getVariable('min_date'); ?>">
+                                            </div>
+                                      
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                           </form>
+                        </div>
+                    </div>
+                </section>
+                <?php //if ($report['total']['loans'] > 0): ?>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Report</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>Sl No.</th>
+                                                            <th>Name</th>
+                                                            <th>Code</th>
+                                                            <th>Mobile</th>
+                                                            <th>Membership Type</th>
+                                                            <th>Parish</th>
+                                                            <th>Location</th>
+                                                            
+                                                           
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                       <?php foreach ($list as $row): ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>                                                      
+                                                        <td><?php echo $this->view->escapeHtml($row->name); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->code); ?></td>
+                                                         <td><?php echo $this->view->escapeHtml($row->mobile); ?></td>
+                                                        <td><?php echo $this->view->lookup('type', $row->member_type_id); ?></td>
+                                                         <td><?php echo $this->view->escapeHtml($row->parish); ?></td>
+                                                          <td><?php echo $this->view->escapeHtml($row->location); ?></td>
+                                                        <!--td>
+                                                            <a class="btn btn-info btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('membership/view/id/' . $row->id); ?>" title="View"><i class="ft-eye"></i> View</a>
+                                                            <a class="btn btn-primary btn-sm ml-1" href="<?php 
+                                                            echo $this->view->actionUrl('membership/change/id/' . $row->id); ?>" title="Edit"><i class="ft-edit"></i> Edit</a>
+                   
+                                                        </td-->
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                        
+                                                    </tbody>                                                    
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                <?php //endif;
+                

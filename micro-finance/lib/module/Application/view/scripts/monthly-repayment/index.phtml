@@ -1,0 +1,175 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+$isManagr = $this->view->getVariable('isManager');
+$params = $this->view->getVariable('queryParams');
+$fmcList = $this->view->lookupStore('fmc');
+$repayment = $this->view->getVariable('repayment');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Monthly Repayment Report</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-dcb-filter" class="form-horizontal" id="form-dcb-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('monthly-repayment/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">FMC &raquo;</div>
+                                                    <select name="fmc" id="fmc" class="form-control" title="FMC">
+                                                        <?php if (! $isManagr): ?>
+                                                        
+                                                        <option value="0">--ALL--</option>
+                                                        <?php endif; ?>
+                                                        <?php echo $this->view->formHelper('select', $fmcList, $filters->getValue('fmc')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon">Source  &raquo;</div>
+                                                    <select name="source" class="form-control">
+                                                        <option value="0">--ALL--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('source'), $filters->getValue('source')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon">Month &raquo;</div>
+                                                    <select name="date" class="form-control">
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('date'), $filters->getValue('date')); ?>
+                                                    
+                                                    </select>
+                                                    
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                    <a href="javascript:;" class="btn btn-outline-secondary btn-round" id="clear-filter" title="Clear">Clear</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-info">
+                                                    <i class="ft-info"></i> Number of LR records fetched in the current filter: <strong><?php echo $total; ?></strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-primary">
+                                                    <div class="card-header bg-primary">
+                                                        <h4 class="card-title white">Loan Repayment for the month of <?php echo $this->view->getVariable('month'); ?></h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <a href="<?php echo $this->view->actionUrl('monthly-repayment/print'); ?>/?<?php
+                                                                    echo $this->view->escapeHtml($params); ?>" class="btn btn-outline-primary" title="Print" target="_blank">PRINT</a>
+                                                                    <a href="<?php echo $this->view->actionUrl('monthly-repayment/download'); ?>/?<?php
+                                                                    echo $this->view->escapeHtml($params); ?>" class="btn btn-outline-info ml-2" title="Download" target="_blank">DOWNLOAD</a>
+
+                                                                </div>
+                                                            </div>
+                                                            <?php foreach ($fmcList as $fmcId => $fmcName): ?>
+                                                            <?php if (isset($list[$fmcId])): ?>
+                                                            <?php $this->view->counter(0); ?>
+                                                            
+                                                            <div class="row mt-2">
+                                                                <div class="col-12">
+                                                                    <div class="card card-bordered border-info">
+                                                                        <div class="card-header">
+                                                                            <h4 class="card-title">FMC <?php echo $this->view->escapeHtml($fmcName); ?></h4>
+                                                                            <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                                            <div class="heading-elements">
+                                                                                <ul class="list-inline mb-0">
+                                                                                    <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card-content collapse show">
+                                                                            <div class="card-body">
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-striped table-bordered">
+                                                                                        <thead class="bg-blue-grey white">
+                                                                                            <tr>
+                                                                                                <th width="10%">Sl No</th>
+                                                                                                <th width="40%">Name</th>
+                                                                                                <th width="30%">Loan No</th>
+                                                                                                <th>Amount</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <?php foreach ($list[$fmcId] as $row): ?>
+
+                                                                                            <tr>
+                                                                                                <td><?php echo $this->view->counter(); ?></td>
+                                                                                                <td><?php echo $this->view->escapeHtml($row->name); ?></td>
+                                                                                                <td>
+                                                                                                    <?php if ('' == $row->account_number): ?>
+                                                                                                    <?php echo 'New'; ?>
+                                                                                                    <?php else: ?>
+                                                                                                    <?php echo $this->view->escapeHtml($row->account_number); ?>
+                                                                                                    <?php endif; ?>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <?php echo $this->view->amount($row->collection_repaid); ?>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <?php endforeach; ?>
+
+                                                                                        </tbody>
+                                                                                        <tfoot>
+                                                                                            <tr>
+                                                                                                <th>&nbsp;</th>
+                                                                                                <th class="text-center"><strong>Total</strong></th>
+                                                                                                <th>&nbsp;</th>
+                                                                                                <th><?php echo $this->view->amount($repayment[$fmcId]); ?></th>
+                                                                                            </tr>
+                                                                                        </tfoot>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card-footer">
+                                                                            <p class="float-right"><strong><?php echo $this->view->amount($repayment[$fmcId]); ?></strong></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <?php endif; ?>
+                                                            <?php endforeach; ?>
+
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="row">
+                                                                <div class="col-md-8 text-center">
+                                                                     <strong>Grand Total</strong>
+                                                                </div>
+                                                                <div class="col-md-4 text-center">
+                                                                     <strong><?php echo $this->view->amount(array_sum($repayment)); ?></strong>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php else: ?>
+
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

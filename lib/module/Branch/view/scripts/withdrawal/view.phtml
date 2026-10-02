@@ -1,0 +1,75 @@
+<?php
+
+$withdrawal = $this->view->getVariable('withdrawal');
+$member = $this->view->getVariable('member');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Withdrawal
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Member Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date</td>
+                                                            <td><?php echo $this->view->datepicker($withdrawal->withdrawal_date); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Deduction type</td>
+                                                            <td><?php echo $this->view->lookup('deductionType', $withdrawal->deduction_type_id); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Description</td>
+                                                            <td><?php echo $this->view->escapeHtml($withdrawal->description); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Deduction Bill adjusted date</td>
+                                                            <td><?php echo $this->view->datepicker($withdrawal->deduction_bill_date); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Amount</td>
+                                                            <td><?php echo $withdrawal->withdrawal_amount; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Notes</td>
+                                                            <td><?php echo $this->view->textareaHtml($withdrawal->note); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Created by</td>
+                                                            <td><?php echo $this->view->lookup('administrator', $withdrawal->created_by); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                

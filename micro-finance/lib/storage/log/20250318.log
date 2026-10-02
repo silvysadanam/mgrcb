@@ -1,0 +1,9 @@
+[20:54:01 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $bankOptions
+[20:54:01 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[20:54:01 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[20:54:42 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 179 : Undefined variable $bankOptions
+[20:54:42 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 179 : Undefined variable $headId
+[20:54:42 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given
+[20:57:18 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 183 : Undefined variable $bankOptions
+[20:57:18 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 183 : Undefined variable $headId
+[20:57:18 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, null given

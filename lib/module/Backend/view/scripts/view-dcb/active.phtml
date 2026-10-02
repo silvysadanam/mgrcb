@@ -1,0 +1,167 @@
+<?php
+
+$layoutVariables = $this->view->getVariable('layoutVariables');
+$isBranch = $layoutVariables['isBranch'];
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+$isManagr = $this->view->getVariable('isManager');
+$memberOptions = $this->view->getVariable('memberOptions');
+$hasMemberFilter = ! empty($memberOptions);
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">DCB List</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <input type="hidden" id="get-member-url" value="<?php
+                                        echo $this->view->actionUrl('common-ajax/member-name'); ?>">
+                                        <input type="hidden" id="get-fmc-members-url" value="<?php
+                                        echo $this->view->actionUrl('common-ajax/fmc-filter'); ?>">
+                                        <form name="form-dcb-filter" class="form-horizontal" id="form-dcb-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('view-dcb/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">FMC &raquo;</div>
+                                                    <select name="fmc" id="fmc" class="form-control" title="FMC">
+                                                        <?php if (! $isManagr): ?>
+                                                        
+                                                        <option value="0">--ALL--</option>
+                                                        <?php endif; ?>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $filters->getValue('fmc')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon member-select"<?php if (! $hasMemberFilter) { ?> style="display:none;"<?php } ?>>FMC Member &raquo;</div>
+                                                    <select name="member_id" id="member_id" class="form-control member-select" title="FMC Member"<?php if (! $hasMemberFilter) { ?> style="display:none;"<?php } ?>>
+                                                        <option value="0">--ALL--</option>
+                                                        <?php if ($hasMemberFilter): ?>
+                                                        <?php echo $this->view->formHelper('select', $memberOptions, $filters->getValue('member_id')); ?>
+                                                        <?php endif; ?>
+                                                        
+                                                    </select>
+                                                    <?php if (! $isManagr): ?>
+                                                    
+                                                    <div class="input-group-addon member-code"<?php if ($hasMemberFilter) { ?> style="display:none;"<?php } ?>>Code  &raquo;</div>
+                                                    <input type="text" name="code" id="code" class="form-control member-code" placeholder="Code"<?php if ($hasMemberFilter) { ?> style="display:none;"<?php } ?> value="<?php
+                                                    echo $this->view->escapeHtml($filters->getValue('code')); ?>" maxlength="10" title="Code">
+                                                    <div class="input-group-addon member-code"<?php if ($hasMemberFilter) { ?> style="display:none;"<?php } ?>>Member &raquo;</div>
+                                                    <input type="text" name="member" id="member" class="form-control member-code" placeholder="Member"<?php if ($hasMemberFilter) { ?> style="display:none;"<?php } ?> value="<?php
+                                                    echo $this->view->escapeHtml($filters->getValue('member')); ?>" readonly="readonly" title="Member">
+                                                    <?php endif; ?>
+                                                    
+                                                    <div class="input-group-addon">Type  &raquo;</div>
+                                                    <select name="type" class="form-control">
+                                                        <option value="0">--ALL--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $filters->getValue('type')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon">Source &raquo;</div>
+                                                    <select name="source" class="form-control">
+                                                        <option value="0">--ALL--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('source'), $filters->getValue('source')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>                                                    
+                                                </div>
+                                                <div class="col-12 col-sm-12 form-group input-group">
+                                                    <div class="input-group-addon">Amount: From &raquo;</div>
+                                                    <input type="number" name="amount_from" class="form-control" placeholder="Loan Amount From" value="<?php
+                                                    echo $this->view->escapeHtml($filters->getValue('amount_from')); ?>" min="0" step="1" max="999999" title="Loan Amount From">
+                                                    <div class="input-group-addon">To &raquo;</div>
+                                                    <input type="number" name="amount_to" class="form-control" placeholder="Loan Amount To" value="<?php
+                                                    echo $this->view->escapeHtml($filters->getValue('amount_to')); ?>" min="0" step="1" max="999999" title="Loan Amount To">
+                                                    <div class="input-group-addon">Date: From &raquo;</div>
+                                                    <input type="text" name="date_from" id="date_from" class="form-control single-date-clearable" placeholder="Loan From Date" value="<?php
+                                                    echo $this->view->escapeHtml($filters->getValue('date_from')); ?>" title="Loan From Date" readonly="readonly">
+                                                    <div class="input-group-addon">&laquo; [ <a href="javascript:;" class="clear-date" data-target="date_from" title="Clear Date">Clear</a> ]</div>
+                                                    <div class="input-group-addon">To &raquo;</div>
+                                                    <input type="text" name="date_to" id="date_to" class="form-control single-date-clearable" placeholder="Loan To Date" value="<?php
+                                                    echo $this->view->escapeHtml($filters->getValue('date_to')); ?>" title="Loan To Date" readonly="readonly">
+                                                    <div class="input-group-addon">&laquo; [ <a href="javascript:;" class="clear-date" data-target="date_to" title="Clear Date">Clear</a> ]</div>
+                                                    <div class="input-group-addon">Ageing  &raquo;</div>
+                                                    <select name="ageing" class="form-control">
+                                                        <option value="0">--ALL--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('ageing'), $filters->getValue('ageing')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <a href="javascript:;" class="btn btn-outline-secondary btn-round" id="clear-filter" title="Clear">Clear</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-info">
+                                                    <i class="ft-info"></i> Number of DCB records fetched in the current filter: <strong><?php echo $total; ?></strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-9">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">FMC</th>
+                                                        <th class="cursor-pointer">Member</th>
+                                                        <th class="cursor-pointer">Code</th>
+                                                        <th class="cursor-pointer">Type</th>
+                                                        <th class="cursor-pointer">Source</th>
+                                                        <th class="cursor-pointer">Loan Amount</th>
+                                                        <th class="cursor-pointer">Date</th>
+                                                        <th class="cursor-pointer">Loan A/C</th>
+                                                        <th class="cursor-pointer">ID</th>
+                                                        <th>
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->lookup('fmc', $row->fmc_id); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->name); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->code); ?></td>
+                                                        <td><?php echo $this->view->lookup('type', $row->loan_type_id); ?></td>
+                                                        <td><?php echo $this->view->lookup('source', $row->loan_source_id); ?></td>
+                                                        <td data-sort="<?php echo $row->loan_amount; ?>" data-type="num">
+                                                            <?php echo $this->view->integer($row->loan_amount); ?>
+                                                        </td>
+                                                        <td data-sort="<?php echo $this->view->timestamp($row->loan_date); ?>" data-type="num">
+                                                            <?php echo $this->view->datepicker($row->loan_date); ?>
+                                                        </td>
+                                                        <td><?php echo $this->view->escapeHtml($row->account_number); ?></td>
+                                                        <td><?php echo $row->id; ?></td>
+                                                        <td style="white-space: nowrap;">
+                                                            <a class="btn btn-primary btn-sm mr-1" title="VIEW/PRINT" target="_blank" href="<?php 
+                                                            echo $this->view->actionUrl('view-dcb/view/id/' . $row->id); ?>"><i class="ft-clipboard"></i> VIEW/PRINT</a>
+                                                            <a class="btn btn-primary btn-sm" title="MANAGE OD" target="_blank" href="<?php 
+                                                            echo $this->view->actionUrl('modify-dcb/view/id/' . $row->id); ?>"><i class="ft-edit"></i> MANAGE OD</a>
+                                                        </td>
+                                                    </tr> 
+                                                   <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

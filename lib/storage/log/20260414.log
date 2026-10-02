@@ -1,0 +1,3 @@
+[20:24:36 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[20:34:06 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[20:34:30 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId

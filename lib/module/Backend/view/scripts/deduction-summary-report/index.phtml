@@ -1,0 +1,224 @@
+<?php
+
+$form = $this->getForm();
+$generator = $this->view->getVariable('generator');
+
+?>
+
+                <section class="do-not-print">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Deduction Summary Report</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-summary" id="form-summary" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                            <label for="fmc" class="label-control col-md-4 text-left">FMC</label>
+                                                            <select name="fmc" id="fmc" class="form-control col-md-8" title="fmc">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $form->getValue('fmc')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="start_date" class="label-control col-md-4 text-left">From date</label>
+                                                            <input type="text" name="start_date" id="start_date" class="form-control col-md-8 single-date-max-today" value="<?php
+                                                            echo $form->getEscapedValue('start_date'); ?>" readonly="readonly" data-min-date="<?php
+                                                            echo $this->view->getVariable('min_date'); ?>">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="end_date" class="label-control col-md-4 text-left">To date</label>
+                                                            <input type="text" name="end_date" id="end_date" class="form-control col-md-8 single-date-max-today" value="<?php
+                                                            echo $form->getEscapedValue('end_date'); ?>" readonly="readonly" data-min-date="<?php
+                                                            echo $this->view->getVariable('min_date'); ?>">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="help-block text-italic">Instructions</p>
+                                                                <p class="help-block">Select FMC </p>
+                                                                <p class="help-block">Select dates for specific report period </p>
+                                                                <p class="help-block">Report period is inclusive of selected dates</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                
+                                                <button type="submit" class="btn btn-primary" title="SUBMIT">SUBMIT</button>
+                                                <input type="hidden" id="min-date" value="<?php echo $this->view->getVariable('min_date'); ?>">
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php if (! empty($generator)): ?>
+                <?php $report = $generator->report(); ?>
+                <?php $filters = $report['filters']; ?>
+                <?php $deductions = $report['deductions']; ?>
+                <?php $deductionIds = array_keys($deductions); ?>
+                <?php $summary = $report['summary']; ?>
+                <?php $span = count($deductions) + 5; ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Summary</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>From Date</th>
+                                                            <th>To Date</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $filters['fmc']; ?></td>
+                                                            <td><?php echo $filters['period'][0]; ?></td>
+                                                            <td><?php echo $filters['period'][1]; ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a class="btn btn-outline-info" title="Download" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction-summary-report/download'); ?>/?<?php echo $report['params']; ?>"><i class="ft-download"></i> Download</a>
+                                                <a class="btn btn-outline-info ml-1" title="Download" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction-summary-report/print'); ?>/?<?php echo $report['params']; ?>"><i class="ft-printer"></i> Print</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        FMC <?php echo $this->view->escapeHtml($filters['fmc']); ?> -
+                                        Sanghom Statement for the period of <?php
+                                        echo $filters['period'][0]; ?> to <?php echo $filters['period'][1]; ?>
+                                        
+                                    </h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12 overflow-x">
+                                                <table class="table table-bordered table-condensed table-responsive">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th class="text-center">Sl. No.</th>
+                                                            <th class="text-center">Code</th>
+                                                            <th class="text-center">Name</th>
+                                                            <th class="text-center">Catching</th>
+                                                            <?php foreach ($deductions as $type): ?>
+                                                            
+                                                            <th class="text-center"><?php echo $this->view->escapeHtml($type); ?></th>
+                                                            <?php endforeach; ?>
+                                                            
+                                                            <th class="text-center">Total</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php $members = $this->view->lookupStore('member_code'); ?>
+                                                        <?php $list = $report['report']; ?>
+                                                        <?php $dates = $report['dates']; ?>
+                                                        <?php foreach ($dates as $key => $date): ?>
+                                                        <?php $this->view->counter(0); ?>
+                                                        
+                                                        <tr>
+                                                            <td colspan="<?php echo $span; ?>"><?php echo $this->view->datepicker($date); ?></td>
+                                                        </tr>
+                                                        <?php foreach ($members as $memberId => $code): ?>
+                                                        <?php if (isset($list[$key][$memberId])): ?>
+                                                        
+                                                        <tr>
+                                                            <td class="text-center"><?php echo $this->view->counter(); ?></td>
+                                                            <td class="text-center"><?php echo $this->view->escapeHtml($code); ?></td>
+                                                            <td style="white-space: nowrap;"><?php echo $this->view->lookup('member_name', $memberId); ?></td>
+                                                            <td class="text-center"><?php echo $report['catch'][$key][$memberId]; ?></td>
+                                                            
+                                                            <?php foreach ($deductionIds as $id): ?>
+                                                            <?php if (isset($list[$key][$memberId][$id])): ?>
+                                                            
+                                                            <td class="text-right"><?php echo $list[$key][$memberId][$id]; ?></td>
+                                                            <?php else: ?>
+                                                            
+                                                            <td class="text-right">&nbsp;</td>
+                                                            <?php endif; ?>
+                                                            <?php endforeach; ?>
+                                                            
+                                                            <td class="text-right"><?php echo $summary['members'][$key][$memberId]; ?></td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                        
+                                                        <tr><td colspan="<?php echo $span; ?>">&nbsp;</td></tr>
+                                                        <?php endforeach; ?>
+                                                        
+                                                    </tbody>
+                                                    <tfoot class="bg-info white">
+                                                        <tr>
+                                                            <th colspan="3" class="text-center">Total</th>
+                                                            <th class="text-right"><?php echo $summary['catch']; ?></th>
+                                                            <?php foreach ($summary['deductions'] as $value): ?>
+                                                            
+                                                            <th class="text-right"><?php echo $value; ?></th>
+                                                            <?php endforeach; ?>
+                                                            
+                                                            <th class="text-right"><?php echo array_sum($summary['deductions']); ?></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif;
+                

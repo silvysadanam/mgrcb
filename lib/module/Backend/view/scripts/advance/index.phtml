@@ -1,0 +1,143 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+$status = ['Pending', 'Closed'];
+$advanceType = ['Advance', 'Withdrawal'];
+$memberOptions = $this->view->getVariable('memberOptions');
+$members = $this->view->getVariable('members');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Advances &amp; Withdrawals
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-advance" class="form-horizontal" id="form-advance" method="get" action="<?php
+                                        echo $this->view->actionUrl('advance/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">Date &raquo; </div>
+                                                    <input type="text" name="date" id="advance-date" class="form-control single-date-clearable" data-min-date="01/04/2022" data-max-date="<?php
+                                                    echo $this->view->getVariable('maxDate'); ?>" readonly="readonly" value="<?php
+                                                    echo $filters->getEscapedValue('date'); ?>">
+                                                    <div class="input-group-addon"> &laquo; [<a href="javascript:;" class="clear-date" data-target="advance-date" title="Clear Date">Clear</a>]</div>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">FMC &raquo; </div>
+                                                    <select name="fmc" id="fmc" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $filters->getValue('fmc')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Member &raquo; </div>
+                                                    <select name="member" id="member" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php if (! empty($memberOptions)): ?>
+                                                        <?php echo $this->view->formHelper('select', $memberOptions, $filters->getValue('member')); ?>
+                                                        <?php endif; ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Deduction &raquo; </div>
+                                                    <select name="deduction" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('selectGroup', $this->view->getVariable('groupedDeductionTypes'), $filters->getValue('deduction')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Type &raquo; </div>
+                                                    <select name="type" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->getVariable('typeOptions'), $filters->getValue('type')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="get-member-url" value="<?php echo $this->view->actionUrl('advance/get-member'); ?>">
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-8">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">Sl. No.</th>
+                                                        <th class="cursor-pointer">Date</th>
+                                                        <th class="cursor-pointer">FMC</th>
+                                                        <th class="cursor-pointer">Code</th>
+                                                        <th class="cursor-pointer">Name</th>
+                                                        <th class="cursor-pointer">Deduction Type</th>
+                                                        <th class="cursor-pointer">Advance Type</th>
+                                                        <th class="cursor-pointer">Amount</th>
+                                                        <th>
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): ?>
+                                                    <?php $advanceMember = $members[$row->member_id]; ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td data-sort="<?php echo $this->view->timestamp($row->advance_date); ?>"><?php echo $this->view->datepicker($row->advance_date); ?></td>
+                                                        <td>
+                                                            <?php echo $this->view->lookup('fmc', $advanceMember->fmc_id); ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $this->view->escapeHtml($advanceMember->code); ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $this->view->escapeHtml($advanceMember->name); ?>
+                                                        </td>
+                                                        <td><?php echo $this->view->lookup('deductionType', $row->deduction_type_id); ?></td>
+                                                        <td><?php echo $advanceType[$row->withdrawal]; ?></td>
+                                                        <td><?php echo $row->advance_amount; ?></td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('advance/view/id/' . $row->id); ?>" title="View"><i class="ft-eye"></i> View</a>
+                   
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

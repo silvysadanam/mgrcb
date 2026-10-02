@@ -1,0 +1,2 @@
+[10:16:38 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 176 : Undefined variable $headId
+[10:22:06 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 176 : Undefined variable $headId

@@ -1,0 +1,86 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$auctionChit = $store->auctionChit();
+$fmc = $store->fmc();
+$member = $store->member();
+$id = $auctionChit->id;
+$title = [
+    $fmc->code, '-', $id, '-', $this->view->formatDateTime('d-m-Y', $auctionChit->auction_date),
+    '-', $member->code, $member->name,
+];
+
+$balanceReceived = $auctionChit->deduction_balance;
+
+$filtered = $store->filtered();
+$style = 'print-deduction-bill-a5';
+if ($this->view->getVariable('size') > 0) {
+    $style = 'print-deduction-bill-a4';
+}
+
+?><!DOCTYPE html>
+<html lang="ml" dir="ltr">
+<head>
+    <title>Deduction Bill - <?php echo $this->view->escapeHtml(implode(' ', $title)); ?></title>
+    <?php $this->block($style); ?>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 297mm;
+            width: 210mm;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            display: flex;
+            flex-direction: column;
+            page-break-before: avoid;
+            page-break-after: avoid;
+            page-break-inside: avoid;  /* prevent auto break */
+        }
+
+        .half-page {
+            width: 100%;
+            height: 50%;       /* exactly half of A4 */
+            padding: 8mm;
+            box-sizing: border-box;
+        }
+
+        .bill-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        @media print {
+            .half-page:not(:last-child) {
+                border-bottom: 1px dashed #000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="half-page">
+            <table class="bill-table" cellpadding="2" cellspacing="0" border="0">
+                <?php include 'bill-template-portrait.php'; ?>
+            </table>
+        </div>
+
+        <div class="half-page">
+            <table class="bill-table" cellpadding="2" cellspacing="0" border="0">
+                <?php include 'bill-template-portrait.php'; ?>
+            </table>
+        </div>
+    </div>
+
+    <?php $this->block('print-button'); ?>
+</body>
+</html>

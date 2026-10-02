@@ -1,0 +1,131 @@
+<?php
+
+use Application\Constant\Tab;
+
+$active = ' active';
+$home = $active;
+$profile = '';
+$inputs = '';
+$dcb = '';
+$pqa = '';
+$pqr = '';
+
+$layoutVariables = $this->view->getVariable('layoutVariables');
+$tab = $layoutVariables['currentTab'];
+if ($tab != Tab::INTERFACE_HOME) {
+    if ($tab == Tab::INTERFACE_PROFILE) {
+        $profile = $active;
+        $home = '';
+    } elseif ($tab == Tab::INTERFACE_INPUTS) {
+        $inputs = $active;
+        $home = '';
+    } elseif ($tab == Tab::INTERFACE_DCB) {
+        $dcb = $active;
+        $home = '';
+    } elseif ($tab == Tab::INTERFACE_PQA) {
+        $pqa = $active;
+        $home = '';
+    } elseif ($tab == Tab::INTERFACE_PQR) {
+        $pqr = $active;
+        $home = '';
+    }
+}
+
+?>
+
+    <!-- BEGIN: Main Menu-->
+    <div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-static navbar-dark navbar-without-dd-arrow navbar-shadow" role="navigation" data-menu="menu-wrapper">
+        <div class="navbar-container main-menu-content" data-menu="menu-container">
+            <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="nav-item<?php echo $home; ?>">
+                    <a class="dropdown-toggle nav-link" href="<?php echo $this->view->actionUrl(''); ?>" title="Home">
+                        <i class="ft-home"></i><span>Home</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-item<?php echo $inputs; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="INPUTS"><i class="ft-edit"></i><span>INPUTS</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('create-dcb'); ?>" title="Create DCB" data-toggle="dropdown">Create DCB</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('fill-backlog'); ?>" title="Fill Backlog" data-toggle="dropdown">Fill Backlog</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('current-instalment'); ?>" title="Current Installment" data-toggle="dropdown">Current Installment</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $dcb; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="DCB"><i class="ft-list"></i><span>DCB</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('view-dcb/active'); ?>" title="View Active DCB" data-toggle="dropdown">View Active DCB</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('view-dcb'); ?>" title="View DCB" data-toggle="dropdown">View DCB</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('view-dcb/quick'); ?>" title="Quick Find DCB" data-toggle="dropdown">Quick Find DCB</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('loan-history'); ?>" title="Loan History" data-toggle="dropdown">Loan History</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('repayment'); ?>" title="Repayment" data-toggle="dropdown">Repayment</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('monthly-repayment'); ?>" title="Monthly Repayment" data-toggle="dropdown">Monthly Repayment</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('annual-repayment'); ?>" title="Annual Repayment" data-toggle="dropdown">Annual Repayment</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('new-loan'); ?>" title="New Loans" data-toggle="dropdown">New Loans</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $pqa; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="PQA"><i class="ft-disc"></i><span>PQA</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('pqa'); ?>" title="Loans Level Analysis" data-toggle="dropdown">Loans Level Analysis</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('pqa/member'); ?>" title="Members Level Analysis" data-toggle="dropdown">Members Level Analysis</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $pqr; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="PQR"><i class="ft-activity"></i><span>PQR</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('pqr'); ?>" title="Loans Level Report" data-toggle="dropdown">Loans Level Report</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('pqr/member'); ?>" title="Members Level Report" data-toggle="dropdown">Members Level Report</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $profile; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Profile"><i class="ft-user"></i><span>Profile</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('profile'); ?>" title="Edit Profile" data-toggle="dropdown">Edit</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu -->

@@ -1,0 +1,49 @@
+<?php
+
+?>
+
+        <form name="form-opening-balance-modal" id="form-opening-balance-modal" method="post" action="">
+            <div class="modal fade" id="modal-opening-balance" tabindex="-1" role="dialog" aria-labelledby="myModalLabelBalance" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelBalance"> 
+                                Set Initial Opening Balance
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="label-control">Name</label>
+                                            <input type="text" class="form-control" id="auctioneer-name" value="" readonly="readonly">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control">Code</label>
+                                            <input type="text" class="form-control" id="auctioneer-code" value="" readonly="readonly">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="opening-balance">Opening Balance <span class="red">*</span></label>
+                                            <input type="number" id="opening-balance" class="form-control" value="" placeholder="Amount" min="0" max="9999990" step="1" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="opening-date">As on Date</label>
+                                            <input type="text" id="opening-date" class="form-control single-date-max-today" value="" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="auctioneer-id" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

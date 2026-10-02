@@ -1,0 +1,8 @@
+<?php
+$generator = $this->view->getVariable('generator');
+
+?>
+    <p id="print-button">
+        <button type="button" onclick="window.print();" title="PRINT">PRINT</button> &nbsp; 
+        <button type="button" onclick="window.location='<?php echo $this->view->escapeHtml($generator->getDownloadButton()); ?>';" title="PRINT">DOWNLOAD</button>
+    </p>

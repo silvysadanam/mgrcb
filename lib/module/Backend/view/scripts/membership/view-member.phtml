@@ -1,0 +1,120 @@
+<?php
+
+$list = $this->view->getVariable('list');
+
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>
+            Members
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style media="all">
+            html {
+                overflow: auto;
+            }
+            body {
+                font-family: "Calibri", sans-serif;
+                font-size: 11pt;
+                text-align: left;
+                color: black;
+                width: fit-content;
+            }
+            thead th {
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            thead th.center, tbody td.center {
+                text-align: center;
+            }
+            thead th.right, tbody td.right {
+                text-align: right;
+            }
+            tfoot th {
+                font-weight: bold;
+                text-align: right;
+            }
+            tfoot th.center {
+                text-align: center;
+            }
+            tbody tr td {
+                white-space: nowrap;
+            }
+            .main-heading {
+               background-color: #FFFF1F;
+            }
+            .yellow {
+                background-color: #FFFF1F;
+            }
+            .gold {
+                background-color: #F5C018;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .amount {
+                text-align: right;
+            }
+            .number {
+                text-align: center;
+            }
+            .left {
+                text-align: left;
+            }
+            .on-time {
+                background-color: #50B051;
+                font-weight: bold;
+                color: white;
+            }
+            .beyond-365 {
+                background-color: #E9280E;
+                font-weight: bold;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="table table-bordered">
+        <thead class="bg-info white">
+            <tr>
+                <th>Sl No.</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Mobile</th>
+                <th>Membership Type</th>
+                <th>Parish</th>
+                <th>Location</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+           <?php foreach ($list as $row): ?>
+
+        <tr>
+            <td><?php echo $this->view->counter(); ?></td>                                                      
+            <td><?php echo $this->view->escapeHtml($row->name); ?></td>
+            <td><?php echo $this->view->escapeHtml($row->code); ?></td>
+             <td><?php echo $this->view->escapeHtml($row->mobile); ?></td>
+            <td><?php echo $this->view->lookup('type', $row->member_type_id); ?></td>
+             <td><?php echo $this->view->escapeHtml($row->parish); ?></td>
+              <td><?php echo $this->view->escapeHtml($row->location); ?></td>
+            <!--td>
+                <a class="btn btn-info btn-sm" href="<?php 
+                echo $this->view->actionUrl('membership/view/id/' . $row->id); ?>" title="View"><i class="ft-eye"></i> View</a>
+                <a class="btn btn-primary btn-sm ml-1" href="<?php 
+                echo $this->view->actionUrl('membership/change/id/' . $row->id); ?>" title="Edit"><i class="ft-edit"></i> Edit</a>
+
+            </td-->
+        </tr>
+        <?php endforeach; ?>
+
+        </tbody>                                                    
+    </table>
+        <?php $this->block('print-download-button'); ?>
+        
+    </body>
+</html>      
+            

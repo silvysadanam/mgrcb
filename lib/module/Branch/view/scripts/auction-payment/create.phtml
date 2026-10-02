@@ -1,0 +1,124 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+$balance = $this->view->getVariable('balance');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">New Auction Payment</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-auction" id="form-auction" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="alert alert-danger" id="validation-message" style="display:none;"></div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="payment_date">Date <span class="red">*</span></label>
+                                                            <input type="text" name="payment_date" id="payment_date" class="form-control single-date-max-today" data-min-date="01/01/2020" value="<?php 
+                                                            echo $form->getEscapedValue('auction_date'); ?>" placeholder="Payment Date" maxlength="10" readonly="readonly">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="donor_id">Auctioneer <span class="red">*</span></label>
+                                                            <select name="donor_id" id="donor_id" class="form-control" title="Auctioneer">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('donor'), $form->getValue('donor_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="amount">Amount <span class="red">*</span></label>
+                                                            <input type="text" name="amount" id="amount" class="form-control number-integer" value="<?php 
+                                                            echo $form->getEscapedValue('amount'); ?>" placeholder="Amount" maxlength="6">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="description">Description</label>
+                                                            <input type="text" name="description" id="description" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('description'); ?>" placeholder="Description">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="notes">Notes</label>
+                                                            <textarea name="notes" id="notes" class="form-control" placeholder="Notes"><?php 
+                                                            echo $form->getEscapedValue('notes'); ?></textarea>
+                                                        </div>
+                                                        <hr>
+                                                        <p class="help-block"><span class="red">*</span> denotes required field</p>
+                                                        <p class="help-block">Payment not allowed for dates prior to last payment date of selected donor</p>
+                                                        <p class="help-block">Amount should not exceed current closing balance</p>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <a href="javascript:;" class="btn btn-outline-primary" id="check-balance" title="Check Auctioneer Balance"><i class="ft-refresh-cw"></i> CHECK BALANCE</a>
+                                                                <input type="hidden" id="check-balance-url" value="<?php
+                                                                echo $this->view->actionUrl('auction-payment/check-balance'); ?>">
+                                                            </div>
+                                                            <hr>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <table class="table table-bordered border-info table-striped">
+                                                                    <thead class="bg-info white">
+                                                                        <tr>
+                                                                            <th colspan="2">Auctioneer Balance</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td width="50%">Date</td>
+                                                                            <td id="check-balance-date"><?php echo $balance['payment_date']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Auctioneer</td>
+                                                                            <td id="check-balance-donor"><?php echo $this->view->escapeHtml($balance['donor']); ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Opening Balance</td>
+                                                                            <td id="check-balance-opening"><?php echo $balance['opening']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Auction Amount</td>
+                                                                            <td id="check-balance-amount"><?php echo $balance['amount']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Advance paid to Member</td>
+                                                                            <td id="check-balance-advance"><?php echo $balance['advance']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Payment by Auctioneer</td>
+                                                                            <td id="check-balance-payment"><?php echo $balance['payment']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Closing Balance</td>
+                                                                            <td id="check-balance-closing"><?php echo $balance['closing']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Upcoming Receipt Number</td>
+                                                                            <td id="check-receipt-number"><b><?php echo $form->getEscapedValue('receipt_number'); ?></b></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

@@ -1,0 +1,11 @@
+[08:08:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[08:12:16 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[09:02:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[09:02:25 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[09:02:30 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[09:02:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[09:03:59 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[09:04:05 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[09:04:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[09:06:26 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[09:06:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId

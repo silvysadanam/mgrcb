@@ -1,0 +1,183 @@
+[17:00:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:40:37 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:40:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[17:46:13 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:46:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:46:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:46:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:46:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[17:47:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:47:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[17:47:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:47:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[17:48:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:48:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:48:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:48:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:48:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:48:45 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[17:50:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:50:33 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[19:24:28 IST] EXCEPTION: \lib\module\Branch\src\Utility\BSReport.php on line 1429 : Too few arguments to function Branch\Utility\BSReport::getCashTransactions(), 1 passed in C:\laragon\www\fws_main\lib\module\Branch\src\Utility\BSReport.php on line 206 and exactly 3 expected
+[19:24:55 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 1435 : Undefined variable $fmc_id
+[19:24:55 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[19:48:34 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1771 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:48:34 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1833 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:48:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:50:33 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1771 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:50:33 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1833 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:50:34 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 60 : Class "Backend\Controller\LoanSource" not found
+[19:51:45 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1771 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:51:45 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1833 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:51:45 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 60 : Class "Backend\Controller\LoanSource" not found
+[19:52:08 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1771 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:52:08 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1833 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:52:08 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 60 : Class "Backend\Controller\LoanSource" not found
+[19:52:10 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1771 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:52:10 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1833 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:52:10 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 60 : Class "Backend\Controller\LoanSource" not found
+[19:52:19 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1771 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:52:19 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1833 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:52:19 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 60 : Class "Backend\Controller\LoanSource" not found
+[19:52:20 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1771 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:52:20 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1833 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:52:20 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 60 : Class "Backend\Controller\LoanSource" not found
+[19:53:33 IST] ERROR [8192]: \lib\module\Backend\src\Controller\AccountsController.php line 1833 : Optional parameter $date declared before required parameter $fmc_id is implicitly treated as a required parameter
+[19:53:33 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 60 : Class "Backend\Controller\LoanSource" not found
+[19:54:00 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 60 : Class "Backend\Controller\LoanSource" not found
+[20:01:02 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 61 : Class "Backend\Controller\Schedule" not found
+[20:01:16 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:01:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:01:28 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 516 : Undefined variable $id
+[20:01:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:01:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:01:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:01:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 516 : Undefined variable $id
+[20:01:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:01:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:01:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:04:38 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 516 : Undefined variable $id
+[20:04:38 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:04:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:04:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:04:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:04:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:04:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 516 : Undefined variable $id
+[20:04:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:05:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:05:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:05:18 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 516 : Undefined variable $id
+[20:05:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:06:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:06:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:06:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:06:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:06:24 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 517 : Undefined variable $id
+[20:06:24 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:08:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:08:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:08:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:08:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:08:08 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 517 : Undefined variable $id
+[20:08:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:21:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:21:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:21:58 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 548 : Undefined property: Backend\Controller\AccountsController::$_sql
+[20:21:58 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 548 : Call to a member function clear() on null
+[20:22:34 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 615 : Class "Backend\Controller\DateTime" not found
+[20:22:51 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 619 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:22:51 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 619 : Call to a member function getTableQuoted() on null
+[20:25:31 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 619 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:25:31 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 619 : Call to a member function getTableQuoted() on null
+[20:26:22 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 619 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:26:22 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 619 : Call to a member function getTableQuoted() on null
+[20:27:01 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 619 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:27:01 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 619 : Call to a member function getTableQuoted() on null
+[20:27:02 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 619 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:27:02 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 619 : Call to a member function getTableQuoted() on null
+[20:28:09 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 619 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:28:09 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 619 : Call to a member function getTableQuoted() on null
+[20:28:45 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 619 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:28:45 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 619 : Call to a member function getTableQuoted() on null
+[20:28:46 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 619 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:28:46 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 619 : Call to a member function getTableQuoted() on null
+[20:44:45 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 529 : Undefined variable $id
+[20:44:45 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 533 : Undefined variable $id
+[20:44:45 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 534 : Undefined variable $id
+[20:44:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:45:08 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 533 : Undefined variable $id
+[20:45:08 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 534 : Undefined variable $id
+[20:45:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:45:25 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 534 : Undefined variable $id
+[20:45:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:46:07 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1885 : Undefined property: Backend\Controller\AccountsController::$_branch
+[20:46:07 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 1885 : Call to a member function id() on null
+[20:46:38 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 889 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:46:38 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 889 : Call to a member function queryRows() on null
+[20:47:38 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 891 : Call to undefined method Backend\Controller\AccountsController::getPaymentyHeadID()
+[20:50:16 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 1925 : Too few arguments to function Backend\Controller\AccountsController::getPaymentyHeadID(), 1 passed in C:\laragon\www\fws_main\lib\module\Backend\src\Controller\AccountsController.php on line 892 and exactly 2 expected
+[20:50:55 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 899 : Call to undefined method Backend\Controller\AccountsController::getSumByHeadID()
+[20:51:31 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1735 : Undefined variable $operatingLossCol1
+[20:51:31 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1740 : Undefined variable $receiptsCumilativeTotal
+[20:51:31 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1741 : Undefined variable $receiptTotal
+[20:51:31 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1742 : Undefined variable $paymentsCurrenTotal
+[20:51:31 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1743 : Undefined variable $paymentsCumilativeTotal
+[20:51:31 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1745 : Undefined variable $paymentGrandSubTotal
+[20:51:32 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1750 : Undefined variable $assetsOperatingLoss
+[20:51:32 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1758 : Undefined variable $paymentCumulative
+[20:51:32 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1759 : Undefined variable $overCumulativeIncome
+[20:51:32 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1760 : Undefined variable $overCumulativeExpense
+[20:51:32 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1762 : Undefined variable $overTotalIncome
+[20:51:32 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1763 : Undefined variable $receiptGrandSubTotal
+[20:51:32 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1764 : Undefined variable $receiptGrandTotal
+[20:51:32 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1765 : Undefined variable $overTotalExpense
+[20:51:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1742 : Undefined variable $receiptsCumilativeTotal
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1743 : Undefined variable $receiptTotal
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1744 : Undefined variable $paymentsCurrenTotal
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1745 : Undefined variable $paymentsCumilativeTotal
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1747 : Undefined variable $paymentGrandSubTotal
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1752 : Undefined variable $assetsOperatingLoss
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1760 : Undefined variable $paymentCumulative
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1761 : Undefined variable $overCumulativeIncome
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1762 : Undefined variable $overCumulativeExpense
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1764 : Undefined variable $overTotalIncome
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1765 : Undefined variable $receiptGrandSubTotal
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1766 : Undefined variable $receiptGrandTotal
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1767 : Undefined variable $overTotalExpense
+[20:53:43 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1743 : Undefined variable $receiptTotal
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1744 : Undefined variable $paymentsCurrenTotal
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1745 : Undefined variable $paymentsCumilativeTotal
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1747 : Undefined variable $paymentGrandSubTotal
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1752 : Undefined variable $assetsOperatingLoss
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1760 : Undefined variable $paymentCumulative
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1761 : Undefined variable $overCumulativeIncome
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1762 : Undefined variable $overCumulativeExpense
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1764 : Undefined variable $overTotalIncome
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1765 : Undefined variable $receiptGrandSubTotal
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1766 : Undefined variable $receiptGrandTotal
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1767 : Undefined variable $overTotalExpense
+[20:54:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:55:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:55:29 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:57:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:57:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[20:57:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[20:57:16 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 657 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:57:16 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 657 : Call to a member function queryRows() on null
+[20:57:53 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 696 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:57:53 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 696 : Call to a member function queryRows() on null
+[20:58:57 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 943 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[20:58:57 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 943 : Call to a member function queryRows() on null
+[21:00:42 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1045 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[21:00:42 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 1045 : Call to a member function queryRows() on null
+[21:01:27 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1092 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[21:01:27 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 1092 : Call to a member function queryRows() on null
+[21:01:45 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1331 : Undefined property: Backend\Controller\AccountsController::$_bsHeadModel
+[21:01:45 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 1331 : Call to a member function queryRows() on null
+[21:02:07 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1360 : Undefined property: Backend\Controller\AccountsController::$_member
+[21:02:07 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 1360 : Call to a member function getTableQuoted() on null
+[21:03:31 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 1365 : Call to undefined method Backend\Controller\AccountsController::auctionChitIdsOpening()
+[21:04:26 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 1367 : Call to undefined method Backend\Controller\AccountsController::periodSumOpening()
+[21:04:53 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans

@@ -1,0 +1,76 @@
+<?php
+
+?>
+
+
+        <div class="modal fade" id="modal-loan-summary" tabindex="-1" role="dialog" aria-labelledby="myModalLabelLoanSummary" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="myModalLabelLoanSummary"> 
+                            Member Loans - Overview
+                        </h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>FMC</td>
+                                            <td id="result-fmc"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td id="result-member-name"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Code</td>
+                                            <td id="result-member-code"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Loans</td>
+                                            <td id="result-total"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Active</td>
+                                            <td id="result-active"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Closed on tenure</td>
+                                            <td id="result-closed"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Preclosed</td>
+                                            <td id="result-preclosed"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Closed with delinquency</td>
+                                            <td id="result-delinquent"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Refinanced &amp; Rescheduled</td>
+                                            <td id="result-refinanced"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rescheduled</td>
+                                            <td id="result-rescheduled"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Written off</td>
+                                            <td id="result-written-off"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,38 @@
+[18:09:27 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[18:09:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[18:09:31 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[18:09:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:10:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:15:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:15:24 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[19:15:57 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:16:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:16:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:19:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:19:08 IST] EXCEPTION: \lib\module\Backend\src\Controller\ReportsController.php on line 161 : Class "Backend\Controller\BSReport" not found
+[20:25:55 IST] EXCEPTION: \lib\module\Backend\src\Utility\BSReport.php on line 195 : Object of class Branch\Utility\BranchStore could not be converted to string
+[20:27:25 IST] EXCEPTION: \lib\module\Backend\src\Utility\BSReport.php on line 195 : Object of class Branch\Utility\BranchStore could not be converted to string
+[20:29:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:29:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:30:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:40:20 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 647 : Undefined array key 0
+[20:40:20 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 647 : Attempt to read property "id" on null
+[20:40:20 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `t`.`status` = '1' and `t`.`transType` = 'P' and `t`.`transDate` between '20' at line 1
+[20:41:14 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 647 : Undefined array key 0
+[20:41:14 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 647 : Attempt to read property "id" on null
+[20:41:14 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `t`.`status` = '1' and `t`.`transType` = 'P' and `t`.`transDate` between '20' at line 1
+[20:42:25 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 647 : Undefined array key 0
+[20:42:25 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 647 : Attempt to read property "id" on null
+[20:42:25 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `t`.`status` = '1' and `t`.`transType` = 'P' and `t`.`transDate` between '20' at line 1
+[20:43:24 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 647 : Undefined array key 0
+[20:43:24 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 647 : Attempt to read property "id" on null
+[20:43:24 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `t`.`status` = '1' and `t`.`transType` = 'P' and `t`.`transDate` between '20' at line 1
+[20:44:51 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 738 : Undefined array key 0
+[20:44:51 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 738 : Attempt to read property "id" on null
+[20:44:51 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `t`.`status` = '1' and `t`.`transType` = 'P' and `t`.`transDate` between '20' at line 1
+[20:45:34 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 744 : Undefined array key 0
+[20:45:34 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 744 : Attempt to read property "id" on null
+[20:45:34 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `t`.`status` = '1' and `t`.`transType` = 'P' and `t`.`transDate` between '20' at line 1
+[20:46:17 IST] ERROR [2]: \lib\module\Backend\src\Utility\BSReport.php line 748 : Undefined variable $memberPaymentSum
+[20:46:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:50:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans

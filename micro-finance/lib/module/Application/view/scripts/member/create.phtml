@@ -1,0 +1,61 @@
+<?php
+
+$form = $this->getForm();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">New Member</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-member" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="fmc_id">FMC <span class="red">*</span></label>
+                                                            <select name="fmc_id" id="fmc_id" class="form-control" title="FMC">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $form->getValue('fmc_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="member_type_id">Member Type <span class="red">*</span></label>
+                                                            <select name="member_type_id" id="member_type_id" class="form-control" title="Member Type">
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $form->getValue('member_type_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="name">Name <span class="red">*</span></label>
+                                                            <input type="text" name="name" id="name" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('name'); ?>" placeholder="Name" maxlength="100" required="required">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="code">Code <span class="red">*</span></label>
+                                                            <input type="text" name="code" id="code" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('code'); ?>" placeholder="Code" required="required" maxlength="5">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

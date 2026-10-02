@@ -1,0 +1,219 @@
+[12:30:30 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:30:34 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:47:47 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:47:53 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[12:47:53 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[12:47:53 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:47:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:47:57 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[12:48:01 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:48:08 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:54:50 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:54:53 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:55:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:55:29 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:55:31 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:55:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:55:59 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:58:17 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:58:27 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[12:58:27 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[12:58:27 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:58:32 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:58:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:58:50 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[12:58:50 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[13:01:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:01:10 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[13:01:12 IST] EXCEPTION: \lib\module\Application\src\Controller\TransactionController.php on line 286 : Call to a member function auctionMemberIds() on null
+[13:02:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:02:31 IST] EXCEPTION: \lib\module\Application\src\Controller\TransactionController.php on line 272 : Call to a member function isMember() on null
+[13:02:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:03:42 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:03:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:03:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:03:51 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:03:53 IST] EXCEPTION: \lib\module\Application\src\Controller\TransactionController.php on line 297 : Class "Application\Form\TransactionForm" not found
+[13:07:07 IST] EXCEPTION: \lib\module\Application\src\Controller\TransactionController.php on line 297 : Class "Application\Form\TransactionForm" not found
+[13:07:44 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:12:24 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:12:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:12:47 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:18:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:18:40 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[13:18:41 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:18:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:18:52 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[13:18:53 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:18:54 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:19:01 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:19:02 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:19:07 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:19:14 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:19:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:19:42 IST] EXCEPTION: \lib\module\Application\src\Controller\TransactionController.php on line 146 : Class "Shared\Utility\ManageReceipt" not found
+[13:19:45 IST] EXCEPTION: \lib\module\Application\src\Controller\TransactionController.php on line 146 : Class "Shared\Utility\ManageReceipt" not found
+[13:21:08 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:22:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:22:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:23:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:23:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:25:31 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:25:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:25:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:25:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:25:38 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[13:26:22 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:29:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:30:03 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:30:03 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:30:05 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:30:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:30:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:30:11 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:30:14 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:30:24 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:30:32 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:31:42 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:31:56 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:31:59 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:32:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[13:32:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[13:32:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:32:06 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:32:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:32:45 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:32:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:32:54 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[13:33:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:10:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:10:57 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[14:11:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:15:12 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:15:16 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:15:22 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:15:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:15:50 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:15:55 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:16:06 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:16:11 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:16:14 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:16:19 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[14:16:19 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[14:16:19 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:16:22 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:17:19 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:17:22 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:17:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:17:29 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[14:17:29 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[14:17:29 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:17:32 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:18:26 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[14:18:52 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[14:21:08 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[14:21:44 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[14:22:58 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[14:28:30 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:28:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:28:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:28:39 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:28:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:29:35 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[14:29:35 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[14:34:28 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:34:31 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:34:41 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:35:02 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:35:13 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:35:58 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:36:23 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:36:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:36:54 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:36:59 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:37:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:37:11 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:38:47 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:38:50 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[14:49:36 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[14:50:03 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 91 : Undefined array key "loan_source_id"
+[14:50:03 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[14:50:03 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[14:57:11 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[14:57:28 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 91 : Undefined array key "loan_source_id"
+[14:57:28 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[14:57:28 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[15:07:56 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[15:08:53 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 91 : Undefined array key "loan_source_id"
+[15:08:53 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[15:08:53 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[15:13:08 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[15:13:35 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 91 : Undefined array key "loan_source_id"
+[15:13:35 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 138 : Undefined array key "receipt"
+[15:13:35 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[20:06:15 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:07:55 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:09:49 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 130 : Undefined array key "receipt"
+[20:09:49 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 160 : Undefined variable $remarks
+[20:16:17 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:16:19 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:16:19 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:17:02 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:17:02 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:17:09 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:17:09 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:17:14 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:17:14 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:17:21 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:17:21 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:17:28 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:20:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:20:36 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:21:09 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:24:26 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:24:29 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:24:29 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:25:05 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:25:05 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[20:25:19 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:26:23 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:26:30 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:26:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:26:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:26:55 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 130 : Undefined array key "receipt"
+[20:26:55 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 160 : Undefined variable $remarks
+[20:26:55 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:28:26 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:28:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:28:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:29:01 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:29:06 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:29:12 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:48:48 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:49:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:49:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:49:42 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 130 : Undefined array key "receipt"
+[20:49:42 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 160 : Undefined variable $remarks
+[20:49:42 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:49:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:50:03 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:55:07 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:55:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:55:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:57:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:57:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:58:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:58:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:58:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:58:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:59:34 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:59:51 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:59:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:00:26 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:00:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:00:39 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:00:50 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:01:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:01:28 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:33:42 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:34:14 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans

@@ -1,0 +1,3 @@
+[18:26:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:26:31 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[18:26:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans

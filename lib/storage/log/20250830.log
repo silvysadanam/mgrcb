@@ -1,0 +1,144 @@
+[09:21:28 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 83 : Undefined variable $headId
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Undefined array key "cash_count"
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Trying to access array offset on value of type null
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Undefined array key "cash_count"
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Trying to access array offset on value of type null
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Undefined array key "cash_count"
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Trying to access array offset on value of type null
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Undefined array key "cash_count"
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Trying to access array offset on value of type null
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Undefined array key "cash_count"
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Trying to access array offset on value of type null
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Undefined array key "cash_count"
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Trying to access array offset on value of type null
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Undefined array key "cash_count"
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Trying to access array offset on value of type null
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Undefined array key "cash_count"
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Trying to access array offset on value of type null
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Undefined array key "cash_count"
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 43 : Trying to access array offset on value of type null
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 62 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 56 : Undefined variable $symbol
+[09:58:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 62 : Undefined variable $symbol
+[10:01:16 IST] EXCEPTION: \lib\module\Branch\view\scripts\opening\index.phtml on line 46 : syntax error, unexpected variable "$disp_val"
+[10:01:24 IST] EXCEPTION: \lib\module\Branch\view\scripts\opening\index.phtml on line 46 : syntax error, unexpected variable "$disp_val"
+[10:01:32 IST] EXCEPTION: \lib\module\Branch\view\scripts\opening\index.phtml on line 46 : syntax error, unexpected variable "$disp_val"
+[10:01:38 IST] EXCEPTION: \lib\module\Branch\view\scripts\opening\index.phtml on line 46 : syntax error, unexpected variable "$disp_val"
+[10:02:03 IST] EXCEPTION: \lib\module\Branch\view\scripts\opening\index.phtml on line 10 : Call to undefined function money_format()
+[10:02:04 IST] EXCEPTION: \lib\module\Branch\view\scripts\opening\index.phtml on line 10 : Call to undefined function money_format()
+[14:04:25 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 122 : Call to undefined method Branch\Controller\OpeningController::getFinancialYearInfo()
+[14:04:49 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 139 : Undefined property: Branch\Controller\OpeningController::$_startDate
+[14:04:49 IST] ERROR [8192]: \lib\module\Branch\src\Controller\OpeningController.php line 139 : date_create(): Passing null to parameter #1 ($datetime) of type string is deprecated
+[14:04:49 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 162 : Undefined property: Branch\Controller\OpeningController::$_headModel
+[14:04:49 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 162 : Call to a member function getTableQuoted() on null
+[14:06:01 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 162 : Undefined property: Branch\Controller\OpeningController::$_headModel
+[14:06:01 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 162 : Call to a member function getTableQuoted() on null
+[14:06:53 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 51 : Class "Shared\Model\RPHeads" not found
+[14:07:25 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 170 : Undefined property: Branch\Controller\OpeningController::$_transactionModel
+[14:07:25 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 170 : Call to a member function getTableQuoted() on null
+[14:11:10 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 170 : Undefined property: Branch\Controller\OpeningController::$_transactionModel
+[14:11:10 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 170 : Call to a member function getTableQuoted() on null
+[14:12:04 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 47 : Class "Branch\Controller\RPBSHeads" not found
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 134 : Undefined array key "member_id"
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 135 : Undefined array key "deduction_type_id"
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 136 : Undefined array key "advance_date"
+[16:44:39 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 137 : Undefined array key "advance_amount"
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 138 : Attempt to read property "closing_balance" on null
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 144 : Attempt to read property "deduction_date" on null
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 154 : Attempt to read property "deduction_date" on null
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 156 : Undefined array key "description"
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 157 : Undefined array key "note"
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 161 : Undefined array key "auto_collect_overdue"
+[16:44:39 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 167 : Attempt to read property "closing_balance" on null
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 135 : Undefined array key "member_id"
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 136 : Undefined array key "deduction_type_id"
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 137 : Undefined array key "advance_date"
+[16:45:09 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 138 : Undefined array key "advance_amount"
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 139 : Attempt to read property "closing_balance" on null
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 145 : Attempt to read property "deduction_date" on null
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 155 : Attempt to read property "deduction_date" on null
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 157 : Undefined array key "description"
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 158 : Undefined array key "note"
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 162 : Undefined array key "auto_collect_overdue"
+[16:45:09 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 168 : Attempt to read property "closing_balance" on null
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 135 : Undefined array key "member_id"
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 136 : Undefined array key "deduction_type_id"
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 137 : Undefined array key "advance_date"
+[16:45:20 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 138 : Undefined array key "advance_amount"
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 139 : Attempt to read property "closing_balance" on null
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 145 : Attempt to read property "deduction_date" on null
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 155 : Attempt to read property "deduction_date" on null
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 157 : Undefined array key "description"
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 158 : Undefined array key "note"
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 162 : Undefined array key "auto_collect_overdue"
+[16:45:20 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 168 : Attempt to read property "closing_balance" on null
+[20:10:42 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 104 : Class "Branch\Form\Opening\DeductionMemberMonthly" not found
+[20:11:12 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 104 : Class "Branch\Form\Opening\DeductionMemberMonthly" not found
+[20:11:33 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 106 : Class "Branch\Form\Opening\OpenDetails" not found
+[20:12:49 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 149 : Undefined array key 0
+[20:12:49 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 149 : Trying to access array offset on value of type null
+[20:12:49 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 161 : Undefined constant "Branch\Form\Opening\this"
+[20:13:20 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 161 : Undefined constant "Branch\Form\Opening\this"
+[20:13:52 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 161 : Undefined constant "Branch\Form\Opening\this"
+[20:14:48 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 162 : Undefined constant "Branch\Form\Opening\this"
+[20:28:11 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 105 : Undefined property: Branch\Controller\OpeningController::$openingDetailsModel
+[20:28:11 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 105 : Call to a member function getTableQuoted() on null
+[20:28:51 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 107 : Undefined property: Branch\Controller\OpeningController::$_fmcid
+[20:28:51 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 107 : Undefined variable $today
+[20:28:51 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and opening_date =''' at line 1
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Undefined array key "cash_count"
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Trying to access array offset on value of type null
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Undefined array key "cash_count"
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Trying to access array offset on value of type null
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Undefined array key "cash_count"
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Trying to access array offset on value of type null
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Undefined array key "cash_count"
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Trying to access array offset on value of type null
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Undefined array key "cash_count"
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Trying to access array offset on value of type null
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Undefined array key "cash_count"
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Trying to access array offset on value of type null
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Undefined array key "cash_count"
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Trying to access array offset on value of type null
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Undefined array key "cash_count"
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Trying to access array offset on value of type null
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Undefined array key "cash_count"
+[20:35:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 155 : Trying to access array offset on value of type null
+[20:35:36 IST] ERROR [2]: \lib\module\Branch\view\scripts\opening\index.phtml line 160 : Undefined variable $prev_val
+[21:34:15 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'opening_date' in 'where clause'
+[21:36:24 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[21:40:26 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[21:46:08 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 112 : Undefined array key 0
+[21:46:08 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 112 : Attempt to read property "counted_till" on null
+[21:53:01 IST] ERROR [2]: \lib\module\Branch\src\Controller\OpeningController.php line 94 : Undefined variable $populate
+[21:54:22 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 145 : Trying to access array offset on value of type null
+[21:54:22 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 146 : Trying to access array offset on value of type null
+[21:54:22 IST] ERROR [2]: \lib\module\Branch\src\Form\Opening\CreateForm.php line 147 : Trying to access array offset on value of type null
+[21:54:22 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 149 : Cannot use object of type stdClass as array
+[21:55:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\advance-withdrawal\create.phtml line 83 : Undefined variable $headId
+[22:02:43 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 135 : syntax error, unexpected token "private"
+[22:05:05 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 76 : syntax error, unexpected token "try"
+[22:06:02 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 76 : syntax error, unexpected token "try"
+[22:06:18 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 76 : syntax error, unexpected token "try"
+[22:06:45 IST] EXCEPTION: \lib\module\Branch\src\Controller\OpeningController.php on line 76 : syntax error, unexpected token "try"
+[22:11:05 IST] EXCEPTION: \lib\module\Branch\src\Form\Opening\CreateForm.php on line 136 : Cannot use object of type stdClass as array

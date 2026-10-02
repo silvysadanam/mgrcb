@@ -1,0 +1,6 @@
+[18:15:42 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[18:15:42 IST] EXCEPTION: \lib\web\Web\src\Database\SqlHelper.php on line 69 : Call to a member function quote() on null
+[18:16:03 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[18:16:03 IST] EXCEPTION: \lib\web\Web\src\Database\SqlHelper.php on line 69 : Call to a member function quote() on null
+[18:16:29 IST] ERROR [2]: \lib\web\Web\src\Database\AdapterTrait.php line 59 : Undefined variable $instance
+[18:16:29 IST] EXCEPTION: \lib\web\Web\src\Database\SqlHelper.php on line 69 : Call to a member function quote() on null

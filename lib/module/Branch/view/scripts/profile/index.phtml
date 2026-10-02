@@ -1,0 +1,73 @@
+<?php
+
+$form = $this->getForm();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Edit Profile</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-profile" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="name">Name <span class="red">*</span></label>
+                                                            <input type="text" name="name" id="name" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('name'); ?>" placeholder="Name (mandatory)" maxlength="100" required="required">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="username">Username <span class="red">*</span></label>
+                                                            <input type="text" name="username" id="username" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('username'); ?>" placeholder="Username (Login)" required="required" maxlength="20">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <p class="help-block text-muted">
+                                                                Username must be 6 to 20 alpha-numeric characters without space
+                                                            </p>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="form-group">
+                                                            <p class="help-block">Password fields are required only if the password is to be changed</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="profile_password1">Current Password </label>
+                                                            <input type="password" name="profile_password1" id="profile_password1" class="form-control" placeholder="Current Password" maxlength="20" title="Current Password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="profile_password2">New Password </label>
+                                                            <input type="password" name="profile_password2" id="profile_password2" class="form-control" placeholder="New Password" maxlength="20" title="New Password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="profile_password3">Repeat New Password</label>
+                                                            <input type="password" name="profile_password3" id="profile_password3" class="form-control" placeholder="Repeat New password" maxlength="20" title="Repeat New password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <p class="help-block text-muted">
+                                                                New Password must contain 6 to 20 characters without space
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                <?php echo $form->getOriginal(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

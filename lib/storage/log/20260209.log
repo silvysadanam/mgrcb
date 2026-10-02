@@ -1,0 +1,314 @@
+[19:26:59 IST] EXCEPTION: \lib\module\Branch\src\Utility\MDReceiptsReport.php on line 418 : syntax error, unexpected variable "$month", expecting "function" or "const"
+[19:28:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Undefined variable $item
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Attempt to read property "amount" on null
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Undefined variable $item
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Attempt to read property "amount" on null
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Undefined variable $item
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Attempt to read property "amount" on null
+[19:28:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Undefined variable $item
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Attempt to read property "amount" on null
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Undefined variable $item
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 355 : Attempt to read property "headID" on null
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "transNo"
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 145 : Undefined array key "bankTotal"
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 146 : Undefined array key "bycashTotal"
+[19:28:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 183 : Undefined array key "bankClosing"
+[19:29:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Undefined variable $item
+[19:29:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Attempt to read property "amount" on null
+[19:29:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Undefined variable $item
+[19:29:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Attempt to read property "amount" on null
+[19:29:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Undefined variable $item
+[19:29:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Attempt to read property "amount" on null
+[19:29:23 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Undefined variable $item
+[19:29:23 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 382 : Attempt to read property "amount" on null
+[19:29:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "transNo"
+[19:29:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 145 : Undefined array key "bankTotal"
+[19:29:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 146 : Undefined array key "bycashTotal"
+[19:29:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 183 : Undefined array key "bankClosing"
+[19:30:33 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:30:33 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:30:33 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 181 : Undefined array key "bankClosing"
+[19:32:03 IST] EXCEPTION: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml on line 159 : syntax error, unexpected token "endif", expecting end of file
+[19:32:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:32:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:33:40 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:33:40 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:33:40 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:33:40 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:33:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:33:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:33:53 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:33:53 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:33:53 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:33:53 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:34:19 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:34:19 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:34:20 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:34:20 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:34:20 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:34:20 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:35:10 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:35:10 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:35:11 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:35:11 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:35:11 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:35:11 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:37:33 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:37:33 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:38:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 2
+[19:38:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 2
+[19:38:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 2
+[19:38:13 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 5
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 5
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 5
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 8
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 8
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 8
+[19:38:14 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 11
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 11
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 11
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 12
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 12
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 12
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 13
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 13
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 13
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 14
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 14
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 14
+[19:38:15 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 17
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 17
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 17
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 19
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 19
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 19
+[19:38:16 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 21
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 21
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 21
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 23
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 23
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Undefined array key 23
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 408 : Trying to access array offset on value of type null
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:38:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:40:06 IST] EXCEPTION: \lib\module\Branch\src\Utility\MDReceiptsReport.php on line 408 : syntax error, unexpected token "}"
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 2
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 2
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 2
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 5
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 5
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 5
+[19:40:17 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 8
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 8
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 8
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 11
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 11
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 11
+[19:40:18 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 12
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 12
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 12
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 13
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 13
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 13
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 14
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 14
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 14
+[19:40:19 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 17
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 17
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 17
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 19
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 19
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 19
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 21
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 21
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 21
+[19:40:20 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 23
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 23
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Undefined array key 23
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\src\Utility\MDReceiptsReport.php line 409 : Trying to access array offset on value of type null
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 131 : Undefined array key "particulars"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 132 : Undefined array key "opening"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:40:21 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:42:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:42:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:44:07 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:44:07 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:45:12 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:45:12 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:45:57 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:45:57 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:49:31 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:49:31 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:49:58 IST] EXCEPTION: \lib\module\Branch\src\Utility\MDReceiptsReport.php on line 517 : syntax error, unexpected token "return", expecting "function" or "const"
+[19:50:16 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:50:16 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:52:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:52:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:53:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:53:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:56:33 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:56:33 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:57:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:57:52 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[19:59:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[19:59:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[20:00:04 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 143 : Undefined array key "bankTotal"
+[20:00:04 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 144 : Undefined array key "bycashTotal"
+[20:00:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[20:00:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"
+[20:01:19 IST] EXCEPTION: \lib\module\Branch\src\Controller\ReportsController.php on line 179 : Class "Branch\Controller\MReceiptsReport" not found
+[22:26:16 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 133 : Undefined array key "bankTotal"
+[22:26:16 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mdreceipts.phtml line 134 : Undefined array key "bycashTotal"

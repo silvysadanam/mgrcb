@@ -1,0 +1,100 @@
+<?php
+
+$branch = $this->view->getVariable('branch');
+$list = $this->view->getVariable('list');
+$auctionDate = $this->view->getVariable('auctionDate');
+$auctioneer = $branch->member();
+$summary = $this->view->getVariable('summary');
+$fmc = $branch->fmc();
+$entries = 0;
+
+$title = [
+    $fmc->code, $auctionDate, $auctioneer->code, $auctioneer->name,
+];
+
+
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>Auction Chits - <?php echo $this->view->escapeHtml(implode(' ', $title)); ?></title>
+        <?php $this->block('print-auction'); ?>
+        
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="0" border="0" style="margin:10px 10px 5px 0;" width="700">
+            <thead>
+                <tr>
+                    <th class="main-heading center" colspan="2">
+                        FISHERMEN WELFARE SOCIETY - KOLLAM
+                    </th>
+                </tr>
+                <tr>
+                    <th class="center" colspan="2">
+                        FMC: <?php echo $this->view->escapeHtml($fmc->name); ?>
+                        
+                    </th>
+                </tr>
+                <tr>
+                    <th class="main-heading center" colspan="2">
+                        AUCTIONEER - <?php echo $this->view->escapeHtml($auctioneer->code . ' ' . $auctioneer->name); ?>
+                        
+                    </th>
+                </tr>
+                <tr>
+                    <th class="main-heading center" colspan="2">
+                        AUCTION CHITS - <?php echo $auctionDate; ?>
+                        
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="center" width="10%">Sl No</th>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                    <th class="center">Weight</th>
+                                    <th class="center">Amount</th>
+                                    <th class="center">Advance</th>
+                                    <th class="center">Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($list as $item): ?>
+                                
+                                <tr>
+                                    <td class="center"><?php echo $this->view->counter(); ?></td>
+                                    <td><?php echo $this->view->lookup('member_code', $item->member_id); ?></td>
+                                    <td><?php echo $this->view->lookup('member_name', $item->member_id); ?></td>
+                                    <td class="center"><?php echo $item->quantity; ?></td>
+                                    <td class="center"><?php echo $item->amount; ?></td>
+                                    <td class="center"><?php echo $item->advance; ?></td>
+                                    <td class="center"><?php echo $item->balance; ?></td>
+                                </tr>
+                                <?php endforeach; ?>
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>Total</th>
+                                    <th class="center"><?php echo $summary->quantity; ?></th>
+                                    <th class="center"><?php echo $summary->amount; ?></th>
+                                    <th class="center"><?php echo $summary->advance; ?></th>
+                                    <th class="center"><?php echo $summary->balance; ?></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>

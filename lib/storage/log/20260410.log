@@ -1,0 +1,1103 @@
+[17:01:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:11:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:11:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:11:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[19:11:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1681 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1682 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1683 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key "head_name"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key "assets_total"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1671 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1672 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1673 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:47 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1685 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1686 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key "opening"
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 1
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1675 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Undefined array key 2
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1676 : Trying to access array offset on value of type null
+[19:23:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1684 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 1
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Undefined array key 2
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1674 : Trying to access array offset on value of type null
+[19:25:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:47:58 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:47:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[19:48:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:48:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:55:49 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 708 : syntax error, unexpected variable "$liabilityCount"
+[19:55:52 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 708 : syntax error, unexpected variable "$liabilityCount"
+[19:55:53 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:55:56 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 708 : syntax error, unexpected variable "$liabilityCount"
+[19:56:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[19:56:12 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[19:56:17 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 543 : Too few arguments to function Backend\Controller\AccountsController::setNewBSOpeningBalance(), 0 passed in C:\laragon\www\fws_main\lib\module\Backend\src\Controller\AccountsController.php on line 711 and exactly 1 expected
+[19:58:02 IST] EXCEPTION: \lib\module\Backend\src\Controller\AccountsController.php on line 543 : Too few arguments to function Backend\Controller\AccountsController::setNewBSOpeningBalance(), 0 passed in C:\laragon\www\fws_main\lib\module\Backend\src\Controller\AccountsController.php on line 720 and exactly 1 expected
+[20:06:51 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1557 : Undefined variable $liability
+[20:06:51 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 1558 : Undefined variable $assets
+[20:06:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans

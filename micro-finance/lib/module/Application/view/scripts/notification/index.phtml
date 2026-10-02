@@ -1,0 +1,75 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+
+
+?>
+                <?php if ($total > 0): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title"><?php echo  $this->view->getVariable('listTitle'); ?> notifications</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body card-dashboard">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="notification-table">
+                                                <thead class="bg-teal white">
+                                                    <tr>
+                                                        <th>Timestamp</th>
+                                                        <th>FMC</th>
+                                                        <th>Subject</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): ?>
+
+                                                    <tr>
+                                                        <td data-sort="<?php echo $row->created_at; ?>"><?php echo $this->view->userTime($row->created_at); ?></td>
+                                                        <td><?php echo $this->view->lookup('fmc', $row->fmc_id); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->subject); ?></td>
+                                                        <td>
+                                                            <a class="btn btn-sm btn-info mr-1" title="View Message" href="<?php
+                                                            echo $this->view->actionUrl('notification/view/id/' . $row->id); ?>"><i class="ft-eye"></i> View Message</a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>  
+                <?php else: ?>
+
+                 <section>
+                    <div class="row">
+                        <div class="col-12 mt-1 mb-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    No notifications available
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <?php endif; 

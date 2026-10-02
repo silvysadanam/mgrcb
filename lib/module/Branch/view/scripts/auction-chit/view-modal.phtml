@@ -1,0 +1,89 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$auctionChit = $store->auctionChit();
+
+?>
+
+        <form name="form-auction-modal" id="form-auction-modal" method="post" action="">
+            <div class="modal fade" id="modal-entry" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEntry" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelEntry"> 
+                                Add Entry
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="medicine_id">Medicine <span class="red">*</span></label>
+                                            <select id="medicine_id" class="form-control" title="Medicine">
+                                                <option value="0">--select--</option>
+                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('medicine')); ?>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="amount">Amount <span class="red">*</span></label>
+                                            <input type="number" id="amount" class="form-control" value="" placeholder="Amount" min="1" max="999999" step="1" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="quantity">Weight</label>
+                                            <input type="number" id="quantity" class="form-control" value="" placeholder="Weight" max="9999" step="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="entry-id" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <form name="form-advance-modal" id="form-advance-modal" method="post" action="">
+            <div class="modal fade" id="modal-advance" tabindex="-1" role="dialog" aria-labelledby="myModalLabelAdvance" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelAdvance"> 
+                                Edit Advance
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="advance">Advance <span class="red">*</span></label>
+                                            <input type="number" id="advance" class="form-control" value="" placeholder="Advance" min="0" max="<?php
+                                            echo $auctionChit->amount; ?>" step="1" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="current-advance" value="<?php echo $auctionChit->advance; ?>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

@@ -1,0 +1,200 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+$daily = $this->view->getVariable('daily');
+$deductions = $this->view->getVariable('deductions');
+$member = $this->view->getVariable('member');
+$groups = $this->view->getVariable('groups');
+$grouped = $this->view->getVariable('grouped');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Create Deduction Bill</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-deduction-bill" id="form-deduction-bill" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="alert alert-danger" id="validation-message" style="display:none;"></div>
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">Date</label>
+                                                            <input type="text" class="form-control" value="<?php 
+                                                            echo $this->view->datepicker($daily->auction_date); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">Name</label>
+                                                            <input type="text" class="form-control" value="<?php 
+                                                            echo $this->view->escapeHtml($member->name); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">Code</label>
+                                                            <input type="text" class="form-control" value="<?php 
+                                                            echo $this->view->escapeHtml($member->code); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">No. of Auction Chits</label>
+                                                            <input type="text" class="form-control" value="<?php 
+                                                            echo $this->view->escapeHtml($daily->entries); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">Auction Amount</label>
+                                                            <input type="text" name="auction_amount" id="auction_amount" class="form-control" value="<?php 
+                                                            echo $this->view->escapeHtml($daily->amount); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">Advance received from Auctioneer</label>
+                                                            <input type="text" name="advance" id="advance" class="form-control" value="<?php 
+                                                            echo $this->view->escapeHtml($daily->advance); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">Available Auction Amount for deductions</label>
+                                                            <input type="text" name="available" id="available" class="form-control" value="<?php 
+                                                            echo $this->view->escapeHtml($values['available']); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">Total available Amount for deductions</label>
+                                                            <input type="text" name="total_available" id="total_available" class="form-control" value="<?php 
+                                                            echo $this->view->escapeHtml($values['total_available']); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="member_paid_amount">Amount paid by Member</label>
+                                                            <input type="number" name="member_paid_amount" id="member_paid_amount" class="form-control" value="<?php 
+                                                            echo $this->view->escapeHtml($values['member_paid_amount']); ?>" min="0" max="<?php echo $daily->advance; ?>" step="1"<?php
+                                                            if (0 == $daily->advance) { ?> readonly="readonly"<?php } ?>>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-9 col-sm-12">
+                                                        <p class="help-block">
+                                                            Enter amount paid by member, if available amount is insufficient to meet the deductions.<br>
+                                                            Total available amount for deductions should not exceed the auction amount.<br>
+                                                            In such case, balance after deductions should be 0.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-2">
+                                                    <div class="col-12">
+                                                        <div class="card card-bordered border-primary">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title">
+                                                                    Deductions
+                                                                </h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+                                                                    <div class="row">
+                                                                        <?php foreach ($groups as $groupId => $groupTitle): ?>
+                                                                        <?php if (! empty($grouped[$groupId])): ?>
+
+                                                                        <div class="col-md-6 col-sm-12 mb-2">
+                                                                            <table class="table table-condensed table-bordered border-info">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th colspan="4" class="bg-info white"><?php echo $this->view->escapeHtml($groupTitle); ?></th>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <th width="10%">Sl. No. </th>
+                                                                                        <th>Deduction Item</th>
+                                                                                        <th width="20%">Deduction Type</th>
+                                                                                        <th width="30%">Deduction Amount</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <?php $index = 0; ?>
+                                                                                    <?php $this->view->counter(0); ?>
+                                                                                    <?php foreach ($grouped[$groupId] as $typeId): ?>
+
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <input type="hidden" name="deduction_item[]" value="<?php echo $typeId; ?>">
+                                                                                            <?php echo $this->view->counter(); ?>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td><?php echo $this->view->lookup('deductionType', $typeId); ?></td>
+                                                                                        <td><?php echo $this->view->escapeHtml($deductions[$typeId]->display_text); ?></td>
+                                                                                        <td>
+                                                                                            <input type="number" name="deduction_amount[]" class="form-control deduction-amount" value="<?php 
+                                                                                            echo $this->view->escapeHtml($values['deduction_amount'][$index]); ?>" placeholder="Amount" min="0" max="<?php
+                                                                                            echo $daily->amount; ?>" step="1" required="required" data-title="<?php
+                                                                                            echo $this->view->lookup('deductionType', $typeId); ?>">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <?php ++$index; ?>
+                                                                                    <?php endforeach; ?>
+
+
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <?php endif; ?>
+                                                                        <?php endforeach; ?>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-1">
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">Total Deductions</label>
+                                                            <input type="text" name="total_deduction" id="total_deduction" class="form-control" value="<?php
+                                                            echo $this->view->escapeHtml($values['total_deduction']); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control">Balance after deductions</label>
+                                                            <input type="text" name="balance" id="balance" class="form-control" value="<?php
+                                                            echo $this->view->escapeHtml($values['balance']); ?>" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="note">Notes</label>
+                                                            <textarea name="note" id="note" class="form-control" placeholder="Notes"><?php 
+                                                            echo $this->view->escapeHtml($values['note']); ?></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="button" id="confirm-submit" class="btn btn-primary" title="Submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

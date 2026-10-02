@@ -1,0 +1,126 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+$status = ['Pending', 'Confirmed'];
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Voucher
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-auction-filter" class="form-horizontal" id="form-auction-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('voucher/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">Date &raquo; </div>
+                                                    <input type="text" name="date" id="auction-date" class="form-control single-date-clearable" data-min-date="01/01/2020" readonly="readonly" value="<?php
+                                                    echo $filters->getEscapedValue('date'); ?>">
+                                                    <div class="input-group-addon"> &laquo; [<a href="javascript:;" class="clear-date" data-target="auction-date" title="Clear Date">Clear</a>]</div>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Member &raquo; </div>
+                                                    <select name="member" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('member'), $filters->getValue('member')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Source &raquo; </div>
+                                                     <select name="source"  class="form-control" title="Source">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('source'), $filters->getValue('source')); ?>
+
+                                                            </select>
+                                                    <!--div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Deduction Bill &raquo; </div>
+                                                    <select name="deduction" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->getVariable('deductionOptions'), $filters->getValue('deduction')); ?>
+                                                    
+                                                    </select-->
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-6">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">Voucher No</th>
+                                                        <th class="cursor-pointer">Date</th>
+                                                        <th class="cursor-pointer">Member /Auctioneer Name/ Non Member</th>
+                                                        <th class="cursor-pointer">Narration</th>
+                                                         <th class="cursor-pointer">Cash/Bank</th>
+                                                         <th class="cursor-pointer">Total</th>
+                                                        <th>
+                                                            Actions
+                                                            <input type="hidden" id="summary-url" value="<?php echo $this->view->actionUrl('voucher/summary/id') ?>/">
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): ?>
+                                                        <?php if($row->status) { ?>
+                                                        <tr>
+                                                        <td><?php echo $row->transNo; ?></td>
+                                                        <td><?php echo $this->view->datepicker($row->transDate); ?></td>
+                                                        <td><?php echo $this->view->lookup('member', $row->member_id); ?><?php echo $row->non_member; ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->particulars); ?></td>
+                                                       <td><?php  if($row->transBy) { echo "Bank"; } else { echo "Cash";} ?></td>
+                                                        <td><?php echo $row->amount; ?></td>
+                                                        <td>
+                                                            <!--a class="btn btn-outline-info btn-sm mb-1 quick-view" href="javascript:;" title="View Summary" data-id="<?php
+                                                            echo $row->id; ?>">Summary</a-->
+                                                            <a class="btn btn-outline-primary btn-sm mb-1" href="<?php 
+                                                            echo $this->view->actionUrl('voucher/view/id/' . $row->id); ?>" title="View Receipt">View</a>
+                                                           
+                                                        </td>                                                        
+                                                    </tr>
+                                                    <?php } else { ?>        
+                                                    <tr style="color:red;">
+                                                         <td><?php echo $row->transNo; ?></td>
+                                                        <td><?php echo $this->view->datepicker($row->transDate); ?></td>
+                                                        <td><?php echo $this->view->lookup('member', $row->member_id); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->particulars); ?></td>
+                                                       <td><?php  if($row->transBy) { echo "Bank"; } else { echo "Cash";} ?></td>
+                                                        <td><?php echo $row->amount; ?></td>
+                                                        <td>
+                                                            <!--a class="btn btn-outline-info btn-sm mb-1 quick-view" href="javascript:;" title="View Summary" data-id="<?php
+                                                            echo $row->id; ?>">Summary</a-->
+                                                            <a class="btn btn-outline-primary btn-sm mb-1" href="<?php 
+                                                            echo $this->view->actionUrl('voucher/view/id/' . $row->id); ?>" title="View Receipt">View</a>
+                                                           
+                                                        </td>                                                        
+                                                    </tr>
+                                                    <?php } ?>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

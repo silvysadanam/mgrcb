@@ -1,0 +1,21 @@
+[19:04:51 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[19:11:10 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[19:13:27 IST] ERROR [2]: \lib\shared\Shared\src\Model\PairModel.php line 323 : Undefined property: Shared\Model\PairModel::$_memberModel
+[19:13:27 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 323 : Call to a member function getSql() on null
+[19:14:04 IST] EXCEPTION: \lib\shared\Shared\src\Model\PairModel.php on line 49 : Class "Shared\Model\Member" not found
+[19:32:22 IST] ERROR [2]: \lib\module\Backend\src\Controller\TransactionController.php line 280 : Undefined property: Backend\Controller\TransactionController::$_branch
+[19:32:22 IST] EXCEPTION: \lib\module\Backend\src\Controller\TransactionController.php on line 280 : Call to a member function isAuctioneer() on null
+[19:41:03 IST] ERROR [2]: \lib\module\Backend\src\Controller\TransactionController.php line 280 : Undefined property: Backend\Controller\TransactionController::$_branch
+[19:41:03 IST] EXCEPTION: \lib\module\Backend\src\Controller\TransactionController.php on line 280 : Call to a member function isAuctioneer() on null
+[19:41:04 IST] ERROR [2]: \lib\module\Backend\src\Controller\TransactionController.php line 280 : Undefined property: Backend\Controller\TransactionController::$_branch
+[19:41:04 IST] EXCEPTION: \lib\module\Backend\src\Controller\TransactionController.php on line 280 : Call to a member function isAuctioneer() on null
+[19:43:36 IST] ERROR [2]: \lib\module\Backend\src\Controller\TransactionController.php line 280 : Undefined property: Backend\Controller\TransactionController::$_branch
+[19:43:36 IST] EXCEPTION: \lib\module\Backend\src\Controller\TransactionController.php on line 280 : Call to a member function isAuctioneer() on null
+[20:08:25 IST] ERROR [2]: \lib\module\Backend\src\Controller\TransactionController.php line 280 : Undefined property: Backend\Controller\TransactionController::$_branch
+[20:08:25 IST] EXCEPTION: \lib\module\Backend\src\Controller\TransactionController.php on line 280 : Call to a member function isAuctioneer() on null
+[20:08:58 IST] ERROR [2]: \lib\module\Backend\src\Controller\TransactionController.php line 280 : Undefined property: Backend\Controller\TransactionController::$_branch
+[20:08:58 IST] EXCEPTION: \lib\module\Backend\src\Controller\TransactionController.php on line 280 : Call to a member function isAuctioneer() on null
+[20:09:40 IST] ERROR [2]: \lib\module\Backend\src\Controller\TransactionController.php line 273 : Undefined property: Backend\Controller\TransactionController::$_branch
+[20:09:40 IST] EXCEPTION: \lib\module\Backend\src\Controller\TransactionController.php on line 273 : Call to a member function isMember() on null
+[20:11:34 IST] ERROR [2]: \lib\module\Backend\src\Controller\VoucherController.php line 273 : Undefined property: Backend\Controller\VoucherController::$_branch
+[20:11:34 IST] EXCEPTION: \lib\module\Backend\src\Controller\VoucherController.php on line 273 : Call to a member function isMember() on null

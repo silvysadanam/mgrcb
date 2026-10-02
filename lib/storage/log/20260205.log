@@ -1,0 +1,142 @@
+[16:06:02 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:06:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:06:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:06:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:10:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:55:24 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:55:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:17:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:17:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:18:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:18:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:25:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:25:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:28:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:29:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:30:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:31:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[18:27:01 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 138 : Undefined property: Branch\Controller\VoucherController::$_transModel
+[18:27:01 IST] EXCEPTION: \lib\module\Branch\src\Controller\VoucherController.php on line 138 : Call to a member function queryRows() on null
+[18:27:34 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.amount' in 'where clause'
+[18:27:47 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:28:43 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:40:02 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:42:01 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:42:18 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:42:57 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:05:18 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:06:11 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:06:41 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:06:53 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:07:18 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:07:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:07:51 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:08:06 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:08:14 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:09:21 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 137 : Attempt to read property "id" on bool
+[19:09:21 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `t`.`member_id` =  and `t`.`amount` = 5000.00' at line 1
+[19:09:59 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:10:11 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:10:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:10:42 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:13:50 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 94 : Undefined variable $headId
+[19:14:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:16:53 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:17:01 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageVoucher.php on line 290 : Unclosed '[' does not match ')'
+[19:17:07 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageVoucher.php on line 290 : Unclosed '[' does not match ')'
+[19:17:36 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 290 : Undefined array key "mfLoan"
+[19:18:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:18:12 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 291 : Undefined array key "mfLoan"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 298 : Undefined array key "mfLoan"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 453 : Undefined array key "transDate"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 457 : Undefined array key "particulars"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 310 : Undefined array key "ByTo"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 320 : Undefined array key "transDate"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 322 : Undefined array key "transDate"
+[19:18:52 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 320 : Undefined array key "non_member"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 320 : Undefined array key "particulars"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 324 : Undefined array key "particulars"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 320 : Undefined array key "transBy"
+[19:18:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 324 : Undefined array key "transBy"
+[19:18:52 IST] ERROR [2]: \lib\web\Web\src\Mvc\View.php line 119 : Cannot modify header information - headers already sent by (output started at C:\laragon\www\fws_main\lib\web\Web\src\Core\ErrorManager.php:125)
+[19:20:02 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 298 : Undefined array key "mfLoan"
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 453 : Undefined array key "transDate"
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 457 : Undefined array key "particulars"
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 310 : Undefined array key "ByTo"
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 320 : Undefined array key "transDate"
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 322 : Undefined array key "transDate"
+[19:20:10 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 320 : Undefined array key "non_member"
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 320 : Undefined array key "particulars"
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 324 : Undefined array key "particulars"
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 320 : Undefined array key "transBy"
+[19:20:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 324 : Undefined array key "transBy"
+[19:20:10 IST] ERROR [2]: \lib\web\Web\src\Mvc\View.php line 119 : Cannot modify header information - headers already sent by (output started at C:\laragon\www\fws_main\lib\web\Web\src\Core\ErrorManager.php:125)
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 454 : Undefined array key "transDate"
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 458 : Undefined array key "particulars"
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 306 : Undefined array key "mfLoan"
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 311 : Undefined array key "ByTo"
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 321 : Undefined array key "transDate"
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 323 : Undefined array key "transDate"
+[19:21:05 IST] ERROR [8192]: \lib\web\Web\src\Utility\DateHelper.php line 194 : DateTime::createFromFormat(): Passing null to parameter #2 ($datetime) of type string is deprecated
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 321 : Undefined array key "non_member"
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 321 : Undefined array key "particulars"
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 325 : Undefined array key "particulars"
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 321 : Undefined array key "transBy"
+[19:21:05 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 325 : Undefined array key "transBy"
+[19:21:05 IST] ERROR [2]: \lib\web\Web\src\Mvc\View.php line 119 : Cannot modify header information - headers already sent by (output started at C:\laragon\www\fws_main\lib\web\Web\src\Core\ErrorManager.php:125)
+[19:21:20 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 454 : Undefined array key "transDate"
+[19:21:20 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 458 : Undefined array key "particulars"
+[19:23:23 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 316 : Undefined property: stdClass::$mfLoan
+[19:24:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:24:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 316 : Undefined property: stdClass::$mfLoan
+[19:25:24 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:25:34 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 316 : Undefined property: stdClass::$mfLoan
+[19:26:20 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:26:25 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 316 : Undefined property: stdClass::$mfLoan
+[19:27:34 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 94 : Undefined variable $headId
+[19:27:40 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 316 : Undefined property: stdClass::$mfLoan
+[19:27:42 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 94 : Undefined variable $headId
+[19:27:47 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 316 : Undefined property: stdClass::$mfLoan
+[19:29:34 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:29:38 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 316 : Undefined property: stdClass::$mfLoan
+[19:29:49 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:29:55 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 316 : Undefined property: stdClass::$mfLoan
+[19:30:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:30:28 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 316 : Undefined property: stdClass::$mfLoan
+[19:30:28 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 322 : Undefined property: stdClass::$mfLoan
+[19:33:10 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageVoucher.php on line 304 : Unclosed '[' does not match ')'
+[19:33:40 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:38:31 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 369 : Undefined property: stdClass::$id
+[19:39:24 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 369 : Undefined property: stdClass::$id
+[19:40:45 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 370 : Undefined property: stdClass::$id
+[19:41:26 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageVoucher.php on line 374 : syntax error, unexpected token "catch", expecting "function" or "const"
+[19:45:00 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 369 : Undefined variable $currentId
+[19:45:00 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 369 : Undefined variable $currentId
+[19:45:00 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 369 : Undefined variable $currentId
+[19:46:38 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:47:11 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:48:49 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:49:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:49:39 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:49:47 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 324 : Undefined property: stdClass::$mfLoan
+[19:49:48 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 324 : Undefined property: stdClass::$mfLoan
+[19:49:55 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 324 : Undefined property: stdClass::$mfLoan
+[19:51:07 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:51:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[20:22:14 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:22:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:22:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[20:22:32 IST] ERROR [2]: \lib\module\Backend\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[20:29:32 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[20:29:44 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[20:36:08 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[20:36:22 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:46:40 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:53:38 IST] EXCEPTION: \lib\module\Branch\src\Controller\VoucherController.php on line 60 : Class "Branch\Controller\RPTransMemberDetails" not found
+[21:54:20 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:55:10 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:55:17 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[21:55:30 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId

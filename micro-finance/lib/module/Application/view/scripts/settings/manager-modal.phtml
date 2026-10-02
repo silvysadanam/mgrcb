@@ -1,0 +1,64 @@
+<?php
+
+?>
+
+        <form name="form-manager-modal" id="form-manager-modal" method="post" action="">
+            <div class="modal fade" id="modal-manager" tabindex="-1" role="dialog" aria-labelledby="myModalLabelManager" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelManager"> 
+                                Add Manager
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger" id="js-validation-error"></div>
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label for="fmc-id">FMC <span class="red">*</span></label>
+                                    <select id="fmc-id" class="form-control" title="FMC">
+                                        <option value="0">--select--</option>
+                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc')); ?>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="manager-name">Name <span class="red">*</span></label>
+                                    <input type="text" id="manager-name" class="form-control" value="" maxlength="30" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="manager-username">Username <span class="red">*</span></label>
+                                    <input type="text" id="manager-username" class="form-control" value="" maxlength="20" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <p class="help-block text-muted">
+                                       6 to 20 lowercase alpha-numeric characters
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="manager-password">Password <span class="red">*</span></label>
+                                    <input type="password" id="manager-password" class="form-control" value="" maxlength="20">
+                                </div>
+                                <div class="form-group">
+                                    <p class="help-block text-muted">
+                                        Password must contain 6 to 20 characters without space
+                                    </p>
+                                    <p class="help-block text-muted" id="edit-manager">
+                                        Password field is required if password is to be changed
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('settings/manage-manager'); ?>">
+                            <input type="hidden" id="manager-id" value="0">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

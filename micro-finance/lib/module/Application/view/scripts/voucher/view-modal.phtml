@@ -1,0 +1,114 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$transaction = $store->transaction();
+$bankOptions = $this->view->lookupStore('bank');
+?>
+
+        <form name="form-receipt-modal" id="form-receipt-modal" method="post" action="">
+            <div class="modal fade" id="modal-entry" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEntry" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelEntry"> 
+                                Add Entry
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="head_id">Head <span class="red">*</span></label>
+                                            <select id="head_id" class="form-control" title="Head">
+                                                <option value="0">--select--</option>
+                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('expenseHead')); ?>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="amount">Amount <span class="red">*</span></label>
+                                            <input type="number" id="amount" class="form-control" value="" placeholder="Amount" min="1" max="9999999" step=".01" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="entry-id" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <form name="form-voucher-modal" id="form-voucher-modal" method="post" action="">
+            <div class="modal fade" id="modal-voucher" tabindex="-1" role="dialog" aria-labelledby="myModalLabelVoucher" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelVoucher"> 
+                                Edit Voucher
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                         <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                     <div class="form-group">
+                                            <label class="label-control" for="receipt_date">Date <span class="red">*</span></label>
+                                            <input type="text" name="receipt_date" id="receipt_date" class="form-control single-date-max-today" data-min-date="01/01/2020"  placeholder="Receipt Date" maxlength="10" readonly="readonly">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                        <label class="label-control" for="non_member">Non Member</label>
+                                        <input type="text" name="non_member" id="non_member" class="form-control"  placeholder="Non Member" >
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                        <label class="label-control" for="non_member">By/To</label>
+                                         <select name="payment_type" class="form-control" title="Payment Type" id="payment_type" >
+                                        <option value="Cash" selected="selected">Cash</option>
+                                        <option value="Bank">Bank</option>
+                                      </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                        <label class="label-control" for="non_member">Payment Type</label>
+                                          <select name="bank_id" id="bank_id"  class="form-control" title="Bank">
+                                            <option value="0">--select--</option>
+                                            <?php echo $this->view->formHelper('select', $bankOptions, $headId); ?>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                         <div class="form-group">
+                                            <label class="label-control" for="note">Narration <span class="red">*</span></label>
+                                               <textarea name="note" id="note" required="required" class="form-control" placeholder="Narration"></textarea>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="entry-id" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

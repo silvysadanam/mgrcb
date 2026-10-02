@@ -1,0 +1,122 @@
+[19:00:28 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 123 : Undefined variable $form
+[19:00:28 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 123 : Call to a member function getValue() on null
+[19:02:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 123 : Undefined variable $form
+[19:02:04 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 123 : Call to a member function getValue() on null
+[19:02:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 123 : Undefined variable $form
+[19:02:07 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 123 : Call to a member function getValue() on null
+[19:02:16 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 63 : foreach() argument must be of type array|object, bool given
+[19:02:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:02:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:02:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:02:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:02:16 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:06:31 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 63 : foreach() argument must be of type array|object, bool given
+[19:06:31 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:06:31 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:06:31 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:06:31 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:06:31 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:28 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 63 : foreach() argument must be of type array|object, bool given
+[19:08:28 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:28 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:28 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:28 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:28 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:39 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 63 : foreach() argument must be of type array|object, bool given
+[19:08:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:08:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:11:43 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 63 : foreach() argument must be of type array|object, bool given
+[19:11:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:11:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:11:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:11:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:11:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:12:48 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 63 : foreach() argument must be of type array|object, bool given
+[19:12:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:12:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:12:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:12:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:12:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:13:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:13:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:13:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:13:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:13:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:14:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:14:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:14:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:14:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:14:58 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:24:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:24:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:24:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:24:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:24:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:28:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:28:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:28:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:28:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:28:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:29:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:29:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:29:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:29:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:29:02 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:31:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:31:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:31:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:31:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:31:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:51:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:51:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:51:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:51:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:51:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:56:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:56:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:56:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:56:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:56:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:57:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:57:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:57:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:57:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:57:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:59:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:59:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:59:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:59:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[19:59:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:00:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:00:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:00:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:00:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:00:05 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:01:26 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:01:26 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:01:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:01:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:01:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:01:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:01:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:01:31 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:01:31 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:07:16 IST] ERROR [2]: \lib\module\Backend\src\Controller\BeneficiaryController.php line 149 : Undefined variable $pairModel
+[20:07:16 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 149 : Call to a member function loanSource() on null
+[20:08:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:08:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:08:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:08:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:08:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:08:41 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:08:41 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[20:17:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:17:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:17:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:17:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:17:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[20:17:40 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[20:17:40 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found

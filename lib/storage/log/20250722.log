@@ -1,0 +1,41 @@
+[10:33:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:33:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:33:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:40:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:40:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:41:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:42:51 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:44:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:45:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:54:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:55:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[10:56:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:21:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:21:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:21:38 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:22:51 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:23:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:27:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\LedgerReport.php line 657 : Undefined array key "toBankPaymentTotal"
+[17:27:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\LedgerReport.php line 657 : Undefined array key "byBankPaymentTotal"
+[17:27:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\LedgerReport.php line 658 : Undefined array key "toBankPaymentTotal"
+[17:27:33 IST] ERROR [2]: \lib\module\Branch\src\Utility\LedgerReport.php line 659 : Undefined array key "byBankPaymentTotal"
+[17:27:33 IST] ERROR [8192]: \lib\module\Branch\src\Utility\LedgerReport.php line 748 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[17:27:33 IST] ERROR [8192]: \lib\module\Branch\src\Utility\LedgerReport.php line 752 : number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+[17:27:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:31:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:32:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:32:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:38:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:39:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:39:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:39:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:39:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:39:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:39:50 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:39:55 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:40:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:40:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:40:27 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[17:40:40 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column '0y' in 'where clause'
+[17:40:50 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[18:47:46 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId

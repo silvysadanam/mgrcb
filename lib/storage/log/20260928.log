@@ -1,0 +1,191 @@
+[14:59:34 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[14:59:34 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[14:59:34 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[14:59:34 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[14:59:34 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:06:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:00 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:07:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:33 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[15:13:33 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[15:13:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[15:13:37 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[15:13:37 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[21:35:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:35:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:35:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:35:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:35:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:35:26 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[21:35:26 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[21:37:26 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[21:37:26 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[21:41:45 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:41:45 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:41:45 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:41:45 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:41:45 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:41:50 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[21:41:50 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[21:42:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:42:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:42:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:42:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:42:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:45:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:45:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:45:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:45:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[21:45:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:04:44 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:06 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[22:06:49 IST] EXCEPTION: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php on line 126 : array_map(): Argument #2 ($array) must be of type array, string given
+[22:13:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 11 : Undefined property: stdClass::$disablity
+[22:15:30 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 123 : Undefined variable $form
+[22:15:30 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 123 : Call to a member function getValue() on null
+[22:16:27 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 123 : Undefined variable $form
+[22:16:27 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 123 : Call to a member function getValue() on null
+[22:16:47 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 123 : Undefined variable $form
+[22:16:47 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 123 : Call to a member function getValue() on null
+[22:19:20 IST] ERROR [2]: \lib\module\Backend\src\Controller\BeneficiaryController.php line 238 : Undefined variable $form
+[22:19:20 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 238 : Call to a member function populate() on null
+[22:19:39 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:19:39 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:22:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:22:35 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:25:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:25:37 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:26:59 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:26:59 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:27:01 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:27:01 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:27:01 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:27:01 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:27:34 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:27:34 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:27:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:27:43 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:27:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:27:49 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:30:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:30:04 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:30:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:30:35 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:32:26 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:32:26 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:32:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:32:40 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:32:52 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:32:52 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:32:53 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[22:32:53 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[22:32:57 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:32:57 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:37:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:37:22 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:38:36 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:38:36 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:42:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:42:42 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:42:53 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:42:53 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:45:51 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:45:51 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:46:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:46:40 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:48:49 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:48:49 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:51:27 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:51:27 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:51:55 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:51:55 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:52:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:52:48 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:52:54 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:52:54 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:53:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:53:43 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:53:45 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:53:45 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:53:46 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:53:46 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:54:21 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:54:21 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:54:22 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:54:22 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:54:32 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:54:32 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:54:45 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:54:45 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:55:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:55:11 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:55:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:55:48 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:56:31 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:56:31 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:56:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:56:43 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:59:19 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:59:19 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:59:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:59:25 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[22:59:55 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[22:59:55 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[23:02:53 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml line 124 : Undefined variable $form
+[23:02:53 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\change-modal.phtml on line 124 : Call to a member function getValue() on null
+[23:06:50 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 253 : Call to undefined method Shared\Utility\ManageBeneficiary::registerPairs()
+[23:06:51 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 253 : Call to undefined method Shared\Utility\ManageBeneficiary::registerPairs()
+[23:07:09 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 253 : Call to undefined method Shared\Utility\ManageBeneficiary::registerPairs()
+[23:07:13 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 253 : Call to undefined method Shared\Utility\ManageBeneficiary::registerPairs()
+[23:08:06 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 253 : Call to undefined method Shared\Utility\ManageBeneficiary::registerPairs()
+[23:11:02 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1390 : Class "Shared\Utility\PairModel" not found
+[23:11:07 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1390 : Class "Shared\Utility\PairModel" not found
+[23:11:37 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1394 : Class "Shared\Utility\LookupStore" not found
+[23:11:41 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1394 : Class "Shared\Utility\LookupStore" not found
+[23:12:09 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageBeneficiary.php line 255 : Undefined property: Shared\Utility\ManageBeneficiary::$view
+[23:12:09 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 255 : Call to a member function lookupStore() on null
+[23:13:35 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageBeneficiary.php on line 1394 : Class "Shared\Utility\LookupStore" not found
+[23:19:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[23:19:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[23:19:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[23:19:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count
+[23:19:50 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 598 : Undefined variable $count

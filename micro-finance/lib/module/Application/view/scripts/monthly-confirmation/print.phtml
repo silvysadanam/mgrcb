@@ -1,0 +1,113 @@
+<?php
+
+$list = $this->view->getVariable('list');
+$fmcList = $this->view->lookupStore('fmc');
+$fmcTotal = $this->view->getVariable('fmcTotal');
+$grandTotal = $this->view->getVariable('grandTotal');
+$source = $this->view->getVariable('source');
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title><?php echo $source; ?> Loan Collection and Confirmation details for the month of <?php
+        echo $this->view->getVariable('month'); ?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <?php $this->block('print-view'); ?>
+        
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="0" border="0" style="margin:10px 10px 5px 0;" width="700">
+            <thead>
+                <tr>
+                    <th class="main-heading center">
+                        FISHERMEN WELFARE SOCIETY - KOLLAM
+                    </th>
+                </tr>
+                <tr>
+                    <th class="main-heading center">
+                        <?php echo $source; ?> Loan Collection and Confirmation details for the month of <?php
+                        echo $this->view->getVariable('month'); ?>
+                        
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                            <?php foreach ($fmcList as $fmcId => $fmcName): ?>
+                            <?php if (isset($list[$fmcId])): ?>
+                            <?php $this->view->counter(0); ?>
+                            <tr>
+                                <td colspan="9" class="bold">FMC <?php echo $this->view->escapeHtml($fmcName); ?></td>
+                            </tr>
+                            <tr>
+                                <td class="center bold" rowspan="2">Sl No</td>
+                                <td rowspan="2" class="bold">Name</td>
+                                <td rowspan="2" class="bold">Loan No</td>
+                                <td rowspan="2" class="bold">Type</td>
+                                <td rowspan="2" class="bold">Opening</td>
+                                <td colspan="3" class="center bold">Collection</td>
+                                <td rowspan="2" class="bold">Current Principal Balance</td>
+                                <td rowspan="2" class="bold">Current Principal + Interest Balance</td>
+                            </tr>
+                            <tr>
+                                <td class="bold">Principal</td>
+                                <td class="bold">Interest</td>
+                                <td class="bold">Principal + Interest</td>
+                            </tr>
+                            <?php foreach ($list[$fmcId] as $row): ?>
+
+                            <tr>
+                                <td class="center"><?php echo $this->view->counter(); ?></td>
+                                <td><?php echo $this->view->escapeHtml($row['name']); ?></td>
+                                <td><?php echo $this->view->escapeHtml($row['account_number']); ?></td>
+                                <td><?php echo $this->view->lookup('type', $row['loan_type_id']); ?></td>
+                                <td class="right"><?php echo $this->view->integer($row['opening']); ?></td>
+                                <td class="right"><?php echo $this->view->integer($row['principal']); ?></td>
+                                <td class="right"><?php echo $this->view->integer($row['interest']); ?></td>
+                                <td class="right"><?php echo $this->view->integer($row['total']); ?></td>
+                                <td class="right"><?php echo $this->view->integer($row['balance']); ?></td>
+                                <td class="right"><?php echo $this->view->integer($row['actual']); ?></td>
+                            </tr>
+                            <?php endforeach; ?>
+                            
+                            <tr>
+                                <td colspan="4" class="center">Total</td>
+                                <td class="right bold"><?php echo $this->view->integer($fmcTotal[$fmcId]['opening']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($fmcTotal[$fmcId]['principal']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($fmcTotal[$fmcId]['interest']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($fmcTotal[$fmcId]['total']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($fmcTotal[$fmcId]['balance']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($fmcTotal[$fmcId]['actual']); ?></td>
+                            </tr>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                            
+                            <tr>
+                                <td colspan="10">&nbsp;</td>
+                            <tr>
+                            <tr>
+                                <td class="center bold" colspan="4">
+                                    Grand Total
+                                </td>
+                                <td class="right bold"><?php echo $this->view->integer($grandTotal['opening']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($grandTotal['principal']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($grandTotal['interest']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($grandTotal['total']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($grandTotal['balance']); ?></td>
+                                <td class="right bold"><?php echo $this->view->integer($grandTotal['actual']); ?></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>
+
+                
+            

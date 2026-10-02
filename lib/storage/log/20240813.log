@@ -1,0 +1,8 @@
+[10:59:50 IST] ERROR [2]: /lib/module/Application/view/layouts/index.phtml line 19 : Undefined array key "branch"
+[10:59:50 IST] EXCEPTION: /lib/module/Application/view/layouts/index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[10:59:50 IST] ERROR [2]: /lib/module/Application/view/layouts/index.phtml line 19 : Undefined array key "branch"
+[10:59:50 IST] EXCEPTION: /lib/module/Application/view/layouts/index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:54:05 IST] ERROR [2]: /lib/module/Application/view/layouts/index.phtml line 19 : Undefined array key "branch"
+[14:54:05 IST] EXCEPTION: /lib/module/Application/view/layouts/index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[14:54:05 IST] ERROR [2]: /lib/module/Application/view/layouts/index.phtml line 19 : Undefined array key "branch"
+[14:54:05 IST] EXCEPTION: /lib/module/Application/view/layouts/index.phtml on line 23 : Class "Shared\Constant\UserType" not found

@@ -1,0 +1,61 @@
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style media="all">
+            html {
+                overflow: auto;
+            }
+            body {
+                font-family: "Calibri", sans-serif;
+                font-size: 10pt;
+                text-align: left;
+                color: black;
+            }
+            thead th {
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            thead th.center, tbody td.center, tfoot th.center {
+                text-align: center;
+            }
+            thead th.right, tbody td.right, tfoot th.right {
+                text-align: right;
+            }
+            th.main-heading {
+                font-size: 13pt;
+            }
+            tfoot th {
+                font-weight: bold;
+            }
+            tbody tr td {
+                white-space: nowrap;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            span.dotted {
+                border-bottom: 1px dotted;
+            }
+            p#print-button {
+                margin: 10px 0px 10px 5px;
+            }
+            p#print-button button {
+                cursor: pointer;
+                padding: 5px 15px 5px 15px;
+            }
+            .malayalam {
+                font-size: 8pt;
+            }
+            
+            @media print {
+                @page {
+                  size: A5 portrait;
+                  margin: auto;
+                }
+                p#print-button {
+                    display: none;
+                }
+                table {
+                  page-break-inside: avoid;
+                }
+            }
+        </style>

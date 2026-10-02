@@ -1,0 +1,147 @@
+[13:30:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:30:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:30:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:30:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:30:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:31:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:31:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:31:21 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:31:24 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:31:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:31:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:31:37 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:31:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:32:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:32:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:32:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:33:00 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:33:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:33:16 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:33:29 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:33:31 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:33:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:33:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:33:46 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:33:51 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:35:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:41:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:41:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:53:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[13:53:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:01:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:01:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:01:43 IST] EXCEPTION: \lib\module\Branch\src\Controller\VoucherController.php on line 61 : Call to undefined method Branch\Controller\VoucherController::getAdminLogin()
+[14:02:44 IST] EXCEPTION: \lib\module\Branch\src\Controller\VoucherController.php on line 61 : Call to undefined method Branch\Controller\VoucherController::getAdminLogin()
+[14:02:46 IST] EXCEPTION: \lib\module\Branch\src\Controller\VoucherController.php on line 61 : Call to undefined method Branch\Controller\VoucherController::getAdminLogin()
+[14:03:17 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 73 : Undefined property: Branch\Controller\VoucherController::$_session
+[14:03:17 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 73 : Trying to access array offset on value of type null
+[14:06:43 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:06:46 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:08:57 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:08:58 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:46:57 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:47:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:47:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:51:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:59:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[14:59:22 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:09:24 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:09:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:09:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:13:23 IST] EXCEPTION: \lib\module\Branch\src\Controller\ImpersonateController.php on line 53 : Call to undefined method Branch\Controller\ImpersonateController::_redirect()
+[15:13:29 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:19:53 IST] EXCEPTION: \lib\module\Branch\src\Controller\ImpersonateController.php on line 53 : Call to undefined method Branch\Controller\ImpersonateController::_redirect()
+[15:19:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:22:53 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:26:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:26:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:34:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:34:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:36:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:36:55 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:44:01 IST] EXCEPTION: \lib\module\Branch\src\Controller\ImpersonateController.php on line 53 : Call to undefined method Branch\Controller\ImpersonateController::_redirect()
+[15:44:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:44:08 IST] EXCEPTION: \lib\module\Branch\src\Controller\VoucherController.php on line 61 : Call to undefined method Branch\Controller\VoucherController::getAdminLogin()
+[15:44:40 IST] ERROR [2]: \lib\web\Web\src\Mvc\ActionController.php line 70 : Undefined property: Branch\Controller\IndexController::$_session
+[15:45:02 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:46:08 IST] EXCEPTION: \lib\web\Web\src\Mvc\ActionController.php on line 70 : Cannot use object of type Web\Mvc\SessionManager as array
+[15:46:27 IST] ERROR [2]: \lib\web\Web\src\Mvc\ActionController.php line 70 : Undefined property: Web\Mvc\SessionManager::$backend
+[15:48:44 IST] ERROR [2]: \lib\web\Web\src\Mvc\ActionController.php line 70 : Undefined property: Branch\Controller\IndexController::$_session
+[15:48:44 IST] ERROR [2]: \lib\web\Web\src\Mvc\ActionController.php line 70 : Attempt to read property "_activeValidators" on null
+[15:48:44 IST] ERROR [2]: \lib\web\Web\src\Mvc\ActionController.php line 70 : Trying to access array offset on value of type null
+[15:48:44 IST] ERROR [2]: \lib\web\Web\src\Mvc\ActionController.php line 70 : Trying to access array offset on value of type null
+[15:48:55 IST] EXCEPTION: \lib\web\Web\src\Mvc\ActionController.php on line 70 : Cannot access private property Web\Mvc\SessionManager::$_activeValidators
+[15:55:31 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:56:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[15:57:00 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:02:08 IST] EXCEPTION: \lib\web\Web\src\Mvc\ActionController.php on line 71 : Call to undefined method Web\Mvc\SessionManager::getBackendActive()
+[16:02:11 IST] EXCEPTION: \lib\web\Web\src\Mvc\ActionController.php on line 71 : Call to undefined method Web\Mvc\SessionManager::getBackendActive()
+[16:02:13 IST] EXCEPTION: \lib\web\Web\src\Mvc\ActionController.php on line 71 : Call to undefined method Web\Mvc\SessionManager::getBackendActive()
+[16:02:13 IST] EXCEPTION: \lib\web\Web\src\Mvc\ActionController.php on line 71 : Call to undefined method Web\Mvc\SessionManager::getBackendActive()
+[16:02:14 IST] EXCEPTION: \lib\web\Web\src\Mvc\ActionController.php on line 71 : Call to undefined method Web\Mvc\SessionManager::getBackendActive()
+[16:02:16 IST] EXCEPTION: \lib\web\Web\src\Mvc\ActionController.php on line 71 : Call to undefined method Web\Mvc\SessionManager::getBackendActive()
+[16:02:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:03:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:05:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:06:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:06:16 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:08:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:08:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:08:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:13:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:19:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:26:06 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:26:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:26:14 IST] ERROR [2]: \lib\module\Branch\src\Controller\VoucherController.php line 61 : Undefined property: Branch\Controller\VoucherController::$_session
+[16:27:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:27:02 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:28:51 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:28:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:28:55 IST] EXCEPTION: \lib\web\Web\src\Database\Adapter.php on line 43 : Adapter - " : Web\Database\Adapter\AdminAdapter" not found
+[16:30:22 IST] EXCEPTION: \lib\module\Branch\src\Controller\ImpersonateController.php on line 53 : Call to undefined method Branch\Controller\ImpersonateController::_redirect()
+[16:30:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:30:50 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:31:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:31:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:31:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:32:00 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:32:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:32:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:33:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:33:02 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:33:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:33:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:34:16 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:34:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:36:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:36:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:37:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:37:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:38:45 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:38:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:39:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:39:08 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:41:43 IST] EXCEPTION: \lib\module\Branch\src\Controller\ImpersonateController.php on line 53 : Call to undefined method Branch\Controller\ImpersonateController::_redirect()
+[16:41:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:42:29 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:42:31 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 40 : Undefined property: Branch\Controller\ImpersonateController::$loginType
+[16:42:31 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 41 : Undefined variable $loginType
+[16:42:31 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 40 : Undefined property: Branch\Controller\IndexController::$loginType
+[16:42:31 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 41 : Undefined variable $loginType
+[16:42:44 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 42 : Undefined variable $loginType
+[16:42:46 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:42:48 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 42 : Undefined variable $loginType
+[16:42:48 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 42 : Undefined variable $loginType
+[16:47:14 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 40 : Undefined property: Branch\Controller\LogoutController::$loginType
+[16:47:14 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 40 : Undefined property: Branch\Controller\IndexController::$loginType
+[16:48:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[16:48:29 IST] ERROR [2]: \lib\module\Branch\src\BranchController.php line 40 : Undefined property: Branch\Controller\IndexController::$loginType
+[17:01:37 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:01:53 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[17:01:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:08:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:08:47 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:09:16 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:09:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:10:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans
+[21:10:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 130 : Undefined variable $trans

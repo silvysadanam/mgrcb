@@ -1,0 +1,136 @@
+<?php
+
+$notification = $this->view->getVariable('notification');
+$comments = $this->view->getVariable('comments');
+$creator = $this->view->getVariable('creator');
+
+$form = $this->getForm();
+
+?>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">View </h4>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body card-dashboard">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Timestamp</td>
+                                                        <td><?php echo $this->view->userTime($notification->created_at); ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>FMC</td>
+                                                        <td><?php echo $this->view->lookup('fmc', $notification->fmc_id); ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Subject</td>
+                                                        <td><?php echo $this->view->escapeHtml($notification->subject); ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Message</td>
+                                                        <td><?php echo $this->view->textareaHtml($notification->message); ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Originator</td>
+                                                        <td>
+                                                            <?php echo $this->view->escapeHtml($creator->name); ?>
+                                                            
+                                                            [<?php echo $this->view->managerType($creator->manager_type); ?>]
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Actions</td>
+                                                        <td>
+                                                            <?php if ($notification->reference_id > 0): ?>
+                                                            <?php if (1 == $notification->reference_type): ?>
+                                                            
+                                                            <a class="btn btn-sm btn-outline-info mr-1" title="View Loan" href="<?php
+                                                            echo $this->view->actionUrl('modify-dcb/view/id/' . $notification->reference_id); ?>"><i class="ft-eye"></i> View Loan</a>
+                                                            <?php elseif (2 == $notification->reference_type): ?>
+                                                            
+                                                            <a class="btn btn-sm btn-outline-info mr-1" title="View Loan Request" href="<?php
+                                                            echo $this->view->actionUrl('loan-request/view/id/' . $notification->reference_id); ?>"><i class="ft-eye"></i> View Loan Request</a>
+                                                            <?php endif; ?>
+                                                            <?php endif; ?>
+                                                            
+                                                            <a class="btn btn-sm btn-outline-danger confirm-remove" href="<?php 
+                                                            echo $this->view->actionUrl('notification/remove/id/' . $notification->id); ?>" data-confirm="Notification" title="Delete"><i class="ft-delete"></i> Delete</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Comments </h4>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body card-dashboard">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <form class="form-horizontal" name="form-comment" action="" method="post">
+                                                    <div class="form-body">
+                                                        <div class="form-group">
+                                                            <label for="comments">New comment</label>
+                                                            <textarea name="comments" id="comments" class="form-control" required="required"></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <?php echo $form->getCsrf(); ?>
+                                                
+                                                            <button type="submit" class="btn btn-primary" title="Submit">Save comment</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <?php if (! empty($comments)): ?>
+                                        
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <table class="table table-striped table-bordered">
+                                                    <thead class="bg-teal white">
+                                                        <tr>
+                                                            <th>Timestamp</th>
+                                                            <th>Comment</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($comments as $row): ?>
+
+                                                        <tr>
+                                                            <td><?php echo $this->view->userTime($row->created_at); ?></td>
+                                                            <td><?php echo $this->view->textareaHtml($row->comments); ?></td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <?php else: ?>
+                                            
+                                            <div class="alert alert-info">
+                                                No comments added
+                                            </div>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

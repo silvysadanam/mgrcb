@@ -1,0 +1,236 @@
+<?php
+$yesOrNo = ['No', 'Yes'];
+
+?>
+
+        <form name="form-member-modal" id="form-member-modal" method="post" action="">
+            <div class="modal fade" id="modal-member" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabel1"> 
+                                Edit Member details
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-6">                                        
+                                        <div class="form-group">
+                                            <label for="member_type_id">Member Type <span class="red">*</span></label>
+                                            <select id="member_type_id" class="form-control" title="Member Type">
+                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('type')); ?>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="name">Name <span class="red">*</span></label>
+                                            <input type="text" id="name" class="form-control" value="" placeholder="Name" maxlength="100" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="code">Code <span class="red">*</span></label>
+                                            <input type="text" id="code" class="form-control" value="" placeholder="Code" required="required" maxlength="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="mobile">Mobile</label>
+                                            <input type="text" id="mobile" class="form-control" value="" placeholder="Mobile" maxlength="10">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="aadhar_number">Aadhar Number</label>
+                                            <input type="text" id="aadhar_number" class="form-control" value="" placeholder="Aadhar Number" maxlength="14">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="pan_number">PAN Number</label>
+                                            <input type="text" id="pan_number" class="form-control" value="" placeholder="Pan Number" maxlength="14">
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <label class="label-control" for="location">Location</label>
+                                            <input type="text" id="location" class="form-control" value="" placeholder="Location">
+                                        </div>
+                                          <div class="form-group">
+                                            <label class="label-control" for="approved_date">Approved Date</label>
+                                            <input type="text" name="approved_date" id="approved_date" class="form-control single-date-max-today" data-min-date="01/01/2020"  placeholder="Receipt Date" maxlength="10" readonly="readonly">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       
+                                       <div class="form-group">
+                                        <label for="membership_type_id">Membership Type <span class="red"></span></label>
+                                        <select id="membership_type_id" class="form-control" title="Membership Type">
+                                            <?php echo $this->view->formHelper('select', $this->view->lookupStore('mtype')); ?>
+
+                                        </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="parish">Name of the Orthodox Parish of which you are a member</label>
+                                             <input type="text" id="parish" class="form-control" value="" placeholder="Parish">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="address">Address</label>
+                                            <textarea id="address" class="form-control" placeholder="Address"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="email">Email ID</label>
+                                            <input type="text" id="email" class="form-control" value="" placeholder="Email ID">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="landline">Land line with STD Code</label>
+                                            <input type="text" id="landline" class="form-control" value="" placeholder="Landline" maxlength="30">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="whatsapp">WhatsApp</label>
+                                            <input type="text" id="whatsapp" class="form-control" value="" placeholder="WhatsApp" maxlength="30">
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="label-control" for="membership_fee">Membership Fee</label>
+                                            <input type="text" id="membership_fee" class="form-control" value="" placeholder="Membership Fee" maxlength="50">
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="label-control" for="date_of_birth">Date of Birth</label>
+                                            <input type="text" name="date_of_birth" id="date_of_birth" class="form-control" value="" placeholder="Date of Birth" maxlength="10" readonly="readonly">
+                                            <span>[<a href="javascript:;" id="clear-date-of-birth" title="Clear">Clear</a>]</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="start-date" value="<?php echo $this->view->getVariable('startDate'); ?>">
+                            <input type="hidden" id="end-date" value="<?php echo $this->view->getVariable('endDate'); ?>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        
+        
+
+        <form name="form-document-modal" id="form-document-modal" method="post" action="" enctype="multipart/form-data">
+            <div class="modal fade" id="modal-document" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabel4"> 
+                                Add Document
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="document_type_id">Document Type <span class="red">*</span></label>
+                                            <select id="document_type_id" class="form-control" title="Type">
+                                                <option value="0">--select--</option>
+                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('documentType')); ?>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="description">Description</label>
+                                            <input type="text" id="description" class="form-control" value="" placeholder="Description" maxlength="50">
+                                        </div>
+                                        <div class="form-group" id="document-field">
+                                            <label class="label-control" for="document_file">Upload file</label>
+                                            <input type="file" id="document_file" class="form-control" accept=".jpg,.pdf">
+                                            <p class="help-block">.jpg OR .pdf files only</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="document-id" value="0">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <form name="form-photo-modal" id="form-photo-modal" method="post" action="" enctype="multipart/form-data">
+            <div class="modal fade" id="modal-photo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabel5"> 
+                                Upload Photo
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="photo_file">Upload file <span class="red">*</span></label>
+                                            <input type="file" id="photo_file" class="form-control" accept=".jpg" required="true">
+                                            <p class="help-block">.jpg files only</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form name="form-disable-modal" id="form-disable-modal" method="post" action="">
+            <div class="modal fade" id="modal-disable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabel8"> 
+                                Disable Member
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="inactive_date">Inactive from <span class="red">*</span></label>
+                                            <input type="text" id="inactive_date" class="form-control single-date-max-today" value="" readonly="readonly">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="inactive_note">Notes <span class="red">*</span></label>
+                                            <input type="text" id="inactive_note" class="form-control" value="" placeholder="Reason" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

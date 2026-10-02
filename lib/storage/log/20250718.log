@@ -1,0 +1,6 @@
+[18:17:50 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[18:17:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[18:31:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[18:32:13 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[18:32:20 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 127 : Undefined variable $trans
+[18:32:20 IST] ERROR [2]: \lib\module\Backend\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId

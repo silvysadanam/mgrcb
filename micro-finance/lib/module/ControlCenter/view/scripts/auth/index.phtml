@@ -1,0 +1,29 @@
+<?php
+
+$form = $this->getForm();
+$captcha = $form->captcha();
+
+?><!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Control Center Authentication</title>
+    </head>
+    <body>
+        <form action="" method="post">
+            <p><input type="text" name="passcode" required="required" maxlength="100"></p>
+            
+            <p>
+                <?php echo $captcha->getExpression(); ?>
+                <?php echo $captcha->getChallenge(); ?>
+                <input type="text" class="form-control round" name="<?php 
+                echo $captcha->getVerificationField(); ?>" placeholder="?" required="required" maxlength="10">
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+                <?php echo $form->getCsrf(); ?>
+            
+            </p>
+        </form>
+    </body>
+</html>

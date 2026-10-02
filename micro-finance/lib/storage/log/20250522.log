@@ -1,0 +1,109 @@
+[10:28:39 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:28:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:28:54 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:28:58 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:30:01 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 158 : Undefined array key "non_member"
+[10:30:01 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:36:24 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:36:31 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:36:34 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:37:34 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:37:42 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:37:47 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:38:12 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:38:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:40:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:40:41 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:40:58 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:55:44 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:55:54 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:55:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:55:57 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[20:17:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:17:28 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:17:28 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 176 : Undefined variable $headId
+[20:18:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:19:47 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:20:09 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:20:12 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:20:21 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:20:26 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 679 : Undefined property: Application\Utility\LoanStore::$_formValues
+[20:20:26 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 679 : Trying to access array offset on value of type null
+[20:20:30 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 679 : Undefined property: Application\Utility\LoanStore::$_formValues
+[20:20:30 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 679 : Trying to access array offset on value of type null
+[20:20:42 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 679 : Undefined property: Application\Utility\LoanStore::$_formValues
+[20:20:42 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 679 : Trying to access array offset on value of type null
+[20:21:58 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:23:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:23:41 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:23:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:23:43 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 176 : Undefined variable $headId
+[20:24:17 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:24:29 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:24:32 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:24:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:24:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:31:02 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:31:11 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:31:13 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:31:13 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 176 : Undefined variable $headId
+[20:33:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:33:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:33:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:33:55 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:33:59 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:34:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:34:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:34:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:34:54 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:36:33 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:37:30 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:37:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:37:48 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 158 : Undefined array key "non_member"
+[20:37:48 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:38:49 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:39:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:39:04 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[20:39:44 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 217 : Undefined variable $trans
+[20:39:44 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 217 : Call to a member function generateVoucher() on null
+[20:40:43 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 411 : Undefined array key "loan_amount"
+[20:40:43 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 412 : Undefined array key "interest_rate"
+[20:40:43 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 413 : Undefined array key "loan_date"
+[20:40:43 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 414 : Undefined array key "tenure"
+[20:40:43 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 415 : Undefined array key "emi"
+[20:40:43 IST] EXCEPTION: \lib\module\Application\src\Utility\LoanHelper.php on line 128 : Division by zero
+[20:44:19 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 730 : Undefined variable $loan_source
+[20:44:19 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 731 : Undefined variable $loanSourceType
+[20:44:19 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 731 : Trying to access array offset on value of type null
+[20:44:19 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 731 : Attempt to read property "code" on null
+[20:44:19 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 733 : Undefined variable $loan_source
+[20:44:19 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 158 : Undefined array key "non_member"
+[20:44:19 IST] ERROR [2]: \lib\web\Web\src\Plugin\Redirect.php line 132 : Cannot modify header information - headers already sent by (output started at C:\laragon\www\fws_main\micro-finance\lib\web\Web\src\Core\ErrorManager.php:125)
+[20:47:11 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:49:31 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:49:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:49:58 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:50:09 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:50:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:50:23 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:50:23 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[20:51:07 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:51:07 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[20:51:38 IST] ERROR [2]: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php line 276 : Undefined property: Application\Form\ModifyDcb\RefinanceForm::$_headModel
+[20:51:38 IST] EXCEPTION: \lib\module\Application\src\Form\ModifyDcb\RefinanceForm.php on line 276 : Call to a member function checkByColumnByFmc() on null
+[20:53:32 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 158 : Undefined array key "non_member"
+[20:53:32 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:56:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:56:50 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:56:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:57:02 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:57:06 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:57:15 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:57:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:57:27 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:57:30 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:57:35 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:57:37 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:57:37 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\refinance.phtml line 227 : Undefined variable $headId
+[20:57:52 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 158 : Undefined array key "non_member"
+[20:57:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans

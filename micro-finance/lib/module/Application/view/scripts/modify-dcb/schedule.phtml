@@ -1,0 +1,156 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$loan = $store->loan();
+$member = $store->member();
+$fmc = $store->fmc();
+$schedule = $store->schedule();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        DCB SUMMARY
+                                        <span class="float-right">
+                                            <a class="btn btn-outline-secondary mr-1" title="BACK" href="<?php 
+                                            echo $this->view->actionUrl('modify-dcb/view/id/' . $loan->id); ?>"><i class="ft-rewind"></i> BACK</a>
+                                        </span>
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12 text-right">
+                                                <a  class="btn btn-outline-primary" title="PRINT" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('modify-dcb/schedule-print/id/' . $loan->id); ?>">
+                                                    <i class="ft-printer"></i> PRINT
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>FMC</th>
+                                                            <th>Member</th>
+                                                            <th>Code</th>
+                                                            <th>Type</th>
+                                                            <th>Source</th>
+                                                            <th>Ln Amnt</th>
+                                                            <th>Date</th>
+                                                            <th>RoI</th>
+                                                            <th>PRoI</th>
+                                                            <th>Tenure</th>
+                                                            <th>EMI</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanType()); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($store->loanSource()); ?></td>
+                                                            <td><?php echo $this->view->integer($loan->loan_amount); ?></td>
+                                                            <td><?php echo $this->view->datepicker($loan->loan_date); ?></td>
+                                                            <td><?php echo $this->view->interestRate($loan->interest_rate); ?>%</td>
+                                                            <td><?php echo $this->view->interestRate($loan->penal_interest_rate); ?>%</td>
+                                                            <td><?php echo $this->view->integer($loan->tenure); ?></td>
+                                                            <td><?php echo $this->view->amount($loan->emi); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>     
+                <section>                   
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Repayment Schedule</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <table class="table table-bordered">
+                                             <thead class="bg-info white">
+                                                <tr>
+                                                    <th colspan="2" class="text-center">Instalment</th>
+                                                    <th rowspan="2">Opening<br>Balance</th>
+                                                    <th colspan="3" class="text-center">Scheduled Demand</th>
+                                                    <th rowspan="2">Closing<br>Balance</th>
+                                                    <th colspan="3" class="text-center">Cumulative Amount</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Number</th>
+                                                    <th>Date</th>
+                                                    <th>Interest</th>
+                                                    <th>Principal</th>
+                                                    <th>EMI</th>
+                                                    <th>Interest</th>
+                                                    <th>Principal</th>
+                                                    <th>EMI</th>
+                                                 </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($schedule as $row): ?>
+
+                                                <tr>
+                                                    <td><?php echo $this->view->instalmentNumber($row->instalment); ?></td>
+                                                    <td><?php echo $this->view->datepicker($row->instalment_date); ?></td>
+                                                    <td><?php echo $this->view->amount($row->opening_principal); ?></td>
+                                                    <td><?php echo $this->view->amount($row->interest_component); ?></td>
+                                                    <td><?php echo $this->view->amount($row->principal_component); ?></td>
+                                                    <td><?php echo $this->view->amount($row->emi); ?></td>
+                                                    <td><?php echo $this->view->amount($row->closing_principal); ?></td>
+                                                    <td><?php echo $this->view->amount($row->cumulative_interest); ?></td>
+                                                    <td><?php echo $this->view->amount($row->cumulative_principal); ?></td>
+                                                    <td><?php echo $this->view->amount($row->cumulative_emi); ?></td>
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                            <tfoot class="bg-info white">
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th>&nbsp;</th>
+                                                    <th>&nbsp;</th>
+                                                    <th><?php echo $this->view->amount($loan->total_interest_amount); ?></th>
+                                                    <th><?php echo $this->view->amount($loan->total_principal_amount); ?></th>
+                                                    <th><?php echo $this->view->amount($loan->total_emi_amount); ?></th>
+                                                    <th>&nbsp;</th>
+                                                    <th>&nbsp;</th>
+                                                    <th>&nbsp;</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Instalment</th>
+                                                    <th>Date</th>
+                                                    <th>Opening<br>Balance</th>
+                                                    <th>Interest<br>Amount</th>
+                                                    <th>Principal<br>Amount</th>
+                                                    <th>EMI</th>
+                                                    <th>Closing<br>Balance</th>
+                                                    <th>Cumulative<br>Interest</th>
+                                                    <th>Cumulative<br>Principal</th>
+                                                    <th>Cumulative<br>EMI</th>
+                                                 </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

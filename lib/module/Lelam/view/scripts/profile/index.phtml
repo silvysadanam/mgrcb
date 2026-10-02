@@ -1,0 +1,256 @@
+<?php
+
+$membership = $this->view->getVariable('membership');
+$fmc = $membership->fmc();
+$member = $membership->member();
+$yesOrNo = ['No', 'Yes'];
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Membership</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>FMC</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Type</td>
+                                                            <td><?php echo $this->view->escapeHtml($membership->memberType()); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mobile</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->mobile); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Aadhar Number</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->aadhar_number); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Aadhar Linked Mobile</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->aadhar_mobile); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Date of Birth</td>
+                                                            <td><?php echo $membership->dateOfBirth(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Name in Malayalam</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name_malayalam); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Address</td>
+                                                            <td><?php echo $this->view->textareaHtml($member->address); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Village</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->village); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Taluk</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->taluk); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <?php $photo = $membership->photo(); ?>
+                                        <?php if (! empty($photo)): ?>
+                                        
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Photo</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <?php echo $this->view->photo($photo); ?>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                        <?php $accounts = $membership->accounts(); ?>
+                                        <?php if (! empty($accounts)): ?>
+                                        
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Bank Accounts</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <?php $banks = $this->view->lookupStore('banks'); ?>
+                                                            
+                                                            <table class="table table-bordered">
+                                                                <thead class="bg-secondary white">
+                                                                    <tr>
+                                                                        <th>Account Number</th>
+                                                                        <th>Bank</th>
+                                                                        <th>Branch</th>
+                                                                        <th>IFSC</th>
+                                                                        <th>Account Type</th>
+                                                                        <th>Description</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php foreach ($accounts as $account): ?>
+                                                                    <?php $bank = $banks[$account->bank_id]; ?>
+                                                                    
+                                                                    <tr>
+                                                                        <td><?php echo $this->view->escapeHtml($account->account_number); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($bank->bank); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($bank->branch); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($bank->ifsc); ?></td>
+                                                                        <td><?php echo $this->view->lookup('accountType', $account->account_type_id); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($account->description); ?></td>
+                                                                    </tr>
+                                                                    <?php endforeach; ?>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                        <?php $cards = $membership->cards(); ?>
+                                        <?php if (! empty($cards)): ?>
+                                        
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">ID Card / Membership Numbers</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <table class="table table-bordered">
+                                                                <thead class="bg-secondary white">
+                                                                    <tr>
+                                                                        <th>Type</th>
+                                                                        <th width="40%">Number</th>
+                                                                        <th width="15%">Issue date</th>
+                                                                        <th width="15%">Expiry date</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php foreach ($cards as $card): ?>
+
+                                                                    <tr>
+                                                                        <td><?php echo $this->view->lookup('cardType', $card->card_type_id); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($card->card_number); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($card->issue_date); ?></td>
+                                                                        <td><?php echo $this->view->escapeHtml($card->expiry_date); ?></td>
+                                                                    </tr>
+                                                                    <?php endforeach; ?>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                        <?php $documents = $membership->documents(); ?>
+                                        <?php if (! empty($documents)): ?>
+                                        
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Documents</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-bordered">
+                                                                        <thead class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th>Document Type</th>
+                                                                                <th>Description</th>
+                                                                                <th>View</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php foreach ($documents as $document): ?>
+
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->lookup('documentType', $document->document_type_id); ?></td>
+                                                                                <td><?php echo $this->view->escapeHtml($document->description); ?></td>
+                                                                                <td><?php echo $this->view->documentLink($document); ?></td>
+                                                                            </tr>
+                                                                            <?php endforeach; ?>
+
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

@@ -1,0 +1,68 @@
+<?php
+$layoutVariables = $this->view->getVariable('layoutVariables');
+$flash = $layoutVariables['flashMessage'];
+$error = null;
+$style = 'success';
+$title = 'Successful';
+$messageBox = $flash['hasFlash'];
+if (!empty($flash['message'])) {
+    $messageBox = true;
+}
+if (! empty($flash['type'])) {
+    if ('error' == $flash['type']) {
+        $style = 'danger';
+        $title = 'Error';
+    } elseif ('warning' == $flash['type']) {
+        $style = 'warning';
+        $title = 'Warning';
+    }
+}
+
+$showFormFlash = $this->view->getVariable('showFormFlash');
+if ($showFormFlash) {
+    $form = $this->getForm();
+    if (!empty($form)) {
+        if ($form->hasError()) {
+            $error = $form->formatErrors();
+        }
+    }
+}
+
+
+
+if ($messageBox): ?>
+<?php $link = $layoutVariables['flashLink']; ?>
+
+    <section class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-<?php echo $style; ?> alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong><?php echo $title; ?>.</strong> <?php echo $flash['message']; ?>
+                <?php if (!empty($link)): ?>
+                
+                <span class="ml-5"><?php echo $link; ?></span>
+                <?php endif; ?>
+                
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+
+<?php if (! empty($error)): ?>
+
+    <section class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-danger alert-dismissible mb-2" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>Error.</strong><br> <?php echo $error; ?>
+            </div>
+        </div>
+    </section>
+<?php endif;
+
+                       
+                    

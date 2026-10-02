@@ -1,0 +1,94 @@
+<?php
+
+$closeOutData = $this->view->getVariable('closeOutData');
+$openingData = $this->view->getVariable('openingData');
+$closeout_counted_difference =   ($closeOutData[0]->counted_till - $closeOutData[0]->expected_till) ;
+if ($closeout_counted_difference < 0) $closeout_over_short_color='color: red;';
+else $closeout_over_short_color='color: blue;'; 
+$opening_counted_difference =   ($openingData[0]->counted_till - $openingData[0]->expected_till) ;
+if ($opening_counted_difference < 0) $over_short_color='color: red;';
+else $over_short_color='color: blue;';
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Advance/withdrawal
+                                    </h4>
+                                    <input type="hidden" id="cancel-url" value="<?php echo $this->view->actionUrl('advance-withdrawal'); ?>">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="2" class="card-title">Closeout Details</td>                                                           
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Payment</td>
+                                                            <td><?php echo ucfirst($this->view->escapeHtml($closeOutData[0]->type)); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>End-day Count</td>
+                                                            <td><?php echo $this->view->escapeHtml($closeOutData[0]->counted_till); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Computed</td>
+                                                            <td><?php echo $this->view->escapeHtml($closeOutData[0]->expected_till); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Over/Short</td>
+                                                            <td style="<?php echo $closeout_over_short_color;?>"><?php echo $this->view->escapeHtml($closeOutData[0]->till_difference); ?></td>
+                                                        </tr>
+                                                          <tr>
+                                                            <td>Notes</td>
+                                                            <td><?php echo $this->view->textareaHtml($closeOutData[0]->notes); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Modified On</td>
+                                                            <td><?php echo $this->view->userTime($closeOutData[0]->timestamp); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="2" class="card-title">Opening Details</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Counted Opening Till Amount</td>
+                                                            <td><?php echo $openingData[0]->counted_till; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Carryover Opening Till Amount</td>
+                                                            <td><?php echo $openingData[0]->expected_till; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Difference</td>
+                                                            <td style="<?php echo $over_short_color;?>"><?php echo $openingData[0]->till_difference; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Notes</td>
+                                                            <td><?php echo $this->view->textareaHtml($openingData[0]->notes); ?></td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>Modified On</td>
+                                                            <td><?php echo $this->view->userTime($openingData[0]->timestamp); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

@@ -1,0 +1,61 @@
+[17:04:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-ceo.phtml line 76 : Undefined variable $Microfinance
+[17:04:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-ceo.phtml line 93 : Undefined variable $trans
+[17:04:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-ceo.phtml line 93 : Undefined variable $trans
+[17:58:00 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[17:58:12 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[17:58:12 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[17:58:12 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[17:58:12 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:00:35 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 343 : Attempt to read property "member_id" on bool
+[18:02:49 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 344 : Attempt to read property "member_id" on bool
+[18:03:53 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:03:54 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:03:54 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:03:54 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:03:54 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:51:35 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageVoucher.php on line 341 : Call to undefined method Model\RPTransMember::getRowByColumn()
+[18:54:05 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:54:05 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:54:05 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:54:05 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:54:05 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:56:16 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:56:16 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:56:16 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:56:16 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:56:16 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:59:07 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:59:07 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:59:07 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:59:07 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:59:07 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:59:54 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[18:59:54 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:59:54 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[18:59:55 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[18:59:55 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:00:05 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[19:00:05 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:00:05 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:00:05 IST] ERROR [2]: \lib\module\Application\view\layouts\index.phtml line 19 : Undefined array key "branch"
+[19:00:05 IST] EXCEPTION: \lib\module\Application\view\layouts\index.phtml on line 23 : Class "Shared\Constant\UserType" not found
+[19:44:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-ceo.phtml line 76 : Undefined variable $Microfinance
+[19:44:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-ceo.phtml line 93 : Undefined variable $trans
+[19:44:33 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-ceo.phtml line 93 : Undefined variable $trans
+[19:44:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-ceo.phtml line 93 : Undefined variable $trans
+[19:44:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[19:44:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-ceo.phtml line 93 : Undefined variable $trans
+[19:45:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-ceo.phtml line 93 : Undefined variable $trans
+[22:09:11 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[22:14:19 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageVoucher.php on line 92 : Class "Shared\Utility\RPTransMemberDetails" not found
+[22:14:56 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 346 : Undefined property: Shared\Utility\ManageVoucher::$_transactionmodel
+[22:14:56 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ManageVoucher.php on line 346 : Call to a member function queryRows() on null
+[22:17:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[22:20:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[22:21:15 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[22:27:10 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[22:28:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[22:28:28 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 347 : Undefined array key 0
+[22:28:28 IST] ERROR [2]: \lib\shared\Shared\src\Utility\ManageVoucher.php line 347 : Attempt to read property "member_id" on null
+[22:30:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[22:31:05 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId

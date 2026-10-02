@@ -1,0 +1,1 @@
+[20:48:10 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'code' in 'where clause'

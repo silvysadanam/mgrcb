@@ -1,0 +1,168 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+$medicineOptions = $this->view->lookupStore('medicine');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">New Auction Chit</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-auction" id="form-auction" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="alert alert-danger" id="validation-message" style="display:none;"></div>
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="auction_date">Date <span class="red">*</span></label>
+                                                            <input type="text" name="auction_date" id="auction_date" class="form-control single-date-max-today" data-min-date="01/01/2020" value="<?php 
+                                                            echo $form->getEscapedValue('auction_date'); ?>" placeholder="Auction Date" maxlength="10" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="donor_id">Auctioneer <span class="red">*</span></label>
+                                                            <select name="donor_id" id="donor_id" class="form-control" title="Auctioneer">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('donor'), $form->getValue('donor_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="member_id">Member <span class="red">*</span></label>
+                                                            <select name="member_id" id="member_id" class="form-control" title="Member">
+                                                                <option value="0">--select--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('member'), $form->getValue('member_id')); ?>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-2">
+                                                    <div class="col-12">
+                                                        <div class="card card-bordered border-info">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title">
+                                                                    Entries
+                                                                    <a class="btn btn-sm btn-outline-primary float-right" id="add-entry-row" title="Add entry" href="javascript:;">
+                                                                        <i class="ft-plus-square"></i> Add entry
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+                                                                    <table class="table table-borderless">
+                                                                        <thead class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th>No.</th>
+                                                                                <th>Medicine</th>
+                                                                                <th>Amount</th>
+                                                                                <th>Weight (kg)</th>
+                                                                                <th>Delete</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody id="entry-block">
+                                                                            <?php if (count($values['medicine']) > 0); ?>
+                                                                            <?php foreach ($values['medicine'] as $index => $medicineId): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td class="entry-number"><?php echo $this->view->counter(); ?></td>
+                                                                                <td>
+                                                                                    <select name="medicine[]" class="form-control" title="Medicine">
+                                                                                        <option value="0">--select--</option>
+                                                                                        <?php echo $this->view->formHelper('select', $medicineOptions, $medicineId); ?>
+
+                                                                                    </select>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="number" name="amount[]" class="form-control entry-amount" value="<?php 
+                                                                                    echo $this->view->escapeHtml($values['amount'][$index]); ?>" placeholder="Amount" min="1" max="999999" step="1" required="required">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="number" name="quantity[]" class="form-control entry-quantity" value="<?php 
+                                                                                    echo $this->view->escapeHtml($values['quantity'][$index]); ?>" placeholder="Weight" max="9999" step="1">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a href="javascript:;" class="btn btn-sm btn-outline-danger delete-entry-row" title="Delete"><i class="ft-x-square"></i> Delete</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                        <tfoot>
+                                                                            <tr>
+                                                                                <th colspan="2" class="text-right">Total</th>
+                                                                                <th>
+                                                                                    <input type="text" name="total[]" id="total-amount" class="form-control" value="<?php
+                                                                                    echo $this->view->escapeHtml($values['total'][0]); ?>" readonly="readonly">
+                                                                                </th>
+                                                                                <th>
+                                                                                    <input type="text" name="total[]" id="total-quantity" class="form-control" value="<?php
+                                                                                    echo $this->view->escapeHtml($values['total'][1]); ?>" readonly="readonly">
+                                                                                </th>
+                                                                                <th>&nbsp;</th>
+                                                                            </tr>
+                                                                        </tfoot>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-2">
+                                                    <div class="col-12">
+                                                        <div class="card card-bordered border-info">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title">
+                                                                    Advance
+                                                                </h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 col-sm-12">
+                                                                            <div class="form-group">
+                                                                                <label class="label-control" for="advance">Advance paid to Member</label>
+                                                                                <input type="text" name="advance" id="advance" class="form-control number-integer" value="<?php 
+                                                                                echo $form->getEscapedValue('advance'); ?>" placeholder="Advance" maxlength="6">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-sm-12">
+                                                                            <div class="form-group">
+                                                                                <label class="label-control" for="balance">Balance Amount</label>
+                                                                                <input type="text" name="balance" id="balance" class="form-control" value="<?php 
+                                                                                echo $form->getEscapedValue('balance'); ?>" placeholder="Balance" readonly="readonly">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="d-none">
+                                        <select id="medicine-options"><option value="0">--select--</option><?php
+                                        echo $this->view->formHelper('select', $medicineOptions); ?></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

@@ -1,0 +1,153 @@
+<?php
+
+$generator = $this->view->getVariable('generator');
+$report = $generator->report();
+$fmcList = $this->view->lookupStore('fmc');
+$title = 'New Loans Report ' . $report['options']['start_month'] . ' to '
+       . $report['options']['end_month'];
+
+$fmcSelected = $generator->fmcSelected();
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title><?php echo $title; ?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <?php $this->block('print-view'); ?>
+        
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="0" border="0" style="margin:10px 10px 5px 0;" width="700">
+            <thead>
+                <tr>
+                    <th class="main-heading center">FISHERMEN WELFARE SOCIETY - KOLLAM</th>
+                </tr>
+                <tr>
+                    <th class="main-heading center"><?php echo $title; ?></th>
+                </tr>
+                <tr>
+                    <th class="center">
+                        FMC :
+                        <?php if ($fmcSelected): ?>
+                        <?php echo $this->view->escapeHtml($fmcList[$report['filters']['fmc']]); ?>
+                        <?php else: ?>ALL<?php endif; ?>,
+                        SOURCE :
+                        <?php if ($report['filters']['source'] > 0): ?>
+                        <?php echo $this->view->lookup('source', $report['filters']['source']); ?>
+                        <?php else: ?>ALL<?php endif; ?>,
+                        TYPE :
+                        <?php if ($report['filters']['type'] > 0): ?>
+                        <?php echo $this->view->lookup('type', $report['filters']['typee']); ?>
+                        <?php else: ?>ALL<?php endif; ?>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <?php if ($fmcSelected): ?>
+                        <?php $fmcId = $report['filters']['fmc']; ?>
+                        
+                        <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th colspan="3"><?php echo $this->view->escapeHtml($fmcList[$fmcId]); ?></th>
+                                </tr>
+                                <tr>
+                                    <th>Month</th><th>Loans</th><th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($report['months'] as $year => $list): ?>
+                                <?php foreach ($list as $month => $monthTitle): ?>
+                                
+                                
+                                <tr>
+                                    <td><?php echo $monthTitle; ?></td>
+                                    <?php if (isset($report['report'][$year][$month][$fmcId])): ?>
+                                    
+                                    <td class="center"><?php echo $report['report'][$year][$month][$fmcId]['loans']; ?></td>
+                                    <td class="right"><?php echo $generator->printAmount($report['report'][$year][$month][$fmcId]['amount']); ?></td>
+                                    <?php else: ?>
+                                    
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <?php endif; ?>
+                                    
+                                </tr>
+                                <?php endforeach; ?>
+                                <?php endforeach; ?>
+                                
+                                <tr>
+                                    <td><strong>Total</strong></td>
+                                    <td class="center bold"><?php echo $report['total']['loans']; ?></td>
+                                    <td class="right bold"><?php echo $generator->printAmount($report['total']['amount']); ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <?php else: ?>
+                        
+                        <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>FMC</th><th>Loans</th><th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($report['months'] as $year => $list): ?>
+                                <?php foreach ($list as $month => $monthTitle): ?>
+                                
+                                <tr>
+                                    <td colspan="3">
+                                        <strong><?php echo $monthTitle; ?></strong>
+                                    </td>
+                                </tr>
+                                <?php foreach ($fmcList as $fmcId => $fmcName): ?>
+                                
+                                <tr>
+                                    <td><?php echo $fmcName; ?></td>
+                                    <?php if (isset($report['report'][$year][$month][$fmcId])): ?>
+                                    
+                                    <td class="center"><?php echo $report['report'][$year][$month][$fmcId]['loans']; ?></td>
+                                    <td class="right"><?php $generator->printAmount($report['report'][$year][$month][$fmcId]['amount']); ?></td>
+                                    <?php else: ?>
+                                    
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <?php endif; ?>
+                                    
+                                </tr>
+                                <?php endforeach; ?>
+                                
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="center"><strong><?php echo $report['total_month'][$year][$month]['loans']; ?></strong></td>
+                                    <td class="right"><strong><?php echo $generator->printAmount($report['total_month'][$year][$month]['amount']); ?></strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                </tr>
+                                <?php endforeach; ?>
+                                <?php endforeach; ?>
+                                
+                                <tr>
+                                    <td><strong>Total</strong></td>
+                                    <td class="center bold"><?php echo $report['total']['loans']; ?></td>
+                                    <td class="right bold"><?php echo $generator->printAmount($report['total']['amount']); ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <?php endif; ?>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>
+
+                
+            

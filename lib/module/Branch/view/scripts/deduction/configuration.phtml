@@ -1,0 +1,63 @@
+<?php
+$list = $this->view->getVariable('list');
+$groups = $this->view->getVariable('groups');
+$grouped = $this->view->getVariable('grouped');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Deduction Bill Configuration
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <?php foreach ($groups as $groupId => $groupTitle): ?>
+                                            <?php if (! empty($grouped[$groupId])): ?>
+
+                                            <div class="col-md-6 col-sm-12 mb-2">
+                                                <table class="table table-condensed table-bordered border-info">
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="3" class="bg-info white"><?php echo $this->view->escapeHtml($groupTitle); ?></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th width="10%">Sl. No.</th>
+                                                            <th>Deduction Item</th>
+                                                            <th width="25%">Deduction Value</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php $this->view->counter(0); ?>
+                                                        <?php foreach ($grouped[$groupId] as $typeId): ?>
+
+                                                        <tr>
+                                                            <td><?php echo $this->view->counter(); ?></td>
+                                                            <td>
+                                                                <?php echo $this->view->lookup('deductionType', $typeId); ?>
+
+                                                            </td>
+                                                            <td><?php echo $this->view->escapeHtml($list[$typeId]->display_text); ?></td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <?php endif; ?>
+                                            <?php endforeach; ?>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

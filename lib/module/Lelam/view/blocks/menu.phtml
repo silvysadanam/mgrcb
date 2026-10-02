@@ -1,0 +1,71 @@
+<?php
+
+use Lelam\Constant\Tab;
+
+$active = ' active';
+$dashboard = $active;
+$profile = '';
+$auction = '';
+
+$layoutVariables = $this->view->getVariable('layoutVariables');
+$tab = $layoutVariables['currentTab'];
+if ($tab == Tab::PROFILE) {
+    $profile = $active;
+    $dashboard = '';
+} elseif ($tab == Tab::AUCTION) {
+    $auction = $active;
+    $dashboard = '';
+}
+
+?>
+
+<!-- BEGIN: Main Menu-->
+    <div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-static navbar-dark navbar-without-dd-arrow navbar-shadow" role="navigation" data-menu="menu-wrapper">
+        <div class="navbar-container main-menu-content" data-menu="menu-container">
+            <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="nav-item<?php echo $dashboard; ?>">
+                    <a class="dropdown-toggle nav-link" href="<?php echo $this->view->actionUrl(''); ?>" title="Dashboard"><i class="ft-home"></i><span>Dashboard</span></a>
+                </li>
+                <li class="dropdown nav-item<?php echo $auction; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Auction Chits"><i class="ft-activity"></i><span>Auction Chits</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit'); ?>" title="Auction Chits" data-toggle="dropdown">Auction Chits</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/today'); ?>" title="Auction Chits Today" data-toggle="dropdown">Today</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/last-day'); ?>" title="Auction Chits Last Day" data-toggle="dropdown">Last Day</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('create'); ?>" title="Add Auction Chit" data-toggle="dropdown">Add Auction Chit</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/day-select'); ?>" title="Auction Chits - View by Day" data-toggle="dropdown">View by Day</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('auction-chit/monthly'); ?>" title="Monthly Summary" data-toggle="dropdown">Monthly Summary</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $profile; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Profile"><i class="ft-user"></i><span>Profile</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('profile'); ?>" title="View" data-toggle="dropdown">View</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('profile/password'); ?>" title="Change Password" data-toggle="dropdown">Change Password</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu -->
+    

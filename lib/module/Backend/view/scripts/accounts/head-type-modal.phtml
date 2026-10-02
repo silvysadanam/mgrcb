@@ -1,0 +1,77 @@
+
+        <form name="form-head-type-modal" id="form-head-type-modal" method="post" action="">
+            <div class="modal fade" id="modal-head-type" tabindex="-1" role="dialog" aria-labelledby="myModalLabelHeadType" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelHeadType"> 
+                                Add Card Type
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label for="head_name">Head Name <span class="red">*</span></label>
+                                    <input type="text" id="head_name" class="form-control" value="" maxlength="30" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="head_alias">Head Alias <span class="red">*</span></label>
+                                    <input type="text" id="head_alias" class="form-control" value="" maxlength="30" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="head_type">Head Type <span class="red">*</span></label>
+                                    <select id="head_type"  class="form-control">                                        
+                                        <option value="Bank">Bank</option>
+                                        <option value="Cash">Cash</option>
+                                        <option value="Direct Expense">Direct Expense</option>
+                                        <option value="Direct Income">Direct Income</option>
+                                        <option value="Indirect Expense">Indirect Expense</option>
+                                        <option value="Indirect Income">Indirect Income</option>
+                                    </select>
+                                </div>
+                                 <div class="form-group">
+                                    <label for="head_code">Code <span class="red">*</span></label>
+                                    <input type="text" id="head_code" class="form-control" value="" maxlength="30" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="head_opb">Opening Balance <span class="red"></span></label>
+                                    <input type="text" id="head_opb" class="form-control" value="" maxlength="30">
+                                </div>
+                                <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="ie_item">Show item 0n I&E Report</label>
+                                     <select id="ie_item"  class="form-control">                                        
+                                        <option value="0" selected="selected">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                  </div>
+                                </div>
+
+                                <!--div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="bs_item">Balance Sheet Item</label>
+                                    <select id="bs_item"  class="form-control">                                        
+                                        <option value="0" selected="selected">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                  </div>
+                                </div-->
+                              </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('accounts/head-type/type/head'); ?>">
+                            <input type="hidden" id="head-id" value="0">
+                             <input type="hidden" id="fmc_id" value="0">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

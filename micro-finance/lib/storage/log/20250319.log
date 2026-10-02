@@ -1,0 +1,18 @@
+[07:48:47 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[07:48:56 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[07:49:54 IST] ERROR [2]: \lib\module\Application\src\ApplicationController.php line 326 : Undefined property: Application\Controller\CreateDcbController::$_fmcID
+[07:49:54 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[07:49:54 IST] ERROR [2]: \lib\web\Web\src\Form\FormHelper.php line 99 : foreach() argument must be of type array|object, bool given
+[07:52:03 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[07:55:23 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[07:55:32 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[07:56:14 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[19:08:27 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[19:11:12 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[19:11:13 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[19:12:16 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[19:12:21 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[19:12:24 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[19:39:52 IST] ERROR [2]: \lib\module\Application\src\Form\DcbCreateForm.php line 131 : Undefined array key "payment_type"
+[19:44:36 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[19:55:42 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId

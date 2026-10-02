@@ -1,0 +1,235 @@
+<?php
+
+$membership = $this->view->getVariable('membership');
+$fmc = $membership->fmc();
+$member = $membership->member();
+$yesOrNo = ['No', 'Yes'];
+$banks = $this->view->lookupStore('banks');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Member details &nbsp;
+                                        
+                                        <a class="btn btn-sm btn-outline-primary" id="edit-member" title="Edit" href="javascript:;">
+                                            <i class="ft-edit"></i> Edit
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-secondary float-right" title="Back to View" href="<?php
+                                        echo $this->view->actionUrl('membership/view/id/' . $member->id); ?>">
+                                            <i class="ft-rewind"></i> Back to View
+                                        </a>
+                                    </h4>
+                                    <input type="hidden" id="manage-url" value="<?php
+                                    echo $this->view->actionUrl('membership/manage/id/' . $member->id . '/action'); ?>">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>                                                       
+                                                        <tr>
+                                                            <td>Member Type</td>
+                                                            <td><?php echo $this->view->escapeHtml($membership->memberType()); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mobile</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->mobile); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Aadhar Number</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->aadhar_number); ?></td>
+                                                        </tr>
+                                                      
+                                                        <tr>
+                                                            <td>Date of Birth</td>
+                                                            <td><?php echo $membership->dateOfBirth(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Age</td>
+                                                            <td><?php echo $membership->age(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Status</td>
+                                                            <td><?php if ($membership->active()) { ?>Active<?php } else { ?>Inactive<?php } ?></td>
+                                                        </tr>
+                                                        <?php if (! $membership->active()): ?>
+                                                        
+                                                        <tr>
+                                                            <td>Inactive from</td>
+                                                            <td>
+                                                                <?php echo $this->view->datepicker($member->inactive_date); ?><br>
+                                                                [<?php echo $this->view->escapeHtml($member->inactive_note); ?>]
+                                                            </td>
+                                                        </tr>
+                                                        <?php endif; ?>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <?php if ($membership->active()): ?>
+                                                              
+                                                                  <a class="btn btn-sm btn-outline-danger" id="disable-membership" title="Disable Member - Move to Inactive status" href="javascript:;">
+                                                                    <i class="ft-user"></i> Disable Member
+                                                                </a>
+                                                                <?php else: ?>
+                                                                
+                                                                <a class="btn btn-sm btn-outline-success" id="enable-membership" title="Activate Member - Move to Active status" href="javascript:;">
+                                                                    <i class="ft-user"></i> Activate Member
+                                                                </a>
+                                                                <?php endif; ?>
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>                                                        
+                                                     
+                                                        <tr>
+                                                            <td>Address</td>
+                                                            <td><?php echo $this->view->textareaHtml($member->address); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Land line with STD Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->landline); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>WhatsApp</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->whatsapp); ?></td>
+                                                        </tr>
+                                                       <tr>
+                                                            <td>PAN Number</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->pan_number); ?></td>
+                                                        </tr>    
+                                                        <tr>
+                                                            <td>location</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->location); ?></td>
+                                                        </tr>    
+                                                         <tr>
+                                                            <td>Approved On</td>
+                                                            <td><?php echo $membership->approvedDate(); ?></td>
+                                                        </tr>    
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Photo
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <?php $photo = $membership->photo(); ?>
+                                            
+                                            <div class="col-6">
+                                                <?php $title = 'Upload photo'; ?>
+                                                <?php if (! empty($photo)): ?>
+                                                <?php $title = 'Replace photo'; ?>
+                                                <?php echo $this->view->photo($photo); ?>
+                                                <?php else: ?>
+
+                                                <div class="alert">Photo not uploaded</div>
+                                                <?php endif; ?>
+                                             
+                                            </div>
+                                            <div class="col-6">
+                                                <a class="btn btn-sm btn-outline-info" id="upload-photo" title="<?php echo $title; ?>" href="javascript:;">
+                                                    <i class="ft-edit"></i> <?php echo $title; ?>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>               
+                
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Documents &nbsp;
+                                        <a class="btn btn-sm btn-outline-primary" id="add-document" title="Add Document" href="javascript:;">
+                                            <i class="ft-plus"></i> Add Document
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <?php $documents = $membership->documents(); ?>
+                                                <?php if (! empty($documents)): ?>
+
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-secondary white">
+                                                        <tr>
+                                                            <th>Document Type</th>
+                                                            <th>Description</th>
+                                                            <th>View</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($documents as $document): ?>
+
+                                                        <tr>
+                                                            <td><?php echo $this->view->lookup('documentType', $document->document_type_id); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($document->description); ?></td>
+                                                            <td><?php echo $this->view->documentLink($document); ?></td>
+                                                            <td>
+                                                                <a class="btn btn-sm btn-outline-info edit-document" title="Edit Document" href="javascript:;" data-id="<?php 
+                                                                echo $document->id; ?>">
+                                                                    <i class="ft-edit"></i> Edit
+                                                                </a>
+                                                                <a class="btn btn-sm btn-outline-danger ml-1 delete-document" title="Delete Document" href="javascript:;" data-id="<?php 
+                                                                echo $document->id; ?>">
+                                                                    <i class="ft-delete"></i> Delete
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+
+                                                    </tbody>
+                                                </table>
+                                                <?php else: ?>
+
+                                                <div class="alert">No documents uploaded</div>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

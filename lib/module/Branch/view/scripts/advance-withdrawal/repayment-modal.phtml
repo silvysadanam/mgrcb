@@ -1,0 +1,72 @@
+<?php
+
+use Web\Utility\DateHelper;
+
+$store = $this->view->getVariable('store');
+$advance = $store->advance();
+$date = $advance->advance_date;
+if (! empty($repayments)) { $last = end($repayments); $date = $last->deduction_bill_date; }
+$dateTime = DateHelper::getDateTime($date); 
+$dateTime->modify('+1 day');
+$minDate = $dateTime->format(DateHelper::DATEPICKER);
+
+?>
+        <form name="form-repayment-modal" id="form-repayment-modal" method="post" action="">
+            <div class="modal fade" id="modal-repayment" tabindex="-1" role="dialog" aria-labelledby="myModalLabelAdvance" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelAdvance"> 
+                                Overdue Repayment
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="od-balance">Overdue Balance</label>
+                                            <input type="text" id="od-balance" class="form-control" value="<?php echo $advance->overdue_balance; ?>" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="payment-date">Payment Date <span class="red">*</span></label>
+                                            <input type="text" id="payment-date" class="form-control single-date-max-today" value="<?php
+                                            echo DateHelper::datepicker(); ?>" data-min-date="<?php echo $minDate; ?>" readonly="readonly">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="repayment-amount">Payment Amount <span class="red">*</span></label>
+                                            <input type="number" id="repayment-amount" class="form-control" value="<?php
+                                            $advance->overdue_balance; ?>" placeholder="Amount" min="1" max="<?php
+                                            echo $advance->overdue_balance; ?>" step="1"  required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="modified-balance">Modified Overdue Balance</label>
+                                            <input type="text" id="modified-balance" class="form-control" value="0" readonly="readonly">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label-control" for="note">Notes</label>
+                                            <textarea id="note" class="form-control" placeholder="Notes"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="advance-id" value="<?php echo $advance->id; ?>">
+                            <input type="hidden" id="manage-url" value="<?php
+                            echo $this->view->actionUrl('advance-withdrawal/repayment/id/' . $advance->id); ?>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>

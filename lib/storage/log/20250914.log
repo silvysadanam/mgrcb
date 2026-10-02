@@ -1,0 +1,19 @@
+[16:19:48 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.member_id' in 'where clause'
+[16:20:48 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.member_id' in 'where clause'
+[16:34:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 335 : Undefined variable $memberTransaction
+[16:38:42 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 335 : Undefined variable $memberTransaction
+[16:39:44 IST] EXCEPTION: \lib\module\Branch\src\Utility\MReceiptsReport.php on line 778 : syntax error, unexpected token "private"
+[16:40:03 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 335 : Undefined variable $memberTransaction
+[17:09:43 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 619 : Undefined variable $matchingHeadId
+[17:09:43 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and `m`.`status` = '1' and  `m`.`transDate` between '2025-04-01'  and '2025-08-3' at line 1
+[17:10:22 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 676 : Undefined property: stdClass::$transBy
+[18:00:41 IST] EXCEPTION: \lib\module\Branch\src\Utility\MReceiptsReport.php on line 331 : Call to undefined method Branch\Utility\MReceiptsReport::getMemberReceipts()
+[18:01:09 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 604 : Undefined variable $fmc_id
+[18:01:09 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[18:01:41 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 378 : Undefined property: stdClass::$receiptNo
+[18:01:41 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 381 : Undefined property: stdClass::$remarks
+[18:01:41 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 384 : Undefined property: stdClass::$loan_id
+[18:02:58 IST] ERROR [2]: \lib\module\Branch\src\Utility\MReceiptsReport.php line 381 : Undefined property: stdClass::$remarks
+[18:07:07 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.id' in 'group statement'
+[18:37:41 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'transType' in where clause is ambiguous
+[18:38:48 IST] ERROR [2]: \lib\module\Branch\view\scripts\reports\mreceipts.phtml line 184 : Undefined array key "cashClosing"

@@ -1,0 +1,132 @@
+[11:11:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:12:25 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:12:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[11:12:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[11:12:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[11:12:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[11:12:25 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[11:16:58 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 103 : Undefined variable $field
+[11:16:58 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 103 : Undefined array key ""
+[11:40:42 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 48 : Class "Backend\Controller\Benidiciary" not found
+[11:43:25 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 354 : Undefined array key "bank_id"
+[11:43:25 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 160 : Undefined variable $now
+[11:43:25 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 161 : Undefined variable $now
+[11:43:25 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 167 : Undefined array key "family_name"
+[11:43:25 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 167 : foreach() argument must be of type array|object, null given
+[11:43:25 IST] ERROR [2]: \lib\web\Web\src\Plugin\Redirect.php line 132 : Cannot modify header information - headers already sent by (output started at C:\laragon\www\mgrcb\lib\web\Web\src\Core\ErrorManager.php:125)
+[11:44:04 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 160 : Undefined variable $now
+[11:44:04 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 161 : Undefined variable $now
+[11:44:04 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 167 : Undefined array key "family_name"
+[11:44:04 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 167 : foreach() argument must be of type array|object, null given
+[11:44:04 IST] ERROR [2]: \lib\web\Web\src\Plugin\Redirect.php line 132 : Cannot modify header information - headers already sent by (output started at C:\laragon\www\mgrcb\lib\web\Web\src\Core\ErrorManager.php:121)
+[11:45:15 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 167 : Undefined array key "family_name"
+[11:45:15 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 167 : foreach() argument must be of type array|object, null given
+[11:45:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:46:59 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 75 : Class "Backend\Controller\MemberType" not found
+[11:47:09 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:47:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:47:17 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 75 : Class "Backend\Controller\MemberType" not found
+[11:48:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[11:48:05 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\member.phtml on line 27 : Call to a member function getValue() on null
+[19:22:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:22:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:22:05 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\member.phtml on line 27 : Call to a member function getValue() on null
+[19:25:39 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:25:43 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:25:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:25:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:25:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:25:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:25:43 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:33:55 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 295 : Class "Backend\Controller\MemberType" not found
+[19:36:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:39:38 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:39:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:39:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:39:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:39:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:39:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[19:43:11 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:43:11 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[19:43:11 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[19:44:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:44:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[19:44:40 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[19:44:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[19:44:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 452 : Undefined array key "family_name"
+[19:44:52 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\create.phtml on line 452 : count(): Argument #1 ($value) must be of type Countable|array, null given
+[20:01:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[20:01:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:01:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:01:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:01:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:01:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:01:41 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[20:01:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:01:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:01:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:01:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:01:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\create.phtml line 610 : Undefined variable $count
+[20:06:12 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 167 : Undefined array key "family_name"
+[20:06:12 IST] ERROR [2]: \lib\module\Backend\src\Form\Beneficiary\CreateForm.php line 167 : foreach() argument must be of type array|object, null given
+[20:06:12 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 191 : Class "Backend\Controller\Membership" not found
+[20:07:04 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 192 : Call to undefined method Model\Beneficiary::load()
+[20:28:04 IST] EXCEPTION: \lib\module\Backend\src\Controller\BeneficiaryController.php on line 192 : Call to undefined method Model\Beneficiary::load()
+[20:29:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 143 : Attempt to read property "fmc_id" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 18 : Attempt to read property "id" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 28 : Attempt to read property "name" on bool
+[20:29:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 209 : Attempt to read property "member_type_id" on bool
+[20:29:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 209 : Undefined array key ""
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 36 : Attempt to read property "name" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 40 : Attempt to read property "code" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 44 : Attempt to read property "mobile" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 48 : Attempt to read property "aadhar_number" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 52 : Attempt to read property "aadhar_mobile" on bool
+[20:29:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 269 : Attempt to read property "date_of_birth" on bool
+[20:29:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 290 : Attempt to read property "date_of_birth" on bool
+[20:29:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 299 : Attempt to read property "disabled" on bool
+[20:29:04 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 299 : Attempt to read property "disabled" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 85 : Attempt to read property "name_malayalam" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 89 : Attempt to read property "address" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 93 : Attempt to read property "village" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 97 : Attempt to read property "taluk" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 101 : Attempt to read property "kerosene_distribution_center" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 105 : Attempt to read property "preferred_inspection_location" on bool
+[20:29:04 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 107 : Attempt to read property "access_key" on bool
+[22:04:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:04:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:04:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\member.phtml line 58 : Undefined property: stdClass::$code
+[22:05:24 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:05:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:06:00 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:06:01 IST] EXCEPTION: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php on line 143 : Attempt to assign property "fmc_id" on bool
+[22:09:30 IST] EXCEPTION: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php on line 128 : Class "Shared\Utility\Beneficiary" not found
+[22:10:20 IST] EXCEPTION: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php on line 329 : Call to a member function selectTotal() on null
+[22:10:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:10:56 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 207 : Undefined property: stdClass::$member_type_id
+[22:10:56 IST] ERROR [2]: \lib\shared\Shared\src\Utility\BeneficiaryAccount.php line 207 : Undefined array key ""
+[22:10:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 40 : Undefined property: stdClass::$code
+[22:10:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 52 : Undefined property: stdClass::$aadhar_mobile
+[22:10:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 85 : Undefined property: stdClass::$name_malayalam
+[22:10:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 93 : Undefined property: stdClass::$village
+[22:10:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 97 : Undefined property: stdClass::$taluk
+[22:10:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 101 : Undefined property: stdClass::$kerosene_distribution_center
+[22:10:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 105 : Undefined property: stdClass::$preferred_inspection_location
+[22:16:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:16:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 71 : Undefined property: stdClass::$name_malayalam
+[22:16:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 79 : Undefined property: stdClass::$village
+[22:16:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 83 : Undefined property: stdClass::$taluk
+[22:16:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 87 : Undefined property: stdClass::$kerosene_distribution_center
+[22:16:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\view.phtml line 91 : Undefined property: stdClass::$preferred_inspection_location
+[22:20:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:21:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:25:53 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:26:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:27:05 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:28:04 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:28:04 IST] EXCEPTION: \lib\module\Backend\view\scripts\beneficiary\view.phtml on line 4 : Call to a member function fmc() on null
+[22:28:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:28:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 150 : Undefined variable $trans
+[22:28:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\index.phtml line 65 : Undefined property: stdClass::$code
+[22:28:52 IST] ERROR [2]: \lib\module\Backend\view\scripts\beneficiary\index.phtml line 66 : Undefined property: stdClass::$member_type_id

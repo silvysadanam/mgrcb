@@ -1,0 +1,85 @@
+[14:22:51 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:22:57 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[14:22:57 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[14:30:53 IST] EXCEPTION: \lib\module\Application\src\Utility\RDReport.php on line 556 : Too few arguments to function Application\Utility\RDReport::cumulativePaymentyHeadID(), 0 passed in C:\laragon\www\fws_main\micro-finance\lib\module\Application\src\Utility\RDReport.php on line 149 and exactly 1 expected
+[14:32:08 IST] ERROR [2]: \lib\module\Application\src\Utility\RDReport.php line 151 : Array to string conversion
+[14:32:08 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[14:32:08 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[14:32:17 IST] ERROR [2]: \lib\module\Application\src\Utility\RDReport.php line 151 : Array to string conversion
+[14:32:17 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[14:32:17 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[14:32:24 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[14:32:32 IST] ERROR [2]: \lib\module\Application\src\Utility\RDReport.php line 151 : Array to string conversion
+[14:32:32 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[14:32:32 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[14:56:17 IST] ERROR [2]: \lib\module\Application\src\Utility\RDReport.php line 151 : Array to string conversion
+[14:56:17 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[14:56:17 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[15:05:22 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[15:05:22 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[15:22:40 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[15:22:40 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[15:23:25 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[15:23:25 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[15:24:06 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[15:24:22 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[15:25:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[15:27:19 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[15:27:19 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[16:01:04 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[16:01:04 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[16:27:53 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[16:27:53 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[16:28:03 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[16:28:03 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[16:31:27 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[16:31:27 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[16:32:03 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 65 : Undefined array key "filters"
+[16:32:03 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[16:32:57 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[16:41:28 IST] EXCEPTION: \lib\module\Application\src\Utility\RDReport.php on line 665 : Call to a member function deductionTypes() on null
+[16:41:57 IST] ERROR [2]: \lib\module\Application\view\scripts\reports\index.phtml line 85 : Undefined variable $branch
+[16:41:57 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[16:42:28 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[20:20:47 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[20:27:02 IST] EXCEPTION: \lib\module\Application\src\Utility\RDReport.php on line 665 : Class "Shared\Utility\DeductionHelper" not found
+[20:28:35 IST] EXCEPTION: \lib\module\Application\src\Utility\RDReport.php on line 665 : Class "Shared\Utility\DeductionHelper" not found
+[20:28:58 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[20:29:10 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[20:31:03 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[20:31:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[20:31:29 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[20:32:03 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[20:32:07 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[20:32:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[20:32:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[20:32:23 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[20:33:22 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 46 : Class "Model\DeductionMemberDaily" not found
+[20:34:13 IST] EXCEPTION: \lib\model\Model\src\DeductionMemberDaily.php on line 18 : Undefined constant Web\Database\Table\Db::DEDUCTION_MEMEBR_DAILY
+[20:35:18 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'transDate' in 'field list'
+[20:35:34 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\index.phtml on line 85 : Call to a member function name() on null
+[20:36:31 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[20:36:31 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[20:37:30 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[20:37:30 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[21:34:56 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 173 : Undefined variable $trans
+[21:44:59 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[21:55:07 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[21:57:04 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 171 : Undefined variable $headId
+[22:02:25 IST] ERROR [2]: \lib\module\Application\src\Controller\ReportsController.php line 58 : Undefined variable $minDate
+[22:04:05 IST] EXCEPTION: \lib\web\Web\src\Database\Sql\Result.php on line 55 : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'deduction_date' in 'field list'
+[22:05:35 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 115 : Class "Application\Utility\LedgerReport" not found
+[22:07:52 IST] EXCEPTION: \lib\module\Application\src\Utility\LedgerReport.php on line 600 : Call to a member function deductionTypes() on null
+[22:08:26 IST] EXCEPTION: \lib\module\Application\src\Utility\LedgerReport.php on line 137 : Call to a member function id() on null
+[22:11:02 IST] ERROR [2]: \lib\module\Application\src\Utility\LedgerReport.php line 66 : Undefined variable $branch
+[22:11:02 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[22:11:53 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[22:12:21 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[22:13:55 IST] EXCEPTION: \lib\module\Application\view\scripts\reports\ledger.phtml on line 91 : Call to a member function name() on null
+[22:14:54 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:14:54 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:15:38 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:15:38 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:16:06 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:16:06 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[22:16:44 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated

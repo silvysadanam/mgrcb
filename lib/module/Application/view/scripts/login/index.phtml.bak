@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * login/index
+ */
+
+$form = $this->getForm();
+$captcha = $form->captcha();
+
+?>
+
+                <section class="flexbox-container">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-10 box-shadow-2 p-0">
+                            <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
+                                <div class="card-header border-0">
+                                    <div class="font-large-1 text-center">
+                                        Login
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <?php $this->block('flash-auth'); ?>
+                                        
+                                        <form class="form-horizontal" action="<?php echo $this->view->actionUrl('login'); ?>" method="post" autocomplete="off">
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <input type="text" class="form-control square" name="credential11" id="credential11" placeholder="Code/Mobile/Email" required="required" maxlength="100" title="Username">
+                                                <div class="form-control-position">
+                                                    <i class="ft-user"></i>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <input type="password" class="form-control square" name="credential22" id="credential22" placeholder="Password" required="required" maxlength="50" title="Password">
+                                                <div class="form-control-position">
+                                                    <i class="ft-lock"></i>
+                                                </div>
+                                            </fieldset>
+                                            <?php if ($form->isCaptchaEnabled()): ?>
+                                            
+                                            <div class="form-group row">
+                                                <div class="col-md-6 col-12 text-center mt-1">
+                                                    CAPTCHA Verification: <?php echo $captcha->getExpression(); ?>
+                                                    <?php echo $captcha->getChallenge(); ?>
+                                                    
+                                                </div>
+                                                <div class="col-md-6 col-12 float-sm-left text-center">
+                                                    <input type="text" class="form-control square" name="<?php 
+                                                    echo $captcha->getVerificationField(); ?>" placeholder="?" required="required" maxlength="10" title="Verification code">
+                                                </div>
+                                            </div>
+                                            <?php endif; ?>
+                                                                   
+                                            <div class="form-group text-center">
+                                                <?php echo $form->getCsrf(); ?>
+                                                
+                                                <button type="submit" class="btn square btn-block btn-glow btn-bg-gradient-x-blue-green col-12 mr-1 mb-1 center" title="Login">Login</button>    
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <?php /* ?>
+                                <div class="card-footer border-0 p-0">
+                                    <p class="float-sm-center text-center">Forgot password?
+                                        <a href="<?php echo $this->view->actionUrl('forgot-password'); ?>" class="card-link" title="Forgot Password">Reset password here</a>
+                                    </p>
+                                    <p class="float-sm-center text-center">New user?
+                                        <a href="<?php echo $this->view->actionUrl('register'); ?>" class="card-link" title="Register">Register here</a>
+                                    </p>
+                                </div>
+                                <?php */ ?>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>

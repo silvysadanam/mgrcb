@@ -1,0 +1,85 @@
+<?php
+
+$member = $this->view->getVariable('member');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">View Deduction Bill Opening Balance</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-striped">
+                                                    <thead class="bg-info white">
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>Code</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                            <td>
+                                                                <a class="btn btn-outline-info btn-sm" title="Edit Opening Balance" href="<?php
+                                                                echo $this->view->actionUrl('deduction/opening-balance-edit/id/' . $member->id); ?>">Edit</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">
+                                                            Opening Balance
+                                                        </h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <table class="table table-borderless">
+                                                                <thead class="bg-secondary white">
+                                                                    <tr>
+                                                                        <th>No.</th>
+                                                                        <th>Deduction Item</th>
+                                                                        <th>Opening Balance</th>
+                                                                        <th>As on Date</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php foreach ($this->view->getVariable('list') as $row): ?>
+
+                                                                    <tr>
+                                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                                        <td>
+                                                                            <?php echo $this->view->lookup('deductionType', $row->deduction_type_id); ?> /
+                                                                            <?php echo $this->view->lookup('malayalam', $row->deduction_type_id); ?>
+                                                                            
+                                                                        </td>
+                                                                        <td><?php echo $row->opening_balance; ?></td>
+                                                                        <td><?php echo $row->opening_date; ?></td>
+                                                                    </tr>
+                                                                    <?php endforeach; ?>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

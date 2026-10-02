@@ -1,0 +1,40 @@
+<?php
+
+$form = $this->getForm();
+//$values = $form->getValues();
+$options = $this->view->getVariable('options');
+$blank = $this->view->getVariable('blank');
+$fmcId = $this->view->getVariable('fmcId');
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Configure Initial Balance Sheet Heads - FMC <?php
+                                        echo $this->view->escapeHtml($this->view->getVariable('fmc')); ?>
+                                    
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-deduction" id="form-deduction" method="post" action="" autocomplete="off">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                  <div class="card-header">
+                                                        <h4 class="card-title">The initial Balance Sheet configuration has been completed.</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                <a href="<?php echo $this->view->actionUrl("accounts/bsview/id/{$fmcId}"); ?>" class="btn btn-outline-secondary ml-1" title="Back"><i class="ft-eye"></i> View</a>
+                                            </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

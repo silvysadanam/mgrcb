@@ -1,0 +1,71 @@
+<?php
+
+$members = $this->view->getVariable('members');
+$initialBalance = $this->view->getVariable('initialBalance');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Deduction Bills - Initial Opening Balance
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-4">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">Sl. No.</th>
+                                                        <th class="cursor-pointer">Name</th>
+                                                        <th class="cursor-pointer">Code</th>
+                                                        <th class="cursor-pointer">Status</th>
+                                                        <th>
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($members as $row): ?>
+                                                    <?php $hasSet = in_array($row->id, $initialBalance); ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->name); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->code); ?></td>
+                                                        <td><?php if ($hasSet) { ?>Set<?php } else { ?>Not set<?php } ?></td>
+                                                        <td>
+                                                            <?php if ($hasSet): ?>
+                                                            
+                                                            <a class="btn btn-info btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('deduction-bill/opening-balance-view/id/' . $row->id); ?>" title="View"><i class="ft-eye"></i> View</a>
+                                                            <a class="btn btn-primary btn-sm ml-1" href="<?php 
+                                                            echo $this->view->actionUrl('deduction-bill/opening-balance-edit/id/' . $row->id); ?>" title="Edit"><i class="ft-edit"></i> Edit</a>
+                                                            <?php else: ?>
+                                                            
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('deduction-bill/opening-balance-create/id/' . $row->id); ?>" title="Add Opening Balance"><i class="ft-edit"></i> Add Opening Balance</a>
+                                                            <?php endif; ?>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

@@ -1,0 +1,461 @@
+<?php
+
+$generator = $this->view->getVariable('generator');
+$report = $generator->report();
+$today = $generator->today();
+
+$fmcList = $this->view->lookupStore('fmc');
+$fmcIds = array_keys($fmcList);
+$sourceList = $this->view->lookupStore('source');
+$sourcecIds = array_keys($sourceList);
+$typeList = $this->view->lookupStore('type');
+$typeIds = array_keys($typeList);
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">DCB-PQR RECONCILIATION - FMC WISE - <?php echo $today; ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body overflow-auto">
+                                        <table class="table table-striped table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center bg-yellow">FMC</th>
+                                                    <th class="text-center">DCB</th>
+                                                    <th class="text-center">PQR</th>
+                                                    <th class="text-center">Closed at<br>end of tenure</th>
+                                                    <th class="text-center">Pre-closed</th>
+                                                    <th class="text-center">Written<br>off</th> 
+                                                    <th class="text-center">Rescheduled</th>
+                                                    <th class="text-center">Refinanced &amp;<br>Rescheduled</th>
+                                                    <th class="text-center">Tenure ended<br>with OD</th>
+                                                    <th class="text-center">Inactive</th>
+                                                    <th class="text-center">Closing<br>not effected</th>
+                                                    <th class="text-center">Repayment<br>not started</th>
+                                                    <th class="text-center">Current Instalment<br>pending</th>
+                                                    <th class="text-center bg-amber">Reconciled</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center bg-yellow">Total</th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['total']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pqr']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['tenure_closed']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pre_closed']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['written_off']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['rescheduled']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['refinanced']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['closed_od']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $generator->minus($report['dcb']['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['upcoming']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pending']; ?></th>
+                                                    <th class="text-center bg-success"><?php echo $report['reconciled']['total']['fmc']; ?></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($fmcList as $fmcId => $fmcName): ?>
+
+                                                <tr>
+                                                    <td class="text-center"><?php echo $this->view->escapeHtml($fmcName); ?></td>
+                                                    <th class="text-right bg-success"><?php echo $report['fmc'][$fmcId]['total']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['pqr']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['tenure_closed']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['pre_closed']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['written_off']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['rescheduled']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['refinanced']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['closed_od']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['inactive']; ?></th>
+                                                    <th class="text-right"><?php echo $generator->minus($report['fmc'][$fmcId]['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['upcoming']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['pending']; ?></th>
+                                                    <th class="text-center bg-success"><strong><?php echo $report['reconciled']['fmc'][$fmcId]; ?></strong></th>
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['total']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pqr']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['tenure_closed']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pre_closed']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['written_off']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['rescheduled']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['refinanced']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['closed_od']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $generator->minus($report['dcb']['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['upcoming']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pending']; ?></th>
+                                                    <th class="text-center bg-success"><?php echo $report['reconciled']['total']['fmc']; ?></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">DCB-PQR RECONCILIATION - SOURCE WISE - <?php echo $today; ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body overflow-auto">
+                                        <table class="table table-striped table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center bg-yellow">Source</th>
+                                                    <th class="text-center">DCB</th>
+                                                    <th class="text-center">PQR</th>
+                                                    <th class="text-center">Closed at<br>end of tenure</th>
+                                                    <th class="text-center">Pre-closed</th>
+                                                    <th class="text-center">Written<br>off</th> 
+                                                    <th class="text-center">Rescheduled</th>
+                                                    <th class="text-center">Refinanced &amp;<br>Rescheduled</th>
+                                                    <th class="text-center">Tenure ended<br>with OD</th>
+                                                    <th class="text-center">Inactive</th>
+                                                    <th class="text-center">Closing<br>not effected</th>
+                                                    <th class="text-center">Repayment<br>not started</th>
+                                                    <th class="text-center">Current Instalment<br>pending</th>
+                                                    <th class="text-center bg-amber">Reconciled</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center bg-yellow">Total</th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['total']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pqr']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['tenure_closed']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pre_closed']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['written_off']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['rescheduled']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['refinanced']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['closed_od']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $generator->minus($report['dcb']['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['upcoming']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pending']; ?></th>
+                                                    <th class="text-center bg-success"><?php echo $report['reconciled']['total']['fmc']; ?></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($sourceList as $sourceId => $sourceName): ?>
+
+                                                <tr>
+                                                    <td class="text-center"><?php echo $this->view->escapeHtml($sourceName); ?></td>
+                                                    <th class="text-right bg-success"><?php echo $report['source'][$sourceId]['total']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['pqr']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['tenure_closed']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['pre_closed']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['written_off']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['rescheduled']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['refinanced']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['closed_od']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['inactive']; ?></th>
+                                                    <th class="text-right"><?php echo $generator->minus($report['source'][$sourceId]['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['upcoming']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['pending']; ?></th>
+                                                    <th class="text-center bg-success"><strong><?php echo $report['reconciled']['source'][$sourceId]; ?></strong></th>
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['total']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pqr']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['tenure_closed']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pre_closed']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['written_off']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['rescheduled']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['refinanced']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['closed_od']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $generator->minus($report['dcb']['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['upcoming']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pending']; ?></th>
+                                                    <th class="text-center bg-success"><?php echo $report['reconciled']['total']['source']; ?></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">DCB-PQR WITH FMC / TYPE WISE RECONCILIATION - <?php echo $today; ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body overflow-auto">
+                                        <table class="table table-striped table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center bg-yellow">FMC</th>
+                                                    <th class="text-center bg-yellow">&nbsp;</th>
+                                                    <th class="text-center bg-yellow">Total</th>
+                                                    <?php foreach ($typeList as $typeName): ?>
+                                                    
+                                                    <th class="text-center bg-yellow"><?php echo $generator->title($typeName); ?></th>
+                                                    <?php endforeach; ?>
+                                                    
+                                                    <th class="text-center bg-amber">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($fmcList as $fmcId => $fmcName): ?>
+
+                                                <tr>
+                                                    <td class="text-center" rowspan="2"><?php echo $this->view->escapeHtml($fmcName); ?></td>
+                                                    <th class="text-center">DCB</th>
+                                                    <th class="text-right"><strong><?php echo $report['type']['total']['fmc_dcb'][$fmcId]; ?></strong></th>
+                                                    <?php foreach ($typeIds as $typeId): ?>
+                                                    
+                                                    <th class="text-right"><?php echo $report['type']['fmc'][$fmcId][$typeId]; ?></th>
+                                                    <?php endforeach; ?>
+                                                    
+                                                    <th class="text-center bg-success"><strong><?php echo $report['type']['total']['fmc_dcb'][$fmcId]; ?></strong></th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center">PQR</th>
+                                                    <th class="text-right"><strong><?php echo $report['type']['total']['fmc_pqr'][$fmcId]; ?></strong></th>
+                                                    <?php foreach ($typeIds as $typeId): ?>
+                                                    
+                                                    <th class="text-right"><?php echo $report['type']['pqr'][$fmcId][$typeId]; ?></th>
+                                                    <?php endforeach; ?>
+                                                    
+                                                    <th class="text-center bg-success"><strong><?php echo $report['type']['total']['fmc_pqr'][$fmcId]; ?></strong></th>
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th rowspan="2" class="text-center">Total</th>
+                                                    <th class="text-center">DCB</th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['total']; ?></th>
+                                                    <?php foreach ($typeIds as $typeId): ?>
+                                                    
+                                                    <th class="text-right bg-success"><?php echo $report['type']['total']['dcb'][$typeId]; ?></th>
+                                                    <?php endforeach; ?>
+                                                    
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['total']; ?></th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center">PQR</th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pqr']; ?></th>
+                                                    <?php foreach ($typeIds as $typeId): ?>
+                                                    
+                                                    <th class="text-right bg-success"><?php echo $report['type']['total']['pqr'][$typeId]; ?></th>
+                                                    <?php endforeach; ?>
+                                                    
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pqr']; ?></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">DCB-PQR RECONCILIATION - FMC WISE (Alternate) - <?php echo $today; ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body overflow-auto">
+                                        <table class="table table-striped table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center bg-yellow">FMC</th>
+                                                    <th class="text-center">Active<br>Loans</th>
+                                                    <th class="text-center">Tenure ended<br>with OD</th>
+                                                    <th class="text-center">Inactive</th>
+                                                    <th class="text-center">Total</th>
+                                                    <th class="text-center">PQR</th>
+                                                    <th class="text-center">Closing<br>not effected</th>
+                                                    <th class="text-center">Repayment<br>not started</th>
+                                                    <th class="text-center">Current Instalment<br>pending</th>
+                                                    <th class="text-center bg-amber">Reconciled</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center bg-yellow">Total</th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['active']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['closed_od']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['active'] + $report['dcb']['closed_od'] + $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pqr']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $generator->minus($report['dcb']['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['upcoming']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pending']; ?></th>
+                                                    <th class="text-center bg-success"><?php echo $report['alternate']['reconciled']['fmc']; ?></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($fmcList as $fmcId => $fmcName): ?>
+
+                                                <tr>
+                                                    <td class="text-center"><?php echo $this->view->escapeHtml($fmcName); ?></td>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['active']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['closed_od']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['inactive']; ?></th>
+                                                    <th class="text-right"><?php echo $report['alternate']['fmc'][$fmcId]['total']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['pqr']; ?></th>
+                                                    <th class="text-right"><?php echo $generator->minus($report['fmc'][$fmcId]['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['upcoming']; ?></th>
+                                                    <th class="text-right"><?php echo $report['fmc'][$fmcId]['pending']; ?></th>
+                                                    <th class="text-center bg-success"><strong><?php echo $report['alternate']['fmc'][$fmcId]['reconciled']; ?></strong></th>
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['active']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['closed_od']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['active'] + $report['dcb']['closed_od'] + $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pqr']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $generator->minus($report['dcb']['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['upcoming']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pending']; ?></th>
+                                                    <th class="text-center bg-success"><?php echo $report['alternate']['reconciled']['fmc']; ?></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">DCB-PQR RECONCILIATION - SOURCE WISE (Alternate) - <?php echo $today; ?></h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body overflow-auto">
+                                        <table class="table table-striped table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center bg-yellow">Source</th>
+                                                    <th class="text-center">Active<br>Loans</th>
+                                                    <th class="text-center">Tenure ended<br>with OD</th>
+                                                    <th class="text-center">Inactive</th>
+                                                    <th class="text-center">Total</th>
+                                                    <th class="text-center">PQR</th>
+                                                    <th class="text-center">Closing<br>not effected</th>
+                                                    <th class="text-center">Repayment<br>not started</th>
+                                                    <th class="text-center">Current Instalment<br>pending</th>
+                                                    <th class="text-center bg-amber">Reconciled</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center bg-yellow">Total</th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['active']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['closed_od']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['active'] + $report['dcb']['closed_od'] + $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pqr']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $generator->minus($report['dcb']['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['upcoming']; ?></th>
+                                                    <th class="text-right bg-yellow"><?php echo $report['dcb']['pending']; ?></th>
+                                                    <th class="text-center bg-success"><?php echo $report['alternate']['reconciled']['source']; ?></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($sourceList as $sourceId => $sourceName): ?>
+
+                                                <tr>
+                                                    <td class="text-center"><?php echo $this->view->escapeHtml($sourceName); ?></td>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['active']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['closed_od']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['inactive']; ?></th>
+                                                    <th class="text-right"><?php echo $report['alternate']['source'][$sourceId]['total']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['pqr']; ?></th>
+                                                    <th class="text-right"><?php echo $generator->minus($report['source'][$sourceId]['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['upcoming']; ?></th>
+                                                    <th class="text-right"><?php echo $report['source'][$sourceId]['pending']; ?></th>
+                                                    <th class="text-center bg-success"><strong><?php echo $report['alternate']['source'][$sourceId]['reconciled']; ?></strong></th>
+                                                </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['active']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['closed_od']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['active'] + $report['dcb']['closed_od'] + $report['dcb']['inactive']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pqr']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $generator->minus($report['dcb']['pqr_pre_closed']); ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['upcoming']; ?></th>
+                                                    <th class="text-right bg-success"><?php echo $report['dcb']['pending']; ?></th>
+                                                    <th class="text-center bg-success"><?php echo $report['alternate']['reconciled']['source']; ?></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

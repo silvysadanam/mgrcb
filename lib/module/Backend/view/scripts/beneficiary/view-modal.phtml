@@ -1,0 +1,76 @@
+<?php
+
+$store = $this->view->getVariable('store');
+
+?>
+
+        <form name="form-auction-modal" id="form-auction-modal" method="post" action="">
+            <div class="modal fade" id="modal-entry" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEntry" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabelEntry"> 
+                                Add Entry
+                            </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"></div>
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="family_name">Name <span class="red">*</span></label>
+                                           <input type="text" id="family_name" class="form-control" value="" placeholder="Name" required="required">
+                                        </div>
+                                         <div class="form-group">
+                                            <label for="family_relation">Relationship <span class="red">*</span></label>
+                                           <input type="text" id="family_relation" class="form-control" value="" placeholder="Relationship" required="required">
+                                        </div>
+                                         <div class="form-group">
+                                            <label for="family_category">Gender <span class="red">*</span></label>
+                                            <select name="family_category" id="family_category" class="form-control" title="Gender">
+                                                 <option value="0">--select--</option>
+                                                            <?php echo $this->view->formHelper('select', $this->view->lookupStore('type')); ?>
+
+                                                        </select>
+                                        </div>
+                                         <div class="form-group">
+                                            <label for="family_age">Age <span class="red">*</span></label>
+                                           <input type="text" id="family_age" class="form-control" value="" placeholder="Age" required="required">
+                                        </div>
+                                         <div class="form-group">
+                                            <label for="family_education">Education <span class="red">*</span></label>
+                                            <select id="family_education" name="family_education" class="form-control" title="വിദ്യാഭ്യാസം">
+                                                <option value="0">--select--</option>
+                                                 <?php echo $this->view->formHelper('select', $this->view->lookupStore('edutype')); ?>
+                                            </select>
+                                        </div>
+                                         <div class="form-group">
+                                            <label for="family_disability">Disability</label>
+                                           <input type="text" id="family_disability" class="form-control" value="" placeholder="Disability">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="family_occupation">Occupation </label>
+                                           <input type="text" id="family_occupation" class="form-control" value="" placeholder="Occupation">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="label-control" for="family_income">Monthly Income <span class="red">*</span></label>
+                                            <input type="number" id="family_income" class="form-control" value="" placeholder="Monthly Income" min="0" max="99999" step="1" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="hidden" id="entry-id" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>    

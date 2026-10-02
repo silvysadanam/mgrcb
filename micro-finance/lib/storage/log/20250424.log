@@ -1,0 +1,35 @@
+[12:02:48 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[12:07:21 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 59 : syntax error, unexpected variable "$startDate"
+[12:08:16 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 59 : syntax error, unexpected variable "$sDate"
+[12:08:55 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 60 : syntax error, unexpected variable "$sDate"
+[12:08:56 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 60 : syntax error, unexpected variable "$sDate"
+[12:08:56 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 60 : syntax error, unexpected variable "$sDate"
+[12:08:56 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 60 : syntax error, unexpected variable "$sDate"
+[12:08:56 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 60 : syntax error, unexpected variable "$sDate"
+[12:09:33 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 59 : syntax error, unexpected variable "$sDate"
+[12:14:40 IST] EXCEPTION: \lib\shared\Shared\src\Utility\ReportHelper.php on line 344 : syntax error, unexpected token "="
+[12:15:11 IST] ERROR [2]: \lib\module\Application\src\Controller\ReportsController.php line 91 : Undefined variable $minDatepicker
+[12:18:59 IST] EXCEPTION: \lib\web\Web\src\Utility\DateHelper.php on line 329 : Failed to parse time string (31/03/2025) at position 0 (3): Unexpected character
+[12:20:07 IST] EXCEPTION: \lib\module\Application\src\Controller\ReportsController.php on line 60 : syntax error, unexpected variable "$maxDate"
+[12:23:27 IST] ERROR [2]: \lib\module\Application\src\Controller\ReportsController.php line 58 : Undefined variable $minDate
+[17:25:01 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[17:25:03 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:04:12 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:25:07 IST] ERROR [2]: \lib\module\Application\src\Form\VoucherForm.php line 97 : Undefined property: Application\Form\VoucherForm::$_headModel
+[19:25:07 IST] EXCEPTION: \lib\module\Application\src\Form\VoucherForm.php on line 97 : Call to a member function checkByColumnByFmc() on null
+[19:25:49 IST] EXCEPTION: \lib\module\Application\src\Form\VoucherForm.php on line 126 : Class "Application\Form\Transactions" not found
+[19:26:28 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 152 : Undefined array key "loan_id"
+[19:26:28 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 162 : Undefined variable $remarks
+[19:34:55 IST] ERROR [2]: \lib\module\Application\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[19:39:29 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 152 : Undefined array key "loan_id"
+[19:39:29 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 162 : Undefined variable $remarks
+[19:40:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 152 : Undefined array key "loan_id"
+[19:40:10 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 162 : Undefined variable $remarks
+[19:46:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:49:46 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 152 : Undefined array key "loan_id"
+[19:49:46 IST] ERROR [2]: \lib\shared\Shared\src\Utility\Transactions.php line 168 : Undefined variable $remarks
+[19:53:26 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\index.phtml line 80 : Undefined property: stdClass::$non_member
+[19:53:26 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\index.phtml line 80 : Undefined property: stdClass::$non_member
+[19:53:26 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\index.phtml line 80 : Undefined property: stdClass::$non_member
+[19:53:26 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\index.phtml line 80 : Undefined property: stdClass::$non_member
+[19:53:26 IST] ERROR [2]: \lib\module\Application\view\scripts\voucher\index.phtml line 80 : Undefined property: stdClass::$non_member

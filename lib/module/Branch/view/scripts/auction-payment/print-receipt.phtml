@@ -1,0 +1,78 @@
+<?php
+
+$payment = $this->view->getVariable('payment');
+$dailyAccount = $this->view->getVariable('dailyAccount');
+$auctioneer = $this->view->getVariable('auctioneer');
+$fmc = $this->view->getVariable('fmc');
+$id = $payment->id;
+$title = [
+    $fmc->code, $id, $this->view->formatDateTime('d-m-Y', $payment->payment_date),
+    $auctioneer->code, $auctioneer->name,
+];
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>Payment Receipt - <?php echo $this->view->escapeHtml(implode(' ', $title)); ?></title>
+        <?php $this->block('print-auction'); ?>
+        
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="0" border="0" style="margin:10px 10px 5px 0;" width="600">
+            <thead>
+                <tr>
+                    <th class="main-heading center" colspan="2">
+                        FISHERMEN WELFARE SOCIETY - KOLLAM
+                    </th>
+                </tr>
+                <tr>
+                    <th class="center" colspan="2">
+                        FMC: <?php echo $this->view->escapeHtml($fmc->name); ?>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="main-heading center" colspan="2">
+                        <span style="text-decoration: underline;">RECEIPT</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>No. <?php echo $id; ?></td>
+                    <td class="right">Date: <?php echo $this->view->datepicker($payment->payment_date); ?></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            <em>Received from Mr. </em> <strong><?php echo $this->view->escapeHtml($auctioneer->name); ?></strong> 
+                            <em>an amount of <br> Rupees</em> <strong><?php echo $this->view->amountWords($payment->amount); ?></strong> 
+                            <br><em>towards</em>
+                            <strong>
+                            <?php if ('' != $payment->description): ?>
+                            <?php echo $this->view->escapeHtml($payment->description); ?>
+                            <?php else: ?>
+                            
+                            Auction advance
+                            <?php endif; ?>
+                            
+                            </strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong><?php echo $this->view->symbol('inr'); ?> 
+                        <span style="text-decoration: underline;"><?php echo $payment->amount; ?>/-</span>
+                        </strong>
+                    </td>
+                    <td class="right">Cashier/Accountant</td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>

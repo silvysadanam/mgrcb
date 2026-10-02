@@ -1,0 +1,206 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$auctionChit = $store->auctionChit();
+$fmc = $store->fmc();
+$member = $store->member();
+$grouped = $store->grouped();
+$notes = $store->notes();
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Deduction Bill
+                                    </h4>
+                                    <input type="hidden" id="cancel-url" value="<?php echo $this->view->actionUrl('deduction'); ?>">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>FMC</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Code</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date</td>
+                                                            <td><?php echo $this->view->datepicker($auctionChit->auction_date); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Auction Amount</td>
+                                                            <td><?php echo $auctionChit->amount; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Advance received from Auctioneer</td>
+                                                            <td><?php echo $auctionChit->advance; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount Paid by Member</td>
+                                                            <td><?php echo $auctionChit->member_paid_amount; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Deductions</td>
+                                                            <td><?php echo $auctionChit->deduction_amount; ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Balance received by Member</td>
+                                                            <td><?php echo $auctionChit->deduction_balance; ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-12">
+                                                <a class="btn btn-outline-dark mr-2" title="Print Deduction Bill in English" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction/print/id/' . $auctionChit->id); ?>"><i class="ft-printer"></i> Print Deduction Bill (English - Land) </a>
+                                                <a class="btn btn-outline-dark mr-2" title="Print Deduction Bill in English" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction/print-portrait/id/' . $auctionChit->id); ?>/size/1"><i class="ft-printer"></i> Print Deduction Bill (English - Port) </a>
+                                                <a class="btn btn-outline-dark mr-2" title="Print Deduction Bill Receipt in Malayalam" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction/receipt/id/' . $auctionChit->id); ?>"><i class="ft-printer"></i> Print Receipt (മലയാളം - Land) </a>
+                                                <a class="btn btn-outline-dark" title="Print Deduction Bill Receipt in Malayalam" target="_blank" href="<?php
+                                                echo $this->view->actionUrl('deduction/receipt-portrait/id/' . $auctionChit->id); ?>/size/1"><i class="ft-printer"></i> Print Receipt (മലയാളം - Port) </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-bordered border-primary">
+                                <div class="card-header bg-primary">
+                                    <h4 class="card-title white">Deductions</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements white">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row match-height">
+                                            <?php foreach ($grouped as $groupId => $entries): ?>
+                                            <?php $subTotal = 0; ?>
+                                            <?php $this->view->counter(0); ?>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title"><?php echo $this->view->lookup('deductionGroup', $groupId); ?></h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <table class="table table-bordered">
+                                                                <thead class="bg-secondary white">
+                                                                    <tr>
+                                                                        <th width="10%">Sl. No.</th>
+                                                                        <th>Deduction Item</th>
+                                                                        <th width="25%">Amount</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php foreach ($entries as $item): ?>
+                                                                    <?php $subTotal += $item->deduction_amount; ?>
+                                                                    
+                                                                    <tr>
+                                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                                        <td><?php echo $this->view->lookup('deductionType', $item->deduction_type_id); ?></td>
+                                                                        <td class="text-right"><?php echo $item->deduction_amount; ?></td>
+                                                                    </tr>
+                                                                    <?php endforeach; ?>
+
+                                                                </tbody>
+                                                                <tfoot class="bg-secondary white">
+                                                                    <tr>
+                                                                        <th colspan="2">Sub Total</th>
+                                                                        <th class="text-right"><?php echo $subTotal; ?></th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php endforeach; ?>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <?php if (! empty($notes)): ?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-bordered border-primary">
+                                <div class="card-header bg-primary">
+                                    <h4 class="card-title white">Notes</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0 white">
+                                            <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-secondary white">
+                                                        <tr>
+                                                            <th>Date &amp; Time</th>
+                                                            <th>Name</th>
+                                                            <th>Notes</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($notes as $note): ?>
+                                                        
+                                                        <tr>
+                                                            <td><?php echo $this->view->userTime($note->created_at); ?></td>
+                                                            <td><?php echo $this->view->lookup('administrator', $note->created_by); ?></td>
+                                                            <td><?php echo $this->view->textareaHtml($note->note); ?></td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; 
+                

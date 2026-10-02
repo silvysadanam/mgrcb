@@ -1,0 +1,443 @@
+<?php
+
+use Shared\Column\PqaLoan;
+
+
+$cell = new PqaLoan();
+$columns = $cell->get();
+$span = PqaLoan::COLUMNS;
+
+$generator = $this->view->getVariable('generator');
+$loans = $generator->loans();
+$members = $generator->members();
+$entries = $generator->entries();
+$total = $generator->memberTotal();
+$filters = $generator->filters();
+$grandTotal = $generator->grandTotal();
+$loanCatch = $generator->loanCatch();
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>Credit Portfolio Analysis - Loans Level</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style media="all">
+            html {
+                overflow: auto;
+            }
+            body {
+                font-family: "Calibri", sans-serif;
+                font-size: 11pt;
+                text-align: left;
+                color: black;
+                width: fit-content;
+            }
+            thead th {
+                font-weight: bold;
+            }
+            thead th.center, tbody td.center {
+                text-align: center;
+            }
+            thead th.right, tbody td.right {
+                text-align: right;
+            }
+            tfoot th {
+                font-weight: bold;
+                text-align: right;
+            }
+            tfoot th.center {
+                text-align: center;
+            }
+            tbody tr td {
+                white-space: nowrap;
+            }
+            .main-heading {
+               background-color: #FFFF1F;
+            }
+            .yellow {
+                background-color: #FFFF1F;
+            }
+            .green {
+                background-color: #92D050;
+            }
+            .gold {
+                background-color: #F5C018;
+            }
+            .grey {
+                background-color: #BFBFBF;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .amount {
+                text-align: right;
+            }
+            .number {
+                text-align: center;
+            }
+            @media screen {
+                thead {
+                    top: 0;
+                    position: sticky;
+                    z-index: 10;
+                }
+            }
+            @media print {
+                p#print-button {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table cellpadding="2" cellspacing="0" border="1" style="margin:10px 10px 5px 0;">
+            <thead>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center">Credit Portfolio Analysis - Loans Level</th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center"><?php echo $this->view->escapeHtml($filters['fmc']); ?> Level</th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center">Source: <?php echo $this->view->escapeHtml($filters['source']); ?></th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center">Type: <?php echo $this->view->escapeHtml($filters['type']); ?></th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center">Loan Amount Range: <?php echo $this->view->escapeHtml($filters['amount']); ?></th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center">Ageing: <?php echo $this->view->escapeHtml($filters['ageing']); ?></th>
+                </tr>
+                <tr>
+                    <th colspan="<?php echo $span; ?>" class="main-heading center">As On <?php echo $this->view->escapeHtml($filters['date']); ?></th>
+                </tr>
+                <tr>
+                    <th class="yellow" title="A">&nbsp;</th>
+                    <th class="yellow center" title="B"><span><?php echo $columns[PqaLoan::C2]['html']; ?></span></th>
+                    <th class="yellow center" title="C"><?php echo $columns[PqaLoan::C3]['html']; ?></th>
+                    <th class="yellow center" title="D"><?php echo $columns[PqaLoan::C4]['html']; ?></th>
+                    <th class="yellow center" title="E"><?php echo $columns[PqaLoan::C5]['html']; ?></th>
+                    <th class="yellow center" title="F"><?php echo $columns[PqaLoan::C6]['html']; ?></th>
+                    <th class="yellow center" title="G"><?php echo $columns[PqaLoan::C7]['html']; ?></th>
+                    <th class="yellow center" title="H"><?php echo $columns[PqaLoan::C8]['html']; ?></th>
+                    <th class="yellow center" title="I"><?php echo $columns[PqaLoan::C9]['html']; ?></th>
+                    <th class="yellow center" title="J"><?php echo $columns[PqaLoan::C10]['html']; ?></th>
+                    <th class="yellow center" title="K"><?php echo $columns[PqaLoan::C11]['html']; ?></th>
+                    <th class="yellow center" title="L"><?php echo $columns[PqaLoan::C12]['html']; ?></th>
+                    <th class="yellow center" title="M"><?php echo $columns[PqaLoan::C13]['html']; ?></th>
+                    <th class="yellow center" title="N"><?php echo $columns[PqaLoan::C14]['html']; ?></th>
+                    <th class="yellow center" title="O"><?php echo $columns[PqaLoan::C15]['html']; ?></th>
+                    <th class="yellow center" title="P"><?php echo $columns[PqaLoan::C16]['html']; ?></th>
+                    <th class="yellow center" title="Q"><?php echo $columns[PqaLoan::C17]['html']; ?></th>
+                    <th class="yellow center" title="R"><?php echo $columns[PqaLoan::C18]['html']; ?></th>
+                    <th class="yellow center" title="S"><?php echo $columns[PqaLoan::C19]['html']; ?></th>
+                    <th class="yellow center" title="T"><?php echo $columns[PqaLoan::C20]['html']; ?></th>
+                    <th class="yellow center" title="U"><?php echo $columns[PqaLoan::C21]['html']; ?></th>
+                    <th class="gold center" title="V"><?php echo $columns[PqaLoan::C22]['html']; ?></th>
+                    <th class="gold center" title="W"><?php echo $columns[PqaLoan::C23]['html']; ?></th>
+                    <th class="gold center" title="X"><?php echo $columns[PqaLoan::C24]['html']; ?></th>
+                    <th class="yellow center" title="Y"><?php echo $columns[PqaLoan::C25]['html']; ?></th>
+                    <th class="yellow center" title="Z"><?php echo $columns[PqaLoan::C26]['html']; ?></th>
+                    <th class="yellow center" title="AA"><?php echo $columns[PqaLoan::C27]['html']; ?></th>
+                </tr>
+                <tr>
+                    <?php for ($column = 1; $column < 22; $column++): ?>
+                    
+                    <th class="yellow center"><?php echo $column; ?></th>
+                    <?php endfor; ?>
+                    <?php for ($column = 22; $column < 25; $column++): ?>
+                    
+                    <th class="gold center"><?php echo $column; ?></th>
+                    <?php endfor; ?>
+                    <?php for ($column = 25; $column < 28; $column++): ?>
+                    
+                    <th class="yellow center"><?php echo $column; ?></th>
+                    <?php endfor; ?>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($entries as $memberId => $memberItems): ?>
+                <?php $first = true; ?>
+                <?php foreach ($memberItems as $entry): ?>
+                <?php $loan = $loans[$entry->loan_id]; ?>
+                <?php $count = $this->view->counter(); ?>
+                <tr>
+                    <td class="right" title="<?php echo $count; ?>:1">
+                        <?php echo $count; ?>
+                        
+                    </td>
+                    <?php if ($first): ?>
+                    <?php $first = false; ?>
+                    <?php $member = $members[$memberId]; ?>
+                    
+                    <td class="grey" title="<?php echo $count; ?>:2">
+                        <?php echo $this->view->escapeHtml($member->name); ?>
+                    
+                    </td>
+                    <td class="grey" title="<?php echo $count; ?>:3">
+                        <?php echo $this->view->escapeHtml($member->code); ?>
+                    
+                    </td>
+                    <td class="grey" title="<?php echo $count; ?>:4">
+                        <?php echo $this->view->lookup('fmc', $member->fmc_id); ?>
+                    
+                    </td>
+                    <?php else: ?>
+                    
+                    <td class="grey">&nbsp;</td>
+                    <td class="grey">&nbsp;</td>
+                    <td class="grey">&nbsp;</td>
+                    <?php endif; ?>
+                    
+                    <td class="grey center" title="<?php echo $count; ?>:5">
+                        <?php echo $loan->account_number; ?>
+                    
+                    </td>
+                    <td class="grey" title="<?php echo $count; ?>:6">
+                        <?php echo $this->view->lookup('type', $loan->loan_type_id); ?>
+                    
+                    </td>
+                    <td class="grey" title="<?php echo $count; ?>:7">
+                        <?php echo $this->view->datepicker($loan->loan_date); ?>
+                    
+                    </td>
+                    <td class="grey amount" title="<?php echo $count; ?>:8">
+                        <?php echo $this->view->integer($loan->loan_amount); ?>
+                    
+                    </td>
+                    <td class="grey center" title="<?php echo $count; ?>:9">
+                        <?php echo $this->view->lookup('source', $loan->loan_source_id); ?>
+                    
+                    </td>
+                    <td class="grey center" title="<?php echo $count; ?>:10">
+                        <?php echo $this->view->integer($loan->tenure); ?>
+                    
+                    </td>
+                    <td class="grey amount" title="<?php echo $count; ?>:11">
+                        <?php echo $this->view->interestRate($loan->interest_rate); ?>%
+                    
+                    </td>
+                    <td class="grey amount" title="<?php echo $count; ?>:12">
+                        <?php echo $this->view->integer($loan->emi); ?>
+                    
+                    </td>
+                    <td class="center" title="<?php echo $count; ?>:13">
+                        <?php echo $entry->instalment; ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $count; ?>:14">
+                        <?php echo $this->view->integer($entry->principal_prepaid_current); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $count; ?>:15">
+                        <?php echo $this->view->integer($entry->principal_arrears); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $count; ?>:16">
+                        <?php echo $this->view->integer($entry->principal); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $count; ?>:17">
+                        <?php echo $this->view->integer($entry->interest); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $count; ?>:18">
+                        <?php echo $this->view->integer($entry->total); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $count; ?>:19">
+                        <?php echo $this->view->integer($entry->scheduled_outstanding); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $count; ?>:20">
+                        <?php echo $this->view->integer($entry->principal_outstanding); ?>
+                    
+                    </td>
+                    <td class="amount" title="<?php echo $count; ?>:21">
+                        <?php echo $this->view->integer($entry->actual_outstanding); ?>
+                    
+                    </td>
+                    <td class="gold amount" title="<?php echo $count; ?>:22">
+                        <?php echo $this->view->integer($entry->overdue); ?>
+                    
+                    </td>
+                    <td class="gold right" title="<?php echo $count; ?>:23">
+                        <?php echo $entry->ageing; ?>
+                    
+                    </td>
+                    <td class="gold right" title="<?php echo $count; ?>:24">
+                        <?php echo $entry->par; ?>
+                    
+                    </td>
+                    <td class="amount">&nbsp;</td>
+                    <td class="amount" title="<?php echo $count; ?>:26">
+                        <?php echo $this->view->integer($entry->repaid); ?>
+                    
+                    </td>
+                    <td class="right">&nbsp;</td>
+                </tr>
+                <?php endforeach; ?>
+                
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="green">&nbsp;</td>
+                    <td class="green">&nbsp;</td>
+                    <td class="green">&nbsp;</td>
+                    <td class="green">&nbsp;</td>
+                    <td class="green bold center" title="6">
+                        <?php echo $this->view->integer($total[$memberId]['loans']); ?>
+                    
+                    </td>
+                    <td class="green">&nbsp;</td>
+                    <td class="green bold amount" title="8">
+                        <?php echo $this->view->integer($total[$memberId]['amount']); ?>
+                    
+                    </td>
+                    <td class="green">&nbsp;</td>
+                    <td class="green">&nbsp;</td>
+                    <td class="green">&nbsp;</td>
+                    <td class="green bold amount" title="12">
+                        <?php echo $this->view->integer($total[$memberId]['emi']); ?>
+                    
+                    </td>
+                    <td class="green">&nbsp;</td>
+                    <td class="green bold amount" title="14">
+                        <?php echo $this->view->integer($total[$memberId]['principal_prepaid_current']); ?>
+                    
+                    </td>
+                    <td class="green bold amount" title="15">
+                        <?php echo $this->view->integer($total[$memberId]['principal_arrears']); ?>
+                    
+                    </td>
+                    <td class="green bold amount" title="16">
+                        <?php echo $this->view->integer($total[$memberId]['principal']); ?>
+                    
+                    </td>
+                    <td class="green bold amount" title="17">
+                        <?php echo $this->view->integer($total[$memberId]['interest']); ?>
+                    
+                    </td>
+                    <td class="green bold amount" title="18">
+                        <?php echo $this->view->integer($total[$memberId]['total']); ?>
+                    
+                    </td>
+                    <td class="green bold amount" title="19">
+                        <?php echo $this->view->integer($total[$memberId]['scheduled_outstanding']); ?>
+                    
+                    </td>
+                    <td class="green bold amount" title="20">
+                        <?php echo $this->view->integer($total[$memberId]['principal_outstanding']); ?>
+                    
+                    </td>
+                    <td class="green bold amount" title="21">
+                        <?php echo $this->view->integer($total[$memberId]['actual_outstanding']); ?>
+                    
+                    </td>
+                    <td class="green bold  amount" title="22">
+                        <?php echo $this->view->integer($total[$memberId]['overdue']); ?>
+                    
+                    </td>
+                    <td class="green bold right" title="23">
+                        <?php echo $total[$memberId]['ageing']; ?>
+                    
+                    </td>
+                    <td class="green bold right" title="24">
+                        <?php echo $this->view->integer($total[$memberId]['par']); ?>
+                    
+                    </td>
+                    <td class="green bold amount" title="25">
+                        <?php echo $this->view->integer($total[$memberId]['catch']); ?>
+                    
+                    </td>
+                    <td class="green bold amount" title="26">
+                        <?php echo $this->view->integer($total[$memberId]['repaid']); ?>
+                    
+                    </td>
+                    <td class="green bold right" title="27">
+                        <?php echo $this->view->integer($total[$memberId]['percentage_catch']); ?>%                        
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="bold" colspan="4">Grand Total</td>
+                    <td class="bold center" title="6">
+                        <?php echo $this->view->integer($grandTotal['loans']); ?>
+                    
+                    </td>
+                    <td>&nbsp;</td>
+                    <td class="bold amount" title="8">
+                        <?php echo $this->view->integer($grandTotal['amount']); ?>
+                    
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="bold amount" title="12">
+                        <?php echo $this->view->integer($grandTotal['emi']); ?>
+                    
+                    </td>
+                    <td>&nbsp;</td>
+                    <td class="bold amount" title="14">
+                        <?php echo $this->view->integer($grandTotal['principal_prepaid_current']); ?>
+                    
+                    </td>
+                    <td class="bold amount" title="15">
+                        <?php echo $this->view->integer($grandTotal['principal_arrears']); ?>
+                    
+                    </td>
+                    <td class="bold amount" title="16">
+                        <?php echo $this->view->integer($grandTotal['principal']); ?>
+                    
+                    </td>
+                    <td class="bold amount" title="17">
+                        <?php echo $this->view->integer($grandTotal['interest']); ?>
+                    
+                    </td>
+                    <td class="bold amount" title="18">
+                        <?php echo $this->view->integer($grandTotal['total']); ?>
+                    
+                    </td>
+                    <td class="bold amount" title="19">
+                        <?php echo $this->view->integer($grandTotal['scheduled_outstanding']); ?>
+                    
+                    </td>
+                    <td class="bold amount" title="20">
+                        <?php echo $this->view->integer($grandTotal['principal_outstanding']); ?>
+                    
+                    </td>
+                    <td class="bold amount" title="21">
+                        <?php echo $this->view->integer($grandTotal['actual_outstanding']); ?>
+                    
+                    </td>
+                    <td class="bold  amount" title="22">
+                        <?php echo $this->view->integer($grandTotal['overdue']); ?>
+                    
+                    </td>
+                    <td title="23">&nbsp;</td>
+                    <td class="bold right" title="24">
+                        <?php echo $this->view->integer($grandTotal['par']); ?>
+                    
+                    </td>
+                    <td class="bold amount" title="25">
+                        <?php echo $this->view->integer($grandTotal['catch']); ?>
+                    
+                    </td>
+                    <td class="bold amount" title="26">
+                        <?php echo $this->view->integer($grandTotal['repaid']); ?>
+                    
+                    </td>
+                    <td class="bold right" title="27"><?php echo $this->view->percentage($grandTotal['repaid'], $grandTotal['catch']); ?>%</td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-download-button'); ?>
+        
+    </body>
+</html>      
+            

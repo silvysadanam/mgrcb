@@ -1,0 +1,106 @@
+[13:34:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:34:29 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:34:29 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[13:35:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:35:56 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[13:36:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:36:41 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[13:37:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:37:46 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:37:46 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[13:42:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:42:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 42 : Undefined array key 9
+[13:53:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:53:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 41 : Undefined array key 9
+[13:53:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 47 : Undefined array key 9
+[13:53:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 52 : Undefined array key 9
+[13:54:37 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:54:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 41 : Undefined array key 9
+[13:54:37 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 47 : Undefined array key 9
+[13:55:13 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:55:13 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 47 : Undefined array key 9
+[13:55:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[13:55:36 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:04:14 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:04:17 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:04:28 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:04:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:04:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:04:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:04:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:04:53 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:04:56 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:05:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:05:07 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:05:23 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:05:23 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:05:42 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:05:42 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:05:44 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:05:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:05:48 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:06:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:14:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:14:26 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:14:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:16:10 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:16:10 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:16:18 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:20:26 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:20:26 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:20:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:25:03 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:25:03 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:25:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:26:40 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:26:40 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:26:49 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:37:48 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:37:55 IST] ERROR [2]: \lib\module\Backend\src\Utility\ManageBSHeads.php line 182 : Undefined property: Backend\Utility\ManageBSHeads::$model
+[14:37:55 IST] EXCEPTION: \lib\module\Backend\src\Utility\ManageBSHeads.php on line 182 : Call to a member function getTableQuoted() on null
+[14:37:58 IST] ERROR [2]: \lib\module\Backend\src\Utility\ManageBSHeads.php line 182 : Undefined property: Backend\Utility\ManageBSHeads::$model
+[14:37:58 IST] EXCEPTION: \lib\module\Backend\src\Utility\ManageBSHeads.php on line 182 : Call to a member function getTableQuoted() on null
+[14:38:01 IST] ERROR [2]: \lib\module\Backend\src\Utility\ManageBSHeads.php line 182 : Undefined property: Backend\Utility\ManageBSHeads::$model
+[14:38:01 IST] EXCEPTION: \lib\module\Backend\src\Utility\ManageBSHeads.php on line 182 : Call to a member function getTableQuoted() on null
+[14:38:08 IST] ERROR [2]: \lib\module\Backend\src\Utility\ManageBSHeads.php line 182 : Undefined property: Backend\Utility\ManageBSHeads::$model
+[14:38:08 IST] EXCEPTION: \lib\module\Backend\src\Utility\ManageBSHeads.php on line 182 : Call to a member function getTableQuoted() on null
+[14:38:55 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:39:32 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:44:34 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:46:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:52:23 IST] ERROR [2]: \lib\module\Backend\src\Controller\AccountsController.php line 551 : Undefined variable $id
+[14:52:23 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[14:52:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:52:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:53:07 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:53:19 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:53:38 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:53:38 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[14:53:52 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:53:54 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[14:54:01 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[15:35:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[15:35:15 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[15:49:43 IST] ERROR [2]: \lib\module\Branch\src\Utility\BSReport.php line 1563 : Undefined variable $fmc_id
+[15:49:43 IST] EXCEPTION: \lib\web\Web\src\Database\Model.php on line 96 : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[16:00:57 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[16:02:40 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[16:03:16 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[16:10:03 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[16:11:57 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[16:39:27 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[16:41:11 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[16:54:35 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[16:54:35 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[16:55:13 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[16:55:13 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[16:55:30 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[16:56:55 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[16:56:55 IST] ERROR [2]: \lib\module\Backend\view\scripts\accounts\bsreset.phtml line 48 : Undefined array key 9
+[16:58:57 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[16:58:59 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[16:59:12 IST] ERROR [2]: \lib\module\Backend\view\blocks\menu-admin.phtml line 133 : Undefined variable $trans
+[17:02:29 IST] ERROR [2]: \lib\module\Branch\view\scripts\voucher\view-modal.phtml line 93 : Undefined variable $headId
+[17:04:37 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[17:26:06 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId
+[17:26:23 IST] ERROR [2]: \lib\module\Branch\view\scripts\income\cash-receipt-modal.phtml line 62 : Undefined variable $headId

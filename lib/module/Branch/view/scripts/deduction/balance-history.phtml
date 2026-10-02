@@ -1,0 +1,85 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+$member = $this->view->getVariable('member');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Member - <?php
+                                        echo $this->view->escapeHtml($member->code . ' ' . $member->name); ?>
+                                        
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-deduction-bill" class="form-horizontal" id="form-deduction-bill" method="get" action="<?php
+                                        echo $this->view->actionUrl('deduction-bill/balance-history/id/' . $member->id); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon">Date &raquo; </div>
+                                                    <input type="text" name="date" id="balance-date" class="form-control single-date-clearable" data-min-date="<?php
+                                                    echo $this->view->getVariable('minDate'); ?>" readonly="readonly" value="<?php
+                                                    echo $filters->getEscapedValue('date'); ?>">
+                                                    <div class="input-group-addon"> &laquo; [<a href="javascript:;" class="clear-date" data-target="balance-date" title="Clear Date">Clear</a>]</div>
+                                                    <div class="input-group-addon bg-white">&nbsp;</div>
+                                                    <div class="input-group-addon">Deduction Type &raquo; </div>
+                                                    <select name="type" class="form-control">
+                                                        <option value="0">--all--</option>
+                                                        <?php echo $this->view->formHelper('selectGroup', $this->view->getVariable('deductionSelector'), $filters->getValue('type')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th>Sl. No.</th>
+                                                        <th>Date</th>
+                                                        <th>Deduction Type</th>
+                                                        <th>Opening Balance</th>
+                                                        <th>Closing Balance</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td><?php echo $this->view->datepicker($row->deduction_date); ?></td>
+                                                        <td><?php echo $this->view->lookup('deductionType', $row->deduction_type_id); ?></td>
+                                                        <td class="text-center"><?php echo $row->opening_balance; ?></td>
+                                                        <td class="text-center"><?php echo $row->closing_balance; ?></td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

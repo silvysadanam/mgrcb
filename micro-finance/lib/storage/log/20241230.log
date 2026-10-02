@@ -1,0 +1,2 @@
+[11:19:41 IST] ERROR [2]: \lib\module\Application\view\scripts\modify-dcb\view.phtml line 85 : Undefined property: stdClass::$loan_status
+[11:19:41 IST] ERROR [8192]: \lib\web\Web\src\View\ViewHelper\EscapeHtml.php line 26 : htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated

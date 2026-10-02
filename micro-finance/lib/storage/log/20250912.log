@@ -1,0 +1,112 @@
+[08:55:26 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[08:55:29 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[08:55:29 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[08:56:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[08:56:52 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[08:57:22 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[08:57:22 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[09:10:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[09:10:20 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[09:11:43 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[09:11:43 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[09:39:48 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[09:39:48 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[10:09:09 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[10:09:27 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:09:30 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[10:09:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[17:04:29 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[17:04:31 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[17:04:31 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[18:15:03 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[18:15:05 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[18:15:07 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[18:15:10 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 731 : Undefined array key 0
+[18:15:10 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 731 : Attempt to read property "id" on null
+[18:15:16 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 731 : Undefined array key 0
+[18:15:16 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 731 : Attempt to read property "id" on null
+[18:15:29 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 731 : Undefined array key 0
+[18:15:29 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 731 : Attempt to read property "id" on null
+[18:16:19 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 731 : Undefined array key 0
+[18:16:19 IST] ERROR [2]: \lib\module\Application\src\Utility\LoanStore.php line 731 : Attempt to read property "id" on null
+[18:20:44 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:29:02 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:29:50 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:29:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:29:52 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[19:30:52 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:31:04 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:31:07 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:31:09 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:33:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:35:24 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:35:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:50:27 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:50:27 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[19:51:03 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:51:15 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:51:17 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:51:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:51:23 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:55:45 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:55:47 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:55:47 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[19:56:34 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:56:38 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:56:38 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[19:57:00 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[19:57:17 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:57:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:57:22 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:57:25 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:57:29 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[19:57:32 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-ceo.phtml line 179 : Undefined variable $trans
+[20:07:09 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:07:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:07:10 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 174 : Undefined variable $headId
+[20:22:36 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[20:22:46 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:21:41 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:21:44 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 26 : Class "Branch\BranchController" not found
+[22:23:18 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 26 : Class "Branch\BranchController" not found
+[22:23:19 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 26 : Class "Branch\BranchController" not found
+[22:23:34 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 26 : Class "Branch\BranchController" not found
+[22:23:35 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 26 : Class "Branch\BranchController" not found
+[22:23:36 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 26 : Class "Branch\BranchController" not found
+[22:23:36 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 26 : Class "Branch\BranchController" not found
+[22:23:36 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 26 : Class "Branch\BranchController" not found
+[22:23:36 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 26 : Class "Branch\BranchController" not found
+[22:24:08 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 47 : Class "Model\DeductionMemberDaily" not found
+[22:24:22 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 47 : Call to a member function id() on null
+[22:24:44 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 47 : Class "Application\Controller\FormHelper" not found
+[22:25:00 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 48 : Class "Model\OpeningDetails" not found
+[22:26:09 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:27:29 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:27:30 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:27:30 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:27:30 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:27:30 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:27:31 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:28:01 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:28:01 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:28:01 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:28:02 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:28:02 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:28:02 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:28:02 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:28:02 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:28:58 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:29:00 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:29:02 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 61 : Class "Application\Form\Opening\CreateForm" not found
+[22:31:26 IST] EXCEPTION: \lib\module\Application\src\Controller\OpeningController.php on line 169 : Call to a member function id() on null
+[22:32:10 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:34:40 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:34:51 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:35:02 IST] EXCEPTION: \lib\module\Application\src\Controller\CloseoutController.php on line 26 : Class "Branch\BranchController" not found
+[22:35:48 IST] EXCEPTION: \lib\module\Application\src\Controller\CloseoutController.php on line 26 : Class "Branch\BranchController" not found
+[22:37:37 IST] EXCEPTION: \lib\module\Application\src\Controller\CloseoutController.php on line 24 : Class "Application\Controller\BranchController" not found
+[22:37:50 IST] EXCEPTION: \lib\module\Application\src\Controller\CloseoutController.php on line 47 : Class "Application\Controller\FormHelper" not found
+[22:38:16 IST] EXCEPTION: \lib\module\Application\src\Controller\CloseoutController.php on line 190 : Class "Application\Form\Opening\CreateCloseoutForm" not found
+[22:38:39 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[22:39:03 IST] ERROR [2]: \lib\module\Application\src\Form\Opening\CreateCloseoutForm.php line 162 : require(C:\laragon\www\fws_main\micro-finance\lib\module\Application\src\Form\Opening/../../phpmailer/src/Exception.php): Failed to open stream: No such file or directory
+[22:39:03 IST] EXCEPTION: \lib\module\Application\src\Form\Opening\CreateCloseoutForm.php on line 162 : Failed opening required 'C:\laragon\www\fws_main\micro-finance\lib\module\Application\src\Form\Opening/../../phpmailer/src/Exception.php' (include_path='.;C:/laragon/etc/php/pear')

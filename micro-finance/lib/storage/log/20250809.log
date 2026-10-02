@@ -1,0 +1,10 @@
+[21:28:20 IST] ERROR [2]: \lib\module\Application\view\scripts\create-dcb\index.phtml line 176 : Undefined variable $headId
+[21:43:30 IST] EXCEPTION: \lib\module\Application\src\Utility\NewLoanReport.php on line 355 : Object of class Application\Utility\NewLoanReport could not be converted to string
+[21:43:31 IST] EXCEPTION: \lib\module\Application\src\Utility\NewLoanReport.php on line 355 : Object of class Application\Utility\NewLoanReport could not be converted to string
+[21:43:32 IST] EXCEPTION: \lib\module\Application\src\Utility\NewLoanReport.php on line 355 : Object of class Application\Utility\NewLoanReport could not be converted to string
+[21:43:34 IST] EXCEPTION: \lib\module\Application\src\Utility\NewLoanReport.php on line 355 : Object of class Application\Utility\NewLoanReport could not be converted to string
+[21:54:18 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:54:22 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:56:13 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:56:19 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans
+[21:59:20 IST] ERROR [2]: \lib\module\Application\view\blocks\menu-admin.phtml line 191 : Undefined variable $trans

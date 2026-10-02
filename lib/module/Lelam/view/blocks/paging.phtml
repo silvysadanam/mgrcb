@@ -1,0 +1,19 @@
+<?php
+$total = $this->view->getVariable('total');
+if ($this->view->getVariable('total') > 200):
+$paging = $this->view->getVariable('paging');
+
+if ('' != $paging): ?>
+
+                <div class="row d-flex justify-content-center clearfix text-center">
+                    <div class="col-12">
+                        <hr class="mt-2">
+                        <p><?php echo $this->view->getVariable('pagingInfo'); ?></p>
+                    </div>
+                    <div class="col-12">
+                        <?php echo $paging; ?>
+                        
+                    </div>
+                </div>
+<?php endif; 
+endif;

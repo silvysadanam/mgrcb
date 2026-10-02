@@ -1,0 +1,216 @@
+<?php
+
+$store = $this->view->getVariable('store');
+$Receipt = $store->transaction();
+$fmc = $store->fmc();
+$member = $store->member();
+$auctioneer = $store->auctioneer();
+$sum = 0;
+$transBy = $store->transBy();
+$hasDeductionBill = $store->hasDeductionBill();
+$edit = ! $hasDeductionBill;
+$mf_loan_found = $this->view->getVariable('mf_loan_found');   
+$delete = ! $mf_loan_found;
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Voucher
+                                    </h4>
+                                    <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('voucher/manage/id/' . $Receipt->id); ?>/action/">
+                                    <input type="hidden" id="cancel-url" value="<?php echo $this->view->actionUrl('voucher'); ?>">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>FMC</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmc->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date</td>
+                                                            <td><?php echo $this->view->escapeHtml($store->receiptDate()); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Code</td>
+                                                            <td><?php if(isset($member->code)) echo $this->view->escapeHtml($member->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Member Name</td>
+                                                            <td><?php if(isset($member->name)) echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auctioneer Code</td>
+                                                            <td><?php if(isset($auctioneer->code)) echo $this->view->escapeHtml($auctioneer->code); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auctioneer Name</td>
+                                                            <td><?php  if(isset($auctioneer->name)) echo $this->view->escapeHtml($auctioneer->name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Voucher No</td>
+                                                            <td><?php echo $this->view->escapeHtml($store->transNo()); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Non Member Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($store->nonMember()); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Payment Type</td>
+                                                            <td><?php 
+                                                            
+                                                            if($transBy) {                                                                
+                                                                echo $this->view->escapeHtml($store->getBankName());
+                                                            } else {
+                                                                echo "Cash"; } ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Entries</td>
+                                                            <td><?php echo $store->getTotalRows(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Amount</td>
+                                                            <td><b>Rs.<?php echo $store->totalVoucherAmount(); ?></b></td>
+                                                        </tr> 
+                                                               
+                                                                                                               <tr>
+                                                         <td>Narration</td>
+                                                            <td><?php echo $store->remarks(); ?></td>
+                                                        </tr>
+                                                                                                               <tr>
+                                                         <td>Last updated</td>
+                                                            <td><?php echo $this->view->userTime($store->updated_at()); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <table class="table table-borderless" id="list-table-2">
+                                                    <tbody>
+                                                        <!--tr>
+                                                            <td><a class="btn btn-outline-primary w-100" href="javascript:;" id="add-entry" title="Add Entry to Receipt"><i class="ft-plus-square"></i> Add Entry</a></td>
+                                                        </tr-->
+                                                         <?php if ($delete): ?>
+                                                          <?php if($store->status()) { ?>
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-danger w-100" href="javascript:;" id="delete-transaction" title="Delete Voucher"><i class="ft-x-square"></i> Delete Voucher</a></td>
+                                                        </tr>
+                                                         <?php }?>
+                                                         <?php endif; ?>
+                                                         <?php if ($edit): ?>
+                                                          <?php if($store->status()) { ?>
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-info w-100 edit-voucher"
+                                                                   data-id="<?php
+                                                            echo $Receipt->id; ?>" data-date="<?php
+                                                            echo $store->receiptDate(); ?>" 
+                                                            data-non_member="<?php
+                                                            echo $store->nonMember(); ?>"
+                                                            data-note ="<?php
+                                                            echo $store->remarks(); ?>"
+                                                            data-bank_id="<?php
+                                                            echo $transBy; ?>"
+                                                            data-mf_loan="<?php
+                                                            echo $mf_loan_found; ?>"
+                                                            data-payment_type ="<?php
+                                                            if($transBy) { echo "Bank";} else { echo "Cash"; } ?>"
+                                                                   href="javascript:;" title="Edit Voucher"><i class="ft-edit"></i> Edit Voucher</a></td>
+                                                        </tr>
+                                                         <?php }?>
+                                                         <?php endif; ?>
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-dark w-100" title="Print Receipt" target="_blank" href="<?php
+                                                            echo $this->view->actionUrl('voucher/print/id/' . $Receipt->id); ?>"><i class="ft-printer"></i> Print</a></td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Entries</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <table class="table table-bordered">
+                                                                        <thead class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th>Sl. No.</th>
+                                                                                <th>Head</th>
+                                                                                <th>Amount</th>
+                                                                                <th>Actions</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php $deleteItem = $store->getTotalRows() > 1; ?>
+                                                                            <?php foreach ($store->entries() as $item): ?>
+                                                                            
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->counter(); ?></td>
+                                                                                <td><?php echo $this->view->lookup('expenseHead', $item->headID); ?></td>
+                                                                                <td class="text-right"><?php echo $item->amount; ?></td>
+                                                                                <td>
+                                                                                    <?php if ($delete): ?>
+                                                                                    <?php if($store->status()) { ?>
+                                                                                    <a class="btn btn-outline-info btn-sm edit-entry" href="javascript:;" data-id="<?php
+                                                                                    echo $item->id; ?>" title="Edit Entry"><i class="ft-edit"></i> Edit</a>
+                                                                                    <?php } ?>
+                                                                                    <?php if ($deleteItem): ?>
+                                                                                    
+                                                                                    <a class="btn btn-outline-danger btn-sm ml-1 delete-entry" href="javascript:;" data-id="<?php
+                                                                                    echo $item->id; ?>" title="Delete Entry"><i class="ft-delete"></i> Delete</a>
+                                                                                    <?php endif; ?>
+                                                                                    <?php endif; ?>
+                                                                                    
+                                                                                </td>
+                                                                            </tr>
+                                                                            <?php $sum += $item->amount;?>
+                                                                            <?php endforeach; ?>
+                                                                            
+                                                                        </tbody>
+                                                                        <tfoot class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Total</th>
+                                                                                <th class="text-right"><?php echo number_format($sum, 2); ?></th>
+                                                                                <th>&nbsp;</th>
+                                                                            </tr>                                                                           
+                                                                        </tfoot>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

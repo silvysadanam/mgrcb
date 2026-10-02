@@ -1,0 +1,91 @@
+<?php
+
+$generator = $this->view->getVariable('generator');
+$report = $generator->report();
+$members = $report['members'];
+$summary = $report['summary'];
+$fmc = $generator->fmc();
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>FMC <?php echo $this->view->escapeHtml($fmc); ?> Term Ending Loans</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <?php $this->block('print-view'); ?>
+        
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="0" border="0" style="margin:10px 10px 5px 0;">
+            <thead>
+                <tr>
+                    <th class="main-heading center">
+                        FISHERMEN WELFARE SOCIETY - KOLLAM
+                    </th>
+                </tr>
+                <tr>
+                    <th class="main-heading center">
+                        FMC: <?php echo $this->view->escapeHtml($fmc); ?>
+                        
+                    </th>
+                </tr>
+                <tr>
+                    <th class="main-heading center">
+                        Term Ending Loans - <?php echo $this->view->lookup('instalment', $report['instalment']); ?>
+                        
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <table cellpadding="4" cellspacing="0" border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Sl. No.</th>
+                                    <th>FMC</th>
+                                    <th>Member</th>
+                                    <th>Code</th>
+                                    <th>Loan<br>Amount</th>
+                                    <th>Date</th>
+                                    <th>Source</th>
+                                    <th>Type</th>
+                                    <th>Tenure</th>
+                                    <th>Term<br>End Date</th>
+                                    <th>Pending<br>Instalments</th>
+                                    <th>PIOS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($report['list'] as $row): ?>
+                                <?php $member = $members[$row->member_id]; ?>
+                                
+                                <tr>
+                                    <td class="center"><?php echo $this->view->counter(); ?></td>
+                                    <td><?php echo $this->view->lookup('fmc', $member->fmc_id); ?></td>
+                                    <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                    <td><?php echo $this->view->escapeHtml($member->code); ?></td>
+                                    <td class="center"><?php echo $this->view->integer($row->loan_amount); ?></td>
+                                    <td><?php echo $this->view->datepicker($row->loan_date); ?></td>
+                                    <td><?php echo $this->view->lookup('source', $row->loan_source_id); ?></td>
+                                    <td><?php echo $this->view->lookup('type', $row->loan_type_id); ?></td>
+                                    <td class="center"><?php echo $row->tenure; ?></td>
+                                    <td><?php echo $this->view->datepicker($row->end_date); ?></td>
+                                    <td class="center"><?php echo $row->tenure - $row->paid_tenures; ?></td>
+                                    <td class="center"><?php echo $this->view->amount($summary[$row->id]->balance_actual_principal_interest_outstanding); ?></td>
+                                </tr>
+                                <?php endforeach; ?>
+                                
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <?php $this->block('print-button'); ?>
+        
+    </body>
+</html>
+
+                
+            

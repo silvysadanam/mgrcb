@@ -1,0 +1,89 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Members &nbsp; 
+                                        <a href="<?php echo $this->view->actionUrl('member/create'); ?>" class="btn btn-outline-primary btn-sm" title="New Member"><i class="ft-plus"></i> New Member</a>
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-staff-filter" class="form-horizontal" id="form-member-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('member/index'); ?>/">
+                                            <div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon"></div>
+                                                    <select name="fmc" id="fmc" class="form-control">
+                                                        <option value="0">--FMC--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('fmc'), $filters->getValue('fmc')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <select name="type" id="type" class="form-control">
+                                                        <option value="0">--Member Type--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $filters->getValue('type')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-4">
+                                                <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">FMC</th>
+                                                        <th class="cursor-pointer">Name</th>
+                                                        <th class="cursor-pointer">Member Code</th>
+                                                        <th class="cursor-pointer">Member Type</th>
+                                                        <th>
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($list as $row): ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->lookup('fmc', $row->fmc_id); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->name); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->code); ?></td>
+                                                        <td><?php echo $this->view->lookup('type', $row->member_type_id); ?></td>
+                                                        <td>
+                                                            <a class="btn btn-primary btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('member/change/id/' . $row->id); ?>" title="Edit"><i class="ft-edit"></i> Edit</a>
+                   
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
