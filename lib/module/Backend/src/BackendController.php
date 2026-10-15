@@ -310,6 +310,10 @@ class BackendController extends ActionController
             $pairModel = new PairModel();
             LookupStore::register('diseaseTypes', $pairModel->diseaseTypes());
         }
+        if (in_array('designationType', $list)) {
+            $pairModel = new PairModel();
+            LookupStore::register('designationType', $pairModel->designationType());
+        }
         if (in_array('incomeHead', $list)) {            
             $columns =['id', 'head_name'];
             LookupStore::register('incomeHead', $pairModel->custom('rp_head', $columns, "transType in ('Direct Income', 'Indirect Income', 'Bank') and fmc_id = {$this->_fmcID} and status='N'", 'head_name'));

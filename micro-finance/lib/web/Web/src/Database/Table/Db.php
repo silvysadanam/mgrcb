@@ -39,6 +39,8 @@ final class Db
     const BANK = 'bank';
     const BOAT = 'boat';
     const CARD_TYPE = 'card_type';
+    const DESIGNATION_TYPE = 'designation_type';
+    const STAFF = 'staff';
     const DOCUMENT_TYPE = 'document_type';
     const RATION_CARD = 'ration_card';
     const PANCHAYATH_BRAND = 'panchayath_brand';
@@ -46,7 +48,7 @@ final class Db
     const MEMBER_CARD = 'member_card';
     const MEMBER_DOCUMENT = 'member_document';
     const MEMBER_PHOTO = 'member_photo';
-    
+    const STAFF_PHOTO = 'staff_photo';
     const LOAN_NUMBER = 'loan_number';
     const RP_TRANS_MEMBER = 'rp_trans_member';
     const RP_TRANS_MEMBER_DETAILS = 'rp_trans_member_details';

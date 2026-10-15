@@ -424,7 +424,7 @@ class MembershipController extends BranchController
     private function _loadFormOptions()
     {
         $pairModel = new PairModel();
-        LookupStore::register('cardType', $pairModel->cardType());
+        LookupStore::register('DesignationType', $pairModel->DesignationType());
         LookupStore::register('documentType', $pairModel->documentType());
         LookupStore::register('panchayathBrand', $pairModel->panchayathBrand());
         LookupStore::register('accountType', $pairModel->accountType());

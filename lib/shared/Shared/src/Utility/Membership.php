@@ -356,7 +356,7 @@ class Membership
     private function _loadLookups()
     {
         $pairModel = new PairModel();
-        LookupStore::register('cardType', $pairModel->cardType());
+        LookupStore::register('designationType', $pairModel->designationType());
         LookupStore::register('panchayathBrand', $pairModel->panchayathBrand());
         LookupStore::register('documentType', $pairModel->documentType());
         LookupStore::register('accountType', $pairModel->accountType());

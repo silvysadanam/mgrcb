@@ -1,16 +1,40 @@
 <?php
 
 $beneficiary = $this->view->getVariable('beneficiary');
-
-//$fmc    = $beneficiary->fmc();
 $member = $beneficiary->member();
+$beneficiaryMedicine = $this->view->getVariable('beneficiaryMedicine');
+$medicineEntries = $beneficiaryMedicine->medicineEntries();
+
+$equipmentMedicine = $this->view->getVariable('beneficiaryEquipment');
+$equipmentEntries = $equipmentMedicine->equipmentEntries();
+
+// Panchayath object, if supplied by your controller
+$panchayath = $beneficiary->panchayath();
+
+// Format dates consistently as DD/MM/YYYY
+$fmtDate = function ($date) {
+    if (empty($date)) {
+        return '';
+    }
+
+    $timestamp = strtotime((string) $date);
+
+    return $timestamp !== false
+        ? date('d/m/Y', $timestamp)
+        : (string) $date;
+};
+
+
+$photo = $beneficiary->photo();
+$documents = $beneficiary->documents();
+$entries = $beneficiary->entries();
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
 
     <title>
         Beneficiary - <?php echo $this->view->escapeHtml($member->name); ?>
@@ -18,354 +42,898 @@ $member = $beneficiary->member();
 
     <?php $this->block('print-auction'); ?>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 15px;
+            color: #222;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            background: #fff;
+        }
+
+        .report {
+            width: 100%;
+            max-width: 190mm;
+            margin: 0 auto;
+        }
+
+        .report-header {
+            text-align: center;
+            padding: 8px 0 14px;
+            margin-bottom: 14px;
+            border-bottom: 2px solid #333;
+        }
+
+        .institution {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .report-title {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            margin-bottom: 13px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: bold;
+            background: #e9edf2;
+            border-left: 4px solid #526779;
+            padding: 7px 9px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 18px;
+            row-gap: 0;
+        }
+
+        .detail {
+            display: grid;
+            grid-template-columns: 44% 56%;
+            padding: 5px 4px;
+            border-bottom: 1px solid #e5e5e5;
+            min-width: 0;
+            align-items: start;
+        }
+
+        .label {
+            font-weight: bold;
+            padding-right: 6px;
+        }
+
+        .value {
+            overflow-wrap: anywhere;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .long-detail {
+            display: block;
+            padding: 7px 4px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .long-detail .label {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .long-detail .value {
+            white-space: pre-wrap;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 5px;
+        }
+
+        th, td {
+            border: 1px solid #777;
+            padding: 6px 5px;
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+        }
+
+        th {
+            background: #e9edf2;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .family-table {
+            font-size: 9px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .photo-container {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .photo-container img {
+            max-width: 140px;
+            max-height: 160px;
+            object-fit: contain;
+        }
+
+        .empty-value {
+            color: #666;
+        }
+        .medicine-entry {
+            border: 1px solid #cbd2d9;
+            border-radius: 3px;
+            padding: 8px 10px 10px;
+            margin-bottom: 12px;
+            page-break-inside: auto;
+            break-inside: auto;
+        }
+
+        .medicine-entry-title {
+            font-size: 11px;
+            font-weight: bold;
+            background: #f0f3f6;
+            border-bottom: 1px solid #cbd2d9;
+            padding: 7px 8px;
+            margin: -8px -10px 6px;
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        .assessment-date {
+            font-weight: normal;
+        }
+        @media screen {
+            body {
+                background: #f2f2f2;
+            }
+
+            .report {
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 1px 6px #ccc;
+            }
+        }
+        
+        
+
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 10mm;
+            }
+
+            body {
+                padding: 0;
+                font-size: 10px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .report {
+                max-width: none;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            .report-header {
+                padding-top: 0;
+            }
+
+            .section-title,
+            th {
+                background: #e9edf2 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section-title {
+                break-after: avoid;
+            }
+
+            thead {
+                display: table-header-group;
+            }
+
+            tr {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .long-detail {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+            .medicine-entry-title {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .medicine-entry .detail,
+            .medicine-entry .long-detail {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<table cellpadding="5"
-       cellspacing="0"
-       border="0"
-       style="margin:10px 10px 5px 0;"
-       width="800">
-
-    <thead>
-
-        <tr>
-            <th class="main-heading center" colspan="2">
-                Mar Gregorios Rehabilitation Centre For The Blind
-            </th>
-        </tr>
-
-        <tr>
-            <th colspan="2" class="center">
-                BENEFICIARY DETAILS
-            </th>
-        </tr>
-
-    </thead>
-
-
-    <tbody>
-
-        <!-- Basic Details -->
-
-        <tr>
-            <td width="50%">
-                <strong>Name:</strong>
-                <?php echo $this->view->escapeHtml($member->name); ?>
-            </td>
-
-            <td>
-                <strong>Panchayath:</strong>
-                <?php echo $this->view->escapeHtml($member->panchayath); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>Address:</strong>
-                <?php echo $this->view->escapeHtml($member->address); ?>
-            </td>
-
-            <td>
-                <strong>Gender:</strong>
-                <?php echo $this->view->escapeHtml($member->gender); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>Education:</strong>
-                <?php echo $this->view->escapeHtml($member->beducation); ?>
-            </td>
-
-            <td>
-                <strong>Date of Birth:</strong>
-                <?php echo $beneficiary->dateOfBirth(); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>Monthly Income:</strong>
-                <?php echo $this->view->escapeHtml($member->monthly_income); ?>
-            </td>
-
-            <td>
-                <strong>Ration Card:</strong>
-                <?php echo $this->view->escapeHtml($member->ration_card); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>Mobile:</strong>
-                <?php echo $this->view->escapeHtml($member->mobile); ?>
-            </td>
-
-            <td>
-                <strong>Aadhar Number:</strong>
-                <?php echo $this->view->escapeHtml($member->aadhar_number); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>House Type:</strong>
-                <?php echo $beneficiary->houseType(); ?>
-            </td>
-
-            <td>
-                <strong>Rent Amount:</strong>
-                <?php echo $this->view->escapeHtml($member->rented_amount); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>House Ownership:</strong>
-                <?php echo $beneficiary->houseOwnership(); ?>
-            </td>
-
-            <td>
-                <strong>Total Land Area:</strong>
-                <?php echo $this->view->escapeHtml($member->land_area); ?>
-            </td>
-        </tr>
-
-
-        <!-- Disability Details -->
-
-        <tr>
-            <td colspan="2">
-                <strong>DISABILITY DETAILS</strong>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>Year Disability Occurred:</strong>
-                <?php echo $this->view->escapeHtml($member->disability_occurred); ?>
-            </td>
-
-            <td>
-                <strong>Cause of Disability:</strong>
-                <?php echo $beneficiary->disabilityTypes(); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td colspan="2">
-                <strong>Description of Disease / Disability:</strong><br>
-                <?php echo $this->view->escapeHtml($member->disability); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>Medical Examination Date:</strong>
-                <?php echo $beneficiary->dateOfMedicalExam(); ?>
-            </td>
-
-            <td>
-                <strong>Various Pensions Received:</strong>
-                <?php echo $this->view->escapeHtml($member->pensions); ?>
-            </td>
-        </tr>
-
-
-        <!-- Rehabilitation Details -->
-
-        <tr>
-            <td colspan="2">
-                <strong>REHABILITATION DETAILS</strong>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>Community Worker:</strong>
-                <?php echo $this->view->escapeHtml($member->worker_name); ?>
-            </td>
-
-            <td>
-                <strong>Proposed Date:</strong>
-                <?php echo $beneficiary->proposedDate(); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td colspan="2">
-                <strong>Recommendation of Committee Member:</strong><br>
-                <?php echo $this->view->escapeHtml($member->worker_opinion); ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <strong>Approved Date:</strong>
-                <?php echo $beneficiary->approvedDate(); ?>
-            </td>
-
-            <td>
-                <strong>Status:</strong>
-                <?php echo $beneficiary->active() ? 'Active' : 'Inactive'; ?>
-            </td>
-        </tr>
-
-
-        <!-- Family Details -->
-
-        <tr>
-            <td colspan="2">
-                <strong>FAMILY DETAILS</strong>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="2">
-
-                <table cellpadding="4"
-                       cellspacing="0"
-                       border="1"
-                       width="100%">
-
-                    <thead>
-
-                        <tr>
-                            <th width="6%">Sl.</th>
-                            <th>Name</th>
-                            <th>Relation</th>
-                            <th>Category</th>
-                            <th>Age</th>
-                            <th>Education</th>
-                            <th>Disability</th>
-                            <th>Occupation</th>
-                            <th>Income</th>
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                        <?php foreach ($beneficiary->entries() as $item): ?>
-
-                        <tr>
-
-                            <td class="center">
-                                <?php echo $this->view->counter(); ?>
-                            </td>
-
-                            <td>
-                                <?php echo $this->view->escapeHtml($item->family_name); ?>
-                            </td>
-
-                            <td>
-                                <?php echo $this->view->escapeHtml($item->family_relation); ?>
-                            </td>
-
-                            <td>
-                                <?php echo $this->view->escapeHtml($item->family_category); ?>
-                            </td>
-
-                            <td class="center">
-                                <?php echo $this->view->escapeHtml($item->family_age); ?>
-                            </td>
-
-                            <td>
-                                <?php echo $this->view->escapeHtml($item->family_education); ?>
-                            </td>
-
-                            <td>
-                                <?php echo $this->view->escapeHtml($item->family_disability); ?>
-                            </td>
-
-                            <td>
-                                <?php echo $this->view->escapeHtml($item->family_occupation); ?>
-                            </td>
-
-                            <td class="right">
-                                <?php echo $this->view->escapeHtml($item->family_income); ?>
-                            </td>
-
-                        </tr>
-
-                        <?php endforeach; ?>
-
-                    </tbody>
-
-                </table>
-
-            </td>
-        </tr>
-
-
-        <!-- Photo -->
-
-        <?php $photo = $beneficiary->photo(); ?>
-
-        <?php if (!empty($photo)): ?>
-
-        <tr>
-
-            <td colspan="2">
-
-                <strong>PHOTO</strong><br><br>
-
+<div class="report">
+
+    <!-- Report Header -->
+    <div class="report-header">
+        <div class="institution">
+            Mar Gregorios Rehabilitation Centre For The Blind
+        </div>
+        <div class="report-title">BENEFICIARY DETAILS</div>
+    </div>
+
+    <!-- Beneficiary Details -->
+    <div class="section">
+        <div class="section-title">Beneficiary Details</div>
+
+        <div class="details-grid">
+
+            <div class="detail">
+                <span class="label">Name</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->name); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Panchayath</span>
+                <span class="value"><?php echo $panchayath->panchayath_brand; ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Address</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->address); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Gender</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->gender); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Education</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->beducation); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Date of Birth</span>
+                <span class="value"><?php echo $beneficiary->dateOfBirth(); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Monthly Income</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->monthly_income); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Ration Card</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->ration_card); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Mobile</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->mobile); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Aadhaar Number</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->aadhar_number); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">House Type</span>
+                <span class="value"><?php echo $beneficiary->houseType(); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Rent Amount</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->rented_amount); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">House Ownership</span>
+                <span class="value"><?php echo $beneficiary->houseOwnership(); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Total Land Area</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->land_area); ?></span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Disability Details -->
+    <div class="section">
+        <div class="section-title">Disability Details</div>
+
+        <div class="details-grid">
+
+            <div class="detail">
+                <span class="label">Year Disability Occurred</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->disability_occurred); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Cause of Disability</span>
+                <span class="value"><?php echo $beneficiary->disabilityTypes(); ?></span>
+            </div>
+
+            <div class="long-detail full-width">
+                <span class="label">Description of Disease / Disability</span>
+                <div class="value"><?php echo $this->view->escapeHtml($member->disability); ?></div>
+            </div>
+
+            <div class="detail">
+                <span class="label">Medical Examination Date</span>
+                <span class="value"><?php echo $beneficiary->dateOfMedicalExam(); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Various Pensions Received</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->pensions); ?></span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Rehabilitation Details -->
+    <div class="section">
+        <div class="section-title">Rehabilitation Details</div>
+
+        <div class="details-grid">
+
+            <div class="detail">
+                <span class="label">Community Worker</span>
+                <span class="value"><?php echo $this->view->escapeHtml($member->worker_name); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Proposed Date</span>
+                <span class="value"><?php echo $beneficiary->proposedDate(); ?></span>
+            </div>
+
+            <div class="long-detail full-width">
+                <span class="label">Recommendation of Committee Member</span>
+                <div class="value"><?php echo $this->view->escapeHtml($member->worker_opinion); ?></div>
+            </div>
+
+            <div class="detail">
+                <span class="label">Approved Date</span>
+                <span class="value"><?php echo $beneficiary->approvedDate(); ?></span>
+            </div>
+
+            <div class="detail">
+                <span class="label">Status</span>
+                <span class="value"><?php echo $beneficiary->active() ? 'Active' : 'Inactive'; ?></span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Family Details -->
+    <div class="section">
+        <div class="section-title">Family Details</div>
+
+        <table class="family-table">
+            <thead>
+                <tr>
+                    <th style="width: 5%;">Sl.</th>
+                    <th style="width: 16%;">Name</th>
+                    <th style="width: 11%;">Relation</th>
+                    <th style="width: 12%;">Category</th>
+                    <th style="width: 6%;">Age</th>
+                    <th style="width: 12%;">Education</th>
+                    <th style="width: 12%;">Disability</th>
+                    <th style="width: 14%;">Occupation</th>
+                    <th style="width: 12%;">Income</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php
+                $sl = 0;
+                foreach ($entries as $item):
+                    $sl++;
+                ?>
+                    <tr>
+                        <td class="center"><?php echo $sl; ?></td>
+                        <td><?php echo $this->view->escapeHtml($item->family_name); ?></td>
+                        <td><?php echo $this->view->escapeHtml($item->family_relation); ?></td>
+                        <td><?php echo $this->view->escapeHtml($item->family_category); ?></td>
+                        <td class="center"><?php echo $this->view->escapeHtml($item->family_age); ?></td>
+                        <td><?php echo $this->view->escapeHtml($item->family_education); ?></td>
+                        <td><?php echo $this->view->escapeHtml($item->family_disability); ?></td>
+                        <td><?php echo $this->view->escapeHtml($item->family_occupation); ?></td>
+                        <td class="right"><?php echo $this->view->escapeHtml($item->family_income); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+
+                <?php if ($sl === 0): ?>
+                    <tr>
+                        <td colspan="9" class="center">No family details available.</td>
+                    </tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Photo -->
+    <?php if (!empty($photo)): ?>
+        <div class="section">
+            <div class="section-title">Beneficiary Photo</div>
+            <div class="photo-container">
                 <?php echo $this->view->photo($photo); ?>
+            </div>
+        </div>
+    <?php endif; ?>
+    
+<!-- Medicine / Medical Assessment Details -->
 
-            </td>
+<!-- Medical Assessment Details -->
+<div class="section">
+    <div class="section-title">Medical Assessment History</div>
 
-        </tr>
+    <?php if (!empty($medicineEntries)): ?>
 
-        <?php endif; ?>
+        <?php $assessmentNo = 0; ?>
+
+        <?php foreach ($medicineEntries as $medicine): ?>
+            <?php $assessmentNo++; ?>
+
+            <div class="medicine-entry">
+
+                <div class="medicine-entry-title">
+                    Medical Assessment #<?php echo $assessmentNo; ?>
+                    <?php if (!empty($medicine->assessment_date)): ?>
+                        <span class="assessment-date">
+                            - <?php echo $this->view->escapeHtml(
+                                $fmtDate($medicine->assessment_date)
+                            ); ?>
+                        </span>
+                    <?php endif; ?>
+                </div>
+
+                <div class="details-grid">
+
+                    <div class="detail">
+                        <span class="label">Name</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml($member->name); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Panchayath</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $panchayath->panchayath_brand ?? ''
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Registration Number</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $medicine->reg_no ?? ''
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Gender</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $beneficiary->gender()
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Date of Birth</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $fmtDate($beneficiary->dateOfBirth())
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Cause of Disability</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $beneficiary->disabilityTypes()
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Medical Assessment Date</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $fmtDate($medicine->assessment_date ?? '')
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Diagnosis</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $medicine->diagnosis ?? ''
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Prescription Valid For</span>
+                        <span class="value">
+                            <?php
+                            echo $this->view->escapeHtml(
+                                (string) $this->view->lookup(
+                                    'prescType',
+                                    $medicine->prescription_valid
+                                )
+                            );
+                            ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Assessment Hospital</span>
+                        <span class="value">
+                            <?php
+                            echo $this->view->escapeHtml(
+                                (string) $this->view->lookup(
+                                    'HospitalType',
+                                    $medicine->hospital
+                                )
+                            );
+                            ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Department</span>
+                        <span class="value">
+                            <?php
+                            echo $this->view->escapeHtml(
+                                (string) $this->view->lookup(
+                                    'DepartmentType',
+                                    $medicine->department
+                                )
+                            );
+                            ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Amount of Last Payment</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                (string) ($medicine->last_bill_amount ?? '')
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Last Payment Date</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $fmtDate($medicine->last_bill_date ?? '')
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Community Worker Name</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $medicine->worker_name
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Payment Details</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $medicine->payment_type ?? ''
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="long-detail full-width">
+                        <span class="label">
+                            Committee Member Recommendation
+                        </span>
+                        <div class="value"><?php echo $this->view->escapeHtml(
+                            $medicine->worker_opinion ?? ''
+                        ); ?></div>
+                    </div>
+
+                    <div class="detail full-width">
+                        <span class="label">Approved Date</span>
+                        <span class="value">
+                           <?php echo $this->view->escapeHtml($fmtDate($medicine->approved_date)); ?>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        <?php endforeach; ?>
+
+    <?php else: ?>
+
+        <div class="detail">
+            No medical assessment records available.
+        </div>
+
+    <?php endif; ?>
+</div>
 
 
-        <!-- Documents -->
+<div class="section">
+    <div class="section-title">Equipment History</div>
 
-        <?php $documents = $beneficiary->documents(); ?>
+    <?php if (!empty($equipmentEntries)): ?>
 
-        <?php if (!empty($documents)): ?>
+        <?php $assessmentNo = 0; ?>
 
-        <tr>
+        <?php foreach ($equipmentEntries as $equipment): ?>
+            <?php $assessmentNo++; ?>
 
-            <td colspan="2">
+            <div class="medicine-entry">
 
-                <strong>DOCUMENTS</strong>
+                <div class="medicine-entry-title">
+                    Medical Assessment #<?php echo $assessmentNo; ?>
+                    <?php if (!empty($equipment->assessment_date)): ?>
+                        <span class="assessment-date">
+                            - <?php echo $this->view->escapeHtml(
+                                $fmtDate($equipment->assessment_date)
+                            ); ?>
+                        </span>
+                    <?php endif; ?>
+                </div>
 
-                <table cellpadding="4"
-                       cellspacing="0"
-                       border="1"
-                       width="100%"
-                       style="margin-top:5px;">
+                <div class="details-grid">
 
-                    <thead>
+                    <div class="detail">
+                        <span class="label">Name</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml($member->name); ?>
+                        </span>
+                    </div>
 
+                    <div class="detail">
+                        <span class="label">Panchayath</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $panchayath->panchayath_brand ?? ''
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Registration Number</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $medicine->reg_no ?? ''
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Gender</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $beneficiary->gender()
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Date of Birth</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $fmtDate($beneficiary->dateOfBirth())
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Cause of Disability</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $beneficiary->disabilityTypes()
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Medical Assessment Date</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $fmtDate($equipment->assessment_date ?? '')
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Diagnosis</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $equipment->diagnosis ?? ''
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Name of Equipment</span>
+                        <span class="value">
+                           <?php echo $this->view->escapeHtml(
+                                $equipment->equipment ?? ''
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Assessment Hospital</span>
+                        <span class="value">
+                            <?php
+                            echo $this->view->escapeHtml(
+                                (string) $this->view->lookup(
+                                    'HospitalType',
+                                    $equipment->hospital
+                                )
+                            );
+                            ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Department</span>
+                        <span class="value">
+                            <?php
+                            echo $this->view->escapeHtml(
+                                (string) $this->view->lookup(
+                                    'DepartmentType',
+                                    $equipment->department
+                                )
+                            );
+                            ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Amount of Last Payment</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                (string) ($equipment->last_bill_amount ?? '')
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Last Payment Date</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $fmtDate($equipment->last_bill_date ?? '')
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Community Worker Name</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $equipment->worker_name
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="label">Payment Details</span>
+                        <span class="value">
+                            <?php echo $this->view->escapeHtml(
+                                $equipment->payment_type ?? ''
+                            ); ?>
+                        </span>
+                    </div>
+
+                    <div class="long-detail full-width">
+                        <span class="label">
+                            Committee Member Recommendation
+                        </span>
+                        <div class="value"><?php echo $this->view->escapeHtml(
+                            $equipment->worker_opinion ?? ''
+                        ); ?></div>
+                    </div>
+
+                    <div class="detail full-width">
+                        <span class="label">Approved Date</span>
+                        <span class="value">
+                           <?php echo $this->view->escapeHtml($fmtDate($equipment->approved_date)); ?>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        <?php endforeach; ?>
+
+    <?php else: ?>
+
+        <div class="detail">
+            No medical assessment records available.
+        </div>
+
+    <?php endif; ?>
+</div>
+
+
+    <!-- Documents -->
+    <?php if (!empty($documents)): ?>
+        <div class="section">
+            <div class="section-title">Documents</div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Document Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <?php foreach ($documents as $document): ?>
                         <tr>
-                            <th>Document Type</th>
-                            <th>Description</th>
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                        <?php foreach ($documents as $document): ?>
-
-                        <tr>
-
                             <td>
                                 <?php
                                 echo $this->view->lookup(
@@ -374,38 +942,21 @@ $member = $beneficiary->member();
                                 );
                                 ?>
                             </td>
-
                             <td>
-                                <?php
-                                echo $this->view->escapeHtml(
-                                    $document->description
-                                );
-                                ?>
+                                <?php echo $this->view->escapeHtml($document->description); ?>
                             </td>
-
                         </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    <?php endif; ?>
+<div class="no-print" style="margin:10px 0;">
+        <button type="button" onclick="window.print()">PRINT</button>
+    </div>
+</div>
 
-                        <?php endforeach; ?>
-
-                    </tbody>
-
-                </table>
-
-            </td>
-
-        </tr>
-
-        <?php endif; ?>
-
-
-    </tbody>
-
-</table>
-
-
-<?php $this->block('print-button'); ?>
 
 
 </body>
-
 </html>

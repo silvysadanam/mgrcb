@@ -34,7 +34,7 @@ var Beneficiary = {
             }
         );
 
-        $("input#approved_date").daterangepicker({
+        /*$("input#approved_date").daterangepicker({
             timePicker: false,
             singleDatePicker: true,
             autoUpdateInput: false,
@@ -84,7 +84,7 @@ var Beneficiary = {
         $("a#clear-examination_date").click(function () {
                 $("input#examination_date").val("");
             }
-        );
+        );*/
 
 $("input#proposed_date").daterangepicker({
             timePicker: false,

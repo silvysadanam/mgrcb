@@ -372,7 +372,7 @@ class MembershipController extends BackendController
     private function _loadFormOptions()
     {
         $pairModel = new PairModel();
-        LookupStore::register('cardType', $pairModel->cardType());
+        LookupStore::register('designationType', $pairModel->designationType());
         LookupStore::register('documentType', $pairModel->documentType());
         LookupStore::register('panchayathBrand', $pairModel->panchayathBrand());
         LookupStore::register('accountType', $pairModel->accountType());
@@ -571,7 +571,7 @@ class MembershipController extends BackendController
         $this->_loadMembershipTypes();
         $this->_loadMemberStatus();
         $this->_loadReportOptions();
-
+        $this->addModuleScript('print');
         $this->view->setVariable('generator', $generator);
 
         $this->_breadcrumb();
@@ -582,8 +582,8 @@ class MembershipController extends BackendController
     private function _loadReportOptions()
     {
         $options = [
-            self::REPORT_DOWNLOAD => 'DOWNLOAD',
             self::REPORT_INLINE => 'VIEW INLINE',
+           // self::REPORT_DOWNLOAD => 'DOWNLOAD',
         ];
         $this->view->setVariable('reportOptions', $options);
     }

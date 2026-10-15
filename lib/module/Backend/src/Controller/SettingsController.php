@@ -12,7 +12,7 @@ use Backend\BackendController;
 use Backend\Constant\Tab;
 use Backend\Utility\ManageSettings;
 
-use Model\{CardType, MemberCard, DocumentType, MemberDocument, Medicine, Disease};
+use Model\{DesignationType, MemberCard, DocumentType, MemberDocument, Medicine, Disease, Staff};
 use Model\{Account, Bank, PanchayathBrand, Boat};
 
 use Backend\Form\AjaxForm;
@@ -43,26 +43,26 @@ class SettingsController extends BackendController
     }
     
     /**
-     * card type action
+     * designation type action
      * 
      * @return \Web\View\ViewModel
      */
-    public function cardTypeAction()
+    public function designationTypeAction()
     {
-        $model = new CardType();
+        $model = new DesignationType();
         $total = $model->selectTotal();
         if ($total > 0) {
-            $this->view->setVariable('list', $model->select(null, 'card_type'));
+            $this->view->setVariable('list', $model->select(null, 'designation_type'));
         
-            $memberCardModel = new MemberCard();
-            $this->view->setVariable('used', $memberCardModel->selectDistinct('card_type_id'));
+            $staffModel = new Staff();
+            $this->view->setVariable('used', $staffModel->selectDistinct('designation_type_id'));
         }
         
         $this->view->setVariable('total', $total);
-        $this->addModuleScript('settings/card-type');
-        $this->layout->addModal('settings/card-type');
+        $this->addModuleScript('settings/designation-type');
+        $this->layout->addModal('settings/designation-type');
         
-        $this->_breadcrumb('Card Types');
+        $this->_breadcrumb('Designation');
         
         return $this->getViewModel();
     }
@@ -81,7 +81,7 @@ class SettingsController extends BackendController
         $manage = new ManageSettings($this->getAjaxResponse());
         switch ($this->getParam('type')) {
             case 'card':
-                $result = $manage->cardType();
+                $result = $manage->designationType();
                 break;
             
             case 'document':

@@ -1,0 +1,105 @@
+<?php
+
+$total = $this->view->getVariable('total');
+$list = $this->view->getVariable('list');
+$filters = $this->view->getVariable('filters');
+$beneficiary = $this->view->getVariable('beneficiary');
+$fmtDate = function ($value) {
+    if (empty($value) || strpos($value, '0000-00-00') === 0) {
+        return '';
+    }
+    $ts = strtotime($value);
+    return $ts ? date('d-m-Y', $ts) : $value;
+};
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Beneficiary - <?php echo $beneficiary->memberName(); ?> <a href="javascript:;" class="btn btn-outline-primary btn-sm" id="add-medicine-type" title="New Entry"><i class="ft-plus"></i> New Entry</a>
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form name="form-member-filter" class="form-horizontal" id="form-member-filter" method="get" action="<?php
+                                        echo $this->view->actionUrl('beneficiary/index'); ?>/">
+                                            <!--div class="row text-center mb-1">
+                                                <div class="col-12 form-group input-group">
+                                                    <div class="input-group-addon"></div>
+                                                    <select name="status" id="status" class="form-control">
+                                                        <option value="0">--Status--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('status'), $filters->getValue('status')); ?>
+                                                    
+                                                    </select>
+                                                      <div class="input-group-addon"></div>
+                                                    <select name="mtype" id="mtype" class="form-control">
+                                                        <option value="0">--Membership Type--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('mtype'), $filters->getValue('mtype')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <select name="type" id="type" class="form-control">
+                                                        <option value="0">--Member Type--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $filters->getValue('type')); ?>
+                                                    
+                                                    </select>
+                                                    <div class="input-group-addon"></div>
+                                                    <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
+                                                    <div class="input-group-addon"></div>
+                                                </div>
+                                            </div-->
+                                        </form>
+                                        <?php if ($total > 0): ?>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" id="list-table-5">
+                                               <thead class="bg-blue-grey white">
+                                                    <tr>
+                                                        <th class="cursor-pointer">Sl. No.</th>
+                                                        <th class="cursor-pointer">Last Payment Date</th>
+                                                        <th class="cursor-pointer">Prescription Valid For</th>
+                                                        <th class="cursor-pointer">Assessment Hospital</th>
+                                                        <th class="cursor-pointer">last Bill Amount</th>
+                                                        <th>
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                  <tbody>
+                                                    <?php foreach ($list as $row): ?>
+                                                    
+                                                    <tr>
+                                                        <td><?php echo $this->view->counter(); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($fmtDate($row->assessment_date)); ?></td>
+                                                        <td><?php echo $this->view->lookup('prescType', $row->prescription_valid); ?></td>
+                                                        <td><?php echo $this->view->lookup('HospitalType', $row->hospital); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->last_bill_amount); ?></td>
+                                                        <td>
+                                                            <a class="btn btn-info btn-sm" href="<?php 
+                                                            echo $this->view->actionUrl('beneficiary/medicineview/id/' . $row->id); ?>" title="View"><i class="ft-eye"></i> View</a>
+                                                            <a class="btn btn-primary btn-sm ml-1" href="<?php 
+                                                            echo $this->view->actionUrl('beneficiary/medicinechange/id/' . $row->id); ?>" title="Edit"><i class="ft-edit"></i> Edit</a>
+                   
+                                                        </td>
+                                                    </tr>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <?php $this->block('paging'); ?>
+                                        <?php else: ?>
+                                        
+                                        <div class="alert alert-warning">No records found</div>
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            

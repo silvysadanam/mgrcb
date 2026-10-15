@@ -5,6 +5,18 @@ $fmc = $membership->fmc();
 $member = $membership->member();
 $yesOrNo = ['No', 'Yes'];
 
+$maskAadhar = function ($value) {
+    $digits = preg_replace('/\D+/', '', (string) $value);
+    if ($digits === '') {
+        return '';
+    }
+    if (strlen($digits) <= 4) {
+        return $digits;
+    }
+    $masked = str_repeat('X', strlen($digits) - 4) . substr($digits, -4);
+    // group as 4-4-4 for readability
+    return trim(chunk_split($masked, 4, ' '));
+};
 ?>
 
                 <section>
@@ -47,7 +59,7 @@ $yesOrNo = ['No', 'Yes'];
                                                         </tr>
                                                         <tr>
                                                             <td>Aadhar Number</td>
-                                                            <td><?php echo $this->view->escapeHtml($member->aadhar_number); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($maskAadhar($member->aadhar_number)); ?></td>
                                                         </tr>
                                                         <tr>
                                                             <td>Date of Birth</td>

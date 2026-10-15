@@ -14,6 +14,19 @@ foreach ($diseaseIds as $diseaseId) {
         $diseaseNames[] = $diseaseTypes[$diseaseId];
     }
 }
+
+$maskAadhar = function ($value) {
+    $digits = preg_replace('/\D+/', '', (string) $value);
+    if ($digits === '') {
+        return '';
+    }
+    if (strlen($digits) <= 4) {
+        return $digits;
+    }
+    $masked = str_repeat('X', strlen($digits) - 4) . substr($digits, -4);
+    // group as 4-4-4 for readability
+    return trim(chunk_split($masked, 4, ' '));
+};
 ?>
 
                 <section>
@@ -59,10 +72,6 @@ foreach ($diseaseIds as $diseaseId) {
                                                             <td><?php echo $beneficiary->dateOfBirth(); ?></td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Monthly Income</td>
-                                                            <td><?php echo $this->view->escapeHtml($member->monthly_income); ?></td>
-                                                        </tr>
-                                                        <tr>
                                                             <td>Date of Birth</td>
                                                             <td><?php echo $beneficiary->dateOfBirth(); ?></td>
                                                         </tr>
@@ -106,7 +115,7 @@ foreach ($diseaseIds as $diseaseId) {
                                                         </tr>
                                                         <tr>
                                                             <td> Aadhar Number</td>
-                                                            <td><?php echo $this->view->escapeHtml($member->aadhar_number); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($maskAadhar($member->aadhar_number)); ?></td>
                                                         </tr>
                                                         <tr>
                                                             <td> Various Pensions Received</td>
@@ -160,17 +169,32 @@ foreach ($diseaseIds as $diseaseId) {
                                                             <td> <?php if ($beneficiary->active()): ?>
                                                               
                                                                   <a class="btn btn-outline-primary btn-outline-danger w-100" id="disable-beneficiary" title="Disable Member - Move to Inactive status" href="javascript:;">
-                                                                    <i class="ft-user"></i> Disable Member
+                                                                    <i class="ft-user"></i> Disable Beneficiary
                                                                 </a>
                                                                 <?php else: ?>
                                                                 
                                                                 <a class="btn btn-outline-primary btn-outline-success w-100" id="enable-beneficiary" title="Activate Member - Move to Active status" href="javascript:;">
-                                                                    <i class="ft-user"></i> Activate Member
+                                                                    <i class="ft-user"></i> Activate Beneficiary
                                                                 </a>
-                                                                <?php endif; ?></td>
+                                                              
+                                                                <?php endif; ?>
+                                                              
+                                                            </td>
                                                         </tr>                                                        
                                                         <?php endif; ?>
-                                                        
+                                                        <tr><td>  <a class="btn btn-outline-primary btn-outline-success w-100"  title="Activate Member - Move to Active status" href="<?php 
+                                                            echo $this->view->actionUrl('beneficiary/equipment/id/' . $member->id); ?>">
+                                                                    <i class="ft-settings"></i> Plan for Aids & Equipment
+                                                                </a></td>
+                                                        </tr>
+                                                    <tr><td>  <a class="btn btn-outline-primary btn-outline-success w-100"  title="Activate Member - Move to Active status" href="<?php 
+                                                            echo $this->view->actionUrl('beneficiary/medicine/id/' . $member->id); ?>">
+                                                                    <i class="ft-plus-square"></i> Plan for Medicine to Beneficiaries
+                                                                </a>
+                                                        </td></tr>
+                                                    <tr><td><a class="btn btn-outline-primary btn-outline-success w-100" id="enable-beneficiary" title="Activate Member - Move to Active status" href="javascript:;">
+                                                                    <i class="ft-user"></i> CBR Service
+                                                                </a></td></tr>
                                                         <tr>
                                                             <td><a class="btn btn-outline-dark w-100" title="Print Beneficiary" target="_blank" href="<?php
                                                             echo $this->view->actionUrl('beneficiary/print/id/' . $member->id); ?>"><i class="ft-printer"></i> Print</a></td>

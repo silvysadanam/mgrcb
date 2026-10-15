@@ -71,7 +71,7 @@ var Settings = {
     },
     
     remove: function () {
-        if (confirm("Are you sure you to delete this Card Type?")) {
+        if (confirm("Are you sure you to delete this Designation Type?")) {
             var SettingsId = $(this).data("id");
             var formData = {
                 action : 2,

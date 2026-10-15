@@ -1,0 +1,395 @@
+<?php
+$beneficiaryMedicine = $this->view->getVariable('beneficiaryMedicine');
+$medicine = $beneficiaryMedicine->medicineData();
+$beneficiary = $this->view->getVariable('beneficiary');
+$fmc = $beneficiary->fmc();
+$member = $beneficiary->member();
+$yesOrNo = ['No', 'Yes'];
+$edit = 1;
+$fmtDate = function ($value) {
+    if (empty($value) || strpos($value, '0000-00-00') === 0) {
+        return '';
+    }
+    $ts = strtotime($value);
+    return $ts ? date('d-m-Y', $ts) : $value;
+};
+$panchayath = $beneficiary->panchayath();
+?>
+
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+
+    <title>
+        Beneficiary - <?php echo $this->view->escapeHtml($member->name); ?>
+    </title>
+
+    <?php $this->block('print-auction'); ?>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #263238;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .print-container {
+        width: 100%;
+        max-width: 850px;
+        margin: 15px auto;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #d7dee5;
+    }
+
+    .report-header {
+        text-align: center;
+        padding: 8px 10px 16px;
+        border-bottom: 3px solid #176b67;
+        margin-bottom: 18px;
+    }
+
+    .report-header h2 {
+        margin: 0 0 8px;
+        color: #174e4b;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+
+    .report-header h3 {
+        margin: 0;
+        color: #455a64;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .section-heading {
+        margin: 0 0 8px;
+        padding: 7px 10px;
+        background: #eaf4f3;
+        border-left: 4px solid #176b67;
+        color: #174e4b;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .details-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        margin-bottom: 18px;
+    }
+
+    .details-table td {
+        width: 50%;
+        padding: 9px 10px;
+        border: 1px solid #dce3e8;
+        vertical-align: top;
+        overflow-wrap: anywhere;
+    }
+
+    .details-table tr:nth-child(even) td {
+        background: #f8fafb;
+    }
+
+    .field-label {
+        display: block;
+        margin-bottom: 2px;
+        color: #60727d;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+    .field-value {
+        color: #263238;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .documents-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+        font-size: 11px;
+    }
+
+    .documents-table th {
+        padding: 9px;
+        background: #176b67;
+        color: #fff;
+        border: 1px solid #176b67;
+        text-align: left;
+    }
+
+    .documents-table td {
+        padding: 8px 9px;
+        border: 1px solid #dce3e8;
+        overflow-wrap: anywhere;
+    }
+
+    .documents-table tbody tr:nth-child(even) {
+        background: #f4f8f8;
+    }
+
+    .report-footer {
+        margin-top: 25px;
+        padding-top: 12px;
+        border-top: 1px solid #dce3e8;
+        color: #60727d;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    @page {
+        size: A4 portrait;
+        margin: 12mm;
+    }
+
+    @media print {
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 11px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .print-container {
+            max-width: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .report-header {
+            break-inside: avoid;
+        }
+
+        .details-table tr,
+        .documents-table tr {
+            break-inside: avoid;
+        }
+
+        .section-heading {
+            break-after: avoid;
+        }
+
+        .documents-table thead {
+            display: table-header-group;
+        }
+
+        .print-button,
+        .no-print {
+            display: none !important;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+
+<div class="print-container">
+
+    <div class="report-header">
+        <h2>Mar Gregorios Rehabilitation Centre for the Blind</h2>
+        <h3>Plan for Medicine to Beneficiaries</h3>
+    </div>
+
+    <h4 class="section-heading">Beneficiary &amp; Medical Details</h4>
+
+    <table class="details-table">
+        <tbody>
+            <tr>
+                <td>
+                    <span class="field-label">Name</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($member->name); ?>
+                    </span>
+                </td>
+                <td>
+                    <span class="field-label">Panchayath</span>
+                    <span class="field-value">
+                        <?php echo $panchayath->panchayath_brand; ?>
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="field-label">Registration Number</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($medicine->reg_no); ?>
+                    </span>
+                </td>
+                <td>
+                    <span class="field-label">Gender</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($beneficiary->gender()); ?>
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="field-label">Date of Birth</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($fmtDate($beneficiary->dateOfBirth())); ?>
+                    </span>
+                </td>
+                <td>
+                    <span class="field-label">Cause of Disability</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($beneficiary->disabilityTypes()); ?>
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="field-label">Medical Assessment Date</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($fmtDate($medicine->assessment_date)); ?>
+                    </span>
+                </td>
+                <td>
+                    <span class="field-label">Diagnosis</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($medicine->diagnosis); ?>
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="field-label">Prescription Valid For</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml((string) $this->view->lookup('prescType', $medicine->prescription_valid)); ?>
+                    </span>
+                </td>
+                <td>
+                    <span class="field-label">Assessment Hospital</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml((string) $this->view->lookup('HospitalType', $medicine->hospital)); ?>
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="field-label">Department</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml((string) $this->view->lookup('DepartmentType', $medicine->department)); ?>
+                    </span>
+                </td>
+                <td>
+                    <span class="field-label">Amount of Last Payment</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml((string) $medicine->last_bill_amount); ?>
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="field-label">Last Payment Date</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($fmtDate($medicine->last_bill_date)); ?>
+                    </span>
+                </td>
+                <td>
+                    <span class="field-label">Committee Member Recommendation</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($medicine->worker_opinion); ?>
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="field-label">Community Worker Name</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($member->worker_name); ?>
+                    </span>
+                </td>
+                <td>
+                    <span class="field-label">Payment Details</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($medicine->payment_type); ?>
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <span class="field-label">Approved Date</span>
+                    <span class="field-value">
+                        <?php echo $this->view->escapeHtml($fmtDate($beneficiary->approvedDate())); ?>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <?php $documents = $beneficiaryMedicine->documents(); ?>
+
+    <?php if (!empty($documents)): ?>
+        <h4 class="section-heading">Supporting Documents</h4>
+
+        <table class="documents-table">
+            <thead>
+                <tr>
+                    <th style="width: 35%;">Document Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($documents as $document): ?>
+                    <tr>
+                        <td>
+                            <?php
+                            echo $this->view->escapeHtml((string) $this->view->lookup(
+                                'documentType',
+                                $document->document_type_id
+                            ));
+                            ?>
+                        </td>
+                        <td>
+                            <?php echo $this->view->escapeHtml($document->description); ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    <?php endif; ?>
+
+    <div class="report-footer">
+        Mar Gregorios Rehabilitation Centre for the Blind
+    </div>
+<div class="no-print" style="margin:10px 0;">
+        <button type="button" onclick="window.print()">PRINT</button>
+    </div>
+
+</div>
+
+
+
+
+</body>
+
+</html>

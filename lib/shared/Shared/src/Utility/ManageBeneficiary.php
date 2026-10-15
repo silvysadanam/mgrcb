@@ -8,7 +8,7 @@
 
 namespace Shared\Utility;
 
-use Model\{Member, Beneficiary, BeneficiaryEntry, MemberCard, BeneficiaryDocument, BeneficiaryPhoto, Account};
+use Model\{Member, Beneficiary, BeneficiaryEntry, MemberCard, BeneficiaryDocument, BeneficiaryEquipment, BeneficiaryPhoto, Account, BeneficiaryMedicine, BeneficiaryMedicineDocument, BeneficiaryEquipmentDocument};
 
 use Shared\Form\AjaxForm;
 use Shared\Utility\{MembershipValidator, DocumentDirectory, FileTypeDetector};
@@ -28,19 +28,30 @@ class ManageBeneficiary
     const GET_ENTRY = 5;
     const SAVE_ENTRY = 6;
     const DELETE_ENTRY = 7;
-    const SAVE_ADVANCE = 8;
+    const SAVE_MEDICINE = 8;
     const GET_DOCUMENT = 9;
+    const GET_MEDICINE_DOCUMENT = 22;
     const SAVE_DOCUMENT_WITH_FILE = 10;
     const SAVE_DOCUMENT_WITHOUT_FILE = 11;
     const REMOVE_DOCUMENT = 12;
+    const REMOVE_MEDICINE_DOCUMENT = 23;
+    const SAVE_EQUIPMENT = 24;
+    const GET_EQUIPMENT = 25;
     const SAVE_PHOTO = 13;
     const GET_ACCOUNT = 14;
     const SAVE_ACCOUNT = 15;
     const REMOVE_ACCOUNT = 16;
     const SET_PASSWORD = 17;
-    
+    const GET_MEDICINE = 20;
     const DISABLE = 18;
     const ACTIVATE = 19;
+    const SAVE_MEDICINE_DOCUMENT_WITH_FILE = 21;
+    const SAVE_MEDICINE_DOCUMENT_WITHOUT_FILE = 30;
+    const GET_EQUIPMENT_DOCUMENT = 26;
+    const SAVE_EQUIPMENT_DOCUMENT_WITH_FILE = 27;
+    const SAVE_EQUIPMENT_DOCUMENT_WITHOUT_FILE = 28;
+    const REMOVE_EQUIPMENT_DOCUMENT = 29;
+    
 
     /**
      *
@@ -125,7 +136,9 @@ class ManageBeneficiary
      * @var boolean
      */
     private $_manager = true;
-    
+    private $_medicineDocumentModel;
+    private $_equipmentModel;
+    private $_equipmentDocumentModel;
     /**
      * constructor
      * 
@@ -138,11 +151,15 @@ class ManageBeneficiary
         $this->_model = new Beneficiary();
         $this->_memberCardModel = new MemberCard();
         $this->_beneficiaryDocumentModel = new BeneficiaryDocument();
+        $this->_medicineDocumentModel = new BeneficiaryMedicineDocument();
         $this->_member = $this->_model->find($this->_id);
         $this->_memberEntry = new BeneficiaryEntry();
         $this->_beneficiaryPhotoModel = new BeneficiaryPhoto();
         $this->_accountModel = new Account();
         $this->_membershipValidator = new MembershipValidator();
+        $this->_medicineModel = new BeneficiaryMedicine();
+        $this->_equipmentModel = new BeneficiaryEquipment();
+        $this->_equipmentDocumentModel = new BeneficiaryEquipmentDocument();
     }
     
     /**
@@ -161,21 +178,25 @@ class ManageBeneficiary
             case self::GET_MEMBER:
                 $this->_getMember();
                 break;
-            
+            case self::GET_MEDICINE:
+                $this->_getMedicine();
+                break;
+            case self::GET_EQUIPMENT:
+                $this->_getEquipment();
+                break;
             case self::SAVE_MEMBER:
                 $this->_saveMember();
-                break;
-            
-            case self::GET_CARD:
-                $this->_getCard();
-                break;
-            
-            case self::SAVE_CARD:
-                $this->_saveCard();
-                break;            
-                       
+                break;        
+                                    
             case self::GET_ENTRY:
                 $this->_getEntry();
+                break;
+            
+            case self::SAVE_MEDICINE:
+                $this->_saveMedicine();
+                break;
+            case self::SAVE_EQUIPMENT:
+                $this->_saveequipment();
                 break;
             
             case self::SAVE_ENTRY:
@@ -189,6 +210,19 @@ class ManageBeneficiary
             case self::GET_DOCUMENT:
                 $this->_getDocument();
                 break;
+            case self::GET_MEDICINE_DOCUMENT:
+                $this->_getMedicineDocument();
+                break;
+            case self::GET_EQUIPMENT_DOCUMENT:
+                $this->_getEquipmentDocument();
+                break;          
+            
+            case self::SAVE_MEDICINE_DOCUMENT_WITH_FILE:
+                $this->_saveMedicineDocumentWithFile();
+                break;    
+            case self::SAVE_EQUIPMENT_DOCUMENT_WITH_FILE:
+                $this->_saveEquipmentDocumentWithFile();
+                break;            
             
             case self::SAVE_DOCUMENT_WITH_FILE:
                 $this->_saveDocumentWithFile();
@@ -196,10 +230,21 @@ class ManageBeneficiary
             
             case self::SAVE_DOCUMENT_WITHOUT_FILE:
                 $this->_saveDocumentWithoutFile();
-                break;
-            
+                break;            
+            case self::SAVE_MEDICINE_DOCUMENT_WITHOUT_FILE:
+                $this->_saveMedicineDocumentWithoutFile();
+                break; 
+            case self::SAVE_EQUIPMENT_DOCUMENT_WITHOUT_FILE:
+                $this->_saveEquipmentDocumentWithoutFile();
+                break; 
             case self::REMOVE_DOCUMENT:
                 $this->_removeDocument();
+                break;
+            case self::REMOVE_MEDICINE_DOCUMENT:
+                 $this->_removeMedicineDocument();
+                break;
+            case self::REMOVE_EQUIPMENT_DOCUMENT:
+                 $this->_removeEquipmentDocument();
                 break;
             
             case self::SAVE_PHOTO:
@@ -285,7 +330,219 @@ class ManageBeneficiary
         $this->_setResult($member);
         $this->_valid();
     }
+    private function _getEquipment()
+    {
+        $fields = ['id',
+                'reg_no',
+                'diagnosis',
+                'assessment_date',
+                'equipment',
+                'hospital',
+                'department',
+                'last_bill_amount',
+                'last_bill_date',
+                'worker_opinion',
+                'worker_name',
+                'payment_type',
+                'approved_date',
+            ];
+        
+        $member = (array) $this->_equipmentModel->selectFieldsById($fields, $this->_id);
+       
+        if (DateHelper::isDate($member['assessment_date'])) {
+            $member['assessment_date'] = DateHelper::datepicker($member['assessment_date']);
+        }
+        
+         if (DateHelper::isDate($member['approved_date'])) {
+            $member['approved_date'] = DateHelper::datepicker($member['approved_date']);
+        }
+
+        $this->_setResult($member);
+        $this->_valid();
+    }
+    private function _getMedicine()
+    {
+       $fields = ['id',
+                'reg_no',
+                'diagnosis',
+                'assessment_date',
+                'prescription_valid',
+                'hospital',
+                'department',
+                'last_bill_amount',
+                'last_bill_date',
+                'worker_opinion',
+                'worker_name',
+                'payment_type',
+                'approved_date',
+            ];
+        
+        $member = (array) $this->_medicineModel->selectFieldsById($fields, $this->_id);
+       
+        if (DateHelper::isDate($member['assessment_date'])) {
+            $member['assessment_date'] = DateHelper::datepicker($member['assessment_date']);
+        }
+        
+         if (DateHelper::isDate($member['approved_date'])) {
+            $member['approved_date'] = DateHelper::datepicker($member['approved_date']);
+        }
+
+        $this->_setResult($member);
+        $this->_valid();
+    }
     
+    private function _saveequipment()
+    {
+        $fields = [
+            'mid',
+            'reg_no',
+            'diagnosis',
+            'assessment_date',
+            'equipment',
+            'hospital',
+            'department',
+            'last_bill_amount',
+            'last_bill_date',
+            'worker_opinion',
+            'worker_name',
+            'payment_type',
+            'approved_date',
+        ];
+
+        $this->_loadAjaxForm($fields);
+
+        if (empty($this->_formValues)) {
+            return;
+        }
+
+        $mid = (int) ($this->_formValues['mid'] ?? 0);
+
+        $insert = [];
+
+        foreach ($fields as $field) {
+            $value = $this->_formValues[$field] ?? null;
+
+            // Convert date fields to database format
+            if (in_array($field, [
+                'assessment_date',
+                'last_bill_date',
+                'approved_date',
+            ], true)) {
+                $value = ($value === null || trim((string) $value) === '')
+                    ? null
+                    : DateHelper::fromDatepicker($value);
+            }
+
+            // Store empty optional values as NULL
+            if (is_string($value)) {
+                $value = trim($value);
+                if ($value === '') {
+                    $value = null;
+                }
+            }
+
+            $insert[$field] = $value;
+        }
+
+        // mid is only used to pick insert vs update, never saved as a column
+        unset($insert['mid']);
+
+        if ($mid > 0) {
+            // Existing row: update
+            if (!$this->_equipmentModel->hasId($mid)) {
+                return;
+            }
+
+            $this->_equipmentModel->updateById($insert, $mid);
+        } else {
+            // New row: insert
+            $insert['beneficiary_id'] = $this->_id;
+
+            $newId = $this->_equipmentModel->insert($insert);
+
+            if (!$newId) {
+                return;
+            }
+        }
+
+        $this->_saved('Equipment details', true);
+    }
+    private function _saveMedicine()
+    {
+        $fields = [
+            'mid',
+            'reg_no',
+            'diagnosis',
+            'assessment_date',
+            'prescription_valid',
+            'hospital',
+            'department',
+            'last_bill_amount',
+            'last_bill_date',
+            'worker_opinion',
+            'worker_name',
+            'payment_type',
+            'approved_date',
+        ];
+
+        $this->_loadAjaxForm($fields);
+
+        if (empty($this->_formValues)) {
+            return;
+        }
+
+        $mid = (int) ($this->_formValues['mid'] ?? 0);
+
+        $insert = [];
+
+        foreach ($fields as $field) {
+            $value = $this->_formValues[$field] ?? null;
+
+            // Convert date fields to database format
+            if (in_array($field, [
+                'assessment_date',
+                'last_bill_date',
+                'approved_date',
+            ], true)) {
+                $value = ($value === null || trim((string) $value) === '')
+                    ? null
+                    : DateHelper::fromDatepicker($value);
+            }
+
+            // Store empty optional values as NULL
+            if (is_string($value)) {
+                $value = trim($value);
+                if ($value === '') {
+                    $value = null;
+                }
+            }
+
+            $insert[$field] = $value;
+        }
+
+        // mid is only used to pick insert vs update, never saved as a column
+        unset($insert['mid']);
+
+        if ($mid > 0) {
+            // Existing row: update
+            if (!$this->_medicineModel->hasId($mid)) {
+                return;
+            }
+
+            $this->_medicineModel->updateById($insert, $mid);
+        } else {
+            // New row: insert
+            $insert['beneficiary_id'] = $this->_id;
+
+            $newId = $this->_medicineModel->insert($insert);
+
+            if (!$newId) {
+                return;
+            }
+        }
+
+        $this->_saved('Medicine details', true);
+    }
     /**
      * save member
      * 
@@ -548,7 +805,49 @@ class ManageBeneficiary
         $this->_remove($this->_memberCardModel, 'Card Number');
     }
    
+    private function _getEquipmentDocument()
+    {
+        $this->_loadAjaxForm([
+            'id'
+        ]);
+
+        if (! $this->_checkId()) {
+            return;
+        }
+
+        $fields = ['document_type_id', 'description'];
+
+        $this->_setResult(
+            $this->_equipmentDocumentModel->selectFieldsById(
+                $fields,
+                $this->_formValues['id']
+            )
+        );
+
+        $this->_valid();
+    }
     
+    private function _getMedicineDocument()
+    {
+        $this->_loadAjaxForm([
+            'id'
+        ]);
+
+        if (! $this->_checkId()) {
+            return;
+        }
+
+        $fields = ['document_type_id', 'description'];
+
+        $this->_setResult(
+            $this->_medicineDocumentModel->selectFieldsById(
+                $fields,
+                $this->_formValues['id']
+            )
+        );
+
+        $this->_valid();
+    }
       
     /**
      * get document
@@ -556,26 +855,26 @@ class ManageBeneficiary
      * @return null
      */
     private function _getDocument()
-{
-    $this->_loadAjaxForm([
-        'id'
-    ]);
+    {
+        $this->_loadAjaxForm([
+            'id'
+        ]);
 
-    if (! $this->_checkId()) {
-        return;
+        if (! $this->_checkId()) {
+            return;
+        }
+
+        $fields = ['document_type_id', 'description'];
+
+        $this->_setResult(
+            $this->_beneficiaryDocumentModel->selectFieldsById(
+                $fields,
+                $this->_formValues['id']
+            )
+        );
+
+        $this->_valid();
     }
-
-    $fields = ['document_type_id', 'description'];
-
-    $this->_setResult(
-        $this->_beneficiaryDocumentModel->selectFieldsById(
-            $fields,
-            $this->_formValues['id']
-        )
-    );
-
-    $this->_valid();
-}
 
     
     /**
@@ -670,7 +969,191 @@ class ManageBeneficiary
         $this->_beneficiaryDocumentModel->insert($document);
         $this->_saved('Document');
     }
+     /**
+     * save document with file
+     * 
+     * @return null
+     */
+    private function _saveMedicineDocumentWithFile()
+    {
+        $form = new Form();
+        if (! $form->isPost()) {
+            return;
+        }
+        
+        $documentId = $form->post('document_id');
+        $documentTypeId = $form->post('document_type_id');
+        $description = $form->post('description');
+        
+        $options = [
+            'required' => true,
+            'custom1' => true,
+            'size' => 10485760,
+        ];
+        
+        if ($documentId > 0) {
+            if (! $this->_medicineDocumentModel->hasId($documentId)) {
+                return;
+            }
+            
+            if ($this->_id != $this->_medicineDocumentModel->selectColumnById('member_id', $documentId)) {
+                return;
+            }
+        }
+        
+        if ($this->_membershipValidator->notSelected($documentTypeId)) {
+            $this->_response->message('Document Type not selected');
+            return;
+        }
+        
+        
+        $document = [];
+        $upload = new FileUpload('document', 'Document');
+        if ($upload->validate($options)) {
+            if ($upload->hasFile()) {
+                $directory = new DocumentDirectory();
+                $path = $directory->run($this->_id);
+                $upload->setUploadPath(UPLOAD_DIR . '/documents');
+                if ($upload->upload($path)) {
+                    $fileType = new FileTypeDetector();
+                    $document['filename'] = $upload->getUploadedFilename();
+                    $document['original_filename'] = $upload->getRawFilename();
+                    $document['file_size'] = $upload->getUploadedFileSize();
+                    $document['file_type_id'] = $fileType->getFromFilename($document['filename']);
+                    $document['file_path'] = $path;
+                } else {
+                    $this->_response->message('File upload failed');
+                    return;
+                }
+            } else {
+                $this->_response->message('No file uploaded');
+                return;
+            }
+        } else {
+            $this->_response->message($upload->getError());
+            return;
+        }
+        
+        if ($documentId > 0) {
+            $current = $this->_medicineDocumentModel->find($documentId);
+            if ($current->document_type_id != $documentTypeId) {
+                $document['document_type_id'] = $documentTypeId;
+            }
+            if ($current->description != $description) {
+                $document['description'] = $description;
+            }
+            
+            if (empty($document)) {
+                $this->_noChange();
+                return;
+            }
+            
+            $this->_medicineDocumentModel->updateById($document, $documentId);
+            $this->_saved('Document', true);
+            
+            return;
+        }
+        
+        $document['member_id'] = $this->_id;
+        $document['document_type_id'] = $documentTypeId;
+        $document['description'] = $description;
+        $document['created_at'] = DateHelper::timestamp();
+        $this->_medicineDocumentModel->insert($document);
+        $this->_saved('Document');
+    }
     
+    /**
+     * save document with file
+     * 
+     * @return null
+     */
+    private function _saveEquipmentDocumentWithFile()
+    {
+        $form = new Form();
+        if (! $form->isPost()) {
+            return;
+        }
+        
+        $documentId = $form->post('document_id');
+        $documentTypeId = $form->post('document_type_id');
+        $description = $form->post('description');
+        
+        $options = [
+            'required' => true,
+            'custom1' => true,
+            'size' => 10485760,
+        ];
+        
+        if ($documentId > 0) {
+            if (! $this->_equipmentDocumentModel->hasId($documentId)) {
+                return;
+            }
+            
+            if ($this->_id != $this->_equipmentDocumentModel->selectColumnById('member_id', $documentId)) {
+                return;
+            }
+        }
+        
+        if ($this->_membershipValidator->notSelected($documentTypeId)) {
+            $this->_response->message('Document Type not selected');
+            return;
+        }
+        
+        
+        $document = [];
+        $upload = new FileUpload('document', 'Document');
+        if ($upload->validate($options)) {
+            if ($upload->hasFile()) {
+                $directory = new DocumentDirectory();
+                $path = $directory->run($this->_id);
+                $upload->setUploadPath(UPLOAD_DIR . '/documents');
+                if ($upload->upload($path)) {
+                    $fileType = new FileTypeDetector();
+                    $document['filename'] = $upload->getUploadedFilename();
+                    $document['original_filename'] = $upload->getRawFilename();
+                    $document['file_size'] = $upload->getUploadedFileSize();
+                    $document['file_type_id'] = $fileType->getFromFilename($document['filename']);
+                    $document['file_path'] = $path;
+                } else {
+                    $this->_response->message('File upload failed');
+                    return;
+                }
+            } else {
+                $this->_response->message('No file uploaded');
+                return;
+            }
+        } else {
+            $this->_response->message($upload->getError());
+            return;
+        }
+        
+        if ($documentId > 0) {
+            $current = $this->_equipmentDocumentModel->find($documentId);
+            if ($current->document_type_id != $documentTypeId) {
+                $document['document_type_id'] = $documentTypeId;
+            }
+            if ($current->description != $description) {
+                $document['description'] = $description;
+            }
+            
+            if (empty($document)) {
+                $this->_noChange();
+                return;
+            }
+            
+            $this->_equipmentDocumentModel->updateById($document, $documentId);
+            $this->_saved('Document', true);
+            
+            return;
+        }
+        
+        $document['member_id'] = $this->_id;
+        $document['document_type_id'] = $documentTypeId;
+        $document['description'] = $description;
+        $document['created_at'] = DateHelper::timestamp();
+        $this->_equipmentDocumentModel->insert($document);
+        $this->_saved('Document');
+    }
     /**
      * save document without file
      * 
@@ -715,6 +1198,83 @@ class ManageBeneficiary
         $this->_saved('Document', true);
     }
     
+    private function _saveMedicineDocumentWithoutFile()
+    {
+        $fields = ['document_type_id', 'description'];
+        $this->_loadAjaxForm($fields);
+        
+        if (empty($this->_formValues)) {
+            return;
+        }
+        
+        if (! $this->_checkFormId()) {
+            return;
+        }
+        
+        if (! $this->_checkMemberId($this->_medicineDocumentModel)) {
+            return;
+        }
+
+        if ($this->_membershipValidator->notSelected($this->_formValues['document_type_id'])) {
+            $this->_response->message('Document Type not selected');
+            return;
+        }
+        
+        $update = [];
+        $current = $this->_medicineDocumentModel->find($this->_formValues['id']);
+        foreach ($fields as $field) {
+            if ($this->_formValues[$field] != $current->{$field}) {
+                $update[$field] = $this->_formValues[$field];
+            }
+        }
+        
+        if (empty($update)) {
+            $this->_noChange();
+            return;
+        }
+        
+        $this->_medicineDocumentModel->updateById($update, $this->_formValues['id']);
+        $this->_saved('Document', true);
+    }
+    
+    private function _saveEquipmentDocumentWithoutFile()
+    {
+        $fields = ['document_type_id', 'description'];
+        $this->_loadAjaxForm($fields);
+        
+        if (empty($this->_formValues)) {
+            return;
+        }
+        
+        if (! $this->_checkFormId()) {
+            return;
+        }
+        
+        if (! $this->_checkMemberId($this->_equipmentDocumentModel)) {
+            return;
+        }
+
+        if ($this->_membershipValidator->notSelected($this->_formValues['document_type_id'])) {
+            $this->_response->message('Document Type not selected');
+            return;
+        }
+        
+        $update = [];
+        $current = $this->_equipmentDocumentModel->find($this->_formValues['id']);
+        foreach ($fields as $field) {
+            if ($this->_formValues[$field] != $current->{$field}) {
+                $update[$field] = $this->_formValues[$field];
+            }
+        }
+        
+        if (empty($update)) {
+            $this->_noChange();
+            return;
+        }
+        
+        $this->_equipmentDocumentModel->updateById($update, $this->_formValues['id']);
+        $this->_saved('Document', true);
+    }
     /**
      * remove document
      * 
@@ -724,7 +1284,14 @@ class ManageBeneficiary
     {
         $this->_remove($this->_beneficiaryDocumentModel, 'Document');
     }
-    
+    private function _removeMedicineDocument()
+    {
+        $this->_remove($this->_medicineDocumentModel, 'Document');
+    }
+    private function _removeEquipmentDocument()
+    {
+        $this->_remove($this->_equipmentDocumentModel, 'Document');
+    }
     /**
      * save photo
      * 

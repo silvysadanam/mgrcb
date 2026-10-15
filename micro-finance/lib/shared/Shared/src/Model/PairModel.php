@@ -172,11 +172,11 @@ class PairModel extends Model
         return $this->_get(Db::DISEASE);
     }
     /**
-     * card type
+     * designation type
      * 
      * @return array
      */
-    public function cardType()
+    public function designationType()
     {
         return $this->_get(Db::CARD_TYPE);
     }

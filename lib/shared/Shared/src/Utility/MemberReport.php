@@ -279,7 +279,7 @@ class MemberReport
         $total = $this->_model->queryTotal($query1);
         if ($total > 0) {
             //$paging = $this->getPaging($total);
-            $query2 = 'SELECT `m`.`id`, `m`.`name`, `m`.`code`,`m`.`mobile`, `m`.`location`, `m`.`parish`,'
+            $query2 = 'SELECT `m`.`id`, `m`.`name`, `m`.`code`,`m`.`mobile`, `m`.`location`, `m`.`parish`, `m`.`email`, `m`.`email`, `m`.`address`, `m`.`membership_fee`,  `m`.`date_of_birth`,`m`.`approved_date`,'
                     . '`m`.`member_type_id` ' . $query 
                     . ' ORDER BY `m`.`code`, `m`.`name` ';
             $this->list = $this->_model->queryRows($query2);

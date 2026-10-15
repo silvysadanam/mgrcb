@@ -8,6 +8,7 @@ $profile = '';
 $settings = '';
 $membership = '';
 $beneficiary = '';
+$staff = '';
 $auction = '';
 $impersonate = '';
 $deduction = '';
@@ -30,9 +31,9 @@ if ($tab == Tab::PROFILE) {
 } elseif ($tab == Tab::BENEFICIARY) {
     $beneficiary = $active;
     $dashboard = '';   
-} elseif ($tab == Tab::DEDUCTION) {
-    $deduction = $active;
-    $dashboard = '';
+} elseif ($tab == Tab::STAFF) {
+    $staff = $active;
+    $dashboard = '';   
 } elseif ($tab == Tab::ACCOUNTSHEAD) {
     $accountheads = $active;
     $dashboard = '';
@@ -79,20 +80,30 @@ if ($tab == Tab::PROFILE) {
                     </ul>
                 </li>
                 <li class="dropdown nav-item<?php echo $beneficiary; ?>" data-menu="dropdown">
-                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Beneficiary Management"><i class="ft-lock"></i><span>Beneficiary Management</span></a>
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Beneficiary"><i class="ft-lock"></i><span>Beneficiary Management</span></a>
                     <ul class="dropdown-menu">
                         <div class="arrow_box">
                             <li data-menu="">
                                 <a class="dropdown-item" href="<?php echo $this->view->actionUrl('beneficiary/member'); ?>" title="Members" data-toggle="dropdown">Members</a>
                             </li>                            
                             <li data-menu="">
-                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('beneficiary/active'); ?>" title="Active" data-toggle="dropdown">Active</a>
-                            </li>
-                            <li data-menu="">
-                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('beneficiary/inactive'); ?>" title="Inactive" data-toggle="dropdown">Inactive</a>
-                            </li>
-                            <li data-menu="">
                                 <a class="dropdown-item" href="<?php echo $this->view->actionUrl('beneficiary/create'); ?>" title="New Member" data-toggle="dropdown">New Member</a>
+                            </li>
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('beneficiary/filter'); ?>" title="Search Beneficiary" data-toggle="dropdown">Search Beneficiary</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="dropdown nav-item<?php echo $staff; ?>" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" title="Staff"><i class="ft-lock"></i><span>Staff</span></a>
+                    <ul class="dropdown-menu">
+                        <div class="arrow_box">
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('staff/member'); ?>" title="Staffs" data-toggle="dropdown">Staffs</a>
+                            </li>                            
+                            <li data-menu="">
+                                <a class="dropdown-item" href="<?php echo $this->view->actionUrl('staff/create'); ?>" title="New Staff" data-toggle="dropdown">New Staff</a>
                             </li>
                         </div>
                     </ul>

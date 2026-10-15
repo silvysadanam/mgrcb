@@ -61,10 +61,9 @@ $list = $this->view->getVariable('list');
                                                        
                                                         <div class="form-group row">
                                                             <label for="report_option" class="label-control col-md-4 text-left">Report Option</label>
-                                                            <select name="report_option" id="report_option" class="form-control col-md-4" title="Report Option">
-                                                                <option value="0">PRINT VIEW</option>
+                                                            <select name="report_option" id="report_option" class="form-control col-md-4" title="Report Option">                                                               
                                                                 <?php echo $this->view->formHelper('select', $this->view->getVariable('reportOptions'), $form->getValue('report_option')); ?>
-                                                                
+                                                                 <option value="0">PRINT VIEW</option>
                                                             </select>
                                                         </div>
                                                     </div>

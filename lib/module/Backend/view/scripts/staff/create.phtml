@@ -1,0 +1,155 @@
+<?php
+
+$form = $this->getForm();
+$values = $form->getValues();
+$yesOrNo = ['No', 'Yes'];
+
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">New Member</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal" name="form-member" method="post" action="" autocomplete="off" enctype="multipart/form-data">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="name">Name <span class="red">*</span></label>
+                                                            <input type="text" name="name" id="name" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('name'); ?>" placeholder="Name" maxlength="100" required="required">
+                                                        </div>
+                                                       <div class="form-group">
+                                                            <label class="label-control" for="designation_type_id">Designation Type</label>
+                                                            <select name="designation_type_id" id="designation_type_id" class="form-control">
+                                                                <option value="0">--Designation Type--</option>
+                                                                <?php echo $this->view->formHelper('select', $this->view->lookupStore('designationType'), $form->getValue('designation_type_id')); ?>
+                                                            </select>
+                                                        </div>
+                                                         <div class="form-group">
+                                                            <label class="label-control" for="address">Address</label>
+                                                            <textarea name="address" id="address" class="form-control" placeholder="Address"><?php 
+                                                            echo $form->getEscapedValue('address'); ?></textarea>
+                                                        </div>                                                       
+                                                     
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="mobile">Mobile</label>
+                                                            <input type="text" name="mobile" id="mobile" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('mobile'); ?>" placeholder="Mobile" maxlength="10"  required="required">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="aadhar_number">Aadhar Number</label>
+                                                            <input type="text" name="aadhar_number" id="aadhar_number" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('aadhar_number'); ?>" placeholder="Aadhar Number" maxlength="14">
+                                                        </div>
+                                                                                                          
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="approved_date">Approval Date</label>
+                                                            <input type="text" name="approved_date" id="approved_date" class="form-control single-date-max-today" data-min-date="01/01/2020" value="<?php 
+                                                            echo $form->getEscapedValue('approved_date'); ?>" placeholder="Approval Date" maxlength="10" readonly="readonly">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6"> 
+                                                          <div class="form-group">
+                                                            <label class="label-control" for="email">Email ID</label>
+                                                            <input type="text" name="email" id="parish" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('email'); ?>" placeholder="Email ID" required="required">
+                                                        </div>   
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="date_of_birth">Date of Birth</label>
+                                                            <input type="text" name="date_of_birth" id="date_of_birth" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('date_of_birth'); ?>" placeholder="Date of Birth" maxlength="10" readonly="readonly">
+                                                            <span>[<a href="javascript:;" id="clear-date-of-birth" title="Clear">Clear</a>]</span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="landline">Land line with STD Code</label>
+                                                            <input type="text" name="landline" id="landline" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('landline'); ?>" placeholder="Landline" maxlength="30">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="whatsapp">WhatsApp</label>
+                                                            <input type="text" name="whatsapp" id="whatsapp" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('whatsapp'); ?>" placeholder="WhatsApp" maxlength="30">
+                                                        </div>
+                                                       <div class="form-group">
+                                                            <label class="label-control" for="pan_number">PAN Number</label>
+                                                            <input type="text" name="pan_number" id="pan_number" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('pan_number'); ?>" placeholder="PAN Number" maxlength="10">
+                                                        </div>                                                      
+                                                     
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="photo">Upload Photo </label>
+                                                            <input type="file" name="photo" id="photo" class="form-control" accept=".jpg">
+                                                            <p class="help-block">.jpg files only</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <?php if (true == $this->view->getVariable('hasBanks')): ?>
+                                                
+                                                <div class="row mt-2">
+                                                    <div class="col-12">
+                                                        <div class="card card-bordered border-info">
+                                                            <div class="card-header bg-info">
+                                                                <h4 class="card-title white">Bank Account </h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="bank_id">Bank</label>
+                                                                                <select name="bank_id" id="bank_id" class="form-control" title="Bank">
+                                                                                    <option value="0">--select--</option>
+                                                                                    <?php echo $this->view->formHelper('select', $this->view->lookupStore('bank'), $form->getValue('bank_id')); ?>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="account_number">Account Number</label>
+                                                                                <input type="text" name="account_number" id="account_number" class="form-control" placeholder="Account Number" maxlength="16" value="<?php 
+                                                                                $form->getEscapedValue('account_number') ?>">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="account_type_id">Account type</label>
+                                                                                <select name="account_type_id" id="account_type_id" class="form-control" title="Account type">
+                                                                                    <option value="0">--select--</option>
+                                                                                    <?php echo $this->view->formHelper('select', $this->view->lookupStore('accountType'), $form->getValue('account_type_id')); ?>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="description">Description</label>
+                                                                                <input type="text" name="description" id="description" class="form-control" placeholder="Description" maxlength="50" value="<?php 
+                                                                                $form->getEscapedValue('description') ?>">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php endif; ?>
+                                            </div>
+                                            <div class="form-actions center">
+                                                <?php echo $form->getCsrf(); ?>
+
+                                                <button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+                                                <input type="hidden" id="start-date" value="<?php echo $this->view->getVariable('startDate'); ?>">
+                                                <input type="hidden" id="end-date" value="<?php echo $this->view->getVariable('endDate'); ?>">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

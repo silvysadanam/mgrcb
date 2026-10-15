@@ -11,8 +11,8 @@ $used = $this->view->getVariable('used');
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">
-                                        Manage Card Types &nbsp; 
-                                        <a href="javascript:;" class="btn btn-outline-primary btn-sm" id="add-card-type" title="New Card Type"><i class="ft-plus"></i> New Card Type</a>
+                                        Manage Designation &nbsp; 
+                                        <a href="javascript:;" class="btn btn-outline-primary btn-sm" id="add-designation-type" title="New Designation Type"><i class="ft-plus"></i> New Designation Type</a>
                                         <a class="btn btn-sm btn-outline-secondary float-right" title="Back to Settings" href="<?php
                                         echo $this->view->actionUrl('settings'); ?>">
                                             <i class="ft-rewind"></i> Back to Settings
@@ -28,7 +28,7 @@ $used = $this->view->getVariable('used');
                                                 <thead class="bg-blue-grey white">
                                                     <tr>
                                                         <th>ID</th>
-                                                        <th>Card Type</th>
+                                                        <th>Designation Type</th>
                                                         <th>Actions</th>
                                                     </tr>
                                                 </thead>
@@ -37,14 +37,14 @@ $used = $this->view->getVariable('used');
                                                     
                                                     <tr>
                                                         <td><?php echo $row->id; ?></td>
-                                                        <td><?php echo $this->view->escapeHtml($row->card_type); ?></td>
+                                                        <td><?php echo $this->view->escapeHtml($row->designation_type); ?></td>
                                                         
                                                         <td>
-                                                            <a class="btn btn-info btn-sm edit-card-type" href="javascript:;" data-id="<?php
-                                                            echo $row->id; ?>" data-title="<?php echo $this->view->escapeHtml($row->card_type); ?>" title="Edit"><i class="ft-edit"></i> Edit</a>
+                                                            <a class="btn btn-info btn-sm edit-designation-type" href="javascript:;" data-id="<?php
+                                                            echo $row->id; ?>" data-title="<?php echo $this->view->escapeHtml($row->designation_type); ?>" title="Edit"><i class="ft-edit"></i> Edit</a>
                                                             <?php if (! in_array($row->id, $used)): ?>
                                                             
-                                                            <a class="btn btn-danger  btn-sm ml-1 remove-card-type" href="javascript:;" data-id="<?php
+                                                            <a class="btn btn-danger  btn-sm ml-1 remove-designation-type" href="javascript:;" data-id="<?php
                                                             echo $row->id; ?>" title="Delete"><i class="ft-delete"></i> Delete</a>
                                                             <?php endif; ?>
                                                             

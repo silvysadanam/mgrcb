@@ -28,17 +28,17 @@ $filters = $this->view->getVariable('filters');
                                                     
                                                     </select>
                                                       <div class="input-group-addon"></div>
-                                                    <select name="mtype" id="mtype" class="form-control">
-                                                        <option value="0">--Membership Type--</option>
-                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('mtype'), $filters->getValue('mtype')); ?>
+                                                    <select name="panchayath" id="panchayath" class="form-control">
+                                                        <option value="0">--Panchayath--</option>
+                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('panchayathBrand'), $filters->getValue('panchayath')); ?>
                                                     
                                                     </select>
                                                     <div class="input-group-addon"></div>
-                                                    <select name="type" id="type" class="form-control">
-                                                        <option value="0">--Member Type--</option>
-                                                        <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $filters->getValue('type')); ?>
-                                                    
-                                                    </select>
+                                                  <select name="disability_reason" id="disability_reason" class="form-control" title="Cause of Disability">
+                                                            <option value="0">--Cause of Disability --</option>
+                                                            <?php echo $this->view->formHelper('select', $this->view->lookupStore('disability'), $filters->getValue('panchayath')); ?>
+
+                                                        </select>
                                                     <div class="input-group-addon"></div>
                                                     <button type="submit" class="btn btn-primary btn-round" title="Filter">Filter</button>
                                                     <div class="input-group-addon"></div>

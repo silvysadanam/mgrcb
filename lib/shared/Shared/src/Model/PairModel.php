@@ -128,13 +128,13 @@ class PairModel extends Model
     }
     
     /**
-     * card type
+     * designation type
      * 
      * @return array
      */
-    public function cardType()
+    public function designationType()
     {
-        return $this->_get(Db::CARD_TYPE);
+        return $this->_get(Db::DESIGNATION_TYPE);
     }
     
     /**

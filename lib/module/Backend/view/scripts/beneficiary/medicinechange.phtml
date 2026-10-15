@@ -1,0 +1,205 @@
+<?php
+
+
+$beneficiaryMedicine = $this->view->getVariable('beneficiaryMedicine');
+$fmc = $beneficiaryMedicine->fmc();
+$medicine = $beneficiaryMedicine->medicineData();
+$beneficiary = $this->view->getVariable('beneficiary');
+$fmc = $beneficiary->fmc();
+$member = $beneficiary->member();
+$yesOrNo = ['No', 'Yes'];
+$edit = 1;
+$fmtDate = function ($value) {
+    if (empty($value) || strpos($value, '0000-00-00') === 0) {
+        return '';
+    }
+    $ts = strtotime($value);
+    return $ts ? date('d-m-Y', $ts) : $value;
+};
+$panchayath = $beneficiary->panchayath();
+?>
+
+<section>
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card">
+
+                <div class="card-header">
+                    <h4 class="card-title">
+                        Edit Beneficiary
+                          
+                        <a class="btn btn-sm btn-outline-primary" id="edit-medicine" title="Edit" href="javascript:;">
+                            <i class="ft-edit"></i> Edit
+                        </a>
+                        <a class="btn btn-sm btn-outline-secondary float-right"
+                           href="<?php echo $this->view->actionUrl('beneficiary/medicineview/id/' . $medicine->id); ?>">
+                            <i class="ft-rewind"></i> Back to View
+                        </a>
+                         <input type="hidden" id="manage-url" value="<?php
+                                    echo $this->view->actionUrl('beneficiary/managemedicine/id/' . $medicine->id . '/action'); ?>">
+                    </h4>
+                </div>
+
+                <div class="card-content">
+                    <div class="card-body">              
+                                <div class="row">
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                         <tr>
+                                                            <td>Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>Reg. No</td>
+                                                            <td><?php echo $this->view->escapeHtml($medicine->reg_no); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Panchayath</td>
+                                                            <td><?php echo $panchayath->panchayath_brand; ?></td>
+                                                        </tr>
+                                                      <tr>
+                                                            <td>Date of Birth</td>
+                                                            <td><?php echo $beneficiary->dateOfBirth(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gender</td>
+                                                            <td><?php echo $beneficiary->gender(); ?></td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>Cause of Disability</td>
+                                                            <td><?php echo $beneficiary->disabilityTypes(); ?></td>
+                                                        </tr>
+                                                       
+                                                        <tr>
+                                                            <td>Medical Assessment Date</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmtDate($medicine->assessment_date)); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Diagnosis</td>
+                                                            <td><?php echo $this->view->textareaHtml($medicine->diagnosis); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Prescription Valid For</td>
+                                                            <td><?php echo $this->view->escapeHtml((string) $this->view->lookup('prescType', $medicine->prescription_valid)); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Assessment Hospital</td>
+                                                            <td><?php echo $this->view->escapeHtml((string) $this->view->lookup('HospitalType', $medicine->hospital)); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Department</td>
+                                                            <td><?php echo $this->view->escapeHtml((string) $this->view->lookup('DepartmentType', $medicine->department)); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount of Last Payment</td>
+                                                            <td><?php echo $this->view->escapeHtml($medicine->last_bill_amount); ?></td>
+                                                        </tr>
+                                                       <tr>
+                                                            <td>Last Payment Date</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmtDate($medicine->last_bill_date)); ?></td>
+                                                        </tr>
+                                                                                                           
+                                                      
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                         <tr>
+                                                            <td>Recommendation of the Committee Member</td>
+                                                            <td><?php echo $this->view->textareaHtml($medicine->worker_opinion); ?></td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td>Community Worker Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($medicine->worker_name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Payment Details</td>
+                                                            <td><?php echo $this->view->escapeHtml($medicine->payment_type); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Approved Date</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmtDate($medicine->approved_date)); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            
+                                        </div>
+
+                                <hr>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        Documents &nbsp;
+                                        <a class="btn btn-sm btn-outline-primary" id="add-document" title="Add Document" href="javascript:;">
+                                            <i class="ft-plus"></i> Add Document
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <?php $documents = $beneficiaryMedicine->documents(); ?>
+                                                <?php if (! empty($documents)): ?>
+
+                                                <table class="table table-bordered">
+                                                    <thead class="bg-secondary white">
+                                                        <tr>
+                                                            <th>Document Type</th>
+                                                            <th>Description</th>
+                                                            <th>View</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($documents as $document): ?>
+
+                                                        <tr>
+                                                            <td><?php echo $this->view->lookup('documentType', $document->document_type_id); ?></td>
+                                                            <td><?php echo $this->view->escapeHtml($document->description); ?></td>
+                                                            <td><?php echo $this->view->documentLink($document); ?></td>
+                                                            <td>
+                                                                <a class="btn btn-sm btn-outline-info edit-document" title="Edit Document" href="javascript:;" data-id="<?php 
+                                                                echo $document->id; ?>">
+                                                                    <i class="ft-edit"></i> Edit
+                                                                </a>
+                                                                <a class="btn btn-sm btn-outline-danger ml-1 delete-document" title="Delete Document" href="javascript:;" data-id="<?php 
+                                                                echo $document->id; ?>">
+                                                                    <i class="ft-delete"></i> Delete
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <?php endforeach; ?>
+
+                                                    </tbody>
+                                                </table>
+                                                <?php else: ?>
+
+                                                <div class="alert">No documents uploaded</div>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

@@ -13,28 +13,32 @@ use Backend\Constant\{Tab, FlashMessage};
 use Backend\Form\Beneficiary\{CreateForm, SearchForm};
 
 
-use Model\{Beneficiary, Fmc, Bank, BeneficiaryEntry};
+use Model\{Beneficiary, Fmc, Bank, BeneficiaryEntry, BeneficiaryMedicine, BeneficiaryEquipment};
 
 use Web\View\Support\LookupStore;
 use Web\Utility\DateHelper;
 
 use Shared\Constant\GenderType;
-use Shared\Constant\{DiseaseType, MemberStatus, EducationType};
+use Shared\Constant\{DiseaseType, MemberStatus, EducationType, PrescriptionType, DepartmentType, HospitalType};
 use Shared\Constant\HouseType;
 use Shared\Constant\OwnershipType;
 use Shared\Form\FilterForm;
 use Shared\Model\PairModel;
-use Shared\Utility\{BeneficiaryAccount, ManageBeneficiary};
+use Shared\Utility\{BeneficiaryAccount, ManageBeneficiary, BeneficiaryrReport, MedicineAccount, EquipmentAccount};
 
 
 class BeneficiaryController extends BackendController
 {  
+    const REPORT_PRINT = 0;
+    const REPORT_DOWNLOAD = 1;
+    const REPORT_INLINE = 2;
+    private $_filters = [];
     /**
      *
      * @var \Model\Member 
      */
     private $_model;
-    
+    private $_medicineModel;
     /**
      *
      * @var \Model\Fmc 
@@ -46,6 +50,8 @@ class BeneficiaryController extends BackendController
         parent::__construct();
         $this->loginRequired();
         $this->_model = new Beneficiary();
+        $this->_medicineModel = new BeneficiaryMedicine();
+        $this->_equipmentModel = new BeneficiaryEquipment();
         $this->_fmcModel = new Fmc();
         $this->currentTab(Tab::BENEFICIARY);
         $this->setFlashMessageTitle('Member');
@@ -60,6 +66,8 @@ class BeneficiaryController extends BackendController
     {
         $this->_list();
         $this->_loadMemberStatus();
+        $this->registerPairs(['panchayathBrand'], true);
+         $this->_loadDisabilityTypes();
         //$this->_loadMemberTypes();
         $this->_breadcrumb('All');
         
@@ -75,6 +83,8 @@ class BeneficiaryController extends BackendController
     {
         $this->_list();
         $this->_loadMemberStatus();
+        $this->registerPairs(['panchayathBrand'], true);
+         $this->_loadDisabilityTypes();
         $this->_breadcrumb('Beneficiaries');
         
         return $this->getViewModel();
@@ -183,7 +193,95 @@ class BeneficiaryController extends BackendController
         
         return $this->getViewModel();
     }
+    public function medicineviewAction()
+    {
+        
+        $id = $this->getParamId();
+        $medicineData = $this->_medicineModel->find($id);
+        $beneficiary = new BeneficiaryAccount($medicineData->beneficiary_id);
+        $beneficiary->load();
+        $this->view->setVariable('beneficiary', $beneficiary);
+        $beneficiaryMedicine = new MedicineAccount($id);
+        $beneficiaryMedicine->load();
+        $this->_loadPrescriptionValidTypes();
+        $this->_loadHospitalTypes();
+        $this->_loadDepartmentTypes();
+        $this->view->setVariable('beneficiaryMedicine', $beneficiaryMedicine);
+        $this->addModuleScript('beneficiary-view');
+        $this->layout->addModal('beneficiary/medicineview');
+        $this->_breadcrumb('View');
+        
+        return $this->getViewModel();
+    }
     
+    public function medicinechangeAction()
+    {
+        
+        $id = $this->getParamId();
+        $medicineData = $this->_medicineModel->find($id);
+        $beneficiary = new BeneficiaryAccount($medicineData->beneficiary_id);
+        $beneficiary->load();
+        $this->view->setVariable('beneficiary', $beneficiary);
+        $beneficiaryMedicine = new MedicineAccount($id);
+        $beneficiaryMedicine->load();
+        $this->view->setVariable('beneficiaryMedicine', $beneficiaryMedicine);
+        $this->_loadPrescriptionValidTypes();
+        $this->_loadHospitalTypes();
+        $this->_loadDepartmentTypes();
+        
+        $this->addModuleScript('document-validator');
+        $this->addModuleScript('medicine-change');
+        $this->layout->addModal('beneficiary/medicine');
+        $this->_breadcrumb('View');
+        
+        return $this->getViewModel();
+    }
+
+    
+    public function equipmentviewAction()
+    {
+        
+        $id = $this->getParamId();
+        $medicineData = $this->_equipmentModel->find($id);
+        $beneficiary = new BeneficiaryAccount($medicineData->beneficiary_id);
+        $beneficiary->load();
+        $this->view->setVariable('beneficiary', $beneficiary);
+        $beneficiaryEquipment = new EquipmentAccount($id);
+        $beneficiaryEquipment->load();
+        $this->_loadPrescriptionValidTypes();
+        $this->_loadHospitalTypes();
+        $this->_loadDepartmentTypes();
+        $this->view->setVariable('beneficiaryEquipment', $beneficiaryEquipment);
+        $this->addModuleScript('beneficiary-view');
+        $this->layout->addModal('beneficiary/equipmentview');
+        $this->_breadcrumb('View Aids & Equipment to Beneficiaries');
+        
+        return $this->getViewModel();
+    }
+    
+    public function equipmentchangeAction()
+    {
+        
+        $id = $this->getParamId();
+        $medicineData = $this->_equipmentModel->find($id);
+        $beneficiary = new BeneficiaryAccount($medicineData->beneficiary_id);
+        $beneficiary->load();
+        $this->view->setVariable('beneficiary', $beneficiary);
+        $beneficiaryEquipment = new EquipmentAccount($id);
+        $beneficiaryEquipment->load();
+        $this->view->setVariable('beneficiaryEquipment', $beneficiaryEquipment);
+        $this->_loadPrescriptionValidTypes();
+        $this->_loadHospitalTypes();
+        $this->_loadDepartmentTypes();
+        
+        $this->addModuleScript('document-validator');
+        $this->addModuleScript('equipment-change');
+        $this->layout->addModal('beneficiary/equipment');
+        $this->_breadcrumb('View');
+        
+        return $this->getViewModel();
+    }
+
     /**
      * view action
      * 
@@ -205,8 +303,149 @@ class BeneficiaryController extends BackendController
         return $this->getViewModel();
     }
     
-  
+    public function medicineAction($list = 0)
+    {
+        $id = $this->_getId();
+        $filters = new FilterForm();
+        $fields = ['fmc'];
+        if (0 == $list) {
+            $fields[] = 'type';
+        }
+        $filters->addFields($fields);
+        $filters->numeric($fields);
+        $values = $filters->getFilteredValues();
+        $beneficiary = new BeneficiaryAccount($id);
+        $this->view->setVariable('beneficiary', $beneficiary);
+        $sql = $this->_medicineModel->getSql();
+        if ($id > 0) {
+                $sql->whereId('m.beneficiary_id', $id);
+        }
+        $where = $sql->getWhere();
+        
+        $query = 'FROM ' . $this->_medicineModel->getTableQuoted() . ' `m` ';
+             
+        if (! empty($where)) {
+            $query .= ' WHERE ' . $where;
+        }
+        
+        $query1 = 'SELECT COUNT(`m`.`id`) ' . $query;
+        $total = $this->_medicineModel->queryTotal($query1);
+        if ($total > 0) {
+            $paging = $this->getPaging($total);
+            $query2 = 'SELECT `m`.`id`, `m`.`assessment_date`,`m`.`hospital`,  `m`.`last_bill_date`, `m`.`diagnosis`, `m`.`prescription_valid`, '
+                    . '`m`.`last_bill_amount` ' . $query 
+                    . ' ORDER BY `m`.`assessment_date` LIMIT ' . $paging->sqlLimit;
+            $this->view->setVariable('list', $this->_medicineModel->queryRows($query2));
+        }
+        
+        $this->view->setVariable('total', $total);
+        $this->view->setVariable('benID', $id);        
+        $this->view->setVariable('filters', $filters);
+        $this->registerPairs();
+        $this->addModuleScript('list');
+        $this->addModuleScript('medicine');
+        $this->_loadMemberStatus();
+        $this->_loadPrescriptionValidTypes();
+        $this->_loadHospitalTypes();
+        $this->_loadDepartmentTypes();
+        $this->_breadcrumb('All');
+        $this->setPageHeading('Medicines to Beneficiary');
+        $this->layout->addModal('beneficiary/medicine');
+        
+        return $this->getViewModel();
+    }
     
+    public function equipmentAction($list = 0)
+    {
+        $id = $this->_getId();
+        $filters = new FilterForm();
+        $fields = ['fmc'];
+        if (0 == $list) {
+            $fields[] = 'type';
+        }
+        $filters->addFields($fields);
+        $filters->numeric($fields);
+        $values = $filters->getFilteredValues();
+        $beneficiary = new BeneficiaryAccount($id);
+        $this->view->setVariable('beneficiary', $beneficiary);
+        $sql = $this->_equipmentModel->getSql();
+        if ($id > 0) {
+                $sql->whereId('m.beneficiary_id', $id);
+        }
+        $where = $sql->getWhere();
+        
+        $query = 'FROM ' . $this->_equipmentModel->getTableQuoted() . ' `m` ';
+             
+        if (! empty($where)) {
+            $query .= ' WHERE ' . $where;
+        }
+        
+        $query1 = 'SELECT COUNT(`m`.`id`) ' . $query;
+        $total = $this->_equipmentModel->queryTotal($query1);
+        if ($total > 0) {
+            $paging = $this->getPaging($total);
+            $query2 = 'SELECT `m`.`id`, `m`.`assessment_date`,`m`.`hospital`,  `m`.`last_bill_date`, `m`.`diagnosis`, `m`.`equipment`, '
+                    . '`m`.`last_bill_amount` ' . $query 
+                    . ' ORDER BY `m`.`assessment_date` LIMIT ' . $paging->sqlLimit;
+            $this->view->setVariable('list', $this->_equipmentModel->queryRows($query2));
+        }
+        
+        $this->view->setVariable('total', $total);
+        $this->view->setVariable('benID', $id);        
+        $this->view->setVariable('filters', $filters);
+        $this->registerPairs();
+        $this->addModuleScript('list');
+        $this->addModuleScript('equipment');
+        $this->_loadMemberStatus();
+        $this->_loadPrescriptionValidTypes();
+        $this->_loadHospitalTypes();
+        $this->_loadDepartmentTypes();
+        $this->_breadcrumb('All');
+        $this->setPageHeading('Equipment to Beneficiary');
+        $this->layout->addModal('beneficiary/equipment');
+        
+        return $this->getViewModel();
+    }
+
+
+    
+    public function medicineprintAction()
+    {
+        $id = $this->getParamId();
+        $medicineData = $this->_medicineModel->find($id);
+        $beneficiary = new BeneficiaryAccount($medicineData->beneficiary_id);
+        $beneficiary->load();
+        
+        $beneficiaryMedicine = new MedicineAccount($id);
+        $beneficiaryMedicine->load();
+        $this->_loadPrescriptionValidTypes();
+        $this->_loadHospitalTypes();
+        $this->_loadDepartmentTypes();
+        $this->view->setVariable('beneficiary', $beneficiary);
+        $this->view->setVariable('beneficiaryMedicine', $beneficiaryMedicine);
+        $this->layout->setLayout('');
+        
+        return $this->getViewModel();
+    }
+    
+     public function equipmentprintAction()
+    {
+        $id = $this->getParamId();
+        $medicineData = $this->_equipmentModel->find($id);
+        $beneficiary = new BeneficiaryAccount($medicineData->beneficiary_id);
+        $beneficiary->load();
+        
+        $beneficiaryEquipment = new EquipmentAccount($id);
+        $beneficiaryEquipment->load();
+        $this->_loadPrescriptionValidTypes();
+        $this->_loadHospitalTypes();
+        $this->_loadDepartmentTypes();
+        $this->view->setVariable('beneficiary', $beneficiary);
+        $this->view->setVariable('beneficiaryEquipment', $beneficiaryEquipment);
+        $this->layout->setLayout('');
+        
+        return $this->getViewModel();
+    }
     /**
      * print action
      * 
@@ -218,9 +457,18 @@ class BeneficiaryController extends BackendController
         $beneficiary = new BeneficiaryAccount($id);
         $beneficiary->load();
         $this->view->setVariable('beneficiary', $beneficiary);
+        $beneficiaryMedicine = new MedicineAccount($id);
+        $beneficiaryMedicine->loadMedicineData();        
+        $this->view->setVariable('beneficiaryMedicine', $beneficiaryMedicine);
+        
+        $beneficiaryEquipment = new EquipmentAccount($id);
+        $beneficiaryEquipment->loadEquipmentData();        
+        $this->view->setVariable('beneficiaryEquipment', $beneficiaryEquipment);
         
         $this->layout->setLayout('');
-        
+        $this->_loadPrescriptionValidTypes();
+        $this->_loadHospitalTypes();
+        $this->_loadDepartmentTypes();
         return $this->getViewModel();
     }
     
@@ -253,6 +501,50 @@ class BeneficiaryController extends BackendController
         return $this->getViewModel();
     }
     
+    /**
+     * manage action
+     * 
+     * @return \Web\View\ViewModel
+     */
+    public function managemedicineAction()
+    {
+        $id = $this->_getMedicineId();
+        
+        if (! $this->isAjaxRequest()) {
+            return $this->getViewModel();
+        }
+
+        $beneficiary = new ManageBeneficiary($id);
+        $result = $beneficiary->run($this->getAjaxResponse(), $this->getParamId('action'));
+        if (isset($result['flash'])) {
+            $this->setFlashMessage($result['flash']);
+        }
+        
+        return $this->getViewModel();
+    }
+    
+      
+    /**
+     * manage action
+     * 
+     * @return \Web\View\ViewModel
+     */
+    public function manageequipmentAction()
+    {
+        $id = $this->_getEquipmentId();
+        
+        if (! $this->isAjaxRequest()) {
+            return $this->getViewModel();
+        }
+
+        $beneficiary = new ManageBeneficiary($id);
+        $result = $beneficiary->run($this->getAjaxResponse(), $this->getParamId('action'));
+        if (isset($result['flash'])) {
+            $this->setFlashMessage($result['flash']);
+        }
+        
+        return $this->getViewModel();
+    }
     /**
      * manage action
      * 
@@ -310,14 +602,14 @@ class BeneficiaryController extends BackendController
     private function _list($list = 0)
     {
         $filters = new FilterForm();
-        $fields = ['fmc'];
+        $fields = ['fmc','panchayath', 'disability_reason'];
         if (0 == $list) {
             $fields[] = 'type';
         }
         $filters->addFields($fields);
         $filters->numeric($fields);
         $values = $filters->getFilteredValues();
-        
+
         $sql = $this->_model->getSql();
         if ($values['fmc'] > 0) {
             if ($this->_fmcModel->hasId($values['fmc'])) {
@@ -325,7 +617,12 @@ class BeneficiaryController extends BackendController
             }
         }
         
-      
+        if ($values['panchayath'] > 0) {
+                $sql->whereId('m.panchayath', $values['panchayath']);
+        }
+        if ($values['disability_reason'] > 0) {
+                $sql->whereId('m.disability_reason', $values['disability_reason']);
+        }
         
         $where = $sql->getWhere();
         
@@ -364,6 +661,46 @@ class BeneficiaryController extends BackendController
         ];
         
         LookupStore::register('type', $types);
+    }
+    
+    private function _loadPrescriptionValidTypes()
+    {
+        $types = [
+            PrescriptionType::YEAR => 'Year',
+            PrescriptionType::SIX_MONTHS => 'Six Months',
+            PrescriptionType::OTHER => 'Others',
+        ];
+        
+        LookupStore::register('prescType', $types);
+    }
+
+    private function _loadDepartmentTypes()
+    {
+        $types = [
+            DepartmentType::PMR => 'PMR',
+            DepartmentType::STROKE_CLINIC => 'Stroke Clinic',
+            DepartmentType::CP_CLINIC => 'CP Clinic',
+            DepartmentType::NEUROLOGY => 'Neurology',
+            DepartmentType::NEPHROLOGY => 'Nephrology',
+            DepartmentType::PSYCHIATRY => 'Psychiatry',
+            DepartmentType::CARDIOLOGY => 'Cardiology',            
+            DepartmentType::OTHER => 'Others',
+        ];
+        
+        LookupStore::register('DepartmentType', $types);
+    }
+    
+    private function _loadHospitalTypes()
+    {
+        $types = [
+            HospitalType::MCH => 'MCH',
+            HospitalType::SCT => 'SCT',
+            HospitalType::RIO => 'RIO',
+            HospitalType::GH => 'GH',
+            HospitalType::OTHER => 'Others',
+        ];
+        
+        LookupStore::register('HospitalType', $types);
     }
     
     /**
@@ -436,7 +773,7 @@ class BeneficiaryController extends BackendController
     private function _loadFormOptions()
     {
         $pairModel = new PairModel();
-        LookupStore::register('cardType', $pairModel->cardType());
+        LookupStore::register('designationType', $pairModel->designationType());
         LookupStore::register('documentType', $pairModel->documentType());
         LookupStore::register('panchayathBrand', $pairModel->panchayathBrand());
         LookupStore::register('diseaseTypes', $pairModel->diseaseTypes());        
@@ -493,12 +830,42 @@ class BeneficiaryController extends BackendController
         return $id;
     }
     
+    private function _getMedicineId()
+    {
+        $valid = false;
+        $id = $this->getParamId();
+        if ($id > 0) {
+            $valid = $this->_medicineModel->hasId($id);
+        }
+        
+        if (! $valid) {
+            $this->setErrorFlashMessage('Invalid request', 'beneficiary');
+        }
+        
+        return $id;
+    }
+    
+     private function _getEquipmentId()
+    {
+        $valid = false;
+        $id = $this->getParamId();
+        if ($id > 0) {
+            $valid = $this->_equipmentModel->hasId($id);
+        }
+        
+        if (! $valid) {
+            $this->setErrorFlashMessage('Invalid request', 'beneficiary');
+        }
+        
+        return $id;
+    }
+    
     /**
      * set breadcrumb
      * 
      * @param string $page
      */
-    private function _breadcrumb($page)
+    private function _breadcrumb($page = null)
     {
         $this->setHeadTitle('Beneficiary - ' . $page);
         $this->setPageHeading('Beneficiary');
@@ -571,4 +938,98 @@ class BeneficiaryController extends BackendController
         
         return $populate;
     }
+    
+    public function filterAction()
+    {
+        // Old pairs (mtype, status, type) are no longer used on this form
+        $valid = [];
+        $generator = null;
+        $form = new SearchForm();
+        $this->_loadMemberTypes();
+        $this->_loadDisabilityTypes();
+        $this->_loadFormOptions();
+        $this->_loaHouseOwnership();
+        $this->_loadHouseTypes();
+        $this->_loadEducationTypes();
+        $this->_loadReportOptions();
+        $this->registerPairs(['panchayathBrand'], true);
+        $this->registerPairs(['diseaseTypes'], true);    
+        if ($form->isPost()) {
+            if ($form->isFilterValid()) {
+                $values = $form->getValues();
+
+                // Search criteria from the form
+                $filters = [
+                    'disability_reason' => (int) ($values['disability_reason'] ?? 0),
+                    'disability'        => $form->getDisabilities(),
+                    'ration_card'       => (int) ($values['ration_card'] ?? 0),
+                    'house_type'        => (int) ($values['house_type'] ?? 0),
+                    'panchayath'        => (int) ($values['panchayath'] ?? 0),
+                    'gender'            => (int) ($values['gender'] ?? 0),
+                    'beducation'        => (int) ($values['beducation'] ?? 0),
+                    'house_ownership'   => (int) ($values['house_ownership'] ?? 0),
+                    'name'              => trim($values['name'] ?? ''),
+                    'address'           => trim($values['address'] ?? ''),
+                    'monthly_income'    => trim($values['monthly_income'] ?? ''),
+                    'mobile'            => trim($values['mobile'] ?? ''),
+                ];
+
+                // "Show All" ignores every filter
+                if (!empty($values['show_all'])) {
+                    $filters = [];
+                }
+
+                $generator = new BeneficiaryrReport();
+                $generator->setFmcId(1)
+                          ->setFilters($filters);
+
+                $valid = $generator->run();
+
+                if (!$valid) {
+                    $form->addError('No matching customers found');
+                } else {
+                    $option = $values['report_option'] ?? null;
+
+                    if (self::REPORT_DOWNLOAD == $option) {
+                        $export = new MemberExport($this->view);   // see note 2
+                        $export->run($generator);
+                    }
+
+                    if (self::REPORT_PRINT == $option) {
+                        $this->layout->setScript('beneficiary/view-member');
+                        $this->layout->setLayout('');
+                        $this->view->setVariable('list', $valid);
+                        return $this->getViewModel();
+                    }
+                }
+            }
+        } else {
+            $form->populate([
+                'gender'          => 0,
+                'ration_card'     => 0,
+                'house_ownership' => 0,
+            ]);
+        }
+
+        $this->view->setVariable('list', $valid);
+        $this->registerForm($form);        
+        $this->addModuleScript('print');
+        $this->view->setVariable('generator', $generator);
+
+        $this->_breadcrumb();
+
+        return $this->getViewModel();
+    }
+    
+   
+    
+     private function _loadReportOptions()
+    {
+        $options = [
+            self::REPORT_INLINE => 'VIEW INLINE',
+            //self::REPORT_DOWNLOAD => 'DOWNLOAD',
+        ];
+        $this->view->setVariable('reportOptions', $options);
+    }
+        
 }

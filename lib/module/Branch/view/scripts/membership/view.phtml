@@ -229,7 +229,7 @@ $yesOrNo = ['No', 'Yes'];
                                                                     <?php foreach ($cards as $card): ?>
 
                                                                     <tr>
-                                                                        <td><?php echo $this->view->lookup('cardType', $card->card_type_id); ?></td>
+                                                                        <td><?php echo $this->view->lookup('designationType', $card->card_type_id); ?></td>
                                                                         <td><?php echo $this->view->escapeHtml($card->card_number); ?></td>
                                                                         <td><?php echo $this->view->escapeHtml($card->issue_date); ?></td>
                                                                         <td><?php echo $this->view->escapeHtml($card->expiry_date); ?></td>

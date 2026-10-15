@@ -181,7 +181,10 @@ class BeneficiaryAccount
     {
         return $this->_member;
     }
-    
+    public function memberName()
+    {
+        return $this->_member->name;
+    }
     /**
      * get member photo record
      * 
@@ -404,26 +407,7 @@ class BeneficiaryAccount
         }
     }
     
-    /**
-     * load cards
-     */
-    private function _loadCards()
-    {
-        if ($this->_memberCardModel->selectTotal($this->_where) > 0) {
-            $this->_cards = $this->_memberCardModel->select($this->_where);
-        }
-    }
-    
-    /**
-     * load boats
-     */
-    private function _loadBoats()
-    {
-        if ($this->_boatModel->selectTotal($this->_where) > 0) {
-            $this->_boats = $this->_boatModel->select($this->_where);
-        }
-    }
-    
+       
     /**
      * load documents
      */
@@ -440,7 +424,7 @@ class BeneficiaryAccount
     private function _loadLookups()
     {
         $pairModel = new PairModel();
-        LookupStore::register('cardType', $pairModel->cardType());
+        LookupStore::register('designationType', $pairModel->designationType());
         LookupStore::register('panchayathBrand', $pairModel->panchayathBrand());
         LookupStore::register('documentType', $pairModel->documentType());
         LookupStore::register('accountType', $pairModel->accountType());

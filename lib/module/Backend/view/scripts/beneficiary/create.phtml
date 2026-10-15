@@ -68,6 +68,7 @@ $yesOrNo = ['No', 'Yes'];
                                                     <div class="form-group">
                                                         <label for="gender">Gender<span class="red">*</span></label>
                                                         <select name="gender" id="gender" class="form-control" title="Gender">
+                                                             <option value="0">--select--</option>
                                                             <?php echo $this->view->formHelper('select', $this->view->lookupStore('type'), $form->getValue('gender')); ?>
 
                                                         </select>
@@ -81,18 +82,9 @@ $yesOrNo = ['No', 'Yes'];
                                                         <label class="label-control" for="date_of_birth">
                                                             Date of Birth
                                                         </label>
-
-                                                        <input type="text"
-                                                               name="date_of_birth"
-                                                               id="date_of_birth"
-                                                               class="form-control"
-                                                               value="<?php echo $form->getEscapedValue('date_of_birth'); ?>"
-                                                               placeholder="Date of Birth"
-                                                               readonly>
-
-                                                        <small>
-                                                            [<a href="javascript:;" id="clear-date-of-birth">Clear</a>]
-                                                        </small>
+                                                            <input type="text" name="date_of_birth" id="date_of_birth" class="form-control" value="<?php 
+                                                            echo $form->getEscapedValue('date_of_birth'); ?>" placeholder="Date of Birth" maxlength="10" readonly="readonly">
+                                                            <span>[<a href="javascript:;" id="clear-date-of-birth" title="Clear">Clear</a>]</span>
                                                     </div>
                                                 </div>
 
@@ -103,6 +95,7 @@ $yesOrNo = ['No', 'Yes'];
                                                             Education
                                                         </label>
                                                           <select name="beducation" id="beducation" class="form-control" title="Education">
+                                                               <option value="0">--select--</option>
                                                             <?php echo $this->view->formHelper('select', $this->view->lookupStore('edutype'), $form->getValue('beducation')); ?>
                                                         </select>
                                                       
@@ -130,12 +123,13 @@ $yesOrNo = ['No', 'Yes'];
                                                 <!-- Taluk -->
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="label-control" for="taluk">
+                                                        <label class="label-control" for="ration_card">
                                                             Family Status as per Ration Card
                                                         </label>
 
                                                           <select name="ration_card" class="form-control" title="Family Status" id="ration_card" >
-                                                            <option value="APL" selected="selected">APL</option>
+                                                               <option value="0">--select--</option>
+                                                            <option value="APL">APL</option>
                                                             <option value="BPL">BPL</option>
                                                           </select>
                                                     </div>
@@ -213,8 +207,8 @@ $yesOrNo = ['No', 'Yes'];
                                                         <label class="label-control" for="disability_reason">
                                                             Cause of Disability
                                                         </label>
-
                                                          <select name="disability_reason" id="disability_reason" class="form-control" title="Cause of Disability">
+                                                             <option value="0">--select--</option>
                                                             <?php echo $this->view->formHelper('select', $this->view->lookupStore('disability'), $form->getValue('disability_reason')); ?>
 
                                                         </select>
@@ -225,10 +219,8 @@ $yesOrNo = ['No', 'Yes'];
                                                         <label class="label-control" for="examination_date">
                                                             Date of Medical Examination Conducted though the Centre
                                                         </label>
-
-                                                        <input type="text" name="examination_date" id="examination_date" class="form-control" value="<?php 
+                                                         <input type="text" name="examination_date" id="examination_date" class="form-control single-date-max-today" data-min-date="01/01/2020" value="<?php 
                                                             echo $form->getEscapedValue('examination_date'); ?>" placeholder="Date of Medical Examination" maxlength="10" readonly="readonly">
-                                                            <span>[<a href="javascript:;" id="clear-examination_date" title="Clear">Clear</a>]</span>
                                                     </div>
                                                 </div>
 
@@ -353,10 +345,9 @@ $yesOrNo = ['No', 'Yes'];
                                                         <label class="label-control" for="approved_date">
                                                            Approved Date
                                                         </label>
-
-                                                       <input type="text" name="approved_date" id="approved_date" class="form-control" value="<?php 
+                                                        
+                                                        <input type="text" name="approved_date" id="approved_date" class="form-control single-date-max-today" data-min-date="01/01/2020" value="<?php 
                                                             echo $form->getEscapedValue('approved_date'); ?>" placeholder="Approval Date" maxlength="10" readonly="readonly">
-                                                            <span>[<a href="javascript:;" id="clear-approved_date" title="Clear">Clear</a>]</span>
                                                     </div>
                                                 </div>
 

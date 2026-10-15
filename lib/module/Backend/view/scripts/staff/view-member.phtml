@@ -1,0 +1,154 @@
+<?php
+
+$list = $this->view->getVariable('list');
+$fmtDate = function ($value) {
+    if (empty($value) || strpos($value, '0000-00-00') === 0) {
+        return '';
+    }
+    $ts = strtotime($value);
+    return $ts ? date('d-m-Y', $ts) : $value;
+};
+
+?><!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <title>
+            Members
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style media="all">
+    html { overflow: auto; }
+    body {
+        font-family: "Calibri", sans-serif;
+        font-size: 10pt;
+        text-align: left;
+        color: black;
+        margin: 8px;
+    }
+    table {
+        width: 100%;              /* fit the screen */
+        table-layout: auto;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #000;
+        padding: 2px 4px;
+        vertical-align: top;
+        word-wrap: break-word;
+        overflow-wrap: anywhere;  /* long emails/addresses wrap instead of overflowing */
+    }
+    thead th { font-weight: bold; }
+    .gold {
+                background-color: #F5C018;
+            }
+    /* keep short columns compact, let long ones wrap */
+    th:nth-child(1), td:nth-child(1) { white-space: nowrap; }  /* Sl No */
+    th:nth-child(3), td:nth-child(3),                          /* Code */
+    th:nth-child(4), td:nth-child(4),                          /* Mobile */
+    th:nth-child(9), td:nth-child(9),                          /* Fee */
+    th:nth-child(10), td:nth-child(10),                        /* DOB */
+    th:nth-child(11), td:nth-child(11) { white-space: nowrap; }/* Approved On */
+
+    th:nth-child(8), td:nth-child(8) { min-width: 200px; }     /* Address */
+
+    thead th.center, tbody td.center { text-align: center; }
+    thead th.right,  tbody td.right  { text-align: right; }
+    .main-heading { background-color: #FFFF1F; }
+    .center { text-align: center; }
+    .amount { text-align: right; }
+    .number { text-align: center; }
+
+    /* ---------- PRINT ---------- */
+    @page {
+        size: A4 landscape;       /* use A3 landscape if you need more room */
+        margin: 8mm;
+    }
+    @media print {
+        body { font-size: 8pt; margin: 0; }
+        thead { display: table-header-group; }   /* repeat header on every page */
+        tr { page-break-inside: avoid; }
+        .no-print { display: none !important; }  /* hide buttons when printing */
+        * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } /* keep yellow headings */
+    }
+</style>
+<script>
+function downloadMembers() {
+    var html = '<html><head><meta charset="UTF-8"></head><body>'
+             + document.querySelector('table').outerHTML
+             + '</body></html>';
+    var blob = new Blob(['\ufeff', html], {type: 'application/vnd.ms-excel'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'members.xls';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+</script>
+    </head>
+    <body>
+        <table cellpadding="2" cellspacing="0" border="1" style="margin:10px 10px 5px 0;">
+        <thead class="bg-info white">
+             <tr>
+                    <th colspan="12" class="main-heading center">MGRCB</th>
+                </tr>
+                <tr>
+                    <th colspan="12" class="main-heading center">Member Details</th>
+                </tr>
+              
+            <tr>
+                <th class="gold left">Sl No.</th>
+                <th class="gold left">Name</th>
+                <th class="gold left">Code</th>
+                <th class="gold left">Mobile</th>
+                <th class="gold left">Membership Type</th>
+                <th class="gold left">Parish</th>                
+                <th class="gold left">Email</th>
+                <th class="gold left">Address</th>
+                <th class="gold left">membership_fee</th>
+                <th class="gold left">DOB</th>
+                <th class="gold left">Approved On</th>                
+                <th class="gold left">Location</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+           <?php foreach ($list as $row): ?>
+
+        <tr>
+            <td><?php echo $this->view->counter(); ?></td>                                                      
+            <td><?php echo $this->view->escapeHtml($row->name); ?></td>
+            <td><?php echo $this->view->escapeHtml($row->code); ?></td>
+             <td><?php echo $this->view->escapeHtml(str_replace('-', '', (string)$row->mobile)); ?></td>
+            <td><?php echo $this->view->lookup('type', $row->member_type_id); ?></td>
+             <td><?php echo $this->view->escapeHtml($row->parish); ?></td>
+              <td><?php echo $this->view->escapeHtml($row->email); ?></td>
+              <td><?php echo $this->view->escapeHtml($row->address); ?></td>
+              <td><?php echo $this->view->escapeHtml($row->membership_fee); ?></td>
+               <td><?php echo $this->view->escapeHtml($fmtDate($row->date_of_birth)); ?></td>
+               <td><?php echo $this->view->escapeHtml($fmtDate($row->approved_date)); ?></td>             
+             
+              <td><?php echo $this->view->escapeHtml($row->location); ?></td>
+            <!--td>
+                <a class="btn btn-info btn-sm" href="<?php 
+                echo $this->view->actionUrl('membership/view/id/' . $row->id); ?>" title="View"><i class="ft-eye"></i> View</a>
+                <a class="btn btn-primary btn-sm ml-1" href="<?php 
+                echo $this->view->actionUrl('membership/change/id/' . $row->id); ?>" title="Edit"><i class="ft-edit"></i> Edit</a>
+
+            </td-->
+        </tr>
+        <?php endforeach; ?>
+
+        </tbody>                                                    
+    </table>
+    <div class="no-print" style="margin:10px 0;">
+        <button type="button" onclick="window.print()">PRINT</button>
+        <button type="button" onclick="downloadMembers()">DOWNLOAD</button>
+    </div>
+
+        
+    </body>
+</html>      
+            

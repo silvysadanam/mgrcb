@@ -17,8 +17,9 @@ class Tab
     const SETTINGS = 4;
     const PROFILE = 5;
     const BENEFICIARY = 6;
+    const STAFF = 7;
   //  const IMPERSONATE = 6;
-    const DEDUCTION = 7;
+   // const DEDUCTION = 7;
     const DEDUCTION_BILL = 8;
    
     const ADVANCE = 9;

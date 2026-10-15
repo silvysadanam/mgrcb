@@ -9,7 +9,7 @@
 namespace Backend\Utility;
 
 use Shared\Form\AjaxForm;
-use Model\{CardType, MemberCard, DocumentType, MemberDocument, Medicine, Disease, Bank, Account, PanchayathBrand, Boat};
+use Model\{DesignationType, MemberCard, DocumentType, MemberDocument, Medicine, Disease, Bank, Account, PanchayathBrand, Staff};
 
 
 class ManageSettings
@@ -43,11 +43,11 @@ class ManageSettings
     }
     
     /**
-     * manage card type
+     * manage designation type
      */
-    public function cardType()
+    public function designationType()
     {
-        $this->_loadForm(['action', 'card_type']);
+        $this->_loadForm(['action', 'designation_type']);
         if (empty($this->_values)) {
             return $this->_result;
         }
@@ -57,9 +57,9 @@ class ManageSettings
         }
         
         if (1 == $this->_values['action']) {
-            $this->_saveCardType();
+            $this->_saveDesignationType();
         } else {
-            $this->_removeCardType();
+            $this->_removeDesignationType();
         }
         
         return $this->_result;
@@ -193,28 +193,28 @@ class ManageSettings
     }
     
     /**
-     * save card type
+     * save designation type
      * 
      * @return null
      */
-    private function _saveCardType()
+    private function _saveDesignationType()
     {
-        $model = new CardType();
+        $model = new DesignationType();
         $id = (int) $this->_values['id'];
         if ($id > 0) {
             if (! $model->hasId($id)) {
                 return;
             }
             
-            $this->_updateCardType($id);
+            $this->_updateDesignationType($id);
             return;
         }
         
         $errors = [];
-        if ('' == $this->_values['card_type']) {
+        if ('' == $this->_values['designation_type']) {
             $errors[] = 'Card Type is required';
         } else {
-            if ($model->checkByColumn('card_type', $this->_values['card_type'])) {
+            if ($model->checkByColumn('designation_type', $this->_values['designation_type'])) {
                 $errors[] = 'Card Type exists';
             }
         }
@@ -224,24 +224,24 @@ class ManageSettings
             return;
         }
         
-        $model->insert(['card_type' => $this->_values['card_type']]);
+        $model->insert(['designation_type' => $this->_values['designation_type']]);
         $this->_saved('Card Type', false);
     }
     
     /**
-     * update card type
+     * update designation type
      * 
      * @param int $id
      * @return null
      */
-    private function _updateCardType($id)
+    private function _updateDesignationType($id)
     {
-        $model = new CardType();
+        $model = new DesignationType();
         $errors = [];
-        if ('' == $this->_values['card_type']) {
-            $errors[] = 'Card Type is required';
-        } elseif ($model->checkByColumnExceptId('card_type', $this->_values['card_type'], $id)) {
-             $errors[] = 'Card Type exists';
+        if ('' == $this->_values['designation_type']) {
+            $errors[] = 'Designation Type is required';
+        } elseif ($model->checkByColumnExceptId('designation_type', $this->_values['designation_type'], $id)) {
+             $errors[] = 'Designation Type exists';
         }
 
         if (! empty($errors)) {
@@ -249,38 +249,38 @@ class ManageSettings
             return;
         }
 
-        if ($this->_values['card_type'] == $model->selectColumnById('card_type', $id)) {
+        if ($this->_values['designation_type'] == $model->selectColumnById('designation_type', $id)) {
             $this->_noChange();
             return;
         }
 
-        $model->updateById(['card_type' => $this->_values['card_type']], $id);
-        $this->_saved('Card Type', true);
+        $model->updateById(['designation_type' => $this->_values['designation_type']], $id);
+        $this->_saved('Designation Type', true);
     }
     
     /**
-     * remove card type
+     * remove designation type
      * 
      * @return null
      */
-    private function _removeCardType()
+    private function _removeDesignationType()
     {
-        $model = new CardType();
+        $model = new DesignationType();
         $id = (int) $this->_values['id'];
         if ($id > 0) {
             if (! $model->hasId($id)) {
                 return;
             }
             
-            $memberCardModel = new MemberCard();
-            if ($memberCardModel->checkByColumnId('card_type_id', $id)) {
-                $this->_response->message('Card Type already in use');
+            $staffModel = new Staff();
+            if ($staffModel->checkByColumnId('designation_type_id', $id)) {
+                $this->_response->message('Designation Type already in use');
                 return;
             }
             
-            $cardType = $model->selectColumnById('card_type', $id);
+            $designationType = $model->selectColumnById('designation_type', $id);
             $model->deleteById($id);
-            $this->_deletd('Card Type', $cardType);
+            $this->_deletd('Designation Type', $designationType);
         }
     }
     
@@ -357,7 +357,7 @@ class ManageSettings
      */
     private function _removeDocumentType()
     {
-        $model = new CardType();
+        $model = new DesignationType();
         $id = (int) $this->_values['id'];
         if ($id > 0) {
             if (! $model->hasId($id)) {

@@ -1,0 +1,223 @@
+<?php
+
+$beneficiaryEquipment = $this->view->getVariable('beneficiaryEquipment');
+$equipment = $beneficiaryEquipment->equipmentData();
+$beneficiary = $this->view->getVariable('beneficiary');
+$fmc = $beneficiary->fmc();
+$member = $beneficiary->member();
+$yesOrNo = ['No', 'Yes'];
+$edit = 1;
+$fmtDate = function ($value) {
+    if (empty($value) || strpos($value, '0000-00-00') === 0) {
+        return '';
+    }
+    $ts = strtotime($value);
+    return $ts ? date('d-m-Y', $ts) : $value;
+};
+$panchayath = $beneficiary->panchayath();
+?>
+
+                <section>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                        View Aids & Equipment to Beneficiaries &nbsp;
+                                        <a class="btn btn-sm btn-outline-primary" title="Edit" href="<?php
+                                        echo $this->view->actionUrl('beneficiary/equipmentchange/id/' . $equipment->id); ?>">Edit</a></h4>
+                                    <input type="hidden" id="manage-url" value="<?php echo $this->view->actionUrl('beneficiary/manage/id/' . $equipment->id); ?>/action/">
+                                    <input type="hidden" id="cancel-url" value="<?php echo $this->view->actionUrl('beneficiary'); ?>">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                         <tr>
+                                                            <td>Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($member->name); ?></td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>Reg. No</td>
+                                                            <td><?php echo $this->view->escapeHtml($equipment->reg_no); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Panchayath</td>
+                                                            <td><?php echo $panchayath->panchayath_brand; ?></td>
+                                                        </tr>
+                                                      <tr>
+                                                            <td>Date of Birth</td>
+                                                            <td><?php echo $beneficiary->dateOfBirth(); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gender</td>
+                                                            <td><?php echo $beneficiary->gender(); ?></td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>Cause of Disability</td>
+                                                            <td><?php echo $beneficiary->disabilityTypes(); ?></td>
+                                                        </tr>
+                                                       
+                                                        <tr>
+                                                            <td>Medical Assessment Date</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmtDate($equipment->assessment_date)); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Diagnosis</td>
+                                                            <td><?php echo $this->view->textareaHtml($equipment->diagnosis); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Name of Equipment</td>
+                                                            <td><?php echo $this->view->escapeHtml($equipment->equipment); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Assessment Hospital</td>
+                                                            <td><?php echo $this->view->escapeHtml((string) $this->view->lookup('HospitalType', $equipment->hospital)); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Department</td>
+                                                            <td><?php echo $this->view->escapeHtml((string) $this->view->lookup('DepartmentType', $equipment->department)); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount of Last Payment</td>
+                                                            <td><?php echo $this->view->escapeHtml($equipment->last_bill_amount); ?></td>
+                                                        </tr>
+                                                       <tr>
+                                                            <td>Last Payment Date</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmtDate($equipment->last_bill_date)); ?></td>
+                                                        </tr>
+                                                                                                           
+                                                      
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                         <tr>
+                                                            <td>Recommendation of the Committee Member</td>
+                                                            <td><?php echo $this->view->textareaHtml($equipment->worker_opinion); ?></td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td>Community Worker Name</td>
+                                                            <td><?php echo $this->view->escapeHtml($equipment->worker_name); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Payment Details</td>
+                                                            <td><?php echo $this->view->escapeHtml($equipment->payment_type); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Approved Date</td>
+                                                            <td><?php echo $this->view->escapeHtml($fmtDate($equipment->approved_date)); ?></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <table class="table table-borderless">
+                                                    <tbody>
+                                                      
+                                                        <tr>
+                                                            <td><a class="btn btn-outline-dark w-100" title="Print Beneficiary" target="_blank" href="<?php
+                                                            echo $this->view->actionUrl('beneficiary/equipmentprint/id/' . $equipment->id); ?>"><i class="ft-printer"></i> Print</a></td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="card card-bordered border-info">
+                                                    <div class="card-header bg-info">
+                                                        <h4 class="card-title white">Documents</h4>
+                                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                        <div class="heading-elements">
+                                                            <ul class="list-inline mb-0">
+                                                                <li><a data-action="collapse" title="Expand/Collapse"><i class="ft-minus"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <?php $documents = $beneficiaryEquipment->documents(); ?>
+                                                                    <?php if (! empty($documents)): ?>
+
+                                                                    <table class="table table-bordered">
+                                                                        <thead class="bg-secondary white">
+                                                                            <tr>
+                                                                                <th>Document Type</th>
+                                                                                <th>Description</th>
+                                                                                <th>View</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php foreach ($documents as $document): ?>
+
+                                                                            <tr>
+                                                                                <td><?php echo $this->view->lookup('documentType', $document->document_type_id); ?></td>
+                                                                                <td><?php echo $this->view->escapeHtml($document->description); ?></td>
+                                                                                <td><?php echo $this->view->documentLink($document); ?></td>
+                                                                            </tr>
+                                                                            <?php endforeach; ?>
+
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <?php else: ?>
+
+                                                                    <div class="alert">No documents uploaded</div>
+                                                                    <?php endif; ?>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <form name="form-disable-modal" id="form-disable-modal" method="post" action="">
+                                        <div class="modal fade" id="modal-disable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title" id="myModalLabel8"> 
+                                                        Disable Member
+                                                    </h3>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="alert alert-danger"></div>
+                                                    <div class="form-body">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="form-group">
+                                                                    <label class="label-control" for="inactive_date">Inactive from <span class="red">*</span></label>
+                                                                    <input type="text" id="inactive_date" class="form-control single-date-max-today" value="" readonly="readonly">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label-control" for="inactive_note">Notes <span class="red">*</span></label>
+                                                                    <input type="text" id="inactive_note" class="form-control" value="" placeholder="Reason" required="required">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary">Save</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
